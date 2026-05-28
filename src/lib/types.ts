@@ -9,6 +9,14 @@ export const SOURCE_LABELS: Record<Source, string> = {
 	tixcraft: '拓元售票'
 };
 
+/** 單一場次／場館的演出資訊。 */
+export interface Session {
+	date: string | null;
+	venue: string | null;
+	city: string | null;
+	onSaleAt: string | null;
+}
+
 /**
  * 一檔戲劇演出。只保存「事實性」欄位（名稱、日期、場館、開賣、連結），
  * 購票一律深連結回原始售票頁，本站不販售也不轉存對方的圖文資產。
@@ -40,4 +48,10 @@ export interface Show {
 	url: string;
 	/** 是否由關鍵字啟發式判定為戲劇（拓元無分類時使用） */
 	heuristic: boolean;
+	/** 節目簡介（目前僅 OPENTIX 提供） */
+	description: string | null;
+	/** 主辦單位 */
+	organizer: string | null;
+	/** 各場次／場館明細（目前僅 OPENTIX 提供） */
+	sessions: Session[];
 }

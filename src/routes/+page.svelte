@@ -1,20 +1,30 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
 	import { SOURCE_LABELS, type Source, type Show } from '$lib/types';
-	import type { PageData, ActionData } from './$types';
+	import ShowCard from '$lib/components/ShowCard.svelte';
+	import ShowModal from '$lib/components/ShowModal.svelte';
+	import type { PageData } from './$types';
 
-	let { data, form }: { data: PageData; form: ActionData } = $props();
+	let { data }: { data: PageData } = $props();
 
 	const allSources = Object.keys(SOURCE_LABELS) as Source[];
+	const subscribeEnabled = $derived(data.subscribeEnabled);
 
 	let query = $state('');
 	let activeSources = $state<Set<Source>>(new Set());
 	let city = $state('');
+	let category = $state('');
+	let dateRange = $state<'all' | 'week' | 'month' | 'quarter'>('all');
+	let onSale = $state<'all' | 'soon' | 'available'>('all');
 	let includeHeuristic = $state(true);
 	let sort = $state<'date' | 'onsale'>('date');
+	let selected = $state<Show | null>(null);
+	let showSubscribe = $state(false);
 
 	const cities = $derived(
 		[...new Set(data.shows.map((s) => s.city).filter((c): c is string => !!c))].sort()
+	);
+	const categories = $derived(
+		[...new Set(data.shows.map((s) => s.category).filter((c): c is string => !!c))].sort()
 	);
 
 	function toggleSource(s: Source) {
@@ -23,60 +33,100 @@
 		activeSources = next;
 	}
 
+	function isoOffsetDays(days: number): string {
+		return new Date(Date.now() + days * 86_400_000).toISOString();
+	}
+
 	const filtered = $derived.by(() => {
 		const q = query.trim().toLowerCase();
+		const nowIso = new Date().toISOString();
+		const windowEnd =
+			dateRange === 'week'
+				? isoOffsetDays(7).slice(0, 10)
+				: dateRange === 'month'
+					? isoOffsetDays(31).slice(0, 10)
+					: dateRange === 'quarter'
+						? isoOffsetDays(92).slice(0, 10)
+						: null;
+		const soonEnd = isoOffsetDays(14);
+
 		let list = data.shows.filter((s) => {
 			if (!includeHeuristic && s.heuristic) return false;
 			if (activeSources.size && !activeSources.has(s.source)) return false;
 			if (city && s.city !== city) return false;
+			if (category && s.category !== category) return false;
+			if (windowEnd && s.startDate && s.startDate > windowEnd) return false;
+			if (onSale === 'soon') {
+				if (!s.onSaleAt || s.onSaleAt < nowIso || s.onSaleAt > soonEnd) return false;
+			} else if (onSale === 'available') {
+				if (!s.onSaleAt || s.onSaleAt > nowIso) return false;
+			}
 			if (q) {
-				const hay = `${s.title} ${s.venue ?? ''} ${s.category ?? ''}`.toLowerCase();
+				const hay =
+					`${s.title} ${s.venue ?? ''} ${s.category ?? ''} ${s.organizer ?? ''}`.toLowerCase();
 				if (!hay.includes(q)) return false;
 			}
 			return true;
 		});
-		list = [...list].sort((a, b) => {
-			if (sort === 'onsale') {
-				return (a.onSaleAt ?? '9999').localeCompare(b.onSaleAt ?? '9999');
-			}
-			return (a.startDate ?? '9999').localeCompare(b.startDate ?? '9999');
-		});
+		list = [...list].sort((a, b) =>
+			sort === 'onsale'
+				? (a.onSaleAt ?? '9999').localeCompare(b.onSaleAt ?? '9999')
+				: (a.startDate ?? '9999').localeCompare(b.startDate ?? '9999')
+		);
 		return list;
 	});
 
-	function fmtDate(s: Show): string {
-		if (!s.startDate) return '日期未定';
-		const fmt = (d: string) => d.replaceAll('-', '/');
-		if (!s.endDate || s.endDate === s.startDate) return fmt(s.startDate);
-		return `${fmt(s.startDate)} – ${fmt(s.endDate)}`;
+	function resetFilters() {
+		query = '';
+		activeSources = new Set();
+		city = '';
+		category = '';
+		dateRange = 'all';
+		onSale = 'all';
 	}
 
-	function fmtPrice(s: Show): string | null {
-		if (s.minPrice == null) return null;
-		if (s.maxPrice && s.maxPrice !== s.minPrice)
-			return `NT$ ${s.minPrice.toLocaleString()}–${s.maxPrice.toLocaleString()}`;
-		return `NT$ ${s.minPrice.toLocaleString()}`;
+	// 訂閱（client-side 送到 /api/subscribe）
+	let subEmail = $state('');
+	let subKeyword = $state('');
+	let subSource = $state('');
+	let subState = $state<'idle' | 'loading' | 'ok' | 'error'>('idle');
+	let subError = $state('');
+
+	async function submitSubscribe(e: SubmitEvent) {
+		e.preventDefault();
+		subState = 'loading';
+		try {
+			const res = await fetch('/api/subscribe', {
+				method: 'POST',
+				headers: { 'content-type': 'application/json' },
+				body: JSON.stringify({ email: subEmail, keyword: subKeyword, source: subSource })
+			});
+			if (!res.ok) {
+				const d = await res.json().catch(() => null);
+				throw new Error(d?.message ?? '訂閱失敗');
+			}
+			subState = 'ok';
+		} catch (err) {
+			subState = 'error';
+			subError = err instanceof Error ? err.message : '訂閱失敗';
+		}
 	}
 
-	function fmtOnSale(iso: string | null): string | null {
-		if (!iso) return null;
-		const d = new Date(iso);
-		return d.toLocaleDateString('zh-TW', {
-			timeZone: 'Asia/Taipei',
-			month: 'numeric',
-			day: 'numeric'
-		});
-	}
+	const updatedLabel = $derived(
+		data.updatedAt
+			? new Date(data.updatedAt).toLocaleString('zh-TW', {
+					timeZone: 'Asia/Taipei',
+					month: 'numeric',
+					day: 'numeric',
+					hour: '2-digit',
+					minute: '2-digit',
+					hour12: false
+				})
+			: null
+	);
 
-	const sourceColor: Record<Source, string> = {
-		opentix: 'bg-rose-100 text-rose-800',
-		udn: 'bg-amber-100 text-amber-800',
-		kham: 'bg-sky-100 text-sky-800',
-		era: 'bg-emerald-100 text-emerald-800',
-		tixcraft: 'bg-violet-100 text-violet-800'
-	};
-
-	let showSubscribe = $state(false);
+	const selectClass =
+		'rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-curtain-500';
 </script>
 
 <svelte:head>
@@ -87,13 +137,12 @@
 	/>
 </svelte:head>
 
-<!-- Header -->
 <header class="bg-curtain-900 text-white">
 	<div class="mx-auto max-w-6xl px-5 py-10">
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">看戲</h1>
 		<p class="mt-2 text-lg text-curtain-100/90">一個地方看完台灣所有戲劇演出</p>
 		<p class="mt-1 text-sm text-curtain-100/60">
-			整合 OPENTIX · udn · 寬宏 · 年代 · 拓元，共 {data.shows.length} 檔戲劇。本站僅整合資訊，購票導回原售票網。
+			整合 OPENTIX · udn · 寬宏 · 年代 · 拓元，共 {data.shows.length} 檔戲劇。本站僅整合資訊，購票導回原售票網。{#if updatedLabel}　·　資料更新於 {updatedLabel}{/if}
 		</p>
 	</div>
 </header>
@@ -105,31 +154,43 @@
 			<input
 				type="search"
 				bind:value={query}
-				placeholder="搜尋劇名、場館、分類…"
+				placeholder="搜尋劇名、場館、主辦、分類…"
 				class="min-w-50 flex-1 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm outline-none focus:border-curtain-500 focus:ring-2 focus:ring-curtain-500/20"
 			/>
-			<select
-				bind:value={city}
-				class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-curtain-500"
-			>
+			{#if subscribeEnabled}
+				<button
+					onclick={() => (showSubscribe = !showSubscribe)}
+					class="rounded-lg bg-curtain-600 px-4 py-2 text-sm font-medium text-white hover:bg-curtain-700"
+				>
+					訂閱開賣通知
+				</button>
+			{/if}
+		</div>
+
+		<div class="flex flex-wrap items-center gap-2">
+			<select bind:value={city} class={selectClass}>
 				<option value="">全部縣市</option>
-				{#each cities as c (c)}
-					<option value={c}>{c}</option>
-				{/each}
+				{#each cities as c (c)}<option value={c}>{c}</option>{/each}
 			</select>
-			<select
-				bind:value={sort}
-				class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-curtain-500"
-			>
+			<select bind:value={category} class={selectClass}>
+				<option value="">全部分類</option>
+				{#each categories as c (c)}<option value={c}>{c}</option>{/each}
+			</select>
+			<select bind:value={dateRange} class={selectClass}>
+				<option value="all">不限日期</option>
+				<option value="week">本週內</option>
+				<option value="month">一個月內</option>
+				<option value="quarter">三個月內</option>
+			</select>
+			<select bind:value={onSale} class={selectClass}>
+				<option value="all">開賣狀態</option>
+				<option value="soon">即將開賣（14天內）</option>
+				<option value="available">已開賣</option>
+			</select>
+			<select bind:value={sort} class={selectClass}>
 				<option value="date">依演出日期</option>
 				<option value="onsale">依開賣時間</option>
 			</select>
-			<button
-				onclick={() => (showSubscribe = !showSubscribe)}
-				class="rounded-lg bg-curtain-600 px-4 py-2 text-sm font-medium text-white hover:bg-curtain-700"
-			>
-				訂閱開賣通知
-			</button>
 		</div>
 
 		<div class="flex flex-wrap items-center gap-2 text-sm">
@@ -143,66 +204,57 @@
 					{SOURCE_LABELS[s]}
 				</button>
 			{/each}
-			<label class="ml-auto flex items-center gap-2 text-gray-500">
+			<label class="flex items-center gap-2 text-gray-500">
 				<input type="checkbox" bind:checked={includeHeuristic} class="accent-curtain-600" />
-				含疑似戲劇（拓元無分類，靠關鍵字推測）
+				含疑似戲劇
 			</label>
+			<button onclick={resetFilters} class="ml-auto text-gray-400 underline hover:text-curtain-600">
+				清除篩選
+			</button>
 		</div>
 	</div>
 </div>
 
 <!-- Subscribe panel -->
-{#if showSubscribe}
+{#if subscribeEnabled && showSubscribe}
 	<div class="border-b border-curtain-100 bg-white">
 		<div class="mx-auto max-w-6xl px-5 py-5">
-			{#if form?.success}
+			{#if subState === 'ok'}
 				<p class="rounded-lg bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-					已為 <strong>{form.email}</strong> 建立訂閱，有符合的新演出開賣時會寄信通知你。
+					已為 <strong>{subEmail}</strong> 建立訂閱，有符合的新演出開賣時會寄信通知你。
 				</p>
 			{:else}
-				<form method="POST" action="?/subscribe" use:enhance class="flex flex-wrap items-end gap-3">
+				<form onsubmit={submitSubscribe} class="flex flex-wrap items-end gap-3">
 					<div class="flex flex-col gap-1">
 						<label for="email" class="text-xs text-gray-500">Email</label>
 						<input
 							id="email"
-							name="email"
 							type="email"
 							required
+							bind:value={subEmail}
 							placeholder="you@example.com"
-							class="rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-curtain-500"
+							class={selectClass}
 						/>
 					</div>
 					<div class="flex flex-col gap-1">
 						<label for="keyword" class="text-xs text-gray-500">關鍵字（劇名／劇團）</label>
-						<input
-							id="keyword"
-							name="keyword"
-							placeholder="例：果陀、莎士比亞"
-							class="rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-curtain-500"
-						/>
+						<input id="keyword" bind:value={subKeyword} placeholder="例：果陀、莎士比亞" class={selectClass} />
 					</div>
 					<div class="flex flex-col gap-1">
 						<label for="source" class="text-xs text-gray-500">來源（選填）</label>
-						<select
-							id="source"
-							name="source"
-							class="rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-curtain-500"
-						>
+						<select id="source" bind:value={subSource} class={selectClass}>
 							<option value="">不限來源</option>
-							{#each allSources as s (s)}
-								<option value={s}>{SOURCE_LABELS[s]}</option>
-							{/each}
+							{#each allSources as s (s)}<option value={s}>{SOURCE_LABELS[s]}</option>{/each}
 						</select>
 					</div>
 					<button
 						type="submit"
-						class="rounded-lg bg-curtain-600 px-5 py-2 text-sm font-medium text-white hover:bg-curtain-700"
+						disabled={subState === 'loading'}
+						class="rounded-lg bg-curtain-600 px-5 py-2 text-sm font-medium text-white hover:bg-curtain-700 disabled:opacity-60"
 					>
-						建立訂閱
+						{subState === 'loading' ? '處理中…' : '建立訂閱'}
 					</button>
-					{#if form?.error}
-						<p class="w-full text-sm text-curtain-600">{form.error}</p>
-					{/if}
+					{#if subState === 'error'}<p class="w-full text-sm text-curtain-600">{subError}</p>{/if}
 				</form>
 			{/if}
 		</div>
@@ -217,49 +269,15 @@
 	{:else}
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 			{#each filtered as s (s.id)}
-				<a
-					href={s.url}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"
-				>
-					<div class="aspect-[3/2] overflow-hidden bg-gray-100">
-						{#if s.imageUrl}
-							<img
-								src={s.imageUrl}
-								alt={s.title}
-								loading="lazy"
-								referrerpolicy="no-referrer"
-								class="h-full w-full object-cover transition group-hover:scale-105"
-							/>
-						{/if}
-					</div>
-					<div class="flex flex-1 flex-col gap-2 p-4">
-						<div class="flex items-center gap-2">
-							<span class="rounded px-1.5 py-0.5 text-xs font-medium {sourceColor[s.source]}">
-								{SOURCE_LABELS[s.source]}
-							</span>
-							{#if s.heuristic}
-								<span class="rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-500">疑似戲劇</span>
-							{/if}
-							{#if s.category}
-								<span class="text-xs text-gray-400">{s.category}</span>
-							{/if}
-						</div>
-						<h3 class="line-clamp-2 font-semibold leading-snug text-gray-900">{s.title}</h3>
-						<div class="mt-auto space-y-1 text-sm text-gray-500">
-							<p>🗓 {fmtDate(s)}</p>
-							{#if s.venue}<p class="line-clamp-1">📍 {s.venue}{s.city ? ` · ${s.city}` : ''}</p>
-							{:else if s.city}<p>📍 {s.city}</p>{/if}
-							{#if fmtOnSale(s.onSaleAt)}<p class="text-curtain-600">🎟 {fmtOnSale(s.onSaleAt)} 開賣</p>{/if}
-							{#if fmtPrice(s)}<p>{fmtPrice(s)}</p>{/if}
-						</div>
-					</div>
-				</a>
+				<ShowCard show={s} onopen={(show) => (selected = show)} />
 			{/each}
 		</div>
 	{/if}
 </main>
+
+{#if selected}
+	<ShowModal show={selected} onclose={() => (selected = null)} />
+{/if}
 
 <footer class="border-t border-curtain-100 py-8 text-center text-xs text-gray-400">
 	<p>看戲 kanxi · 開源戲劇演出聚合 · 資料即時來自各售票平台公開頁面，著作權屬各主辦單位與售票平台</p>

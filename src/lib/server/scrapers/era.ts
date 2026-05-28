@@ -43,7 +43,10 @@ export async function scrapeEra(): Promise<Show[]> {
 			maxPrice: null,
 			imageUrl: img,
 			url: DETAIL_URL(id),
-			heuristic: false
+			heuristic: false,
+			description: null,
+			organizer: null,
+			sessions: []
 		});
 	}
 	return shows;

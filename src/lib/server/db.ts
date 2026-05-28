@@ -26,6 +26,9 @@ db.exec(`
 		image_url   TEXT,
 		url         TEXT NOT NULL,
 		heuristic   INTEGER NOT NULL DEFAULT 0,
+		description TEXT,
+		organizer   TEXT,
+		sessions    TEXT,
 		first_seen_at TEXT NOT NULL,
 		updated_at  TEXT NOT NULL
 	);
@@ -47,6 +50,15 @@ db.exec(`
 	);
 `);
 
+// 為舊資料庫補上新欄位（已存在會丟錯，忽略即可）。
+for (const col of ['description TEXT', 'organizer TEXT', 'sessions TEXT']) {
+	try {
+		db.exec(`ALTER TABLE shows ADD COLUMN ${col}`);
+	} catch {
+		/* 欄位已存在 */
+	}
+}
+
 interface ShowRow {
 	id: string;
 	source: string;
@@ -63,6 +75,9 @@ interface ShowRow {
 	image_url: string | null;
 	url: string;
 	heuristic: number;
+	description: string | null;
+	organizer: string | null;
+	sessions: string | null;
 	first_seen_at: string;
 }
 
@@ -82,17 +97,20 @@ function rowToShow(r: ShowRow): Show {
 		maxPrice: r.max_price,
 		imageUrl: r.image_url,
 		url: r.url,
-		heuristic: r.heuristic === 1
+		heuristic: r.heuristic === 1,
+		description: r.description,
+		organizer: r.organizer,
+		sessions: r.sessions ? JSON.parse(r.sessions) : []
 	};
 }
 
 const upsertStmt = db.prepare(`
 	INSERT INTO shows (id, source, source_id, title, category, start_date, end_date,
 		venue, city, on_sale_at, min_price, max_price, image_url, url, heuristic,
-		first_seen_at, updated_at)
+		description, organizer, sessions, first_seen_at, updated_at)
 	VALUES (@id, @source, @source_id, @title, @category, @start_date, @end_date,
 		@venue, @city, @on_sale_at, @min_price, @max_price, @image_url, @url, @heuristic,
-		@now, @now)
+		@description, @organizer, @sessions, @now, @now)
 	ON CONFLICT(id) DO UPDATE SET
 		title = excluded.title,
 		category = excluded.category,
@@ -106,6 +124,9 @@ const upsertStmt = db.prepare(`
 		image_url = excluded.image_url,
 		url = excluded.url,
 		heuristic = excluded.heuristic,
+		description = excluded.description,
+		organizer = excluded.organizer,
+		sessions = excluded.sessions,
 		updated_at = excluded.updated_at
 `);
 
@@ -134,12 +155,28 @@ export function upsertShows(shows: Show[]): { inserted: number; total: number } 
 				image_url: s.imageUrl,
 				url: s.url,
 				heuristic: s.heuristic ? 1 : 0,
+				description: s.description,
+				organizer: s.organizer,
+				sessions: s.sessions?.length ? JSON.stringify(s.sessions) : null,
 				now
 			});
 		}
 	});
 	tx(shows);
 	return { inserted, total: shows.length };
+}
+
+/**
+ * 剪除過期資料：對「本次抓取成功」的來源，刪掉這次沒更新到的舊節目
+ * （代表已從來源下架）。失敗的來源不剪，避免暫時性錯誤把資料清空。
+ */
+export function pruneStaleShows(sources: Source[], before: string): number {
+	if (sources.length === 0) return 0;
+	const placeholders = sources.map(() => '?').join(',');
+	const result = db
+		.prepare(`DELETE FROM shows WHERE source IN (${placeholders}) AND updated_at < ?`)
+		.run(...sources, before);
+	return result.changes;
 }
 
 /** 取得用於瀏覽的演出清單：尚未結束（或無日期）的，依演出日排序。 */

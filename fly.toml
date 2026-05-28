@@ -1,0 +1,24 @@
+# Fly.io 自架設定（adapter-node 全功能版，含訂閱 / 抓取 API）。
+# 部署：fly launch --no-deploy  →  fly volumes create kanxi_data --size 1  →  fly deploy
+app = "kanxi"
+primary_region = "nrt" # 東京，離台灣近
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "3000"
+  KANXI_DB = "/data/kanxi.db"
+  KANXI_SNAPSHOT = "/data/shows.json"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+# SQLite 與快照的持久化磁碟
+[mounts]
+  source = "kanxi_data"
+  destination = "/data"

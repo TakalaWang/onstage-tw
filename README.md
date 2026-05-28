@@ -9,7 +9,8 @@
 ## 特色
 
 - 🎭 **單頁瀏覽** — 五大售票平台的戲劇節目集中一頁，含主視覺、日期、場館、票價。
-- 🔍 **即時搜尋 / 過濾** — 依劇名、場館、來源平台、縣市、演出日期或開賣時間篩選。
+- 🔍 **即時搜尋 / 多維過濾** — 依劇名、場館、主辦、來源平台、縣市、分類、演出日期區間、開賣狀態篩選。
+- 🪟 **詳情 Modal** — 點任一卡片即看完整資訊（簡介、主辦、各場次、開賣時間、票價）。
 - 🔔 **開賣訂閱** — 留下 Email + 關鍵字（劇名／劇團），有符合的新演出時寄信通知。
 - 🔗 **只導流、不賣票** — 所有購票連結深連結回原售票網，本站不販售、不轉存對方圖文資料庫。
 
@@ -29,10 +30,22 @@
 
 - [SvelteKit](https://svelte.dev/) (Svelte 5 runes) + TypeScript
 - Tailwind CSS v4
-- better-sqlite3（本地快取）
+- better-sqlite3（抓取去重 / 剪枝 / 訂閱）
 - node-html-parser（HTML 來源解析）
 - nodemailer（開賣通知）
-- adapter-node（可自架）
+- adapter-node（自架）／ adapter-static（純瀏覽 demo）
+
+## 架構
+
+```
+各售票平台 ──(scrapers)──▶ SQLite（去重・剪枝・訂閱）──(export)──▶ static/shows.json（快照）
+                                                                        │
+                                              頁面讀快照 ◀──────────────┘
+```
+
+抓取資料寫入 SQLite（負責去重、剪除下架節目、儲存訂閱），同時輸出一份 `static/shows.json`
+快照。**頁面只讀這份快照**，因此可部署成純靜態站、SSR node 服務、或 serverless —— 同一份程式碼。
+排程抓取後重新產生快照即更新資料。
 
 ## 開始使用
 
@@ -52,7 +65,7 @@ KANXI_FAST=1 npm run scrape
 
 ## 定期更新
 
-部署後可用 cron 定期觸發抓取端點（需設 `KANXI_SCRAPE_TOKEN`）：
+自架（node）部署後，用 cron 定期觸發抓取端點（需設 `KANXI_SCRAPE_TOKEN`），會同時刷新快照：
 
 ```bash
 curl -X POST https://你的網域/api/scrape \
@@ -64,6 +77,32 @@ curl -X POST https://你的網域/api/scrape \
 ```bash
 npm run scrape && npm run notify
 ```
+
+## 部署
+
+### 純瀏覽 demo（Vercel / GitHub Pages，零後端）
+
+`npm run build:static` 產生純靜態站（首頁 prerender、資料來自 `static/shows.json`）。
+搭配內附的 GitHub Action（`.github/workflows/scrape.yml`）定時抓取並 commit 快照，靜態站即自動更新。
+訂閱功能在此模式不啟用（無伺服器）。
+
+```bash
+npm run build:static   # 輸出到 build/
+```
+
+### 全功能自架（Docker，含訂閱 / 通知）
+
+```bash
+docker build -t kanxi .
+docker run -p 3000:3000 -v $PWD/data:/data \
+  -e KANXI_DB=/data/kanxi.db -e KANXI_SNAPSHOT=/data/shows.json \
+  -e KANXI_SCRAPE_TOKEN=your-secret kanxi
+# 首次部署後觸發一次抓取：
+curl -X POST localhost:3000/api/scrape -H "Authorization: Bearer your-secret"
+```
+
+Fly.io 可直接用內附的 `fly.toml`（`fly launch --no-deploy` → `fly volumes create kanxi_data --size 1` → `fly deploy`）。
+任何支援 Docker + 持久化磁碟的平台（Render、Railway、VPS）皆可。
 
 ## 開賣通知
 

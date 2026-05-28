@@ -1,4 +1,4 @@
-import type { Show } from '../../types';
+import type { Show, Session } from '../../types';
 import { politeFetch, sleep, unixToDate, unixToIso } from './util';
 
 const LIST_API = 'https://csm.api.opentix.life/programs';
@@ -22,7 +22,12 @@ interface ProgramListItem {
 
 interface ProgramDetail {
 	onlineStartTime?: number;
-	eventVenues?: { venue?: { name?: string; city?: string } }[];
+	description?: string;
+	programOrganizers?: { name?: string }[];
+	eventVenues?: {
+		venue?: { name?: string; city?: string };
+		events?: { startDateTime?: number; onSaleStartDateTime?: number }[];
+	}[];
 }
 
 /** OPENTIX：逐頁抓 /programs，前端過濾戲劇，再對每檔補抓詳情拿開賣時間與場館。 */
@@ -49,6 +54,9 @@ export async function scrapeOpenTix(): Promise<Show[]> {
 		let onSaleAt: string | null = null;
 		let venue: string | null = null;
 		let city = p.cities?.[0] ?? null;
+		let description: string | null = null;
+		let organizer: string | null = null;
+		let sessions: Session[] = [];
 		if (!fast) {
 			try {
 				const dRes = await politeFetch(`${DETAIL_API}/${p.id}`);
@@ -57,6 +65,16 @@ export async function scrapeOpenTix(): Promise<Show[]> {
 				onSaleAt = unixToIso(detail?.onlineStartTime);
 				venue = detail?.eventVenues?.[0]?.venue?.name ?? null;
 				city = detail?.eventVenues?.[0]?.venue?.city ?? city;
+				description = detail?.description?.trim() || null;
+				organizer = detail?.programOrganizers?.map((o) => o.name).filter(Boolean).join('、') || null;
+				sessions = (detail?.eventVenues ?? []).flatMap((ev) =>
+					(ev.events ?? []).map((e) => ({
+						date: unixToDate(e.startDateTime),
+						venue: ev.venue?.name ?? null,
+						city: ev.venue?.city ?? null,
+						onSaleAt: unixToIso(e.onSaleStartDateTime)
+					}))
+				);
 				await sleep(150);
 			} catch {
 				/* 詳情補抓失敗不影響列表資料 */
@@ -77,7 +95,10 @@ export async function scrapeOpenTix(): Promise<Show[]> {
 			maxPrice: p.maxPrice ?? null,
 			imageUrl: p.imageUrl ?? null,
 			url: EVENT_URL(p.id),
-			heuristic: false
+			heuristic: false,
+			description,
+			organizer,
+			sessions
 		});
 	}
 	return shows;

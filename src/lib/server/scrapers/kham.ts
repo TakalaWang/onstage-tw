@@ -77,7 +77,10 @@ export async function scrapeKham(): Promise<Show[]> {
 			maxPrice: null,
 			imageUrl: item.image,
 			url: DETAIL_URL(item.id),
-			heuristic: false
+			heuristic: false,
+			description: null,
+			organizer: null,
+			sessions: []
 		});
 	}
 	return shows;

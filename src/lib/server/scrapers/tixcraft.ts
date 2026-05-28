@@ -48,7 +48,10 @@ export async function scrapeTixcraft(): Promise<Show[]> {
 			maxPrice: null,
 			imageUrl: img,
 			url: `${BASE}${href}`,
-			heuristic: true
+			heuristic: true,
+			description: null,
+			organizer: null,
+			sessions: []
 		});
 	}
 	return shows;

@@ -2,7 +2,10 @@ import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import { scrapeAll } from '$lib/server/scrapers';
-import { upsertShows } from '$lib/server/db';
+import { upsertShows, pruneStaleShows } from '$lib/server/db';
+import { writeSnapshot } from '$lib/server/snapshot';
+
+export const prerender = false;
 
 /**
  * POST /api/scrape  — 供排程（cron）觸發抓取。
@@ -14,7 +17,13 @@ export const POST: RequestHandler = async ({ request }) => {
 	if (!token) throw error(503, '未設定 KANXI_SCRAPE_TOKEN');
 	if (request.headers.get('authorization') !== `Bearer ${token}`) throw error(401, 'Unauthorized');
 
+	const runAt = new Date().toISOString();
 	const { shows, report } = await scrapeAll();
 	const { inserted, total } = upsertShows(shows);
-	return json({ report, inserted, total });
+	const pruned = pruneStaleShows(
+		report.filter((r) => r.ok).map((r) => r.source),
+		runAt
+	);
+	const snapshot = writeSnapshot();
+	return json({ report, inserted, total, pruned, snapshot: snapshot.count });
 };
