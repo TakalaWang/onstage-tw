@@ -181,7 +181,8 @@
 					...(s.venue ? { location: { '@type': 'Place', name: s.venue } } : {})
 				}
 			}))
-		})
+			// Escape `<` so scraped titles/venues can't break out of the <script> (XSS).
+		}).replace(/</g, '\\u003c')
 	);
 
 	const selectClass =
