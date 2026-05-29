@@ -2,6 +2,7 @@
 	import { SOURCE_LABELS, type Show } from '$lib/types';
 	import { fmtDateRange, fmtPrice, fmtOnSale, daysUntilOnSale, SOURCE_COLOR } from '$lib/format';
 	import { favorites } from '$lib/favorites.svelte';
+	import { eventPath } from '$lib/slug';
 	import Icon from './Icon.svelte';
 
 	let {
@@ -13,18 +14,27 @@
 	const onSaleDays = $derived(daysUntilOnSale(show.onSaleAt));
 	const soon = $derived(onSaleDays !== null && onSaleDays >= 0 && onSaleDays <= 7);
 	const delay = $derived(Math.min(index, 12) * 45);
+
+	// Real link to the show's own page (crawlable / shareable); a plain click opens
+	// the quick-view modal instead, while ⌘/Ctrl/middle-click follows the link.
+	function openModal(e: MouseEvent) {
+		if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+		e.preventDefault();
+		onopen(show);
+	}
 </script>
 
 <article
 	style="animation-delay: {delay}ms; content-visibility: auto; contain-intrinsic-size: 360px;"
 	class="animate-fade-up group relative flex flex-col overflow-hidden rounded-2xl border border-curtain-100 bg-white shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-curtain-900/15 focus-within:ring-2 focus-within:ring-curtain-500 dark:border-white/10 dark:bg-[#1e1716]"
 >
-	<button
-		type="button"
-		onclick={() => onopen(show)}
+	<a
+		href={eventPath(show.id)}
+		onclick={openModal}
+		data-sveltekit-preload-data="off"
 		aria-label={`查看「${show.title}」詳情`}
 		class="absolute inset-0 z-10 cursor-pointer outline-none"
-	></button>
+	></a>
 
 	<div class="relative aspect-[3/2] overflow-hidden bg-curtain-950">
 		{#if show.imageUrl}

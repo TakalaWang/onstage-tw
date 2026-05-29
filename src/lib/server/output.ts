@@ -2,6 +2,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import type { Show, Source } from '../types';
 import { SOURCE_LABELS } from '../types';
 import { GENRE_SLUG } from '../genres';
+import { eventSlug } from '../slug';
 
 const OUT_DIR = process.env.ONSTAGE_OUT_DIR ?? 'static';
 const SITE_URL = (process.env.ONSTAGE_SITE_URL ?? 'https://onstage.takalawang.dev').replace(/\/$/, '');
@@ -65,9 +66,32 @@ ${items}
 `;
 }
 
+function renderSitemap(active: Show[], today: string): string {
+	const urls = [
+		{ loc: `${SITE_URL}/`, priority: '1.0', changefreq: 'daily' },
+		{ loc: `${SITE_URL}/calendar`, priority: '0.7', changefreq: 'daily' },
+		{ loc: `${SITE_URL}/map`, priority: '0.7', changefreq: 'daily' },
+		{ loc: `${SITE_URL}/about`, priority: '0.3', changefreq: 'monthly' },
+		...active.map((s) => ({
+			loc: `${SITE_URL}/event/${eventSlug(s.id)}`,
+			priority: '0.6',
+			changefreq: 'weekly'
+		}))
+	];
+	const body = urls
+		.map(
+			(u) =>
+				`  <url><loc>${escapeXml(u.loc)}</loc><lastmod>${today}</lastmod>` +
+				`<changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`
+		)
+		.join('\n');
+	return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
+}
+
 export function writeOutputs(shows: Show[]): { count: number } {
 	const active = activeShows(shows);
 	const builtAt = new Date().toISOString();
+	const today = builtAt.slice(0, 10);
 	mkdirSync(OUT_DIR, { recursive: true });
 
 	const descriptions: Record<string, string> = {};
@@ -82,6 +106,7 @@ export function writeOutputs(shows: Show[]): { count: number } {
 	);
 	writeFileSync(`${OUT_DIR}/descriptions.json`, JSON.stringify(descriptions));
 	writeFileSync(`${OUT_DIR}/feed.xml`, renderFeed(active, builtAt));
+	writeFileSync(`${OUT_DIR}/sitemap.xml`, renderSitemap(active, today));
 
 	const sources = [...new Set(active.map((s) => s.source))] as Source[];
 	for (const src of sources) {
