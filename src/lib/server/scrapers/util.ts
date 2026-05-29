@@ -84,7 +84,8 @@ const GENRE_PATTERNS: [string, RegExp][] = [
 	['偶戲', /布袋戲|掌中|偶戲|戲偶|皮影|光影偶|懸絲偶/],
 	['音樂劇', /音樂劇|歌舞劇|musical/i],
 	['兒童親子', /兒童劇|親子|紙風車|如果兒童|童話|繪本|寶寶/],
-	['相聲', /相聲|脫口秀|漫才|單口/],
+	['相聲', /相聲/],
+	['喜劇', /脫口秀|單口|漫才|即興|喜劇|roast|stand[\s-]?up/i],
 	['舞台劇', /舞台劇|舞臺劇|話劇/]
 ];
 
@@ -115,6 +116,32 @@ export function parseUtikiDetail(html: string): {
 		venue,
 		minPrice: prices.length ? Math.min(...prices) : null
 	};
+}
+
+const TW_CITIES = [
+	'臺北市', '台北市', '新北市', '基隆市', '桃園市', '新竹市', '新竹縣', '苗栗縣',
+	'臺中市', '台中市', '彰化縣', '南投縣', '雲林縣', '嘉義市', '嘉義縣',
+	'臺南市', '台南市', '高雄市', '屏東縣', '宜蘭縣', '花蓮縣', '臺東縣', '台東縣',
+	'澎湖縣', '金門縣', '連江縣'
+];
+
+/** Pull a normalised Taiwan city (臺/台 unified) from an address or venue string. */
+export function cityFromText(text: string | null | undefined): string | null {
+	if (!text) return null;
+	for (const c of TW_CITIES) if (text.includes(c)) return c.replace('台', '臺');
+	return null;
+}
+
+/** For mixed-content sources (e.g. some KKTIX organizers), decide if an event is theatre. */
+const THEATRE_WORDS =
+	/音樂劇|舞台劇|舞臺劇|戲劇|劇場|話劇|即興|脫口秀|喜劇|漫才|兒童劇|親子劇|歌仔戲|布袋戲|偶戲|相聲|戲曲/;
+const NON_THEATRE_WORDS =
+	/演唱會|巡迴演唱|售票演唱|研習|工作坊|課程|報名|營隊|住宿|講座|簽書會|簽名會|見面會|fan\s*meeting|粉絲|球賽|路跑|展覽/i;
+
+export function looksTheatrical(...texts: (string | null | undefined)[]): boolean {
+	const hay = texts.filter(Boolean).join(' ');
+	if (NON_THEATRE_WORDS.test(hay)) return false;
+	return THEATRE_WORDS.test(hay);
 }
 
 /**

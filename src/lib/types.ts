@@ -1,11 +1,12 @@
 /** Ticketing source platform. */
-export type Source = 'opentix' | 'udn' | 'kham' | 'era';
+export type Source = 'opentix' | 'udn' | 'kham' | 'era' | 'kktix';
 
 export const SOURCE_LABELS: Record<Source, string> = {
 	opentix: 'OPENTIX 兩廳院',
 	udn: 'udn 售票網',
 	kham: '寬宏售票',
-	era: '年代售票'
+	era: '年代售票',
+	kktix: 'KKTIX'
 };
 
 /** One performance occurrence (a date at a venue). */
