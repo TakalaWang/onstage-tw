@@ -93,33 +93,18 @@
 		activeSources = next;
 	}
 
-	const todayKey = new Date().toISOString().slice(0, 10);
-
-	// The date used to order a show: its soonest performance still to come. A long
-	// run that started long ago but is on now sorts as "today", not by its old start
-	// date — so 近→遠 means "happening soonest" rather than "started earliest".
-	function sortDate(s: Show): string {
-		const dates = (s.sessions.length ? s.sessions.map((x) => x.date) : [s.startDate]).filter(
-			(d): d is string => !!d
-		);
-		const upcoming = dates.filter((d) => d >= todayKey).sort();
-		if (upcoming.length) return upcoming[0];
-		// No listed date is in the future, but the show is still active → treat as now.
-		return s.endDate && s.endDate >= todayKey ? todayKey : (s.startDate ?? '9999');
-	}
-
 	function sortShows(a: Show, b: Show): number {
 		switch (sort) {
-			case 'date-asc':
-				return sortDate(a).localeCompare(sortDate(b));
+			case 'date-asc': // earliest (oldest) start date first
+				return (a.startDate ?? '9999').localeCompare(b.startDate ?? '9999');
 			case 'onsale':
 				return (a.onSaleAt ?? '9999').localeCompare(b.onSaleAt ?? '9999');
 			case 'price-asc':
 				return (a.minPrice ?? Infinity) - (b.minPrice ?? Infinity);
 			case 'price-desc':
 				return (b.minPrice ?? -1) - (a.minPrice ?? -1);
-			default: // date-desc — furthest-out performance dates first
-				return sortDate(b).localeCompare(sortDate(a));
+			default: // date-desc — latest start date first
+				return (b.startDate ?? '0000').localeCompare(a.startDate ?? '0000');
 		}
 	}
 
@@ -454,8 +439,8 @@
 				<option value="upcoming">尚未開賣</option>
 			</select>
 			<select bind:value={sort} class={selectClass} aria-label="排序">
-				<option value="date-asc">排序：演出日期近→遠</option>
-				<option value="date-desc">演出日期遠→近</option>
+				<option value="date-asc">排序：演出日期早→晚</option>
+				<option value="date-desc">演出日期晚→早</option>
 				<option value="onsale">開賣時間近→遠</option>
 				<option value="price-asc">票價低→高</option>
 				<option value="price-desc">票價高→低</option>
