@@ -35,33 +35,32 @@
 					class="max-h-80 w-full bg-curtain-950 object-contain"
 				/>
 			{/if}
-			<div class="absolute right-3 top-3 flex items-center gap-2">
+			<button
+				type="button"
+				onclick={onclose}
+				aria-label="關閉"
+				class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-curtain-950/55 text-white backdrop-blur transition hover:bg-curtain-950/80 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
+			>
+				<Icon name="x" size={18} />
+			</button>
+		</div>
+
+		<div class="space-y-5 p-6">
+			<div class="flex items-start justify-between gap-3">
+				<div class="flex flex-wrap items-center gap-2 pt-1">
+					<span class="rounded-full px-2 py-0.5 text-xs font-medium {SOURCE_COLOR[show.source]}">
+						{SOURCE_LABELS[show.source]}
+					</span>
+					{#if show.category}<span class="text-xs text-gray-500">{show.category}</span>{/if}
+				</div>
 				<a
 					href={show.url}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="flex items-center gap-1.5 rounded-full bg-curtain-600 px-3.5 py-2 text-sm font-medium text-white shadow-lg transition hover:bg-curtain-700 active:scale-95"
+					class="flex shrink-0 items-center gap-1.5 rounded-full bg-curtain-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-curtain-700 active:scale-95"
 				>
-					前往 {SOURCE_LABELS[show.source]} 購票
-					<Icon name="arrow-up-right" size={15} />
+					前往購票 <Icon name="arrow-up-right" size={15} />
 				</a>
-				<button
-					type="button"
-					onclick={onclose}
-					aria-label="關閉"
-					class="flex h-9 w-9 items-center justify-center rounded-full bg-curtain-950/55 text-white backdrop-blur transition hover:bg-curtain-950/80 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
-				>
-					<Icon name="x" size={18} />
-				</button>
-			</div>
-		</div>
-
-		<div class="space-y-5 p-6">
-			<div class="flex flex-wrap items-center gap-2">
-				<span class="rounded-full px-2 py-0.5 text-xs font-medium {SOURCE_COLOR[show.source]}">
-					{SOURCE_LABELS[show.source]}
-				</span>
-				{#if show.category}<span class="text-xs text-gray-500">{show.category}</span>{/if}
 			</div>
 
 			<h2 class="font-display text-2xl font-semibold leading-snug text-gray-900 dark:text-gray-100">

@@ -135,7 +135,7 @@
 		// Skip the curtain reveal when reduced motion is requested.
 		if (matchMedia('(prefers-reduced-motion: reduce)').matches) curtain = false;
 		else {
-			const t = setTimeout(() => (curtain = false), 1150);
+			const t = setTimeout(() => (curtain = false), 1700);
 			return () => clearTimeout(t);
 		}
 	});
@@ -214,15 +214,37 @@
 
 <!-- One-time stage-curtain reveal -->
 {#if curtain}
-	<div class="pointer-events-none fixed inset-0 z-[100] flex" aria-hidden="true">
-		<div class="curtain-half curtain-left h-full w-1/2"></div>
-		<div class="curtain-half curtain-right h-full w-1/2"></div>
+	<div class="pointer-events-none fixed inset-0 z-[100] overflow-hidden" aria-hidden="true">
+		<div class="absolute inset-0 flex">
+			<div class="curtain-half curtain-left h-full w-1/2"></div>
+			<div class="curtain-half curtain-right h-full w-1/2"></div>
+		</div>
+		<div class="curtain-brand absolute inset-0 flex flex-col items-center justify-center text-white">
+			<img src={favicon} alt="" class="mb-4 h-16 w-16 rounded-2xl shadow-2xl" />
+			<div class="text-5xl font-bold tracking-tight sm:text-6xl">幕間</div>
+			<div class="mt-1 font-display text-xl italic text-gold-400">OnStage TW</div>
+			<div class="mt-3 text-sm tracking-[0.3em] text-white/60">台灣戲劇演出，一站看完</div>
+		</div>
 	</div>
 {/if}
 
-<!-- Masthead -->
-<header class="relative">
-	<div class="absolute right-4 top-4 flex items-center gap-2">
+<!-- Top nav: brand on the left, controls on the right -->
+<header class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3.5 sm:px-5">
+	<div class="flex min-w-0 items-center gap-2.5">
+		<img src={favicon} alt="" class="h-9 w-9 shrink-0 rounded-lg shadow-sm" />
+		<div class="flex items-baseline gap-2">
+			<h1 class="text-2xl font-bold tracking-tight">幕間</h1>
+			<span class="hidden font-display text-lg italic text-gray-400 sm:inline dark:text-gray-500">
+				OnStage TW
+			</span>
+		</div>
+		<span
+			class="ml-1 hidden border-l border-gray-200 pl-3 text-sm text-gray-400 lg:inline dark:border-white/15"
+		>
+			台灣戲劇演出，一站看完
+		</span>
+	</div>
+	<div class="flex shrink-0 items-center gap-2">
 		<button
 			onclick={toggleTheme}
 			aria-label="切換深色 / 淺色模式"
@@ -241,20 +263,11 @@
 		</a>
 		<button
 			onclick={() => (showSubscribe = !showSubscribe)}
-			class="flex items-center gap-1.5 rounded-full bg-curtain-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-curtain-700 active:scale-[0.98]"
+			class="flex items-center gap-1.5 rounded-full bg-curtain-600 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-curtain-700 active:scale-[0.98]"
 		>
 			<Icon name="rss" size={15} />
 			<span class="hidden sm:inline">RSS 訂閱</span>
 		</button>
-	</div>
-
-	<div class="mx-auto max-w-6xl px-5 pb-4 pt-9 text-center">
-		<div class="flex items-center justify-center gap-2.5">
-			<img src={favicon} alt="" class="h-8 w-8 rounded-lg shadow-sm" />
-			<h1 class="text-3xl font-bold tracking-tight sm:text-4xl">幕間</h1>
-			<span class="font-display text-xl italic text-gray-400 dark:text-gray-500">OnStage TW</span>
-		</div>
-		<p class="mt-1.5 text-sm text-gray-500 dark:text-gray-400">台灣戲劇演出，一站看完。</p>
 	</div>
 </header>
 

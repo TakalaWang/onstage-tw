@@ -118,10 +118,28 @@ html.dark {
 	box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.55);
 }
 .curtain-left {
-	animation: curtain-open-left 1.05s cubic-bezier(0.76, 0, 0.24, 1) 0.1s forwards;
+	animation: curtain-open-left 1.05s cubic-bezier(0.76, 0, 0.24, 1) 0.55s forwards;
 }
 .curtain-right {
-	animation: curtain-open-right 1.05s cubic-bezier(0.76, 0, 0.24, 1) 0.1s forwards;
+	animation: curtain-open-right 1.05s cubic-bezier(0.76, 0, 0.24, 1) 0.55s forwards;
+}
+@keyframes curtain-brand {
+	0% {
+		opacity: 0;
+		transform: scale(0.92);
+	}
+	25%,
+	50% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.04);
+	}
+}
+.curtain-brand {
+	animation: curtain-brand 1.6s ease forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
