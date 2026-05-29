@@ -5,7 +5,6 @@
 
 	let dark = $state(false);
 
-	// --- Theme toggle (mirrors the home page logic) ---
 	$effect(() => {
 		dark = document.documentElement.classList.contains('dark');
 	});
@@ -14,9 +13,7 @@
 		document.documentElement.classList.toggle('dark', dark);
 		try {
 			localStorage.setItem('theme', dark ? 'dark' : 'light');
-		} catch {
-			/* ignore */
-		}
+		} catch {}
 	}
 </script>
 
@@ -25,7 +22,6 @@
 	<meta name="description" content="關於幕間 OnStage TW：免責聲明、著作權、隱私權政策與使用條款。" />
 </svelte:head>
 
-<!-- Top nav: back link on the left, theme toggle on the right -->
 <header class="mx-auto flex max-w-3xl items-center justify-between gap-3 px-4 py-3.5 sm:px-5">
 	<div class="flex min-w-0 items-center gap-2.5">
 		<h1 class="text-2xl font-bold tracking-tight">幕間</h1>
@@ -49,7 +45,6 @@
 </header>
 
 <main class="mx-auto max-w-3xl px-4 py-6 sm:px-5 sm:py-10">
-	<!-- Page title -->
 	<div class="mb-8">
 		<h2 class="font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-50">
 			關於 / 法律資訊
@@ -60,7 +55,6 @@
 	</div>
 
 	<div class="space-y-5">
-		<!-- 關於 -->
 		<section
 			class="rounded-2xl border border-curtain-100 bg-white p-5 sm:p-6 dark:border-white/10 dark:bg-[#1e1716]"
 		>
@@ -82,7 +76,6 @@
 			</div>
 		</section>
 
-		<!-- 免責聲明 -->
 		<section
 			class="rounded-2xl border border-curtain-100 bg-white p-5 sm:p-6 dark:border-white/10 dark:bg-[#1e1716]"
 		>
@@ -101,7 +94,6 @@
 			</div>
 		</section>
 
-		<!-- 著作權 -->
 		<section
 			class="rounded-2xl border border-curtain-100 bg-white p-5 sm:p-6 dark:border-white/10 dark:bg-[#1e1716]"
 		>
@@ -129,7 +121,6 @@
 			</div>
 		</section>
 
-		<!-- 隱私權政策 -->
 		<section
 			class="rounded-2xl border border-curtain-100 bg-white p-5 sm:p-6 dark:border-white/10 dark:bg-[#1e1716]"
 		>
@@ -158,7 +149,6 @@
 			</div>
 		</section>
 
-		<!-- Cookie -->
 		<section
 			class="rounded-2xl border border-curtain-100 bg-white p-5 sm:p-6 dark:border-white/10 dark:bg-[#1e1716]"
 		>
@@ -174,7 +164,6 @@
 			</div>
 		</section>
 
-		<!-- 使用條款 -->
 		<section
 			class="rounded-2xl border border-curtain-100 bg-white p-5 sm:p-6 dark:border-white/10 dark:bg-[#1e1716]"
 		>
@@ -190,7 +179,6 @@
 			</div>
 		</section>
 
-		<!-- 聯絡 / 回饋 -->
 		<section
 			class="rounded-2xl border border-curtain-100 bg-white p-5 sm:p-6 dark:border-white/10 dark:bg-[#1e1716]"
 		>

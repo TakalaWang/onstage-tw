@@ -18,7 +18,6 @@ const LIST_URL = (cat: string) =>
 	`https://ticket.com.tw/application/UTK01/UTK0101_06.aspx?TYPE=1&CATEGORY=${cat}`;
 const DETAIL_URL = (id: string) =>
 	`https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=${id}`;
-// 116 = theatre, 129 = kids/family, 100 = dance.
 const CATEGORIES = ['116', '129', '100'];
 
 interface Listed {
@@ -28,11 +27,6 @@ interface Listed {
 	range: ReturnType<typeof extractDateRange>;
 }
 
-/**
- * ERA: scrape several theatre-ish lists, then enrich each show from its detail
- * page (sessions / venue / city / price / description). ERA blocks suspicious
- * IPs, so detail fetches are paced slowly; failures fall back to list-only data.
- */
 export async function scrapeEra(): Promise<Show[]> {
 	const listed = new Map<string, Listed>();
 	for (const cat of CATEGORIES) {
@@ -44,7 +38,7 @@ export async function scrapeEra(): Promise<Show[]> {
 				const idMatch = href.match(/PRODUCT_ID=([A-Za-z0-9]+)/);
 				if (!idMatch) continue;
 				const id = idMatch[1];
-				if (listed.has(id)) continue; // de-dupe across categories
+				if (listed.has(id)) continue;
 				const title = card.querySelector('h4.list-group-item-heading')?.text.trim() ?? '';
 				if (!title) continue;
 				const img =
@@ -57,7 +51,6 @@ export async function scrapeEra(): Promise<Show[]> {
 				listed.set(id, { id, title, img, range });
 			}
 		} catch {
-			/* skip this category on failure */
 		}
 		await sleep(700);
 	}
@@ -92,11 +85,9 @@ export async function scrapeEra(): Promise<Show[]> {
 				introImages = contentImages(intro, DETAIL_URL(item.id));
 				organizer =
 					root.querySelector('#ctl00_ContentPlaceHolder1_lbOrgName')?.text.trim() || null;
-				// Running time / age live in the "注意事項" tab pane.
 				notes = extractHighlights(root.querySelector('.contents.tab-content')?.text);
 				await sleep(700);
 			} catch {
-				/* keep list-only data */
 			}
 		}
 
@@ -124,7 +115,7 @@ export async function scrapeEra(): Promise<Show[]> {
 			endDate,
 			venue,
 			city,
-			onSaleAt: null, // ERA hides on-sale time once a show is on sale
+			onSaleAt: null,
 			minPrice,
 			maxPrice,
 			imageUrl: item.img,
@@ -139,15 +130,10 @@ export async function scrapeEra(): Promise<Show[]> {
 	return shows;
 }
 
-/** Internal session shape carrying the raw price text for show-level aggregation. */
 interface EraSession extends Session {
 	_price: string | null;
 }
 
-/**
- * Parse the ERA detail GridView. Rows are id'd
- * `ctl00_ContentPlaceHolder1_dgProductList_ctlNN_{START_DATETIME,PLACE_NAME,PLACE_ADDRESS,PRICE}`.
- */
 function parseEraSessions(root: ReturnType<typeof parse>): EraSession[] {
 	const sessions: EraSession[] = [];
 	for (const el of root.querySelectorAll('[id*="dgProductList_ctl"][id$="START_DATETIME"]')) {

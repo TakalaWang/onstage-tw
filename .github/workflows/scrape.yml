@@ -1,11 +1,8 @@
 name: Scrape & refresh data
 
-# Periodically scrape all ticketing platforms, regenerate static/shows.json and
-# static/feed.xml, and commit them. When connected to Vercel / Pages, the push
-# triggers an automatic redeploy so the live site updates. No secrets required.
 on:
   schedule:
-    - cron: '0 0,12 * * *' # 00:00 / 12:00 UTC (08:00 / 20:00 Taipei)
+    - cron: '0 0,12 * * *'
   workflow_dispatch:
 
 permissions:
@@ -39,8 +36,6 @@ jobs:
             git commit -m "chore: refresh show data [skip ci]"
             git push
           fi
-      # If a source errored or returned 0 rows (likely a site redesign), open an
-      # alert issue — but only if there isn't already an open one (no spam).
       - name: Alert on scraper failure
         if: always()
         env:
@@ -54,8 +49,6 @@ jobs:
           node -e "const r=require('./scrape-report.json');const fs=require('fs');const lines=r.failures.map(f=>'- **'+f.source+'**：'+f.error).join('\n');fs.writeFileSync('issue-body.md','排程偵測到抓取異常，可能是來源網站改版或暫時無法存取：\n\n'+lines+'\n\n請檢查對應的 scraper（src/lib/server/scrapers/）。修正後關閉此 issue。\n\n_由排程自動建立。_')"
           gh issue create --title "⚠️ 抓取異常：$(date -u +%Y-%m-%d)" --label scraper-failure --body-file issue-body.md
 
-      # Surface venues we couldn't resolve to a city so a mapping can be added to
-      # src/lib/venues.ts. Reuses a single rolling issue (edit, don't spam).
       - name: Report unmapped venues
         if: always()
         env:

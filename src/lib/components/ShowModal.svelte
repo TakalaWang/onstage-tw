@@ -11,7 +11,6 @@
 	let { show, onclose }: { show: Show; onclose: () => void } = $props();
 	let shared = $state(false);
 
-	// Descriptions are split out of the list payload; fetch lazily on open.
 	let desc = $state<string | null>(null);
 	$effect(() => {
 		desc = show.description ?? null;
@@ -23,7 +22,6 @@
 		}
 	});
 
-	// Respect reduced-motion: collapse durations to 0 so element still mounts/unmounts cleanly.
 	const reduce = $derived(prefersReducedMotion.current);
 
 	function onKey(e: KeyboardEvent) {
@@ -40,14 +38,12 @@
 				setTimeout(() => (shared = false), 1800);
 			}
 		} catch {
-			/* user cancelled / unsupported */
 		}
 	}
 </script>
 
 <svelte:window onkeydown={onKey} />
 
-<!-- backdrop -->
 <div
 	class="fixed inset-0 z-[1200] flex items-start justify-center overflow-y-auto bg-curtain-950/70 p-4 backdrop-blur-md sm:p-8"
 	role="presentation"

@@ -19,7 +19,6 @@
 	style="animation-delay: {delay}ms; content-visibility: auto; contain-intrinsic-size: 360px;"
 	class="animate-fade-up group relative flex flex-col overflow-hidden rounded-2xl border border-curtain-100 bg-white shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-curtain-900/15 focus-within:ring-2 focus-within:ring-curtain-500 dark:border-white/10 dark:bg-[#1e1716]"
 >
-	<!-- Full-card click target → details modal (sits under the jump link) -->
 	<button
 		type="button"
 		onclick={() => onopen(show)}
@@ -42,14 +41,11 @@
 			class="pointer-events-none absolute inset-0 z-0 bg-gradient-to-t from-curtain-950/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 		></div>
 
-		<!-- Spotlight sweep: a soft diagonal highlight glides across the poster on hover.
-		     transform/opacity only; skipped under prefers-reduced-motion. -->
 		<div
 			aria-hidden="true"
 			class="spotlight-sweep pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
 		></div>
 
-		<!-- Direct jump to the official ticketing page (kept above the full-card overlay) -->
 		<a
 			href={show.url}
 			target="_blank"
@@ -69,7 +65,6 @@
 			</span>
 		{/if}
 
-		<!-- Favourite toggle (localStorage) -->
 		<button
 			type="button"
 			onclick={() => favorites.toggle(show.id)}
@@ -129,9 +124,6 @@
 </article>
 
 <style>
-	/* A diagonal sheen that sweeps across the poster while hovered, evoking a stage
-	   spotlight passing over it. Uses transform only (translate) plus the opacity
-	   fade handled by the utility classes above. */
 	.spotlight-sweep {
 		background: linear-gradient(
 			105deg,

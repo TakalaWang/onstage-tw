@@ -1,4 +1,3 @@
-// Region grouping for the area filter (client-safe: no server deps).
 export const REGIONS: Record<string, string[]> = {
 	北部: ['臺北市', '新北市', '基隆市', '桃園市', '新竹市', '新竹縣', '苗栗縣'],
 	中部: ['臺中市', '彰化縣', '南投縣', '雲林縣'],

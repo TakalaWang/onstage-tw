@@ -26,36 +26,30 @@
 	let onSale = $state<'all' | 'available' | 'upcoming'>('all');
 	let priceMin = $state('');
 	let priceMax = $state('');
-	// Default: soonest performance date first (近→遠).
 	let sort = $state<'date-desc' | 'date-asc' | 'onsale' | 'price-asc' | 'price-desc'>('date-asc');
 	let selected = $state<Show | null>(null);
 	let showSubscribe = $state(false);
 	let showFeedback = $state(false);
 	let onlyFavorites = $state(false);
-	let showFilters = $state(false); // mobile: advanced filters collapsed by default
+	let showFilters = $state(false);
 	let visible = $state(48);
 	let sentinel = $state<HTMLElement | null>(null);
 	let dark = $state(false);
-	// Stage-curtain reveal: play once per browser session, not on every return to home.
 	let curtain = $state(shouldShowCurtain());
 	function shouldShowCurtain(): boolean {
 		try {
 			return !sessionStorage.getItem('introShown');
 		} catch {
-			return true; // SSR/prerender (no sessionStorage): render it so first paint has it
+			return true;
 		}
 	}
 
-	// Resolve a city at read time: prefer an explicit city, else look the venue up in
-	// the venue registry. This lets an expanded venue list improve filtering without
-	// needing to re-scrape every source.
 	function cityOf(city: string | null | undefined, venue: string | null | undefined): string | null {
 		if (city) return city;
 		if (venue) return findVenue(venue)?.city ?? null;
 		return null;
 	}
 
-	// All cities a show plays in (it may run at venues in several cities).
 	function showCities(s: Show): string[] {
 		const set = new Set<string>();
 		const top = cityOf(s.city, s.venue);
@@ -67,9 +61,6 @@
 		return [...set];
 	}
 
-	// Discrete occurrences (date + city). Sessions give one per performance;
-	// a single-run show is one occurrence spanning startDate→endDate. This lets us
-	// match "a performance on date X in region Y" rather than the whole tour window.
 	function occurrences(s: Show): { start: string | null; end: string | null; city: string | null }[] {
 		if (s.sessions.length)
 			return s.sessions.map((o) => ({
@@ -84,7 +75,6 @@
 	const categories = $derived(
 		[...new Set(data.shows.map((s) => s.category).filter((c): c is string => !!c))].sort()
 	);
-	// Only show sources that actually have data (hides a source chip when it has no shows).
 	const presentSources = $derived(allSources.filter((s) => data.shows.some((x) => x.source === s)));
 
 	function toggleSource(s: Source) {
@@ -95,7 +85,7 @@
 
 	function sortShows(a: Show, b: Show): number {
 		switch (sort) {
-			case 'date-asc': // earliest (oldest) start date first
+			case 'date-asc':
 				return (a.startDate ?? '9999').localeCompare(b.startDate ?? '9999');
 			case 'onsale':
 				return (a.onSaleAt ?? '9999').localeCompare(b.onSaleAt ?? '9999');
@@ -103,7 +93,7 @@
 				return (a.minPrice ?? Infinity) - (b.minPrice ?? Infinity);
 			case 'price-desc':
 				return (b.minPrice ?? -1) - (a.minPrice ?? -1);
-			default: // date-desc — latest start date first
+			default:
 				return (b.startDate ?? '0000').localeCompare(a.startDate ?? '0000');
 		}
 	}
@@ -116,8 +106,6 @@
 				if (onlyFavorites && !favorites.has(s.id)) return false;
 				if (activeSources.size && !activeSources.has(s.source)) return false;
 				if (category && s.category !== category) return false;
-				// Joint location × date: a touring show matches only if a SINGLE
-				// performance satisfies both the area and the date range together.
 				const cityTargets = city ? [city] : region ? citiesInRegion(region) : null;
 				const dateActive = !!fromDate || !!toDate;
 				if (cityTargets || dateActive) {
@@ -192,9 +180,7 @@
 
 	$effect(() => {
 		dark = document.documentElement.classList.contains('dark');
-		// Filters collapse on every screen; default them open on desktop, closed on mobile.
 		showFilters = matchMedia('(min-width: 640px)').matches;
-		// Skip the curtain if reduced-motion is requested or it already played this session.
 		let alreadyShown = true;
 		try {
 			alreadyShown = !!sessionStorage.getItem('introShown');
@@ -206,9 +192,7 @@
 		} else {
 			try {
 				sessionStorage.setItem('introShown', '1');
-			} catch {
-				/* ignore */
-			}
+			} catch {}
 			const t = setTimeout(() => (curtain = false), 1900);
 			return () => clearTimeout(t);
 		}
@@ -219,9 +203,7 @@
 		document.documentElement.classList.toggle('dark', dark);
 		try {
 			localStorage.setItem('theme', dark ? 'dark' : 'light');
-		} catch {
-			/* ignore */
-		}
+		} catch {}
 	}
 
 	const updatedLabel = $derived(
@@ -237,7 +219,6 @@
 			: null
 	);
 
-	// SEO: schema.org ItemList of events (helps search engines understand the listings).
 	const jsonLd = $derived(
 		JSON.stringify({
 			'@context': 'https://schema.org',
@@ -255,7 +236,6 @@
 					...(s.venue ? { location: { '@type': 'Place', name: s.venue } } : {})
 				}
 			}))
-			// Escape `<` so scraped titles/venues can't break out of the <script> (XSS).
 		}).replace(/</g, '\\u003c')
 	);
 
@@ -282,18 +262,15 @@
 	<meta name="twitter:title" content="幕間 OnStage TW — 台灣戲劇演出整合" />
 	<meta name="twitter:description" content="一個地方看完台灣所有戲劇演出。" />
 	<meta name="twitter:image" content={`${data.siteUrl}/og.svg`} />
-	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html `<script type="application/ld+json">${jsonLd}</script>`}
 </svelte:head>
 
-<!-- One-time stage reveal: brand hangs from a rope, gets hoisted up as the curtains part -->
 {#if curtain}
 	<div class="curtain-root pointer-events-none fixed inset-0 z-[100] overflow-hidden" aria-hidden="true">
 		<div class="absolute inset-0 flex">
 			<div class="curtain-half curtain-left h-full w-1/2"></div>
 			<div class="curtain-half curtain-right h-full w-1/2"></div>
 		</div>
-		<!-- hoisted brand: a hanging wooden plank on one thick rope, lifted off-screen -->
 		<div class="curtain-hoist absolute inset-x-0 top-0 flex flex-col items-center">
 			<div class="curtain-rope h-[24vh]"></div>
 			<div class="curtain-sign relative -mt-1 flex w-64 flex-col items-center px-7 py-8 sm:w-72">
@@ -307,7 +284,6 @@
 	</div>
 {/if}
 
-<!-- Sticky top: brand nav (always visible) + search + filter toggle -->
 <div
 	class="sticky top-0 z-30 border-b border-curtain-100 bg-curtain-50/90 backdrop-blur-xl dark:border-white/10 dark:bg-[#16100f]/90"
 >
@@ -396,7 +372,6 @@
 	</div>
 </div>
 
-<!-- Advanced filters: collapsible on every screen -->
 {#if showFilters}
 	<div class="border-b border-curtain-100 bg-curtain-50/70 dark:border-white/10 dark:bg-[#16100f]/70">
 		<div class="mx-auto max-w-6xl space-y-3 px-5 py-3">
@@ -471,7 +446,6 @@
 </div>
 {/if}
 
-<!-- RSS subscribe panel -->
 {#if showSubscribe}
 	<div class="border-b border-curtain-100 bg-white dark:border-white/10 dark:bg-[#1e1716]">
 		<div class="mx-auto max-w-6xl space-y-3 px-5 py-5 text-sm text-gray-600 dark:text-gray-300">
@@ -517,7 +491,6 @@
 	</div>
 {/if}
 
-<!-- Show grid -->
 <main class="mx-auto max-w-6xl px-5 py-6">
 	<div class="mb-4 flex items-center justify-between gap-3 text-sm text-gray-500 dark:text-gray-400">
 		<p>

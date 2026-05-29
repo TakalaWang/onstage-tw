@@ -1,5 +1,4 @@
 <script lang="ts">
-	// Minimal inline icon set (Lucide paths). Vector, currentColor, consistent 1.75 stroke.
 	type Name =
 		| 'calendar'
 		| 'map-pin'

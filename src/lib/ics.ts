@@ -1,13 +1,9 @@
 import type { Show } from './types';
 
-// Build an .ics (iCalendar) with the performance run and, if known, an on-sale
-// reminder. Runs in the browser on click — no backend.
-
 function pad(n: number): string {
 	return String(n).padStart(2, '0');
 }
 
-/** A Date → UTC timestamp form `YYYYMMDDTHHMMSSZ`. */
 function toUtcStamp(d: Date): string {
 	return (
 		`${d.getUTCFullYear()}${pad(d.getUTCMonth() + 1)}${pad(d.getUTCDate())}` +
@@ -15,7 +11,6 @@ function toUtcStamp(d: Date): string {
 	);
 }
 
-/** YYYY-MM-DD → YYYYMMDD, plus N days (for exclusive all-day DTEND). */
 function dateValue(isoDate: string, addDays = 0): string {
 	const d = new Date(`${isoDate}T00:00:00Z`);
 	d.setUTCDate(d.getUTCDate() + addDays);
@@ -69,7 +64,6 @@ export function buildShowIcs(show: Show): string {
 	return lines.join('\r\n');
 }
 
-/** Trigger a download of the show's .ics file. */
 export function downloadShowIcs(show: Show): void {
 	const blob = new Blob([buildShowIcs(show)], { type: 'text/calendar;charset=utf-8' });
 	const url = URL.createObjectURL(blob);

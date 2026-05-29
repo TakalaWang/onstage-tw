@@ -15,13 +15,10 @@ import {
 
 const API =
 	'https://tickets.udnfunlife.com/Application/UTK01/UTK0101_009.aspx/Product_Category_List';
-// Main detail page: poster, price range, description, and the public program URL.
 const DETAIL_URL = (id: string) =>
 	`https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=${id}`;
-// Sessions page: one block per performance (date, venue+address, city label).
 const SESSIONS_URL = (id: string) =>
 	`https://tickets.udnfunlife.com/application/UTK02/UTK0203_.aspx?PRODUCT_ID=${id}`;
-// 116 = theatre, 129 = kids/family, 100 = dance.
 const CATEGORIES = ['116', '129', '100'];
 
 interface Listed {
@@ -34,7 +31,6 @@ interface Listed {
 	minPrice: number | null;
 }
 
-/** udn: POST WebMethod returns a category at once; its `script` field is an HTML fragment we parse. */
 export async function scrapeUdn(): Promise<Show[]> {
 	const listed = new Map<string, Listed>();
 	for (const cat of CATEGORIES) {
@@ -53,7 +49,7 @@ export async function scrapeUdn(): Promise<Show[]> {
 				const idMatch = href.match(/PRODUCT_ID=([A-Za-z0-9]+)/);
 				if (!idMatch) continue;
 				const id = idMatch[1];
-				if (listed.has(id)) continue; // de-dupe across categories
+				if (listed.has(id)) continue;
 				const title = card.querySelector('.yd_card-title')?.text.trim() ?? '';
 				if (!title) continue;
 				const priceStr = card.querySelector('meta[itemprop=price]')?.getAttribute('content');
@@ -75,7 +71,6 @@ export async function scrapeUdn(): Promise<Show[]> {
 				});
 			}
 		} catch {
-			/* skip this category on failure */
 		}
 		await sleep(400);
 	}
@@ -92,15 +87,12 @@ export async function scrapeUdn(): Promise<Show[]> {
 		let sessions: Session[] = [];
 
 		if (!fast) {
-			// Sessions page → per-performance dates, venue, city.
 			try {
 				const res = await politeFetch(SESSIONS_URL(item.id));
 				sessions = parseUdnSessions(await res.text());
 				await sleep(400);
 			} catch {
-				/* keep list-only data */
 			}
-			// Main detail page → price range + description.
 			try {
 				const res = await politeFetch(DETAIL_URL(item.id));
 				const root = parse(await res.text());
@@ -111,17 +103,14 @@ export async function scrapeUdn(): Promise<Show[]> {
 				const intro = root.querySelector('.showIntro');
 				description = htmlToText(intro?.innerHTML);
 				introImages = contentImages(intro, DETAIL_URL(item.id));
-				// Running time / age live in the collapsed "注意事項" + intro sections.
 				notes = extractHighlights(
 					`${root.querySelector('.admissionNote')?.text ?? ''} ${root.querySelector('.yd_program-main')?.text ?? ''}`
 				);
 				await sleep(400);
 			} catch {
-				/* keep list-only data */
 			}
 		}
 
-		// Derive show-level venue/city/dates from sessions when available.
 		if (sessions.length) {
 			venue = sessions[0].venue ?? venue;
 			city = sessions[0].city ?? null;
@@ -141,7 +130,7 @@ export async function scrapeUdn(): Promise<Show[]> {
 			endDate,
 			venue,
 			city,
-			onSaleAt: null, // udn hides on-sale time once a show is on sale
+			onSaleAt: null,
 			minPrice,
 			maxPrice,
 			imageUrl: item.img,
@@ -156,12 +145,6 @@ export async function scrapeUdn(): Promise<Show[]> {
 	return shows;
 }
 
-/**
- * Parse the udn sessions page. Each `div.yd_session-block` has:
- * - first `.yd_session-time` = "2026/06/12 (五) 19:00"
- * - first `.yd_session-text.fz-13` = "venue (address with city)"
- * - last `.yd_session-text.fz-13` = city label, e.g. "高雄場"
- */
 function parseUdnSessions(html: string): Session[] {
 	const root = parse(html);
 	const sessions: Session[] = [];
@@ -170,9 +153,7 @@ function parseUdnSessions(html: string): Session[] {
 		const date = firstDate(timeText);
 		const texts = block.querySelectorAll('.yd_session-text.fz-13').map((e) => e.text.trim());
 		const venueLine = texts.find((t) => t.length > 0) ?? null;
-		// Venue name = strip the trailing "(address)" portion.
 		const venue = venueLine ? venueLine.replace(/\s*[(（].*$/, '').trim() || venueLine : null;
-		// City: prefer the address inside the venue line, fall back to the last label tag.
 		const lastLabel = [...texts].reverse().find((t) => t.length > 0 && t !== venueLine) ?? null;
 		const city = cityFromText(venueLine) ?? cityFromText(lastLabel);
 		sessions.push({ date, venue, city, onSaleAt: null });

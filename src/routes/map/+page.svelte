@@ -15,7 +15,6 @@
 	let dark = $state(false);
 	let mapEl = $state<HTMLElement | null>(null);
 
-	/** Resolve a show to a registered venue (try its venue, then any session venue). */
 	function venueOf(s: Show): Venue | null {
 		const v = findVenue(s.venue);
 		if (v) return v;
@@ -26,7 +25,6 @@
 		return null;
 	}
 
-	// Group shows by located venue.
 	const groups = $derived.by(() => {
 		const map = new Map<string, { venue: Venue; shows: Show[] }>();
 		let unlocated = 0;
@@ -56,12 +54,9 @@
 		document.documentElement.classList.toggle('dark', dark);
 		try {
 			localStorage.setItem('theme', dark ? 'dark' : 'light');
-		} catch {
-			/* ignore */
-		}
+		} catch {}
 	}
 
-	// Leaflet only runs in the browser; import dynamically inside the effect.
 	$effect(() => {
 		if (!mapEl) return;
 		let map: LMap | undefined;

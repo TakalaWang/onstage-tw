@@ -1,4 +1,3 @@
-// Client-side favourites, persisted to localStorage. No backend.
 const KEY = 'onstage:favorites';
 
 function load(): Set<string> {
@@ -16,7 +15,6 @@ function persist() {
 	try {
 		localStorage.setItem(KEY, JSON.stringify([...ids]));
 	} catch {
-		/* storage unavailable */
 	}
 }
 

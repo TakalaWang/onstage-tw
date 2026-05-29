@@ -22,7 +22,6 @@ export interface ScrapeResult {
 	report: { source: Source; count: number; ok: boolean; error?: string }[];
 }
 
-/** Run every source; a single source failing is recorded but does not affect the others. */
 export async function scrapeAll(): Promise<ScrapeResult> {
 	const shows: Show[] = [];
 	const report: ScrapeResult['report'] = [];

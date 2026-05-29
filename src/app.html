@@ -7,14 +7,11 @@
 		<link rel="manifest" href="/manifest.webmanifest" />
 		<meta name="theme-color" content="#ac1f2c" />
 		<script>
-			// Apply theme before paint to avoid a flash of the wrong mode.
 			try {
 				const t = localStorage.getItem('theme');
 				if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches))
 					document.documentElement.classList.add('dark');
 			} catch (e) {}
-			// Hide the prerendered stage-curtain before paint if it already played this
-			// session, so returning visitors don't see it flash before hydration.
 			try {
 				if (sessionStorage.getItem('introShown'))
 					document.documentElement.classList.add('intro-seen');
@@ -25,7 +22,6 @@
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 		<script>
-			// Register the service worker for offline support / installability.
 			if ('serviceWorker' in navigator) {
 				window.addEventListener('load', () => {
 					try {

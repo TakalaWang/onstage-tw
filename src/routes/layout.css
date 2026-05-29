@@ -2,11 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&display=swap');
 @plugin '@tailwindcss/typography';
 
-/* Class-based dark mode (toggled by adding .dark on <html>). */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	/* Stage / curtain palette */
 	--color-curtain-50: #fdf4f3;
 	--color-curtain-100: #fbe4e2;
 	--color-curtain-200: #f6c9c5;
@@ -16,7 +14,6 @@
 	--color-curtain-700: #8a1623;
 	--color-curtain-900: #3a0c12;
 	--color-curtain-950: #1a0509;
-	/* Gold spotlight accent (on-sale, highlights) */
 	--color-gold-400: #f6b73c;
 	--color-gold-500: #e89c1c;
 
@@ -42,8 +39,6 @@ html.dark {
 	color: #ece6e4;
 	color-scheme: dark;
 }
-
-/* ---- Motion ---------------------------------------------------------- */
 
 @keyframes spotlight-drift {
 	0% {
@@ -88,7 +83,6 @@ html.dark {
 	}
 }
 
-/* Grid card entrance; per-index delay (set inline) creates the stagger. */
 .animate-fade-up {
 	animation: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -102,7 +96,6 @@ html.dark {
 	animation: spotlight-drift 18s ease-in-out infinite;
 }
 
-/* One-time stage-curtain reveal */
 @keyframes curtain-open-left {
 	to {
 		transform: translateX(-100%);
@@ -113,8 +106,6 @@ html.dark {
 		transform: translateX(100%);
 	}
 }
-/* Returning visitors (intro already played this session): hide the prerendered
-   curtain before paint so it doesn't flash before hydration removes it. */
 html.intro-seen .curtain-root {
 	display: none !important;
 }
@@ -128,7 +119,6 @@ html.intro-seen .curtain-root {
 .curtain-right {
 	animation: curtain-open-right 1.05s cubic-bezier(0.76, 0, 0.24, 1) 0.55s forwards;
 }
-/* One thick twisted rope: diagonal hatching in rope tones, hanging from the top. */
 .curtain-rope {
 	width: 11px;
 	border-radius: 6px;
@@ -144,7 +134,6 @@ html.intro-seen .curtain-root {
 		0 0 5px rgba(0, 0, 0, 0.4),
 		inset -2px 0 3px rgba(0, 0, 0, 0.3);
 }
-/* Hanging wooden sign carrying the brand — irregular plank shape with grain. */
 .curtain-sign {
 	background:
 		repeating-linear-gradient(91deg, rgba(0, 0, 0, 0.06) 0 2px, transparent 2px 9px),
@@ -154,11 +143,9 @@ html.intro-seen .curtain-root {
 		0 22px 50px rgba(0, 0, 0, 0.6),
 		inset 0 2px 0 rgba(255, 220, 160, 0.18),
 		inset 0 -3px 8px rgba(0, 0, 0, 0.35);
-	/* slightly irregular board edges + a small hang tilt */
 	clip-path: polygon(1.5% 5%, 99% 1%, 100% 90%, 97% 99%, 3% 97%, 0% 12%);
 	transform: rotate(-1.6deg);
 }
-/* Brass eyelet where the rope meets the sign. */
 .curtain-eyelet {
 	width: 16px;
 	height: 16px;
@@ -168,7 +155,6 @@ html.intro-seen .curtain-root {
 		inset 0 0 2px rgba(0, 0, 0, 0.7),
 		0 0 0 2px rgba(0, 0, 0, 0.2);
 }
-/* The brand drops in, hangs a beat, then is hoisted up and off-screen. */
 @keyframes curtain-hoist {
 	0% {
 		opacity: 0;

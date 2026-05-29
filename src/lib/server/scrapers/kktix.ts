@@ -1,10 +1,6 @@
 import type { Show, Session } from '../../types';
 import { politeFetch, sleep, classifyGenre, looksTheatrical, cityFromText } from './util';
 
-// KKTIX's site-wide drama discovery page is Cloudflare-blocked, but each organizer's
-// `events.json` and event pages are openly fetchable. We track known theatre organizers.
-//   mode 'all'    — the whole account is theatre
-//   mode 'filter' — mixed account; keep only events that look theatrical
 const ORGANIZERS: { slug: string; mode: 'all' | 'filter' }[] = [
 	{ slug: 'godot', mode: 'all' },
 	{ slug: 'storyworks', mode: 'all' },
@@ -59,14 +55,12 @@ function parseEventPage(html: string): {
 				break;
 			}
 		} catch {
-			/* skip malformed block */
 		}
 	}
 	const image = html.match(/<meta\s+property="og:image"\s+content="([^"]+)"/i)?.[1] ?? null;
 	return { detail, image };
 }
 
-/** KKTIX: per-organizer events.json → per-event schema.org JSON-LD. No browser needed. */
 export async function scrapeKktix(): Promise<Show[]> {
 	const today = new Date().toISOString().slice(0, 10);
 	const shows: Show[] = [];
@@ -77,12 +71,9 @@ export async function scrapeKktix(): Promise<Show[]> {
 			const res = await politeFetch(`https://${org.slug}.kktix.cc/events.json`);
 			entries = ((await res.json()) as { entry?: FeedEntry[] }).entry ?? [];
 		} catch {
-			continue; // organizer feed missing / unreachable
+			continue;
 		}
 
-		// `published` is the listing time, not the performance date, so it must NOT be
-		// used to decide whether an event is upcoming. Take the most-recently-listed
-		// theatrical entries; the real event date (from the detail page) is checked below.
 		const candidates = entries
 			.filter((e) => org.mode === 'all' || looksTheatrical(e.title, e.summary, e.content))
 			.slice(0, MAX_PER_ORG);
@@ -107,7 +98,6 @@ export async function scrapeKktix(): Promise<Show[]> {
 				const startDate = detail?.startDate?.slice(0, 10) ?? null;
 				const endDate = detail?.endDate?.slice(0, 10) ?? null;
 
-				// Skip events that have already ended (by real performance date, not listing date).
 				const effectiveEnd = endDate ?? startDate;
 				if (effectiveEnd && effectiveEnd < today) continue;
 
@@ -133,7 +123,6 @@ export async function scrapeKktix(): Promise<Show[]> {
 					sessions: [] as Session[]
 				});
 			} catch {
-				/* skip this event */
 			}
 		}
 	}

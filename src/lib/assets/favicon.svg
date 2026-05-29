@@ -6,11 +6,8 @@
 		</linearGradient>
 	</defs>
 	<rect width="32" height="32" rx="7.5" fill="#3a0c12" />
-	<!-- spotlight beam -->
 	<path d="M16 4.5 27 27.5H5z" fill="url(#beam)" />
-	<!-- light source -->
 	<circle cx="16" cy="5" r="2.3" fill="#fff3d6" />
-	<!-- performer silhouette in the spotlight -->
 	<circle cx="16" cy="16.5" r="2.4" fill="#3a0c12" />
 	<path d="M11.6 27c0-3.4 2-5.6 4.4-5.6s4.4 2.2 4.4 5.6z" fill="#3a0c12" />
 </svg>

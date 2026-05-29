@@ -5,7 +5,6 @@ const LIST_API = 'https://csm.api.opentix.life/programs';
 const DETAIL_API = 'https://csm.api.opentix.life/programs';
 const EVENT_URL = (id: string) => `https://www.opentix.life/event/${id}`;
 
-// displayCategory values we treat as theatre (musicals sit under theatre on OPENTIX; music/dance/concerts excluded).
 const DRAMA_CATEGORIES = new Set(['戲劇', '音樂劇']);
 
 interface ProgramListItem {
@@ -30,7 +29,6 @@ interface ProgramDetail {
 	}[];
 }
 
-/** OPENTIX: page through /programs, filter to theatre, then enrich each via the detail API (on-sale, venue, sessions). */
 export async function scrapeOpenTix(): Promise<Show[]> {
 	const drama: ProgramListItem[] = [];
 	let page = 1;
@@ -77,7 +75,6 @@ export async function scrapeOpenTix(): Promise<Show[]> {
 				);
 				await sleep(150);
 			} catch {
-				/* detail enrichment failure does not affect list data */
 			}
 		}
 		shows.push({

@@ -1,27 +1,9 @@
 import type { Show, Session } from '../../types';
 import { politeFetch, sleep, classifyGenre, looksTheatrical, cityFromText, htmlToText } from './util';
 
-// Accupass is a large general-purpose event platform (lectures, courses, expos,
-// markets, concerts, …); theatre is a small slice. Its web front-end is a Next.js
-// SPA, but the listing data comes from a clean JSON endpoint we can call directly:
-//
-//   POST https://api.accupass.com/v3/search/SearchEvents
-//   body: { categoryTypeList, simpleEventPlaceTypeList, cityLocationList,
-//           sortBy, timeType, keyword, currentIndex }
-//   → { total, items: [{ eventIdNumber, name, photoUrl, startDateTime (UTC),
-//                         endDateTime (UTC), location (English city), tags }] }
-//
-//   timeType "0"  = upcoming (not-yet-ended) events only
-//   currentIndex  = 0-based page number, 25 items per page
-//
-// Per-event detail (venue / address / organizer / description) is server-rendered
-// into the /event/<id> page as schema.org JSON-LD, which we parse without a browser.
 const SEARCH_API = 'https://api.accupass.com/v3/search/SearchEvents';
 const EVENT_URL = (id: string) => `https://www.accupass.com/event/${id}`;
 
-// Keyword search is noisy (matches "舞台" in "認識舞台音響" lectures, "戲劇工作坊"
-// courses, etc.), so we query a theatre whitelist and then filter every hit
-// through util.looksTheatrical to drop non-theatre matches.
 const KEYWORDS = [
 	'音樂劇',
 	'舞台劇',
@@ -37,17 +19,12 @@ const KEYWORDS = [
 	'偶戲'
 ];
 
-const PAGES_PER_KEYWORD = 2; // 25 items/page → up to 50 candidates per keyword
-const MAX_DETAIL_FETCHES = 80; // cap detail-page enrichment to stay polite
+const PAGES_PER_KEYWORD = 2;
+const MAX_DETAIL_FETCHES = 80;
 
-// Extra Accupass-specific noise the shared looksTheatrical blacklist doesn't cover:
-// online courses, school enrollment, reading/derivative events that merely mention
-// 戲劇/劇場 in their title but aren't actual performances.
 const EXTRA_NON_THEATRE =
 	/線上課|學士班|碩士班|進修|招生|甄試|導覽|讀書|書店|工藝|體驗營|夏令營|冬令營|營隊|徵件|徵選|甄選|比賽|競賽/;
 
-// Accupass returns city as an English label; map to the normalised Chinese city
-// so it matches the rest of the aggregator (detail-page address is preferred).
 const EN_CITY: Record<string, string> = {
 	'Taipei City': '臺北市',
 	'New Taipei City': '新北市',
@@ -77,9 +54,9 @@ interface SearchItem {
 	eventIdNumber: string;
 	name: string;
 	photoUrl?: string;
-	startDateTime?: string; // ISO, UTC (e.g. 2026-07-08T10:00:00Z)
+	startDateTime?: string;
 	endDateTime?: string;
-	location?: string; // English city, e.g. "Taipei City"
+	location?: string;
 	tags?: { name: string }[];
 }
 
@@ -99,7 +76,6 @@ interface LdEvent {
 	organizer?: { name?: string };
 }
 
-/** UTC ISO timestamp → YYYY-MM-DD in the Taipei timezone. */
 function isoToTaipeiDate(iso: string | undefined): string | null {
 	if (!iso) return null;
 	const t = new Date(iso);
@@ -107,7 +83,6 @@ function isoToTaipeiDate(iso: string | undefined): string | null {
 	return t.toLocaleDateString('sv-SE', { timeZone: 'Asia/Taipei' });
 }
 
-/** Call the JSON search endpoint for one keyword + page. Returns [] on any failure. */
 async function searchPage(keyword: string, currentIndex: number): Promise<SearchItem[]> {
 	try {
 		const res = await politeFetch(SEARCH_API, {
@@ -118,7 +93,7 @@ async function searchPage(keyword: string, currentIndex: number): Promise<Search
 				simpleEventPlaceTypeList: [],
 				cityLocationList: [],
 				sortBy: '4',
-				timeType: '0', // upcoming only
+				timeType: '0',
 				keyword,
 				currentIndex
 			})
@@ -126,11 +101,10 @@ async function searchPage(keyword: string, currentIndex: number): Promise<Search
 		const data = (await res.json()) as SearchResponse;
 		return data.items ?? [];
 	} catch {
-		return []; // blocked / rate-limited / malformed → skip this page
+		return [];
 	}
 }
 
-/** Parse the first schema.org Event JSON-LD block out of an /event/<id> page. */
 function parseEventLd(html: string): LdEvent | null {
 	const blocks = html.matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi);
 	for (const m of blocks) {
@@ -140,29 +114,20 @@ function parseEventLd(html: string): LdEvent | null {
 			const ev = arr.find((o) => o && o['@type'] === 'Event');
 			if (ev) return ev as LdEvent;
 		} catch {
-			/* skip malformed block */
 		}
 	}
 	return null;
 }
 
-/**
- * Accupass: query a theatre-keyword whitelist against the SearchEvents JSON API,
- * filter out non-theatre noise, then enrich each kept event from its detail page's
- * JSON-LD. Any failure (blocked, no data) yields an empty array so other sources
- * are unaffected. Note: ticket prices are not exposed on the detail HTML (they load
- * in a modal), so minPrice/maxPrice stay null.
- */
 export async function scrapeAccupass(): Promise<Show[]> {
 	try {
 		const fast = process.env.ONSTAGE_FAST === '1';
 
-		// 1. Collect & de-dupe candidates across all keywords/pages.
 		const candidates = new Map<string, SearchItem>();
 		for (const keyword of KEYWORDS) {
 			for (let page = 0; page < PAGES_PER_KEYWORD; page++) {
 				const items = await searchPage(keyword, page);
-				if (items.length === 0) break; // no more pages for this keyword
+				if (items.length === 0) break;
 				for (const it of items) {
 					if (it.eventIdNumber && !candidates.has(it.eventIdNumber)) {
 						candidates.set(it.eventIdNumber, it);
@@ -172,14 +137,12 @@ export async function scrapeAccupass(): Promise<Show[]> {
 			}
 		}
 
-		// 2. Keep only events that actually look theatrical (name + tags as hints).
 		const kept = [...candidates.values()].filter((it) => {
 			const tagText = (it.tags ?? []).map((t) => t.name).join(' ');
 			if (EXTRA_NON_THEATRE.test(it.name)) return false;
 			return looksTheatrical(it.name, tagText);
 		});
 
-		// 3. Build a Show for each, enriching from the detail page unless in fast mode.
 		const shows: Show[] = [];
 		let detailFetches = 0;
 		for (const it of kept) {
@@ -208,7 +171,6 @@ export async function scrapeAccupass(): Promise<Show[]> {
 						endDate = ld.endDate ? ld.endDate.slice(0, 10) : endDate;
 					}
 				} catch {
-					/* keep list-only data for this event */
 				}
 			}
 
@@ -222,7 +184,7 @@ export async function scrapeAccupass(): Promise<Show[]> {
 				endDate,
 				venue,
 				city,
-				onSaleAt: null, // Accupass doesn't expose on-sale time on the detail HTML
+				onSaleAt: null,
 				minPrice: null,
 				maxPrice: null,
 				imageUrl,
@@ -236,6 +198,6 @@ export async function scrapeAccupass(): Promise<Show[]> {
 		}
 		return shows;
 	} catch {
-		return []; // never throw — a single source must not break the others
+		return [];
 	}
 }

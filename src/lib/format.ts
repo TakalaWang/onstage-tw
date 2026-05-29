@@ -2,7 +2,6 @@ import type { Show, Source } from './types';
 
 const slash = (d: string) => d.replaceAll('-', '/');
 
-/** Performance date range as display text. */
 export function fmtDateRange(s: { startDate: string | null; endDate: string | null }): string {
 	if (!s.startDate) return '日期未定';
 	if (!s.endDate || s.endDate === s.startDate) return slash(s.startDate);
@@ -16,7 +15,6 @@ export function fmtPrice(s: { minPrice: number | null; maxPrice: number | null }
 	return `NT$ ${s.minPrice.toLocaleString()}`;
 }
 
-/** On-sale time → "M/D HH:mm" in the Taipei timezone. */
 export function fmtOnSale(iso: string | null, withTime = false): string | null {
 	if (!iso) return null;
 	const d = new Date(iso);
@@ -29,7 +27,6 @@ export function fmtOnSale(iso: string | null, withTime = false): string | null {
 	return d.toLocaleString('zh-TW', opts);
 }
 
-/** Days until on-sale (negative means already on sale). */
 export function daysUntilOnSale(iso: string | null): number | null {
 	if (!iso) return null;
 	const ms = new Date(iso).getTime() - Date.now();

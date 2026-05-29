@@ -7,7 +7,6 @@ const OUT_DIR = process.env.ONSTAGE_OUT_DIR ?? 'static';
 const SITE_URL = (process.env.ONSTAGE_SITE_URL ?? 'https://onstage.takalawang.dev').replace(/\/$/, '');
 const MAX_FEED_ITEMS = 100;
 
-/** Keep only shows that have not finished yet, sorted by performance date. */
 function activeShows(shows: Show[]): Show[] {
 	const today = new Date().toISOString().slice(0, 10);
 	return shows
@@ -24,7 +23,6 @@ function escapeXml(s: string): string {
 		.replace(/'/g, '&apos;');
 }
 
-/** Pick the most relevant date for the feed item's pubDate. */
 function feedDate(s: Show): Date {
 	const iso = s.onSaleAt ?? (s.startDate ? `${s.startDate}T00:00:00+08:00` : null);
 	const d = iso ? new Date(iso) : new Date(0);
@@ -32,7 +30,6 @@ function feedDate(s: Show): Date {
 }
 
 function renderFeed(shows: Show[], builtAt: string, titleSuffix = ''): string {
-	// Most recently on-sale / upcoming items first so readers surface new entries.
 	const items = [...shows]
 		.sort((a, b) => feedDate(b).getTime() - feedDate(a).getTime())
 		.slice(0, MAX_FEED_ITEMS)
@@ -68,23 +65,14 @@ ${items}
 `;
 }
 
-/**
- * Write the static artifacts the site serves:
- *   - shows.json        : list snapshot the page reads (descriptions stripped for size)
- *   - descriptions.json : id → description, lazy-loaded only when a modal opens
- *   - feed*.xml         : RSS feeds users subscribe to in their reader
- */
 export function writeOutputs(shows: Show[]): { count: number } {
 	const active = activeShows(shows);
 	const builtAt = new Date().toISOString();
 	mkdirSync(OUT_DIR, { recursive: true });
 
-	// Split out descriptions — they're the bulk of the payload and only the modal
-	// needs them, so the prerendered list stays light.
 	const descriptions: Record<string, string> = {};
 	const light = active.map((s) => {
 		if (s.description) descriptions[s.id] = s.description;
-		// Upgrade image links to https so they aren't blocked as mixed content.
 		const imageUrl = s.imageUrl?.replace(/^http:\/\//i, 'https://') ?? null;
 		return { ...s, imageUrl, description: null };
 	});
@@ -95,7 +83,6 @@ export function writeOutputs(shows: Show[]): { count: number } {
 	writeFileSync(`${OUT_DIR}/descriptions.json`, JSON.stringify(descriptions));
 	writeFileSync(`${OUT_DIR}/feed.xml`, renderFeed(active, builtAt));
 
-	// Per-source feeds (e.g. /feed-opentix.xml) so readers can follow one platform.
 	const sources = [...new Set(active.map((s) => s.source))] as Source[];
 	for (const src of sources) {
 		writeFileSync(
@@ -108,7 +95,6 @@ export function writeOutputs(shows: Show[]): { count: number } {
 		);
 	}
 
-	// Per-genre feeds (e.g. /feed-genre-xiqu.xml) using ASCII slugs.
 	const genres = [...new Set(active.map((s) => s.category).filter((c): c is string => !!c))];
 	for (const genre of genres) {
 		const slug = GENRE_SLUG[genre];

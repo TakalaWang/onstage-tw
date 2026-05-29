@@ -1,13 +1,11 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="幕間 OnStage TW — 台灣戲劇演出，一站看完">
   <defs>
-    <!-- Deep wine vertical gradient background -->
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1a0509"/>
       <stop offset="55%" stop-color="#2a0a10"/>
       <stop offset="100%" stop-color="#3a0c12"/>
     </linearGradient>
 
-    <!-- Gold spotlight halo, top-right -->
     <radialGradient id="spot" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#f6b73c" stop-opacity="0.55"/>
       <stop offset="35%" stop-color="#f6b73c" stop-opacity="0.22"/>
@@ -15,37 +13,30 @@
       <stop offset="100%" stop-color="#f6b73c" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Soft warm glow behind title -->
     <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#ac1f2c" stop-opacity="0.30"/>
       <stop offset="100%" stop-color="#ac1f2c" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Dotted texture -->
     <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
       <circle cx="2" cy="2" r="1.1" fill="#f6b73c" fill-opacity="0.07"/>
     </pattern>
   </defs>
 
-  <!-- Background layers -->
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect width="1200" height="630" fill="url(#dots)"/>
   <ellipse cx="980" cy="120" rx="560" ry="460" fill="url(#spot)"/>
   <ellipse cx="600" cy="330" rx="520" ry="300" fill="url(#centerGlow)"/>
 
-  <!-- Thin gold frame for poster feel -->
   <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#f6b73c" stroke-opacity="0.35" stroke-width="2" rx="6"/>
 
-  <!-- Kicker -->
   <text x="600" y="186" text-anchor="middle"
         font-family="'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif"
         font-size="30" font-weight="700" letter-spacing="14"
         fill="#f6b73c" fill-opacity="0.95">TAIWAN THEATRE</text>
 
-  <!-- Decorative divider -->
   <line x1="500" y1="214" x2="700" y2="214" stroke="#f6b73c" stroke-opacity="0.5" stroke-width="2"/>
 
-  <!-- Main title -->
   <g>
     <text x="540" y="380" text-anchor="middle"
           font-family="'Noto Serif TC', 'Songti TC', Georgia, serif"
@@ -57,13 +48,11 @@
           fill="#f6b73c" letter-spacing="2">OnStage TW</text>
   </g>
 
-  <!-- Subtitle -->
   <text x="600" y="470" text-anchor="middle"
         font-family="'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif"
         font-size="42" font-weight="500" letter-spacing="6"
         fill="#faf7f5" fill-opacity="0.92">台灣戲劇演出，一站看完</text>
 
-  <!-- Footer url -->
   <text x="600" y="548" text-anchor="middle"
         font-family="'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif"
         font-size="26" font-weight="400" letter-spacing="4"

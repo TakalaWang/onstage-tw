@@ -10,7 +10,6 @@
 	let selected = $state<Show | null>(null);
 	let dark = $state(false);
 
-	// --- Theme toggle (mirrors the home page logic) ---
 	$effect(() => {
 		dark = document.documentElement.classList.contains('dark');
 	});
@@ -19,12 +18,9 @@
 		document.documentElement.classList.toggle('dark', dark);
 		try {
 			localStorage.setItem('theme', dark ? 'dark' : 'light');
-		} catch {
-			/* ignore */
-		}
+		} catch {}
 	}
 
-	// Performance dates for a show: deduped session dates, else [startDate].
 	function showDates(show: Show): string[] {
 		const dates =
 			show.sessions.length > 0
@@ -35,8 +31,6 @@
 		return [...new Set(dates)];
 	}
 
-	// --- Bucket shows by performance date (YYYY-MM-DD) ---
-	// Each show appears once per day it plays. Shows without any date are ignored.
 	const byDate = $derived.by(() => {
 		const map = new Map<string, Show[]>();
 		for (const show of data.shows) {
@@ -56,8 +50,6 @@
 		return `${y}-${String(m0 + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
 	}
 
-	// `view` holds the year & month (0-based) currently shown. Default: current month
-	// if it has shows, otherwise the earliest month that has any performance.
 	let view = $state<{ year: number; month: number }>(initialView());
 	function initialView() {
 		const prefix = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}`;
@@ -80,7 +72,7 @@
 	function changeMonth(delta: number) {
 		const d = new Date(view.year, view.month + delta, 1);
 		view = { year: d.getFullYear(), month: d.getMonth() };
-		activeKey = null; // let the new month auto-pick a day
+		activeKey = null;
 	}
 	function goToday() {
 		view = { year: today.getFullYear(), month: today.getMonth() };
@@ -89,7 +81,6 @@
 
 	const monthLabel = $derived(`${view.year} 年 ${view.month + 1} 月`);
 
-	// Build the calendar grid: weeks of 7 cells, Monday-first (Taiwan-friendly).
 	const weekdayLabels = ['一', '二', '三', '四', '五', '六', '日'];
 
 	type Cell = {
@@ -103,14 +94,13 @@
 	const weeks = $derived.by(() => {
 		const first = new Date(view.year, view.month, 1);
 		const daysInMonth = new Date(view.year, view.month + 1, 0).getDate();
-		// JS getDay(): 0=Sun..6=Sat → Monday-first index (0=Mon..6=Sun).
 		const lead = (first.getDay() + 6) % 7;
 
 		const cells: Cell[] = [];
 		for (let i = 0; i < lead; i++) cells.push(null);
 		for (let day = 1; day <= daysInMonth; day++) {
 			const key = isoKey(view.year, view.month, day);
-			const weekdayIdx = (lead + day - 1) % 7; // 0=Mon..6=Sun
+			const weekdayIdx = (lead + day - 1) % 7;
 			cells.push({
 				key,
 				day,
@@ -126,21 +116,15 @@
 		return out;
 	});
 
-	// Count of shows in the visible month (deduped per day, summed across days).
 	const monthCount = $derived(weeks.flat().reduce((n, c) => n + (c ? c.shows.length : 0), 0));
 
-	// --- Day detail panel ---
-	// activeKey = currently selected day. Reset to null on month change, then a
-	// $derived effect resolves it to the first day-with-shows in the visible month.
 	let activeKey = $state<string | null>(null);
 
 	const resolvedKey = $derived.by(() => {
 		if (activeKey && byDate.has(activeKey)) {
-			// Keep the selection only if it belongs to the visible month.
 			const prefix = `${view.year}-${String(view.month + 1).padStart(2, '0')}`;
 			if (activeKey.startsWith(prefix)) return activeKey;
 		}
-		// Auto-pick: today if it's in view & has shows, else the first day with shows.
 		if (byDate.has(todayKey) && todayKey.startsWith(`${view.year}-${String(view.month + 1).padStart(2, '0')}`))
 			return todayKey;
 		for (const week of weeks) for (const cell of week) if (cell && cell.shows.length) return cell.key;
@@ -180,7 +164,6 @@
 	<meta name="description" content="用月曆檢視台灣戲劇演出，依演出日期一目了然。" />
 </svelte:head>
 
-<!-- Top nav: brand / back link on the left, view switch + theme toggle on the right -->
 <header class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3.5 sm:px-5">
 	<div class="flex min-w-0 items-center gap-2.5">
 		<h1 class="text-2xl font-bold tracking-tight">幕間</h1>
@@ -195,7 +178,6 @@
 		</a>
 	</div>
 	<div class="flex shrink-0 items-center gap-2">
-		<!-- View switch: list / calendar / map -->
 		<div
 			class="flex items-center rounded-full border border-gray-200 bg-white p-0.5 text-sm dark:border-white/15 dark:bg-white/5"
 		>
@@ -228,7 +210,6 @@
 </header>
 
 <main class="mx-auto max-w-6xl px-3 py-4 sm:px-5 sm:py-6">
-	<!-- Month controls -->
 	<div class="mb-4 flex flex-wrap items-center justify-between gap-3">
 		<div class="flex items-center gap-2">
 			<button
@@ -269,10 +250,8 @@
 		</div>
 	</div>
 
-	<!-- Two-column on large screens: calendar grid + day detail panel. -->
 	<div class="grid gap-5 lg:grid-cols-[1fr_22rem]">
 		<div>
-			<!-- Weekday header -->
 			<div
 				class="grid grid-cols-7 gap-1 text-center text-xs font-medium text-gray-400 dark:text-gray-500"
 			>
@@ -281,7 +260,6 @@
 				{/each}
 			</div>
 
-			<!-- Calendar grid -->
 			<div class="grid grid-cols-7 gap-1 sm:gap-1.5">
 				{#each weeks as week, wi (wi)}
 					{#each week as cell, ci (ci)}
@@ -304,7 +282,6 @@
 									? 'ring-2 ring-curtain-500 ring-offset-1 ring-offset-white dark:ring-offset-[#16100f]'
 									: ''}"
 							>
-								<!-- Day number -->
 								<span
 									class="flex h-6 w-6 items-center justify-center rounded-full text-xs font-medium sm:h-7 sm:w-7 sm:text-sm
 										{cell.isToday
@@ -321,7 +298,6 @@
 								</span>
 
 								{#if has}
-									<!-- Count indicator: a dot on phones, a "N 場" pill on larger screens. -->
 									<span
 										class="mt-1 h-1.5 w-1.5 rounded-full bg-curtain-500 sm:hidden"
 									></span>
@@ -340,7 +316,6 @@
 			</div>
 		</div>
 
-		<!-- Day detail panel: all shows on the selected day. -->
 		<aside
 			class="rounded-2xl border border-curtain-100 bg-white p-4 lg:sticky lg:top-4 lg:max-h-[80vh] lg:self-start lg:overflow-y-auto dark:border-white/10 dark:bg-[#1e1716]"
 		>

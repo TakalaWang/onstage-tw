@@ -17,7 +17,6 @@ const LIST_URL = (cat: string) =>
 	`https://kham.com.tw/application/UTK01/UTK0101_06.aspx?TYPE=1&CATEGORY=${cat}`;
 const DETAIL_URL = (id: string) =>
 	`https://kham.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=${id}`;
-// 116 = theatre, 80 = musical, 100 = dance.
 const CATEGORIES = ['116', '80', '100'];
 
 interface Listed {
@@ -27,7 +26,6 @@ interface Listed {
 	category: string;
 }
 
-/** KHAM: list page gives id/title/image; the detail page's meta description supplies dates and venues. */
 export async function scrapeKham(): Promise<Show[]> {
 	const listed = new Map<string, Listed>();
 	for (const cat of CATEGORIES) {
@@ -39,7 +37,7 @@ export async function scrapeKham(): Promise<Show[]> {
 				const idMatch = href.match(/PRODUCT_ID=([A-Za-z0-9]+)/);
 				if (!idMatch) continue;
 				const id = idMatch[1];
-				if (listed.has(id)) continue; // de-dupe across categories
+				if (listed.has(id)) continue;
 				const title = a.querySelector('.title')?.text.trim() ?? '';
 				if (!title) continue;
 				listed.set(id, {
@@ -50,7 +48,6 @@ export async function scrapeKham(): Promise<Show[]> {
 				});
 			}
 		} catch {
-			/* skip this category on failure */
 		}
 		await sleep(500);
 	}
@@ -75,16 +72,12 @@ export async function scrapeKham(): Promise<Show[]> {
 				const desc = root.querySelector('meta[name=description]')?.getAttribute('content') ?? '';
 				sessions = parseKhamSessions(desc);
 				onSaleAt = extractOnSale(root.text);
-				// #showInfo concatenates every tab (注意事項/購票/…); the actual program
-				// intro lives in the #divbtn01 panel (often an image, so text may be empty).
 				const intro = root.querySelector('#divbtn01');
 				description = htmlToText(intro?.innerHTML);
 				introImages = contentImages(intro, DETAIL_URL(item.id));
-				// Running time / age live in the "注意事項" panel (#divbtn02).
 				notes = extractHighlights(root.querySelector('#divbtn02')?.text);
 				await sleep(500);
 			} catch {
-				/* on detail failure, keep just the list data */
 			}
 		}
 
@@ -107,7 +100,7 @@ export async function scrapeKham(): Promise<Show[]> {
 			venue,
 			city,
 			onSaleAt,
-			minPrice: null, // KHAM detail pages rarely expose structured prices
+			minPrice: null,
 			maxPrice: null,
 			imageUrl: item.image,
 			url: DETAIL_URL(item.id),
@@ -121,10 +114,6 @@ export async function scrapeKham(): Promise<Show[]> {
 	return shows;
 }
 
-/**
- * The meta description is "title, venue+date, venue+date…". Each segment after
- * the first is one venue with its date(s). Tolerant of a single venue or none.
- */
 function parseKhamSessions(desc: string): Session[] {
 	const segs = desc
 		.split(/[,，]/)
@@ -132,7 +121,6 @@ function parseKhamSessions(desc: string): Session[] {
 		.filter(Boolean);
 	const sessions: Session[] = [];
 	for (const seg of segs.slice(1)) {
-		// Split the venue name (leading) from the trailing date text.
 		const dm = seg.match(/\d{4}[年/.\-]/);
 		const venue = (dm ? seg.slice(0, dm.index).trim() : seg).replace(/\s+/g, ' ') || null;
 		const date = firstDate(seg);

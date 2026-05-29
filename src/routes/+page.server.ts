@@ -2,7 +2,6 @@ import { readFileSync } from 'node:fs';
 import type { PageServerLoad } from './$types';
 import type { Show } from '$lib/types';
 
-// Static site: the home page is prerendered at build time from the committed snapshot.
 export const prerender = true;
 
 const SNAPSHOT_PATH = process.env.ONSTAGE_SNAPSHOT ?? 'static/shows.json';

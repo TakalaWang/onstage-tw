@@ -11,8 +11,6 @@
 		if (e.key === 'Escape') onclose();
 	}
 
-	// Build a prefilled "new issue" URL. Static site → no backend/token needed;
-	// the visitor reviews and submits on GitHub (where they're already authed).
 	function issueUrl(): string {
 		const firstLine = text.trim().split('\n')[0].slice(0, 50);
 		const title = `[回饋] ${type}${firstLine ? `：${firstLine}` : ''}`;
