@@ -48,7 +48,7 @@ export async function scrapeOpenTix(): Promise<Show[]> {
 		await sleep(200);
 	}
 
-	const fast = process.env.KANXI_FAST === '1';
+	const fast = process.env.ONSTAGE_FAST === '1';
 	const shows: Show[] = [];
 	for (const p of drama) {
 		let onSaleAt: string | null = null;

@@ -1,7 +1,7 @@
 /** 抓取共用工具：禮貌性 fetch、日期解析、戲劇關鍵字啟發式判定。 */
 
 const UA =
-	'kanxi-aggregator/0.1 (+https://github.com/your-name/kanxi; theatre listing aggregator, links back, does not resell)';
+	'onstage-tw-aggregator/0.1 (+https://github.com/your-name/onstage-tw; theatre listing aggregator, links back, does not resell)';
 
 export async function politeFetch(url: string, init?: RequestInit): Promise<Response> {
 	const res = await fetch(url, {

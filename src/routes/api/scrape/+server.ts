@@ -9,12 +9,12 @@ export const prerender = false;
 
 /**
  * POST /api/scrape  — 供排程（cron）觸發抓取。
- * 需在 header 帶 `Authorization: Bearer <KANXI_SCRAPE_TOKEN>`。
- * 若未設定 KANXI_SCRAPE_TOKEN 則拒絕（避免誤開放）。
+ * 需在 header 帶 `Authorization: Bearer <ONSTAGE_SCRAPE_TOKEN>`。
+ * 若未設定 ONSTAGE_SCRAPE_TOKEN 則拒絕（避免誤開放）。
  */
 export const POST: RequestHandler = async ({ request }) => {
-	const token = env.KANXI_SCRAPE_TOKEN;
-	if (!token) throw error(503, '未設定 KANXI_SCRAPE_TOKEN');
+	const token = env.ONSTAGE_SCRAPE_TOKEN;
+	if (!token) throw error(503, '未設定 ONSTAGE_SCRAPE_TOKEN');
 	if (request.headers.get('authorization') !== `Bearer ${token}`) throw error(401, 'Unauthorized');
 
 	const runAt = new Date().toISOString();

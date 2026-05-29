@@ -40,7 +40,7 @@ export async function scrapeKham(): Promise<Show[]> {
 		await sleep(500);
 	}
 
-	const fast = process.env.KANXI_FAST === '1';
+	const fast = process.env.ONSTAGE_FAST === '1';
 	const shows: Show[] = [];
 	for (const item of listed.values()) {
 		let startDate: string | null = null;

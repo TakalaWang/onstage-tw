@@ -33,7 +33,7 @@ function renderEmail(matched: Show[]): string {
 				`${s.venue ? ` @ ${s.venue}` : ''}\n  ${s.url}`
 		)
 		.join('\n\n');
-	return `你訂閱的戲劇有新演出：\n\n${items}\n\n— 看戲 kanxi`;
+	return `你訂閱的戲劇有新演出：\n\n${items}\n\n— 看戲 OnStage TW`;
 }
 
 /**
@@ -43,7 +43,7 @@ function renderEmail(matched: Show[]): string {
 export async function runNotifications(): Promise<{ sent: number; dryRun: boolean }> {
 	const transport = buildTransport();
 	const dryRun = !transport;
-	const from = process.env.MAIL_FROM ?? 'kanxi <no-reply@kanxi.local>';
+	const from = process.env.MAIL_FROM ?? 'onstage-tw <no-reply@onstage.local>';
 	const shows = getAllShows();
 	const subs = getSubscriptions();
 

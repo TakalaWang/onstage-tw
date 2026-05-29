@@ -1,8 +1,8 @@
-# 看戲 kanxi
+# 看戲 OnStage TW
 
 > 一個地方看完台灣所有**戲劇**演出。整合 OPENTIX、udn、寬宏、年代、拓元 的戲劇節目，提供搜尋、過濾與開賣訂閱通知。
 
-🔗 **線上 demo：[kanxi.vercel.app](https://kanxi.vercel.app)**（純瀏覽版；訂閱功能需自架）
+🔗 **線上 demo：[onstage-tw.vercel.app](https://onstage-tw.vercel.app)**（純瀏覽版；訂閱功能需自架）
 
 台灣的售票生態很分散：兩廳院的戲在 OPENTIX、有些在寬宏、有些在年代、有些在 udn、有些在拓元。想知道「最近有什麼戲、什麼時候開賣」得一個一個網站翻。**看戲** 把這些平台的戲劇類節目聚合到同一頁，讓你一次看完、設關鍵字訂閱、不錯過開賣。
 
@@ -55,23 +55,23 @@
 npm install
 cp .env.example .env        # 視需要填 SMTP / token
 
-npm run scrape              # 抓取各平台戲劇，寫入 data/kanxi.db
+npm run scrape              # 抓取各平台戲劇，寫入 data/onstage.db
 npm run dev                 # 啟動網站 http://localhost:5173
 ```
 
 抓取支援快速模式（略過詳情頁，較快但少了部分場館／開賣時間）：
 
 ```bash
-KANXI_FAST=1 npm run scrape
+ONSTAGE_FAST=1 npm run scrape
 ```
 
 ## 定期更新
 
-自架（node）部署後，用 cron 定期觸發抓取端點（需設 `KANXI_SCRAPE_TOKEN`），會同時刷新快照：
+自架（node）部署後，用 cron 定期觸發抓取端點（需設 `ONSTAGE_SCRAPE_TOKEN`），會同時刷新快照：
 
 ```bash
 curl -X POST https://你的網域/api/scrape \
-  -H "Authorization: Bearer $KANXI_SCRAPE_TOKEN"
+  -H "Authorization: Bearer $ONSTAGE_SCRAPE_TOKEN"
 ```
 
 或直接在伺服器上跑 CLI，並接著送出通知：
@@ -95,15 +95,15 @@ npm run build:static   # 輸出到 build/
 ### 全功能自架（Docker，含訂閱 / 通知）
 
 ```bash
-docker build -t kanxi .
+docker build -t onstage-tw .
 docker run -p 3000:3000 -v $PWD/data:/data \
-  -e KANXI_DB=/data/kanxi.db -e KANXI_SNAPSHOT=/data/shows.json \
-  -e KANXI_SCRAPE_TOKEN=your-secret kanxi
+  -e ONSTAGE_DB=/data/onstage.db -e ONSTAGE_SNAPSHOT=/data/shows.json \
+  -e ONSTAGE_SCRAPE_TOKEN=your-secret onstage-tw
 # 首次部署後觸發一次抓取：
 curl -X POST localhost:3000/api/scrape -H "Authorization: Bearer your-secret"
 ```
 
-Fly.io 可直接用內附的 `fly.toml`（`fly launch --no-deploy` → `fly volumes create kanxi_data --size 1` → `fly deploy`）。
+Fly.io 可直接用內附的 `fly.toml`（`fly launch --no-deploy` → `fly volumes create onstage_data --size 1` → `fly deploy`）。
 任何支援 Docker + 持久化磁碟的平台（Render、Railway、VPS）皆可。
 
 ## 開賣通知

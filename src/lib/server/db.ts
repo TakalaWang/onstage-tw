@@ -3,7 +3,7 @@ import { mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 import type { Show, Source } from '../types';
 
-const DB_PATH = process.env.KANXI_DB ?? 'data/kanxi.db';
+const DB_PATH = process.env.ONSTAGE_DB ?? 'data/onstage.db';
 mkdirSync(dirname(DB_PATH), { recursive: true });
 
 export const db = new Database(DB_PATH);

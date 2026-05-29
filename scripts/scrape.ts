@@ -1,7 +1,7 @@
 /**
  * 抓取 CLI：跑所有來源、寫入資料庫。
  * 用法：npm run scrape        （完整抓取，含 OPENTIX/寬宏 的詳情補抓）
- *      KANXI_FAST=1 npm run scrape  （快速抓取，略過詳情頁）
+ *      ONSTAGE_FAST=1 npm run scrape  （快速抓取，略過詳情頁）
  */
 import { scrapeAll } from '../src/lib/server/scrapers/index';
 import { upsertShows, pruneStaleShows } from '../src/lib/server/db';

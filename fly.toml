@@ -1,6 +1,6 @@
 # Fly.io 自架設定（adapter-node 全功能版，含訂閱 / 抓取 API）。
-# 部署：fly launch --no-deploy  →  fly volumes create kanxi_data --size 1  →  fly deploy
-app = "kanxi"
+# 部署：fly launch --no-deploy  →  fly volumes create onstage_data --size 1  →  fly deploy
+app = "onstage-tw"
 primary_region = "nrt" # 東京，離台灣近
 
 [build]
@@ -8,8 +8,8 @@ primary_region = "nrt" # 東京，離台灣近
 
 [env]
   PORT = "3000"
-  KANXI_DB = "/data/kanxi.db"
-  KANXI_SNAPSHOT = "/data/shows.json"
+  ONSTAGE_DB = "/data/onstage.db"
+  ONSTAGE_SNAPSHOT = "/data/shows.json"
 
 [http_service]
   internal_port = 3000
@@ -20,5 +20,5 @@ primary_region = "nrt" # 東京，離台灣近
 
 # SQLite 與快照的持久化磁碟
 [mounts]
-  source = "kanxi_data"
+  source = "onstage_data"
   destination = "/data"

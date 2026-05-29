@@ -280,6 +280,6 @@
 {/if}
 
 <footer class="border-t border-curtain-100 py-8 text-center text-xs text-gray-400">
-	<p>看戲 kanxi · 開源戲劇演出聚合 · 資料即時來自各售票平台公開頁面，著作權屬各主辦單位與售票平台</p>
+	<p>看戲 OnStage TW · 開源戲劇演出聚合 · 資料即時來自各售票平台公開頁面，著作權屬各主辦單位與售票平台</p>
 	<p class="mt-1">本站不販售門票，所有購票連結皆導回官方售票網</p>
 </footer>

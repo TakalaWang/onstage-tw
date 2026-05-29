@@ -2,7 +2,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { getActiveShows } from './db';
 
-const SNAPSHOT_PATH = process.env.KANXI_SNAPSHOT ?? 'static/shows.json';
+const SNAPSHOT_PATH = process.env.ONSTAGE_SNAPSHOT ?? 'static/shows.json';
 
 /**
  * 把目前的演出輸出成靜態 JSON 快照。頁面讀這份快照（而非直接讀 DB），

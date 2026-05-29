@@ -2,9 +2,9 @@ import adapterNode from '@sveltejs/adapter-node';
 import adapterStatic from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-// KANXI_STATIC=1 → 純靜態 SPA（瀏覽用 demo，可部署到 Vercel / GitHub Pages）
+// ONSTAGE_STATIC=1 → 純靜態 SPA（瀏覽用 demo，可部署到 Vercel / GitHub Pages）
 // 預設 → adapter-node（可自架，含訂閱 / 抓取 API）
-const isStatic = process.env.KANXI_STATIC === '1';
+const isStatic = process.env.ONSTAGE_STATIC === '1';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

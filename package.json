@@ -1,12 +1,12 @@
 {
-	"name": "kanxi",
+	"name": "onstage-tw",
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"build:static": "KANXI_STATIC=1 vite build",
+		"build:static": "ONSTAGE_STATIC=1 vite build",
 		"preview": "vite preview",
 		"scrape": "tsx scripts/scrape.ts",
 		"export": "tsx scripts/export.ts",
