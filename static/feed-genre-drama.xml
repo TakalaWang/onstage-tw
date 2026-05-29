@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 29 May 2026 13:27:15 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 14:15:52 GMT</lastBuildDate>
     <item>
       <title>劇場在地・共創新連結-白色恐怖田調分享會(含呈現演出)</title>
       <link>https://www.accupass.com/event/2603310621312093918182</link>
@@ -44,7 +44,7 @@
       <guid isPermaLink="false">accupass:2604161607482058993332</guid>
       <pubDate>Fri, 04 Sep 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-09-05 · Source: Accupass 活動通</description>
+      <description>Date: 2026-09-05 · Venue: 桃園市觀音區草漯國民小學活動中心, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026童演童語-故事DIY-《友誼拉拉手：我們都是超級隊友》</title>
@@ -52,7 +52,7 @@
       <guid isPermaLink="false">accupass:2604161849551233866544</guid>
       <pubDate>Mon, 24 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-25 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-25 · Venue: 3F-親子小學堂, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026童演童語-《仙界小霹靂-圖書館特工》任務四：協調</title>
@@ -60,7 +60,7 @@
       <guid isPermaLink="false">accupass:2604161813399320653180</guid>
       <pubDate>Fri, 21 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-22 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-22 · Venue: 一樓微光廳, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>動物 FUN 舞島</title>
@@ -68,7 +68,7 @@
       <guid isPermaLink="false">era:P1A5XWUU</guid>
       <pubDate>Thu, 13 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-14 · Venue: 四號公園文創演藝廳 · Source: 年代售票</description>
+      <description>Date: 2026-08-14 · Venue: 四號公園文創演藝廳, 新北市 · Source: 年代售票</description>
     </item>
     <item>
       <title>OSTA-Open Stage To All</title>
@@ -132,7 +132,7 @@
       <guid isPermaLink="false">accupass:2604161810081209651625</guid>
       <pubDate>Sat, 18 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-19 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-19 · Venue: 一樓微光廳, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【2026夏季藝術兒童營】兔比的奇幻旅程｜音樂x戲劇x美術x配音x生物x校外參訪</title>
@@ -333,14 +333,6 @@
       <pubDate>Sat, 06 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-06-07 · Venue: 大稻埕戲苑, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>憤怒旅行卡啦帶</title>
-      <link>https://www.opentix.life/event/2039524426554306560</link>
-      <guid isPermaLink="false">opentix:2039524426554306560</guid>
-      <pubDate>Fri, 05 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-06 – 2026-07-26 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>尋找心中的One Piece-2026惠文兒樂成果發表會</title>
@@ -805,6 +797,14 @@
       <pubDate>Wed, 13 May 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-10 – 2026-07-12 · Venue: 牯嶺街小劇場一樓實驗劇場, 臺北市 · On sale: 2026-05-13 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>春美歌劇團《伽羅香》</title>
+      <link>https://www.opentix.life/event/2047598589857177601</link>
+      <guid isPermaLink="false">opentix:2047598589857177601</guid>
+      <pubDate>Wed, 13 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-12 – 2026-09-13 · Venue: 衛武營國家藝術文化中心歌劇院, 高雄市 · On sale: 2026-05-13 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

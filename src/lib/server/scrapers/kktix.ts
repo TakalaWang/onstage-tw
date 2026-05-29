@@ -68,7 +68,7 @@ function parseEventPage(html: string): {
 
 /** KKTIX: per-organizer events.json → per-event schema.org JSON-LD. No browser needed. */
 export async function scrapeKktix(): Promise<Show[]> {
-	const nowIso = new Date().toISOString();
+	const today = new Date().toISOString().slice(0, 10);
 	const shows: Show[] = [];
 
 	for (const org of ORGANIZERS) {
@@ -80,12 +80,14 @@ export async function scrapeKktix(): Promise<Show[]> {
 			continue; // organizer feed missing / unreachable
 		}
 
-		const upcoming = entries
-			.filter((e) => e.published && new Date(e.published).toISOString() >= nowIso)
+		// `published` is the listing time, not the performance date, so it must NOT be
+		// used to decide whether an event is upcoming. Take the most-recently-listed
+		// theatrical entries; the real event date (from the detail page) is checked below.
+		const candidates = entries
 			.filter((e) => org.mode === 'all' || looksTheatrical(e.title, e.summary, e.content))
 			.slice(0, MAX_PER_ORG);
 
-		for (const entry of upcoming) {
+		for (const entry of candidates) {
 			const idMatch = entry.url.match(/\/\/([^.]+)\.kktix\.cc\/events\/([^/?#]+)/);
 			if (!idMatch) continue;
 			const id = `${idMatch[1]}/${idMatch[2]}`;
@@ -102,6 +104,12 @@ export async function scrapeKktix(): Promise<Show[]> {
 					.sort()[0];
 				const venue = detail?.location?.name ?? null;
 				const title = detail?.name ?? entry.title;
+				const startDate = detail?.startDate?.slice(0, 10) ?? null;
+				const endDate = detail?.endDate?.slice(0, 10) ?? null;
+
+				// Skip events that have already ended (by real performance date, not listing date).
+				const effectiveEnd = endDate ?? startDate;
+				if (effectiveEnd && effectiveEnd < today) continue;
 
 				shows.push({
 					id: `kktix:${id}`,
@@ -109,8 +117,8 @@ export async function scrapeKktix(): Promise<Show[]> {
 					sourceId: id,
 					title,
 					category: classifyGenre(title),
-					startDate: (detail?.startDate ?? entry.published)?.slice(0, 10) ?? null,
-					endDate: detail?.endDate?.slice(0, 10) ?? null,
+					startDate,
+					endDate,
 					venue,
 					city: cityFromText(detail?.location?.address ?? venue),
 					onSaleAt: onSale ? new Date(onSale).toISOString() : null,

@@ -26,7 +26,8 @@
 	let onSale = $state<'all' | 'available' | 'upcoming'>('all');
 	let priceMin = $state('');
 	let priceMax = $state('');
-	let sort = $state<'date-desc' | 'date-asc' | 'onsale' | 'price-asc' | 'price-desc'>('date-desc');
+	// Default: soonest performance date first (近→遠).
+	let sort = $state<'date-desc' | 'date-asc' | 'onsale' | 'price-asc' | 'price-desc'>('date-asc');
 	let selected = $state<Show | null>(null);
 	let showSubscribe = $state(false);
 	let showFeedback = $state(false);
@@ -438,8 +439,8 @@
 				<option value="upcoming">尚未開賣</option>
 			</select>
 			<select bind:value={sort} class={selectClass} aria-label="排序">
-				<option value="date-desc">排序：演出日期新→舊</option>
-				<option value="date-asc">演出日期舊→新</option>
+				<option value="date-asc">排序：演出日期近→遠</option>
+				<option value="date-desc">演出日期遠→近</option>
 				<option value="onsale">開賣時間近→遠</option>
 				<option value="price-asc">票價低→高</option>
 				<option value="price-desc">票價高→低</option>
