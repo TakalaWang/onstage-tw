@@ -65,7 +65,8 @@ jobs:
           COUNT=$(node -e "process.stdout.write(String((require('./scrape-report.json').unresolvedVenues||[]).length))")
           if [ "$COUNT" = "0" ]; then echo "All venues resolved."; exit 0; fi
           gh label create venue-unmapped --color FBCA04 --description "Venues missing from venues.ts" 2>/dev/null || true
-          node -e "const r=require('./scrape-report.json');const fs=require('fs');const top=(r.unresolvedVenues||[]).slice(0,40);const lines=top.map(v=>'- '+v.venue+'（'+v.occurrences+'）').join('\n');fs.writeFileSync('venue-body.md','以下場館無法解析到縣市，建議在 \`src/lib/venues.ts\` 補上對照（含座標）。括號為出現次數：\n\n'+lines+'\n\n_由排程自動更新；補齊後此清單會自動縮短。_')"
+          node -e "const r=require('./scrape-report.json');const fs=require('fs');const top=(r.unresolvedVenues||[]).slice(0,40);const lines=top.map(v=>'- '+v.venue+'（'+v.occurrences+'）').join('\n');fs.writeFileSync('venue-body.md','以下場館無法解析到縣市，建議在 \`src/lib/venues.ts\` 補上對照（含座標）。括號為出現次數：\n\n'+lines+'\n\n_由排程自動更新；補齊後此清單會自動縮短。_')" || exit 0
+          test -f venue-body.md || exit 0
           NUM=$(gh issue list --label venue-unmapped --state open --json number --jq '.[0].number // empty')
           if [ -n "$NUM" ]; then
             gh issue edit "$NUM" --body-file venue-body.md

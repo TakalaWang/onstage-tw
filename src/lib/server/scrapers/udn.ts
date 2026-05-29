@@ -110,7 +110,7 @@ export async function scrapeUdn(): Promise<Show[]> {
 				if (range.maxPrice != null) maxPrice = range.maxPrice;
 				const intro = root.querySelector('.showIntro');
 				description = htmlToText(intro?.innerHTML);
-				introImages = contentImages(intro);
+				introImages = contentImages(intro, DETAIL_URL(item.id));
 				// Running time / age live in the collapsed "注意事項" + intro sections.
 				notes = extractHighlights(
 					`${root.querySelector('.admissionNote')?.text ?? ''} ${root.querySelector('.yd_program-main')?.text ?? ''}`

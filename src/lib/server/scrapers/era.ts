@@ -89,7 +89,7 @@ export async function scrapeEra(): Promise<Show[]> {
 				({ minPrice, maxPrice } = extractPriceRange(prices));
 				const intro = root.querySelector('#ctl00_ContentPlaceHolder1_lbProgramInfo_Content');
 				description = htmlToText(intro?.innerHTML);
-				introImages = contentImages(intro);
+				introImages = contentImages(intro, DETAIL_URL(item.id));
 				organizer =
 					root.querySelector('#ctl00_ContentPlaceHolder1_lbOrgName')?.text.trim() || null;
 				// Running time / age live in the "注意事項" tab pane.

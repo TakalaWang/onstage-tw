@@ -176,7 +176,7 @@
 				</div>
 			{/if}
 
-			{#if show.introImages.length}
+			{#if show.introImages?.length}
 				<div class="space-y-3">
 					{#if !desc}
 						<p class="text-sm font-medium text-gray-700 dark:text-gray-200">節目介紹</p>

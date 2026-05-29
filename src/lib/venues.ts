@@ -49,46 +49,28 @@ export const VENUES: Venue[] = [
 	},
 	{
 		name: '臺中國家歌劇院',
-		aliases: [
-			'台中國家歌劇院',
-			'臺中歌劇院',
-			'台中歌劇院',
-			'國家歌劇院',
-			'大劇院',
-			'中劇院',
-			'小劇場',
-			'National Taichung Theater'
-		],
+		// NOTE: bare hall names (大劇院 / 小劇場) are intentionally omitted — they are
+		// ambiguous substrings that would mis-resolve unrelated venues to 臺中市.
+		aliases: ['台中國家歌劇院', '臺中歌劇院', '台中歌劇院', '國家歌劇院', 'National Taichung Theater'],
 		city: '臺中市',
 		lat: 24.1626,
 		lng: 120.6403
 	},
 	{
 		name: '衛武營國家藝術文化中心',
-		aliases: [
-			'衛武營',
-			'歌劇院',
-			'戲劇院',
-			'音樂廳',
-			'表演廳',
-			'Weiwuying',
-			'National Kaohsiung Center for the Arts'
-		],
+		// NOTE: bare hall names (歌劇院 / 戲劇院 / 音樂廳 / 表演廳) omitted — every city has
+		// these, so as substrings they would mis-resolve other venues to 高雄市. The
+		// 「衛武營」 prefix already matches all real scraped strings for this venue.
+		aliases: ['衛武營', 'Weiwuying', 'National Kaohsiung Center for the Arts'],
 		city: '高雄市',
 		lat: 22.6233,
 		lng: 120.3326
 	},
 	{
 		name: '臺北表演藝術中心',
-		aliases: [
-			'台北表演藝術中心',
-			'北藝中心',
-			'大劇院',
-			'球劇場',
-			'藍盒子',
-			'TPAC',
-			'Taipei Performing Arts Center'
-		],
+		// 球劇場 / 藍盒子 are unique to this venue; bare 大劇院 omitted (ambiguous, also
+		// used by 臺中國家歌劇院 — the 「臺北表演藝術中心」 prefix matches real strings).
+		aliases: ['台北表演藝術中心', '北藝中心', '球劇場', '藍盒子', 'TPAC', 'Taipei Performing Arts Center'],
 		city: '臺北市',
 		lat: 25.0847,
 		lng: 121.5211

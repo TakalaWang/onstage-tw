@@ -287,7 +287,7 @@
 
 <!-- One-time stage reveal: brand hangs from a rope, gets hoisted up as the curtains part -->
 {#if curtain}
-	<div class="pointer-events-none fixed inset-0 z-[100] overflow-hidden" aria-hidden="true">
+	<div class="curtain-root pointer-events-none fixed inset-0 z-[100] overflow-hidden" aria-hidden="true">
 		<div class="absolute inset-0 flex">
 			<div class="curtain-half curtain-left h-full w-1/2"></div>
 			<div class="curtain-half curtain-right h-full w-1/2"></div>

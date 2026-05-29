@@ -113,22 +113,33 @@ export function contentImages(
 	el:
 		| { querySelectorAll: (s: string) => { getAttribute: (a: string) => string | null | undefined }[] }
 		| null
-		| undefined
+		| undefined,
+	baseUrl?: string
 ): string[] {
 	if (!el) return [];
 	const urls: string[] = [];
 	for (const im of el.querySelectorAll('img')) {
 		const raw = im.getAttribute('src') || im.getAttribute('data-original') || '';
-		if (!/^https?:\/\//i.test(raw)) continue; // skip data: URIs and relative paths
-		let decoded = raw;
+		if (!raw || raw.startsWith('data:')) continue; // skip inline data: URIs
+		// Resolve protocol-relative / root-relative / relative src against the page URL.
+		let abs = raw;
+		if (baseUrl) {
+			try {
+				abs = new URL(raw, baseUrl).href;
+			} catch {
+				/* keep raw */
+			}
+		}
+		if (!/^https?:\/\//i.test(abs)) continue;
+		let decoded = abs;
 		try {
-			decoded = decodeURIComponent(raw);
+			decoded = decodeURIComponent(abs);
 		} catch {
-			/* keep raw */
+			/* keep abs */
 		}
 		if (NON_CONTENT_IMG.test(decoded)) continue;
 		// Upgrade to https so the image isn't blocked as mixed content on our https site.
-		const url = raw.replace(/^http:\/\//i, 'https://');
+		const url = abs.replace(/^http:\/\//i, 'https://');
 		if (!urls.includes(url)) urls.push(url);
 		if (urls.length >= 8) break;
 	}

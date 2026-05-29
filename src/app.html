@@ -13,6 +13,12 @@
 				if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches))
 					document.documentElement.classList.add('dark');
 			} catch (e) {}
+			// Hide the prerendered stage-curtain before paint if it already played this
+			// session, so returning visitors don't see it flash before hydration.
+			try {
+				if (sessionStorage.getItem('introShown'))
+					document.documentElement.classList.add('intro-seen');
+			} catch (e) {}
 		</script>
 		%sveltekit.head%
 	</head>
