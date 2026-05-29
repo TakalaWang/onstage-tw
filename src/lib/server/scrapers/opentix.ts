@@ -5,7 +5,7 @@ const LIST_API = 'https://csm.api.opentix.life/programs';
 const DETAIL_API = 'https://csm.api.opentix.life/programs';
 const EVENT_URL = (id: string) => `https://www.opentix.life/event/${id}`;
 
-/** 視為戲劇的 displayCategory（音樂劇在 OPENTIX 歸在戲劇底下，一併納入；排除音樂/舞蹈/演唱會）。 */
+// displayCategory values we treat as theatre (musicals sit under theatre on OPENTIX; music/dance/concerts excluded).
 const DRAMA_CATEGORIES = new Set(['戲劇', '音樂劇']);
 
 interface ProgramListItem {
@@ -30,7 +30,7 @@ interface ProgramDetail {
 	}[];
 }
 
-/** OPENTIX：逐頁抓 /programs，前端過濾戲劇，再對每檔補抓詳情拿開賣時間與場館。 */
+/** OPENTIX: page through /programs, filter to theatre, then enrich each via the detail API (on-sale, venue, sessions). */
 export async function scrapeOpenTix(): Promise<Show[]> {
 	const drama: ProgramListItem[] = [];
 	let page = 1;
@@ -77,7 +77,7 @@ export async function scrapeOpenTix(): Promise<Show[]> {
 				);
 				await sleep(150);
 			} catch {
-				/* 詳情補抓失敗不影響列表資料 */
+				/* detail enrichment failure does not affect list data */
 			}
 		}
 		shows.push({

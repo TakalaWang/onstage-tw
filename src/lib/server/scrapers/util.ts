@@ -1,7 +1,7 @@
-/** 抓取共用工具：禮貌性 fetch、日期解析、戲劇關鍵字啟發式判定。 */
+/** Shared scraper helpers: polite fetch, date parsing, theatre keyword heuristic. */
 
 const UA =
-	'onstage-tw-aggregator/0.1 (+https://github.com/your-name/onstage-tw; theatre listing aggregator, links back, does not resell)';
+	'onstage-tw-aggregator/0.1 (+https://github.com/TakalaWang/onstage-tw; theatre listing aggregator, links back, does not resell)';
 
 export async function politeFetch(url: string, init?: RequestInit): Promise<Response> {
 	const res = await fetch(url, {
@@ -17,26 +17,27 @@ export async function politeFetch(url: string, init?: RequestInit): Promise<Resp
 	return res;
 }
 
-/** 簡單的禮貌性延遲，避免短時間大量請求觸發對方的速率限制 / IP 封鎖。 */
+/** Small polite delay so we don't trip a source's rate limiting / IP ban. */
 export function sleep(ms: number): Promise<void> {
 	return new Promise((r) => setTimeout(r, ms));
 }
 
-/** Unix 秒 → YYYY-MM-DD（台北時區）。 */
+/** Unix seconds → YYYY-MM-DD in the Taipei timezone. */
 export function unixToDate(sec: number | null | undefined): string | null {
 	if (!sec) return null;
 	return new Date(sec * 1000).toLocaleDateString('sv-SE', { timeZone: 'Asia/Taipei' });
 }
 
-/** Unix 秒 → ISO 字串。 */
+/** Unix seconds → ISO string. */
 export function unixToIso(sec: number | null | undefined): string | null {
 	if (!sec) return null;
 	return new Date(sec * 1000).toISOString();
 }
 
 /**
- * 從一段中文文字裡盡量抓出 YYYY-MM-DD（支援 2026/05/30、2026年5月30日、2026-05-30）。
- * 回傳第一個與最後一個日期（當作起訖）。
+ * Best-effort extraction of YYYY-MM-DD dates from Chinese text
+ * (supports 2026/05/30, 2026年5月30日, 2026-05-30).
+ * Returns the first and last date found (treated as start/end).
  */
 export function extractDateRange(text: string): { start: string | null; end: string | null } {
 	const dates: string[] = [];
@@ -51,7 +52,7 @@ export function extractDateRange(text: string): { start: string | null; end: str
 	return { start: dates[0], end: dates[dates.length - 1] };
 }
 
-/** 從文字抓「開賣時間」。回傳 ISO（只到日，無精確時間就給當天）。 */
+/** Extract the on-sale time from text. Returns ISO at day granularity. */
 export function extractOnSale(text: string): string | null {
 	const idx = text.search(/開賣|售票時間|啟售|開始售票/);
 	if (idx < 0) return null;
@@ -61,8 +62,8 @@ export function extractOnSale(text: string): string | null {
 }
 
 /**
- * 戲劇關鍵字白名單：給沒有分類欄位的來源（拓元）做啟發式判定。
- * 命中場館或節目名稱關鍵字才視為戲劇。
+ * Theatre keyword allow-list for sources without a category field (tixCraft):
+ * a show counts as theatre only if its title or venue matches one of these.
  */
 const DRAMA_KEYWORDS = [
 	'劇場',
@@ -92,7 +93,7 @@ const DRAMA_KEYWORDS = [
 	'阮劇團'
 ];
 
-/** 一看就是演唱會 / 音樂演出的字眼，命中就先排除（避免「○○劇場」這類場館名誤判）。 */
+/** Obvious concert / music-event terms; if matched, exclude first (avoids venue-name false positives like "○○劇場"). */
 const CONCERT_KEYWORDS = [
 	'演唱會',
 	'巡迴',

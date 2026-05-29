@@ -2,29 +2,20 @@ import { readFileSync } from 'node:fs';
 import type { PageServerLoad } from './$types';
 import type { Show } from '$lib/types';
 
-// ONSTAGE_STATIC=1 時把首頁 prerender 成靜態 HTML（資料來自 build 時的快照）；
-// 自架 node 模式則維持 SSR，每次請求讀最新快照。
-export const prerender = process.env.ONSTAGE_STATIC === '1';
+// Static site: the home page is prerendered at build time from the committed snapshot.
+export const prerender = true;
 
-// 優先讀自訂快照路徑（持久化 volume），讀不到則退回打包進 image 的初始快照。
-const SNAPSHOT_PATHS = [process.env.ONSTAGE_SNAPSHOT, 'static/shows.json'].filter(
-	(p): p is string => !!p
-);
+const SNAPSHOT_PATH = process.env.ONSTAGE_SNAPSHOT ?? 'static/shows.json';
+const SITE_URL = (process.env.ONSTAGE_SITE_URL ?? 'https://onstage-tw.vercel.app').replace(/\/$/, '');
 
 export const load: PageServerLoad = async () => {
-	for (const path of SNAPSHOT_PATHS) {
-		try {
-			const snap = JSON.parse(readFileSync(path, 'utf-8')) as {
-				updatedAt: string;
-				shows: Show[];
-			};
-			return { shows: snap.shows, updatedAt: snap.updatedAt, subscribeEnabled };
-		} catch {
-			/* 試下一個路徑 */
-		}
+	try {
+		const snap = JSON.parse(readFileSync(SNAPSHOT_PATH, 'utf-8')) as {
+			updatedAt: string;
+			shows: Show[];
+		};
+		return { shows: snap.shows, updatedAt: snap.updatedAt, siteUrl: SITE_URL };
+	} catch {
+		return { shows: [] as Show[], updatedAt: null, siteUrl: SITE_URL };
 	}
-	return { shows: [] as Show[], updatedAt: null, subscribeEnabled };
 };
-
-// 靜態 demo（ONSTAGE_STATIC=1）沒有伺服器，訂閱功能僅自架版提供。
-const subscribeEnabled = process.env.ONSTAGE_STATIC !== '1';

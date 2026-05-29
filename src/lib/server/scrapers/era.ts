@@ -7,8 +7,8 @@ const DETAIL_URL = (id: string) =>
 	`https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=${id}`;
 
 /**
- * 年代售票：只抓戲劇列表頁（年代會主動封鎖異常 IP，故刻意不逐筆進詳情頁，
- * 開賣時間與場館留空，以降低被封風險）。
+ * ERA: scrape the theatre list page only. ERA actively blocks suspicious IPs, so we
+ * deliberately avoid per-item detail pages and leave on-sale time / venue empty.
  */
 export async function scrapeEra(): Promise<Show[]> {
 	const res = await politeFetch(LIST_URL);

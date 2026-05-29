@@ -1,126 +1,78 @@
-# 看戲 OnStage TW
+# OnStage TW（看戲）
 
-> 一個地方看完台灣所有**戲劇**演出。整合 OPENTIX、udn、寬宏、年代、拓元 的戲劇節目，提供搜尋、過濾與開賣訂閱通知。
+> See every **theatre** performance in Taiwan in one place. Aggregates drama listings from OPENTIX, udn, KHAM, ERA and tixCraft, with search, filtering, and an RSS feed to follow new on-sales.
 
-🔗 **線上 demo：[onstage-tw.vercel.app](https://onstage-tw.vercel.app)**（純瀏覽版；訂閱功能需自架）
+🔗 **Live site: [onstage-tw.vercel.app](https://onstage-tw.vercel.app)**
 
-台灣的售票生態很分散：兩廳院的戲在 OPENTIX、有些在寬宏、有些在年代、有些在 udn、有些在拓元。想知道「最近有什麼戲、什麼時候開賣」得一個一個網站翻。**看戲** 把這些平台的戲劇類節目聚合到同一頁，讓你一次看完、設關鍵字訂閱、不錯過開賣。
+Taiwan's ticketing scene is fragmented: some plays are on OPENTIX, others on KHAM, ERA, udn, or tixCraft. Finding "what's on and when it goes on sale" means checking each site one by one. **OnStage TW** pulls the theatre listings from all of them onto a single page so you can browse once and subscribe via RSS.
 
-只聚合**戲劇**（現代戲劇、舞台劇、戲曲、偶戲、音樂劇、兒童劇…），**排除演唱會與音樂會**。
+It aggregates **theatre only** (drama, stage plays, traditional opera, puppetry, musicals, children's theatre…) and **excludes concerts and music recitals**.
 
-## 特色
+## Features
 
-- 🎭 **單頁瀏覽** — 五大售票平台的戲劇節目集中一頁，含主視覺、日期、場館、票價。
-- 🔍 **即時搜尋 / 多維過濾** — 依劇名、場館、主辦、來源平台、縣市、分類、演出日期區間、開賣狀態篩選。
-- 🪟 **詳情 Modal** — 點任一卡片即看完整資訊（簡介、主辦、各場次、開賣時間、票價）。
-- 🔔 **開賣訂閱** — 留下 Email + 關鍵字（劇名／劇團），有符合的新演出時寄信通知。
-- 🔗 **只導流、不賣票** — 所有購票連結深連結回原售票網，本站不販售、不轉存對方圖文資料庫。
+- 🎭 **Single-page browsing** — drama from five platforms in one grid, with poster, dates, venue and price.
+- 🔍 **Instant search & multi-filter** — by title, venue, organizer, source, city, category, date range, and on-sale status.
+- 🪟 **Detail modal** — click any card for the full info (description, organizer, sessions, on-sale time, price).
+- 📰 **RSS feed** — subscribe to `/feed.xml` in any reader; new shows show up automatically. No account, no email collected.
+- 🔗 **Links out, never sells** — every ticket link deep-links back to the official site; we don't sell or re-host their data.
 
-## 資料來源
+## Sources
 
-| 平台 | 取得方式 | 戲劇分類 | 開賣時間 |
+| Platform | Method | Theatre category | On-sale time |
 |---|---|---|---|
-| OPENTIX 兩廳院 | 公開 JSON API | `displayCategory = 戲劇 / 音樂劇` | ✅（詳情 API） |
-| udn 售票網 | WebMethod（HTML 片段） | `Category=116` | — |
-| 寬宏售票 | HTML 解析 + 詳情頁 | `CATEGORY=116, 80` | 內文擷取 |
-| 年代售票 | HTML 解析（僅列表） | `CATEGORY=116` | — |
-| 拓元售票 | HTML 列表 + 關鍵字啟發式 | 無分類，靠關鍵字推測（標記「疑似戲劇」） | — |
+| OPENTIX | Public JSON API | `displayCategory = 戲劇 / 音樂劇` | ✅ (detail API) |
+| udn | WebMethod (HTML fragment) | `Category=116` | — |
+| KHAM | HTML + detail page | `CATEGORY=116, 80` | from page text |
+| ERA | HTML (list only) | `CATEGORY=116` | — |
+| tixCraft | HTML list + keyword heuristic | none — guessed by keyword (flagged "heuristic") | — |
 
-> 拓元沒有戲劇分類、開賣時間又藏在會被反爬擋下的詳情頁，因此只 best-effort 抓 `/activity` 列表並用關鍵字挑出戲劇；整站被擋時自動略過，不影響其他來源。
+> tixCraft has no theatre category and hides on-sale times behind anti-bot detail pages, so we only best-effort scrape its `/activity` list and pick out theatre by keyword. If it blocks us, that source is skipped without affecting the others.
 
-## 技術棧
-
-- [SvelteKit](https://svelte.dev/) (Svelte 5 runes) + TypeScript
-- Tailwind CSS v4
-- better-sqlite3（抓取去重 / 剪枝 / 訂閱）
-- node-html-parser（HTML 來源解析）
-- nodemailer（開賣通知）
-- adapter-node（自架）／ adapter-static（純瀏覽 demo）
-
-## 架構
+## Architecture
 
 ```
-各售票平台 ──(scrapers)──▶ SQLite（去重・剪枝・訂閱）──(export)──▶ static/shows.json（快照）
-                                                                        │
-                                              頁面讀快照 ◀──────────────┘
+ticketing platforms ──(scrapers)──▶ shows[] ──(output)──▶ static/shows.json  (page reads this)
+                                                      └──▶ static/feed.xml    (RSS subscribers)
+
+GitHub Actions (cron) ─▶ scrape ─▶ commit refreshed files ─▶ static host redeploys
 ```
 
-抓取資料寫入 SQLite（負責去重、剪除下架節目、儲存訂閱），同時輸出一份 `static/shows.json`
-快照。**頁面只讀這份快照**，因此可部署成純靜態站、SSR node 服務、或 serverless —— 同一份程式碼。
-排程抓取後重新產生快照即更新資料。
+There is **no database and no backend**. The scraper writes two static files; the page is prerendered
+from `shows.json`, and notifications are handled entirely by each user's own RSS reader. A scheduled
+GitHub Action refreshes the files and the static host redeploys automatically.
 
-## 開始使用
+## Getting started
 
 ```bash
 npm install
-cp .env.example .env        # 視需要填 SMTP / token
-
-npm run scrape              # 抓取各平台戲劇，寫入 data/onstage.db
-npm run dev                 # 啟動網站 http://localhost:5173
+npm run scrape    # fetch all platforms → static/shows.json + static/feed.xml
+npm run dev       # http://localhost:5173
 ```
 
-抓取支援快速模式（略過詳情頁，較快但少了部分場館／開賣時間）：
+Fast scrape (skips detail pages, less complete but quicker):
 
 ```bash
 ONSTAGE_FAST=1 npm run scrape
 ```
 
-## 定期更新
+## Deployment
 
-自架（node）部署後，用 cron 定期觸發抓取端點（需設 `ONSTAGE_SCRAPE_TOKEN`），會同時刷新快照：
+Any static host works. The repo is configured for Vercel (`vercel.json`): it runs `npm run build`
+(prerendered output in `build/`). The included GitHub Action (`.github/workflows/scrape.yml`) refreshes
+the data on a schedule and commits it, which triggers an automatic redeploy — **no secrets needed**.
 
-```bash
-curl -X POST https://你的網域/api/scrape \
-  -H "Authorization: Bearer $ONSTAGE_SCRAPE_TOKEN"
-```
+## Data & license
 
-或直接在伺服器上跑 CLI，並接著送出通知：
+Only **factual fields** are stored (title, dates, venue, on-sale time, source link). Poster images are
+hot-linked, not re-hosted, and tickets always link back to the official site. Each program's text and
+images remain the copyright of its organizer and ticketing platform. Scraping is low-frequency and
+attributed; please don't use it in ways that violate the platforms' terms of service.
 
-```bash
-npm run scrape && npm run notify
-```
+Code is released under the [MIT](./LICENSE) license. The UI is in Traditional Chinese (the audience is in Taiwan); code, comments and docs are in English.
 
-## 部署
+## Roadmap / contributing
 
-### 純瀏覽 demo（Vercel / GitHub Pages，零後端）
-
-`npm run build:static` 產生純靜態站（首頁 prerender、資料來自 `static/shows.json`）。
-搭配內附的 GitHub Action（`.github/workflows/scrape.yml`）定時抓取並 commit 快照，靜態站即自動更新。
-訂閱功能在此模式不啟用（無伺服器）。
-
-```bash
-npm run build:static   # 輸出到 build/
-```
-
-### 全功能自架（Docker，含訂閱 / 通知）
-
-```bash
-docker build -t onstage-tw .
-docker run -p 3000:3000 -v $PWD/data:/data \
-  -e ONSTAGE_DB=/data/onstage.db -e ONSTAGE_SNAPSHOT=/data/shows.json \
-  -e ONSTAGE_SCRAPE_TOKEN=your-secret onstage-tw
-# 首次部署後觸發一次抓取：
-curl -X POST localhost:3000/api/scrape -H "Authorization: Bearer your-secret"
-```
-
-Fly.io 可直接用內附的 `fly.toml`（`fly launch --no-deploy` → `fly volumes create onstage_data --size 1` → `fly deploy`）。
-任何支援 Docker + 持久化磁碟的平台（Render、Railway、VPS）皆可。
-
-## 開賣通知
-
-`npm run notify` 會比對所有訂閱與最新節目，對「尚未通知過」的匹配寄信。
-未設定 `SMTP_HOST` 時改為 **dry-run** 直接印出內容，方便本地測試。
-
-## 資料與授權
-
-本專案僅整合**事實性資訊**（節目名稱、日期、場館、開賣時間、原始連結），主視覺圖以熱連結方式呈現、不轉存，購票一律導回官方售票頁。各節目的文字、圖片著作權屬各主辦單位與售票平台所有。抓取採低頻率並標註來源，請勿用於違反各平台服務條款的用途。
-
-程式碼以 [MIT](./LICENSE) 授權釋出。
-
-## 待辦 / 歡迎貢獻
-
-- [ ] udn / 年代 詳情頁補開賣時間（注意年代的 IP 封鎖）
-- [ ] 行事曆視圖
-- [ ] Web Push / LINE 官方帳號通知管道
-- [ ] 社群投稿（補小眾劇團、官方尚未上架的場次）
-- [ ] 退訂連結與訂閱管理
+- [ ] On-sale times for udn / ERA detail pages (mind ERA's IP blocking)
+- [ ] Calendar view
+- [ ] Per-source and per-keyword RSS feeds
+- [ ] Community submissions (small troupes, not-yet-listed runs)

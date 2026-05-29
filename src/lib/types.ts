@@ -1,4 +1,4 @@
-/** 售票來源平台 */
+/** Ticketing source platform. */
 export type Source = 'opentix' | 'udn' | 'kham' | 'era' | 'tixcraft';
 
 export const SOURCE_LABELS: Record<Source, string> = {
@@ -9,7 +9,7 @@ export const SOURCE_LABELS: Record<Source, string> = {
 	tixcraft: '拓元售票'
 };
 
-/** 單一場次／場館的演出資訊。 */
+/** One performance occurrence (a date at a venue). */
 export interface Session {
 	date: string | null;
 	venue: string | null;
@@ -18,40 +18,40 @@ export interface Session {
 }
 
 /**
- * 一檔戲劇演出。只保存「事實性」欄位（名稱、日期、場館、開賣、連結），
- * 購票一律深連結回原始售票頁，本站不販售也不轉存對方的圖文資產。
+ * A theatre show. We store only factual fields (name, dates, venue, on-sale, link);
+ * tickets always deep-link back to the source site — we neither sell nor re-host their assets.
  */
 export interface Show {
-	/** 全域唯一 id，格式 `${source}:${sourceId}` */
+	/** Global unique id, formatted `${source}:${sourceId}`. */
 	id: string;
 	source: Source;
-	/** 該平台內的節目編號 */
+	/** Program id within the source platform. */
 	sourceId: string;
 	title: string;
-	/** 子分類 / 平台原始分類字串，可能為空 */
+	/** Sub-category / source's raw category string; may be null. */
 	category: string | null;
-	/** 演出起始日（YYYY-MM-DD），可能為空 */
+	/** Performance start date (YYYY-MM-DD); may be null. */
 	startDate: string | null;
-	/** 演出結束日（YYYY-MM-DD），可能為空 */
+	/** Performance end date (YYYY-MM-DD); may be null. */
 	endDate: string | null;
-	/** 場館名稱，可能為空 */
+	/** Venue name; may be null. */
 	venue: string | null;
-	/** 縣市，可能為空 */
+	/** City; may be null. */
 	city: string | null;
-	/** 開賣時間（ISO 8601），可能為空（多數 HTML 站需進詳情頁才有） */
+	/** On-sale time (ISO 8601); often null for HTML sources that hide it on detail pages. */
 	onSaleAt: string | null;
 	minPrice: number | null;
 	maxPrice: number | null;
-	/** 主視覺圖（熱連結回來源，不轉存） */
+	/** Poster image (hot-linked from the source, not re-hosted). */
 	imageUrl: string | null;
-	/** 導回原始售票頁的連結 */
+	/** Link back to the original ticketing page. */
 	url: string;
-	/** 是否由關鍵字啟發式判定為戲劇（拓元無分類時使用） */
+	/** Whether classified as theatre by keyword heuristic (used when a source has no category, e.g. tixCraft). */
 	heuristic: boolean;
-	/** 節目簡介（目前僅 OPENTIX 提供） */
+	/** Program description (currently OPENTIX only). */
 	description: string | null;
-	/** 主辦單位 */
+	/** Organizer. */
 	organizer: string | null;
-	/** 各場次／場館明細（目前僅 OPENTIX 提供） */
+	/** Per-session / per-venue details (currently OPENTIX only). */
 	sessions: Session[];
 }

@@ -6,9 +6,10 @@ const LIST_URL = 'https://tixcraft.com/activity';
 const BASE = 'https://tixcraft.com';
 
 /**
- * 拓元售票：平台沒有戲劇分類、開賣時間也藏在會被反爬擋下的詳情頁，
- * 所以只能抓 /activity 列表，再用關鍵字啟發式挑出戲劇（標記 heuristic）。
- * 這是 best-effort 來源，整站被擋時直接回空陣列、不影響其他來源。
+ * tixCraft: no theatre category, and on-sale time lives on detail pages guarded by
+ * anti-bot. So we only scrape the /activity list and pick out theatre via a keyword
+ * heuristic (marked `heuristic`). Best-effort source — if the site blocks us we return
+ * an empty array without affecting the others.
  */
 export async function scrapeTixcraft(): Promise<Show[]> {
 	const res = await politeFetch(LIST_URL);
@@ -26,7 +27,7 @@ export async function scrapeTixcraft(): Promise<Show[]> {
 		const title = card.querySelector('.text-bold a')?.text.trim() ?? '';
 		const venue = card.querySelector('.text-small.text-med-light')?.text.trim() || null;
 		if (!title) continue;
-		if (!looksLikeDrama(title, venue)) continue; // 只收看起來是戲劇的
+		if (!looksLikeDrama(title, venue)) continue; // keep only entries that look like theatre
 		seen.add(id);
 
 		const dateText = card.querySelector('.text-small.date')?.text.trim() ?? '';

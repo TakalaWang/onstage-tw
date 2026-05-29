@@ -20,7 +20,7 @@ export interface ScrapeResult {
 	report: { source: Source; count: number; ok: boolean; error?: string }[];
 }
 
-/** 跑所有來源；單一來源失敗只記錄、不影響其他來源。 */
+/** Run every source; a single source failing is recorded but does not affect the others. */
 export async function scrapeAll(): Promise<ScrapeResult> {
 	const shows: Show[] = [];
 	const report: ScrapeResult['report'] = [];

@@ -1,10 +1,11 @@
-name: Scrape & refresh snapshot
+name: Scrape & refresh data
 
-# 定時抓取各售票平台的戲劇節目，更新 static/shows.json 快照並 commit。
-# 若有連接 Vercel / Pages，push 後會自動重新部署，公開站台資料即更新。
+# Periodically scrape all ticketing platforms, regenerate static/shows.json and
+# static/feed.xml, and commit them. When connected to Vercel / Pages, the push
+# triggers an automatic redeploy so the live site updates. No secrets required.
 on:
   schedule:
-    - cron: '0 0,12 * * *' # 每天 00:00 / 12:00 UTC（台北 08:00 / 20:00）
+    - cron: '0 0,12 * * *' # 00:00 / 12:00 UTC (08:00 / 20:00 Taipei)
   workflow_dispatch:
 
 permissions:
@@ -24,16 +25,16 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Scrape and export snapshot
+      - name: Scrape and regenerate data
         run: npm run scrape
-      - name: Commit updated snapshot
+      - name: Commit refreshed data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- static/shows.json; then
-            echo "No changes in snapshot."
+          if git diff --quiet -- static/shows.json static/feed.xml; then
+            echo "No data changes."
           else
-            git add static/shows.json
-            git commit -m "chore: refresh shows snapshot [skip ci]"
+            git add static/shows.json static/feed.xml
+            git commit -m "chore: refresh show data [skip ci]"
             git push
           fi

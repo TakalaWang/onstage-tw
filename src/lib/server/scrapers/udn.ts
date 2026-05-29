@@ -8,7 +8,7 @@ const DETAIL_URL = (id: string) =>
 	`https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=${id}`;
 const DRAMA_CATEGORY = '116';
 
-/** udn 售票網：POST WebMethod 一次取回整個戲劇類，回傳的 script 欄位是 HTML 片段，再解析。 */
+/** udn: POST WebMethod returns the whole theatre category at once; its `script` field is an HTML fragment we parse. */
 export async function scrapeUdn(): Promise<Show[]> {
 	const res = await politeFetch(API, {
 		method: 'POST',
@@ -54,7 +54,7 @@ export async function scrapeUdn(): Promise<Show[]> {
 			endDate: endDate?.slice(0, 10) ?? null,
 			venue,
 			city: null,
-			onSaleAt: null, // 開賣時間僅在詳情頁，MVP 不逐頁抓
+			onSaleAt: null, // on-sale time only on the detail page; not fetched per item
 			minPrice,
 			maxPrice: null,
 			imageUrl: img,

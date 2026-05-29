@@ -7,7 +7,6 @@
 	let { data }: { data: PageData } = $props();
 
 	const allSources = Object.keys(SOURCE_LABELS) as Source[];
-	const subscribeEnabled = $derived(data.subscribeEnabled);
 
 	let query = $state('');
 	let activeSources = $state<Set<Source>>(new Set());
@@ -85,33 +84,6 @@
 		onSale = 'all';
 	}
 
-	// 訂閱（client-side 送到 /api/subscribe）
-	let subEmail = $state('');
-	let subKeyword = $state('');
-	let subSource = $state('');
-	let subState = $state<'idle' | 'loading' | 'ok' | 'error'>('idle');
-	let subError = $state('');
-
-	async function submitSubscribe(e: SubmitEvent) {
-		e.preventDefault();
-		subState = 'loading';
-		try {
-			const res = await fetch('/api/subscribe', {
-				method: 'POST',
-				headers: { 'content-type': 'application/json' },
-				body: JSON.stringify({ email: subEmail, keyword: subKeyword, source: subSource })
-			});
-			if (!res.ok) {
-				const d = await res.json().catch(() => null);
-				throw new Error(d?.message ?? '訂閱失敗');
-			}
-			subState = 'ok';
-		} catch (err) {
-			subState = 'error';
-			subError = err instanceof Error ? err.message : '訂閱失敗';
-		}
-	}
-
 	const updatedLabel = $derived(
 		data.updatedAt
 			? new Date(data.updatedAt).toLocaleString('zh-TW', {
@@ -133,8 +105,9 @@
 	<title>看戲 — 台灣戲劇演出整合</title>
 	<meta
 		name="description"
-		content="一個地方看完 OPENTIX、udn、寬宏、年代、拓元 的戲劇演出。搜尋、過濾、訂閱開賣通知。"
+		content="一個地方看完 OPENTIX、udn、寬宏、年代、拓元 的戲劇演出。搜尋、過濾、RSS 訂閱開賣資訊。"
 	/>
+	<link rel="alternate" type="application/rss+xml" title="OnStage TW" href="/feed.xml" />
 </svelte:head>
 
 <header class="bg-curtain-900 text-white">
@@ -157,14 +130,12 @@
 				placeholder="搜尋劇名、場館、主辦、分類…"
 				class="min-w-50 flex-1 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm outline-none focus:border-curtain-500 focus:ring-2 focus:ring-curtain-500/20"
 			/>
-			{#if subscribeEnabled}
-				<button
-					onclick={() => (showSubscribe = !showSubscribe)}
-					class="rounded-lg bg-curtain-600 px-4 py-2 text-sm font-medium text-white hover:bg-curtain-700"
-				>
-					訂閱開賣通知
-				</button>
-			{/if}
+			<button
+				onclick={() => (showSubscribe = !showSubscribe)}
+				class="rounded-lg bg-curtain-600 px-4 py-2 text-sm font-medium text-white hover:bg-curtain-700"
+			>
+				RSS 訂閱
+			</button>
 		</div>
 
 		<div class="flex flex-wrap items-center gap-2">
@@ -215,48 +186,26 @@
 	</div>
 </div>
 
-<!-- Subscribe panel -->
-{#if subscribeEnabled && showSubscribe}
+<!-- RSS subscribe panel: notifications handled by the user's own RSS reader, no backend -->
+{#if showSubscribe}
 	<div class="border-b border-curtain-100 bg-white">
-		<div class="mx-auto max-w-6xl px-5 py-5">
-			{#if subState === 'ok'}
-				<p class="rounded-lg bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-					已為 <strong>{subEmail}</strong> 建立訂閱，有符合的新演出開賣時會寄信通知你。
-				</p>
-			{:else}
-				<form onsubmit={submitSubscribe} class="flex flex-wrap items-end gap-3">
-					<div class="flex flex-col gap-1">
-						<label for="email" class="text-xs text-gray-500">Email</label>
-						<input
-							id="email"
-							type="email"
-							required
-							bind:value={subEmail}
-							placeholder="you@example.com"
-							class={selectClass}
-						/>
-					</div>
-					<div class="flex flex-col gap-1">
-						<label for="keyword" class="text-xs text-gray-500">關鍵字（劇名／劇團）</label>
-						<input id="keyword" bind:value={subKeyword} placeholder="例：果陀、莎士比亞" class={selectClass} />
-					</div>
-					<div class="flex flex-col gap-1">
-						<label for="source" class="text-xs text-gray-500">來源（選填）</label>
-						<select id="source" bind:value={subSource} class={selectClass}>
-							<option value="">不限來源</option>
-							{#each allSources as s (s)}<option value={s}>{SOURCE_LABELS[s]}</option>{/each}
-						</select>
-					</div>
-					<button
-						type="submit"
-						disabled={subState === 'loading'}
-						class="rounded-lg bg-curtain-600 px-5 py-2 text-sm font-medium text-white hover:bg-curtain-700 disabled:opacity-60"
-					>
-						{subState === 'loading' ? '處理中…' : '建立訂閱'}
-					</button>
-					{#if subState === 'error'}<p class="w-full text-sm text-curtain-600">{subError}</p>{/if}
-				</form>
-			{/if}
+		<div class="mx-auto max-w-6xl space-y-3 px-5 py-5 text-sm text-gray-600">
+			<p class="font-medium text-gray-800">用 RSS 訂閱開賣資訊</p>
+			<p>
+				把下面的 RSS 連結加進你的閱讀器（Feedly、Inoreader、NetNewsWire…），有新戲上架就會出現在你的訂閱裡。
+			</p>
+			<div class="flex flex-wrap items-center gap-2">
+				<code class="rounded bg-gray-100 px-3 py-2 text-xs">{data.siteUrl}/feed.xml</code>
+				<a
+					href="/feed.xml"
+					class="rounded-lg bg-curtain-600 px-4 py-2 text-xs font-medium text-white hover:bg-curtain-700"
+				>
+					開啟 feed.xml
+				</a>
+			</div>
+			<p class="text-xs text-gray-400">
+				想要 Email 通知？用 Blogtrottr、Follow.it 之類的服務把這個 RSS 轉成信件即可，本站不需收集你的 Email。
+			</p>
 		</div>
 	</div>
 {/if}
@@ -281,5 +230,8 @@
 
 <footer class="border-t border-curtain-100 py-8 text-center text-xs text-gray-400">
 	<p>看戲 OnStage TW · 開源戲劇演出聚合 · 資料即時來自各售票平台公開頁面，著作權屬各主辦單位與售票平台</p>
-	<p class="mt-1">本站不販售門票，所有購票連結皆導回官方售票網</p>
+	<p class="mt-1">
+		本站不販售門票，所有購票連結皆導回官方售票網 ·
+		<a href="/feed.xml" class="underline hover:text-curtain-600">RSS</a>
+	</p>
 </footer>

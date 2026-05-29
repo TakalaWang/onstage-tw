@@ -6,7 +6,7 @@ const LIST_URL = (cat: string) =>
 	`https://kham.com.tw/application/UTK01/UTK0101_06.aspx?TYPE=1&CATEGORY=${cat}`;
 const DETAIL_URL = (id: string) =>
 	`https://kham.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=${id}`;
-// 116=戲劇, 80=音樂劇
+// 116 = theatre, 80 = musical
 const CATEGORIES = ['116', '80'];
 
 interface Listed {
@@ -16,7 +16,7 @@ interface Listed {
 	category: string;
 }
 
-/** 寬宏售票：列表頁取 id/標題/圖，再進詳情頁用 meta description 補日期與場館。 */
+/** KHAM: list page gives id/title/image; the detail page's meta description supplies dates and venue. */
 export async function scrapeKham(): Promise<Show[]> {
 	const listed = new Map<string, Listed>();
 	for (const cat of CATEGORIES) {
@@ -59,7 +59,7 @@ export async function scrapeKham(): Promise<Show[]> {
 				onSaleAt = extractOnSale(root.text);
 				await sleep(500);
 			} catch {
-				/* 詳情失敗就只留列表資料 */
+				/* on detail failure, keep just the list data */
 			}
 		}
 		shows.push({
@@ -86,7 +86,7 @@ export async function scrapeKham(): Promise<Show[]> {
 	return shows;
 }
 
-/** meta description 格式為「標題, 場館+日期, 場館+日期…」，取第一個場館段、去掉日期文字。 */
+/** The meta description is "title, venue+date, venue+date…"; take the first venue segment, stripping the date text. */
 function parseVenue(desc: string): string | null {
 	const segs = desc.split(/[,，]/).map((s) => s.trim());
 	for (const seg of segs.slice(1)) {
