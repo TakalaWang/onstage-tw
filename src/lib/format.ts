@@ -22,7 +22,7 @@ export function fmtOnSale(iso: string | null, withTime = false): string | null {
 		timeZone: 'Asia/Taipei',
 		month: 'numeric',
 		day: 'numeric',
-		...(withTime ? { hour: '2-digit', minute: '2-digit', hour12: false } : {})
+		...(withTime ? { hour: '2-digit', minute: '2-digit', hour12: false } : {}),
 	};
 	return d.toLocaleString('zh-TW', opts);
 }
@@ -39,7 +39,7 @@ export const SOURCE_COLOR: Record<Source, string> = {
 	kham: 'bg-sky-100 text-sky-800',
 	era: 'bg-emerald-100 text-emerald-800',
 	kktix: 'bg-indigo-100 text-indigo-800',
-	accupass: 'bg-orange-100 text-orange-800'
+	accupass: 'bg-orange-100 text-orange-800',
 };
 
 export type { Show };

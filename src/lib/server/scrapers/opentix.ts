@@ -64,18 +64,21 @@ export async function scrapeOpenTix(): Promise<Show[]> {
 				venue = detail?.eventVenues?.[0]?.venue?.name ?? null;
 				city = detail?.eventVenues?.[0]?.venue?.city ?? city;
 				description = htmlToText(detail?.description);
-				organizer = detail?.programOrganizers?.map((o) => o.name).filter(Boolean).join('、') || null;
+				organizer =
+					detail?.programOrganizers
+						?.map((o) => o.name)
+						.filter(Boolean)
+						.join('、') || null;
 				sessions = (detail?.eventVenues ?? []).flatMap((ev) =>
 					(ev.events ?? []).map((e) => ({
 						date: unixToDate(e.startDateTime),
 						venue: ev.venue?.name ?? null,
 						city: ev.venue?.city ?? null,
-						onSaleAt: unixToIso(e.onSaleStartDateTime)
-					}))
+						onSaleAt: unixToIso(e.onSaleStartDateTime),
+					})),
 				);
 				await sleep(150);
-			} catch {
-			}
+			} catch {}
 		}
 		shows.push({
 			id: `opentix:${p.id}`,
@@ -96,7 +99,7 @@ export async function scrapeOpenTix(): Promise<Show[]> {
 			notes: null,
 			introImages: [],
 			organizer,
-			sessions
+			sessions,
 		});
 	}
 	return shows;

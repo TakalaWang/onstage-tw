@@ -5,7 +5,10 @@ import type { Show } from '$lib/types';
 export const prerender = true;
 
 const SNAPSHOT_PATH = process.env.ONSTAGE_SNAPSHOT ?? 'static/shows.json';
-const SITE_URL = (process.env.ONSTAGE_SITE_URL ?? 'https://onstage.takalawang.dev').replace(/\/$/, '');
+const SITE_URL = (process.env.ONSTAGE_SITE_URL ?? 'https://onstage.takalawang.dev').replace(
+	/\/$/,
+	'',
+);
 
 export const load: PageServerLoad = async () => {
 	try {

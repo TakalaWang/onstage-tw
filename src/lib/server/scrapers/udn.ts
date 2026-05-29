@@ -10,7 +10,7 @@ import {
 	contentImages,
 	firstDate,
 	extractPriceRange,
-	dateRangeFromDates
+	dateRangeFromDates,
 } from './util';
 
 const API =
@@ -38,7 +38,7 @@ export async function scrapeUdn(): Promise<Show[]> {
 			const res = await politeFetch(API, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json; charset=utf-8' },
-				body: JSON.stringify({ category: cat, pageNo: '1', pageSize: '999' })
+				body: JSON.stringify({ category: cat, pageNo: '1', pageSize: '999' }),
 			});
 			const json = (await res.json()) as { d?: { ReturnData?: { script?: string } } };
 			const html = json.d?.ReturnData?.script;
@@ -67,11 +67,10 @@ export async function scrapeUdn(): Promise<Show[]> {
 						card.querySelector('[itemprop=location] [itemprop=name]')?.text.trim() ||
 						card.querySelector('[itemprop=location]')?.text.trim() ||
 						null,
-					minPrice: priceStr ? Number(priceStr.replace(/[^\d]/g, '')) || null : null
+					minPrice: priceStr ? Number(priceStr.replace(/[^\d]/g, '')) || null : null,
 				});
 			}
-		} catch {
-		}
+		} catch {}
 		await sleep(400);
 	}
 
@@ -91,8 +90,7 @@ export async function scrapeUdn(): Promise<Show[]> {
 				const res = await politeFetch(SESSIONS_URL(item.id));
 				sessions = parseUdnSessions(await res.text());
 				await sleep(400);
-			} catch {
-			}
+			} catch {}
 			try {
 				const res = await politeFetch(DETAIL_URL(item.id));
 				const root = parse(await res.text());
@@ -104,11 +102,10 @@ export async function scrapeUdn(): Promise<Show[]> {
 				description = htmlToText(intro?.innerHTML);
 				introImages = contentImages(intro, DETAIL_URL(item.id));
 				notes = extractHighlights(
-					`${root.querySelector('.admissionNote')?.text ?? ''} ${root.querySelector('.yd_program-main')?.text ?? ''}`
+					`${root.querySelector('.admissionNote')?.text ?? ''} ${root.querySelector('.yd_program-main')?.text ?? ''}`,
 				);
 				await sleep(400);
-			} catch {
-			}
+			} catch {}
 		}
 
 		if (sessions.length) {
@@ -139,7 +136,7 @@ export async function scrapeUdn(): Promise<Show[]> {
 			notes,
 			introImages,
 			organizer: null,
-			sessions
+			sessions,
 		});
 	}
 	return shows;

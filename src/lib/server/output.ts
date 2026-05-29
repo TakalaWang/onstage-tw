@@ -5,7 +5,10 @@ import { GENRE_SLUG } from '../genres';
 import { eventSlug } from '../slug';
 
 const OUT_DIR = process.env.ONSTAGE_OUT_DIR ?? 'static';
-const SITE_URL = (process.env.ONSTAGE_SITE_URL ?? 'https://onstage.takalawang.dev').replace(/\/$/, '');
+const SITE_URL = (process.env.ONSTAGE_SITE_URL ?? 'https://onstage.takalawang.dev').replace(
+	/\/$/,
+	'',
+);
 const MAX_FEED_ITEMS = 100;
 
 function activeShows(shows: Show[]): Show[] {
@@ -36,10 +39,12 @@ function renderFeed(shows: Show[], builtAt: string, titleSuffix = ''): string {
 		.slice(0, MAX_FEED_ITEMS)
 		.map((s) => {
 			const parts = [
-				s.startDate ? `Date: ${s.startDate}${s.endDate && s.endDate !== s.startDate ? ` – ${s.endDate}` : ''}` : null,
+				s.startDate
+					? `Date: ${s.startDate}${s.endDate && s.endDate !== s.startDate ? ` – ${s.endDate}` : ''}`
+					: null,
 				s.venue ? `Venue: ${s.venue}${s.city ? `, ${s.city}` : ''}` : null,
 				s.onSaleAt ? `On sale: ${s.onSaleAt.slice(0, 10)}` : null,
-				`Source: ${SOURCE_LABELS[s.source]}`
+				`Source: ${SOURCE_LABELS[s.source]}`,
 			].filter(Boolean);
 			return `    <item>
       <title>${escapeXml(s.title)}</title>
@@ -75,14 +80,14 @@ function renderSitemap(active: Show[], today: string): string {
 		...active.map((s) => ({
 			loc: `${SITE_URL}/event/${eventSlug(s.id)}`,
 			priority: '0.6',
-			changefreq: 'weekly'
-		}))
+			changefreq: 'weekly',
+		})),
 	];
 	const body = urls
 		.map(
 			(u) =>
 				`  <url><loc>${escapeXml(u.loc)}</loc><lastmod>${today}</lastmod>` +
-				`<changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`
+				`<changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`,
 		)
 		.join('\n');
 	return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
@@ -102,7 +107,7 @@ export function writeOutputs(shows: Show[]): { count: number } {
 	});
 	writeFileSync(
 		`${OUT_DIR}/shows.json`,
-		JSON.stringify({ updatedAt: builtAt, count: light.length, shows: light })
+		JSON.stringify({ updatedAt: builtAt, count: light.length, shows: light }),
 	);
 	writeFileSync(`${OUT_DIR}/descriptions.json`, JSON.stringify(descriptions));
 	writeFileSync(`${OUT_DIR}/feed.xml`, renderFeed(active, builtAt));
@@ -115,8 +120,8 @@ export function writeOutputs(shows: Show[]): { count: number } {
 			renderFeed(
 				active.filter((s) => s.source === src),
 				builtAt,
-				`（${SOURCE_LABELS[src]}）`
-			)
+				`（${SOURCE_LABELS[src]}）`,
+			),
 		);
 	}
 
@@ -129,8 +134,8 @@ export function writeOutputs(shows: Show[]): { count: number } {
 			renderFeed(
 				active.filter((s) => s.category === genre),
 				builtAt,
-				`（${genre}）`
-			)
+				`（${genre}）`,
+			),
 		);
 	}
 	return { count: active.length };

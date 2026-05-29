@@ -9,6 +9,7 @@
 	import { GENRE_SLUG } from '$lib/genres';
 	import { REGION_ORDER, citiesInRegion } from '$lib/regions';
 	import { findVenue } from '$lib/venues';
+	import { initialDark, applyDark } from '$lib/theme';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -17,7 +18,7 @@
 	const allSources = Object.keys(SOURCE_LABELS) as Source[];
 
 	let query = $state('');
-	let activeSources = $state<Set<Source>>(new Set());
+	let activeSources = $state<Source[]>([]);
 	let region = $state('');
 	let city = $state('');
 	let category = $state('');
@@ -34,7 +35,7 @@
 	let showFilters = $state(false);
 	let visible = $state(48);
 	let sentinel = $state<HTMLElement | null>(null);
-	let dark = $state(false);
+	let dark = $state(initialDark());
 	let curtain = $state(shouldShowCurtain());
 	function shouldShowCurtain(): boolean {
 		try {
@@ -44,43 +45,42 @@
 		}
 	}
 
-	function cityOf(city: string | null | undefined, venue: string | null | undefined): string | null {
+	function cityOf(
+		city: string | null | undefined,
+		venue: string | null | undefined,
+	): string | null {
 		if (city) return city;
 		if (venue) return findVenue(venue)?.city ?? null;
 		return null;
 	}
 
 	function showCities(s: Show): string[] {
-		const set = new Set<string>();
-		const top = cityOf(s.city, s.venue);
-		if (top) set.add(top);
-		for (const ss of s.sessions) {
-			const c = cityOf(ss.city, ss.venue);
-			if (c) set.add(c);
-		}
-		return [...set];
+		const all = [cityOf(s.city, s.venue), ...s.sessions.map((ss) => cityOf(ss.city, ss.venue))];
+		return [...new Set(all.filter((c): c is string => !!c))];
 	}
 
-	function occurrences(s: Show): { start: string | null; end: string | null; city: string | null }[] {
+	function occurrences(
+		s: Show,
+	): { start: string | null; end: string | null; city: string | null }[] {
 		if (s.sessions.length)
 			return s.sessions.map((o) => ({
 				start: o.date,
 				end: o.date,
-				city: cityOf(o.city, o.venue) ?? cityOf(s.city, s.venue)
+				city: cityOf(o.city, o.venue) ?? cityOf(s.city, s.venue),
 			}));
 		return [{ start: s.startDate, end: s.endDate, city: cityOf(s.city, s.venue) }];
 	}
 
 	const cities = $derived([...new Set(data.shows.flatMap(showCities))].sort());
 	const categories = $derived(
-		[...new Set(data.shows.map((s) => s.category).filter((c): c is string => !!c))].sort()
+		[...new Set(data.shows.map((s) => s.category).filter((c): c is string => !!c))].sort(),
 	);
 	const presentSources = $derived(allSources.filter((s) => data.shows.some((x) => x.source === s)));
 
 	function toggleSource(s: Source) {
-		const next = new Set(activeSources);
-		next.has(s) ? next.delete(s) : next.add(s);
-		activeSources = next;
+		activeSources = activeSources.includes(s)
+			? activeSources.filter((x) => x !== s)
+			: [...activeSources, s];
 	}
 
 	function sortShows(a: Show, b: Show): number {
@@ -104,7 +104,7 @@
 		return data.shows
 			.filter((s) => {
 				if (onlyFavorites && !favorites.has(s.id)) return false;
-				if (activeSources.size && !activeSources.has(s.source)) return false;
+				if (activeSources.length && !activeSources.includes(s.source)) return false;
 				if (category && s.category !== category) return false;
 				const cityTargets = city ? [city] : region ? citiesInRegion(region) : null;
 				const dateActive = !!fromDate || !!toDate;
@@ -115,7 +115,8 @@
 						const cityOk = !cityTargets || (o.city != null && cityTargets.includes(o.city));
 						const dateOk =
 							!dateActive ||
-							((o.end ?? o.start ?? '9999-12-31') >= lo && (o.start ?? o.end ?? '0000-01-01') <= hi);
+							((o.end ?? o.start ?? '9999-12-31') >= lo &&
+								(o.start ?? o.end ?? '0000-01-01') <= hi);
 						return cityOk && dateOk;
 					});
 					if (!ok) return false;
@@ -139,7 +140,7 @@
 
 	const hasFilters = $derived(
 		!!query ||
-			activeSources.size > 0 ||
+			activeSources.length > 0 ||
 			!!region ||
 			!!city ||
 			!!category ||
@@ -147,12 +148,12 @@
 			!!toDate ||
 			onSale !== 'all' ||
 			!!priceMin ||
-			!!priceMax
+			!!priceMax,
 	);
 
 	function resetFilters() {
 		query = '';
-		activeSources = new Set();
+		activeSources = [];
 		region = '';
 		city = '';
 		category = '';
@@ -164,28 +165,28 @@
 	}
 
 	$effect(() => {
-		filtered.length;
-		visible = 48;
+		if (filtered) visible = 48;
 	});
 
 	$effect(() => {
 		if (!sentinel) return;
 		const io = new IntersectionObserver(
-			(entries) => entries[0].isIntersecting && (visible += 36),
-			{ rootMargin: '800px' }
+			(entries) => {
+				if (entries[0].isIntersecting) visible += 36;
+			},
+			{ rootMargin: '800px' },
 		);
 		io.observe(sentinel);
 		return () => io.disconnect();
 	});
 
 	$effect(() => {
-		dark = document.documentElement.classList.contains('dark');
 		showFilters = matchMedia('(min-width: 640px)').matches;
-		let alreadyShown = true;
+		let alreadyShown = false;
 		try {
 			alreadyShown = !!sessionStorage.getItem('introShown');
 		} catch {
-			alreadyShown = false;
+			/* ignore */
 		}
 		if (matchMedia('(prefers-reduced-motion: reduce)').matches || alreadyShown) {
 			curtain = false;
@@ -200,10 +201,7 @@
 
 	function toggleTheme() {
 		dark = !dark;
-		document.documentElement.classList.toggle('dark', dark);
-		try {
-			localStorage.setItem('theme', dark ? 'dark' : 'light');
-		} catch {}
+		applyDark(dark);
 	}
 
 	const updatedLabel = $derived(
@@ -214,9 +212,9 @@
 					day: 'numeric',
 					hour: '2-digit',
 					minute: '2-digit',
-					hour12: false
+					hour12: false,
 				})
-			: null
+			: null,
 	);
 
 	const jsonLd = $derived(
@@ -233,15 +231,16 @@
 					url: s.url,
 					...(s.startDate ? { startDate: s.startDate } : {}),
 					...(s.endDate ? { endDate: s.endDate } : {}),
-					...(s.venue ? { location: { '@type': 'Place', name: s.venue } } : {})
-				}
-			}))
-		}).replace(/</g, '\\u003c')
+					...(s.venue ? { location: { '@type': 'Place', name: s.venue } } : {}),
+				},
+			})),
+		}).replace(/</g, '\\u003c'),
 	);
 
 	const selectClass =
 		'rounded-full border border-gray-300 bg-white px-3.5 py-2 text-sm text-gray-700 outline-none transition hover:border-curtain-400 focus:border-curtain-500 cursor-pointer dark:border-white/15 dark:bg-white/5 dark:text-gray-200';
-	const fieldBorderless = 'border-0 bg-transparent py-1 text-sm text-gray-600 outline-none dark:text-gray-300';
+	const fieldBorderless =
+		'border-0 bg-transparent py-1 text-sm text-gray-600 outline-none dark:text-gray-300';
 </script>
 
 <svelte:head>
@@ -255,18 +254,24 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="幕間 OnStage TW" />
 	<meta property="og:title" content="幕間 OnStage TW — 台灣戲劇演出整合" />
-	<meta property="og:description" content="一個地方看完台灣所有戲劇演出。搜尋、過濾、用 RSS 追蹤開賣。" />
+	<meta
+		property="og:description"
+		content="一個地方看完台灣所有戲劇演出。搜尋、過濾、用 RSS 追蹤開賣。"
+	/>
 	<meta property="og:url" content={data.siteUrl} />
 	<meta property="og:image" content={`${data.siteUrl}/og.svg`} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="幕間 OnStage TW — 台灣戲劇演出整合" />
 	<meta name="twitter:description" content="一個地方看完台灣所有戲劇演出。" />
 	<meta name="twitter:image" content={`${data.siteUrl}/og.svg`} />
-	{@html `<script type="application/ld+json">${jsonLd}</script>`}
+	{@html `<script type="application/ld+json">${jsonLd}</` + `script>`}
 </svelte:head>
 
 {#if curtain}
-	<div class="curtain-root pointer-events-none fixed inset-0 z-[100] overflow-hidden" aria-hidden="true">
+	<div
+		class="curtain-root pointer-events-none fixed inset-0 z-[100] overflow-hidden"
+		aria-hidden="true"
+	>
 		<div class="absolute inset-0 flex">
 			<div class="curtain-half curtain-left h-full w-1/2"></div>
 			<div class="curtain-half curtain-right h-full w-1/2"></div>
@@ -288,62 +293,68 @@
 	class="sticky top-0 z-30 border-b border-curtain-100 bg-curtain-50/90 backdrop-blur-xl dark:border-white/10 dark:bg-[#16100f]/90"
 >
 	<header class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 pt-3 pb-1 sm:px-5">
-	<div class="flex min-w-0 items-center gap-2.5">
-		<img src={favicon} alt="" class="h-9 w-9 shrink-0 rounded-lg shadow-sm" />
-		<div class="flex items-baseline gap-2">
-			<h1 class="text-2xl font-bold tracking-tight">幕間</h1>
-			<span class="hidden font-display text-lg italic text-gray-400 sm:inline dark:text-gray-500">
-				OnStage TW
+		<div class="flex min-w-0 items-center gap-2.5">
+			<img src={favicon} alt="" class="h-9 w-9 shrink-0 rounded-lg shadow-sm" />
+			<div class="flex items-baseline gap-2">
+				<h1 class="text-2xl font-bold tracking-tight">幕間</h1>
+				<span class="hidden font-display text-lg italic text-gray-400 sm:inline dark:text-gray-500">
+					OnStage TW
+				</span>
+			</div>
+			<span
+				class="ml-1 hidden border-l border-gray-200 pl-3 text-sm text-gray-400 lg:inline dark:border-white/15"
+			>
+				台灣戲劇演出，一站看完
 			</span>
 		</div>
-		<span
-			class="ml-1 hidden border-l border-gray-200 pl-3 text-sm text-gray-400 lg:inline dark:border-white/15"
-		>
-			台灣戲劇演出，一站看完
-		</span>
-	</div>
-	<div class="flex shrink-0 items-center gap-2">
-		<button
-			onclick={toggleTheme}
-			aria-label="切換深色 / 淺色模式"
-			class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:bg-white/5 dark:text-gray-300"
-		>
-			<Icon name={dark ? 'sun' : 'moon'} size={16} />
-		</button>
-		<a
-			href={REPO}
-			target="_blank"
-			rel="noopener noreferrer"
-			aria-label="GitHub（給顆 Star）"
-			class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:bg-white/5 dark:text-gray-300"
-		>
-			<Icon name="github" size={16} />
-		</a>
-		<button
-			onclick={() => (showFeedback = true)}
-			aria-label="意見回饋"
-			class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:bg-white/5 dark:text-gray-300"
-		>
-			<Icon name="message" size={16} />
-		</button>
-		<button
-			onclick={() => (onlyFavorites = !onlyFavorites)}
-			aria-pressed={onlyFavorites}
-			class="flex items-center gap-1.5 rounded-full border px-3 py-2 text-sm font-medium transition active:scale-[0.98] {onlyFavorites
-				? 'border-curtain-600 bg-curtain-600 text-white'
-				: 'border-gray-200 bg-white text-gray-600 hover:border-curtain-400 dark:border-white/15 dark:bg-white/5 dark:text-gray-300'}"
-		>
-			<Icon name="heart" size={15} filled={onlyFavorites} />
-			<span>收藏{favorites.count ? ` ${favorites.count}` : ''}</span>
-		</button>
-		<button
-			onclick={() => (showSubscribe = !showSubscribe)}
-			class="flex items-center gap-1.5 rounded-full bg-curtain-600 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-curtain-700 active:scale-[0.98]"
-		>
-			<Icon name="rss" size={15} />
-			<span class="hidden sm:inline">RSS 訂閱</span>
-		</button>
-	</div>
+		<div class="flex shrink-0 items-center gap-2">
+			<a
+				href="/about"
+				class="rounded-full px-2 py-2 text-sm text-gray-500 transition hover:text-curtain-600 dark:text-gray-400 dark:hover:text-curtain-400"
+			>
+				關於
+			</a>
+			<button
+				onclick={toggleTheme}
+				aria-label="切換深色 / 淺色模式"
+				class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:bg-white/5 dark:text-gray-300"
+			>
+				<Icon name={dark ? 'sun' : 'moon'} size={16} />
+			</button>
+			<a
+				href={REPO}
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="GitHub（給顆 Star）"
+				class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:bg-white/5 dark:text-gray-300"
+			>
+				<Icon name="github" size={16} />
+			</a>
+			<button
+				onclick={() => (showFeedback = true)}
+				aria-label="意見回饋"
+				class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:bg-white/5 dark:text-gray-300"
+			>
+				<Icon name="message" size={16} />
+			</button>
+			<button
+				onclick={() => (onlyFavorites = !onlyFavorites)}
+				aria-pressed={onlyFavorites}
+				class="flex items-center gap-1.5 rounded-full border px-3 py-2 text-sm font-medium transition active:scale-[0.98] {onlyFavorites
+					? 'border-curtain-600 bg-curtain-600 text-white'
+					: 'border-gray-200 bg-white text-gray-600 hover:border-curtain-400 dark:border-white/15 dark:bg-white/5 dark:text-gray-300'}"
+			>
+				<Icon name="heart" size={15} filled={onlyFavorites} />
+				<span>收藏{favorites.count ? ` ${favorites.count}` : ''}</span>
+			</button>
+			<button
+				onclick={() => (showSubscribe = !showSubscribe)}
+				class="flex items-center gap-1.5 rounded-full bg-curtain-600 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-curtain-700 active:scale-[0.98]"
+			>
+				<Icon name="rss" size={15} />
+				<span class="hidden sm:inline">RSS 訂閱</span>
+			</button>
+		</div>
 	</header>
 	<div class="mx-auto max-w-6xl px-4 pb-3 sm:px-5">
 		<div class="flex items-center gap-2">
@@ -373,77 +384,93 @@
 </div>
 
 {#if showFilters}
-	<div class="border-b border-curtain-100 bg-curtain-50/70 dark:border-white/10 dark:bg-[#16100f]/70">
+	<div
+		class="border-b border-curtain-100 bg-curtain-50/70 dark:border-white/10 dark:bg-[#16100f]/70"
+	>
 		<div class="mx-auto max-w-6xl space-y-3 px-5 py-3">
 			<div class="flex flex-wrap items-center gap-2">
-			<select bind:value={region} class={selectClass} aria-label="地區">
-				<option value="">全部地區</option>
-				{#each REGION_ORDER as r (r)}<option value={r}>{r}</option>{/each}
-			</select>
-			<select bind:value={city} class={selectClass} aria-label="縣市">
-				<option value="">全部縣市</option>
-				{#each cities as c (c)}<option value={c}>{c}</option>{/each}
-			</select>
-			<select bind:value={category} class={selectClass} aria-label="分類">
-				<option value="">全部分類</option>
-				{#each categories as c (c)}<option value={c}>{c}</option>{/each}
-			</select>
+				<select bind:value={region} class={selectClass} aria-label="地區">
+					<option value="">全部地區</option>
+					{#each REGION_ORDER as r (r)}<option value={r}>{r}</option>{/each}
+				</select>
+				<select bind:value={city} class={selectClass} aria-label="縣市">
+					<option value="">全部縣市</option>
+					{#each cities as c (c)}<option value={c}>{c}</option>{/each}
+				</select>
+				<select bind:value={category} class={selectClass} aria-label="分類">
+					<option value="">全部分類</option>
+					{#each categories as c (c)}<option value={c}>{c}</option>{/each}
+				</select>
 
-			<span
-				class="flex items-center gap-1.5 rounded-full border border-gray-300 bg-white py-1 pl-3 pr-2 dark:border-white/15 dark:bg-white/5"
-			>
-				<Icon name="calendar" size={14} class="text-gray-400" />
-				<input type="date" bind:value={fromDate} class={fieldBorderless} aria-label="起始日期" />
-				<span class="text-gray-300 dark:text-gray-600">–</span>
-				<input type="date" bind:value={toDate} class={fieldBorderless} aria-label="結束日期" />
-			</span>
-
-			<span
-				class="flex items-center gap-1 rounded-full border border-gray-300 bg-white py-1 pl-3 pr-2 text-sm text-gray-500 dark:border-white/15 dark:bg-white/5 dark:text-gray-400"
-			>
-				<Icon name="tag" size={14} class="text-gray-400" />
-				<span class="text-xs">NT$</span>
-				<input type="number" min="0" bind:value={priceMin} placeholder="最低" class="w-14 {fieldBorderless}" aria-label="最低票價" />
-				<span class="text-gray-300 dark:text-gray-600">–</span>
-				<input type="number" min="0" bind:value={priceMax} placeholder="最高" class="w-14 {fieldBorderless}" aria-label="最高票價" />
-			</span>
-
-			<select bind:value={onSale} class={selectClass} aria-label="開賣狀態">
-				<option value="all">開賣狀態：全部</option>
-				<option value="available">已開賣</option>
-				<option value="upcoming">尚未開賣</option>
-			</select>
-			<select bind:value={sort} class={selectClass} aria-label="排序">
-				<option value="date-asc">排序：演出日期早→晚</option>
-				<option value="date-desc">演出日期晚→早</option>
-				<option value="onsale">開賣時間近→遠</option>
-				<option value="price-asc">票價低→高</option>
-				<option value="price-desc">票價高→低</option>
-			</select>
-		</div>
-
-		<div class="flex flex-wrap items-center gap-2 text-sm">
-			{#each presentSources as s (s)}
-				<button
-					onclick={() => toggleSource(s)}
-					class="rounded-full border px-3 py-1 transition {activeSources.has(s)
-						? 'border-curtain-600 bg-curtain-600 text-white'
-						: 'border-gray-300 bg-white text-gray-600 hover:border-curtain-400 dark:border-white/15 dark:bg-white/5 dark:text-gray-300'}"
+				<span
+					class="flex items-center gap-1.5 rounded-full border border-gray-300 bg-white py-1 pl-3 pr-2 dark:border-white/15 dark:bg-white/5"
 				>
-					{SOURCE_LABELS[s]}
-				</button>
-			{/each}
-			{#if hasFilters}
-				<button
-					onclick={resetFilters}
-					class="ml-auto flex items-center gap-1 text-gray-400 underline hover:text-curtain-600"
+					<Icon name="calendar" size={14} class="text-gray-400" />
+					<input type="date" bind:value={fromDate} class={fieldBorderless} aria-label="起始日期" />
+					<span class="text-gray-300 dark:text-gray-600">–</span>
+					<input type="date" bind:value={toDate} class={fieldBorderless} aria-label="結束日期" />
+				</span>
+
+				<span
+					class="flex items-center gap-1 rounded-full border border-gray-300 bg-white py-1 pl-3 pr-2 text-sm text-gray-500 dark:border-white/15 dark:bg-white/5 dark:text-gray-400"
 				>
-					<Icon name="x" size={13} /> 清除篩選
-				</button>
-			{/if}
+					<Icon name="tag" size={14} class="text-gray-400" />
+					<span class="text-xs">NT$</span>
+					<input
+						type="number"
+						min="0"
+						bind:value={priceMin}
+						placeholder="最低"
+						class="w-14 {fieldBorderless}"
+						aria-label="最低票價"
+					/>
+					<span class="text-gray-300 dark:text-gray-600">–</span>
+					<input
+						type="number"
+						min="0"
+						bind:value={priceMax}
+						placeholder="最高"
+						class="w-14 {fieldBorderless}"
+						aria-label="最高票價"
+					/>
+				</span>
+
+				<select bind:value={onSale} class={selectClass} aria-label="開賣狀態">
+					<option value="all">開賣狀態：全部</option>
+					<option value="available">已開賣</option>
+					<option value="upcoming">尚未開賣</option>
+				</select>
+				<select bind:value={sort} class={selectClass} aria-label="排序">
+					<option value="date-asc">排序：演出日期早→晚</option>
+					<option value="date-desc">演出日期晚→早</option>
+					<option value="onsale">開賣時間近→遠</option>
+					<option value="price-asc">票價低→高</option>
+					<option value="price-desc">票價高→低</option>
+				</select>
+			</div>
+
+			<div class="flex flex-wrap items-center gap-2 text-sm">
+				{#each presentSources as s (s)}
+					<button
+						onclick={() => toggleSource(s)}
+						class="rounded-full border px-3 py-1 transition {activeSources.includes(s)
+							? 'border-curtain-600 bg-curtain-600 text-white'
+							: 'border-gray-300 bg-white text-gray-600 hover:border-curtain-400 dark:border-white/15 dark:bg-white/5 dark:text-gray-300'}"
+					>
+						{SOURCE_LABELS[s]}
+					</button>
+				{/each}
+				{#if hasFilters}
+					<button
+						onclick={resetFilters}
+						class="ml-auto flex items-center gap-1 text-gray-400 underline hover:text-curtain-600"
+					>
+						<Icon name="x" size={13} /> 清除篩選
+					</button>
+				{/if}
+			</div>
 		</div>
 	</div>
-</div>
 {/if}
 
 {#if showSubscribe}
@@ -452,9 +479,15 @@
 			<p class="flex items-center gap-2 font-medium text-gray-800 dark:text-gray-100">
 				<Icon name="rss" size={16} class="text-curtain-600" /> 用 RSS 訂閱開賣資訊
 			</p>
-			<p>把下面的 RSS 連結加進你的閱讀器（Feedly、Inoreader、NetNewsWire…），有新戲上架就會出現在你的訂閱裡。</p>
+			<p>
+				把下面的 RSS
+				連結加進你的閱讀器（Feedly、Inoreader、NetNewsWire…），有新戲上架就會出現在你的訂閱裡。
+			</p>
 			<div class="flex flex-wrap items-center gap-2">
-				<code class="rounded-lg bg-curtain-50 px-3 py-2 text-xs text-curtain-800 dark:bg-white/10 dark:text-gray-200">{data.siteUrl}/feed.xml</code>
+				<code
+					class="rounded-lg bg-curtain-50 px-3 py-2 text-xs text-curtain-800 dark:bg-white/10 dark:text-gray-200"
+					>{data.siteUrl}/feed.xml</code
+				>
 				<a
 					href="/feed.xml"
 					class="flex items-center gap-1.5 rounded-full bg-curtain-600 px-4 py-2 text-xs font-medium text-white transition hover:bg-curtain-700"
@@ -485,16 +518,21 @@
 				{/each}
 			</div>
 			<p class="text-xs text-gray-400">
-				想要 Email 通知？用 Blogtrottr、Follow.it 之類的服務把這個 RSS 轉成信件即可，本站不需收集你的 Email。
+				想要 Email 通知？用 Blogtrottr、Follow.it 之類的服務把這個 RSS
+				轉成信件即可，本站不需收集你的 Email。
 			</p>
 		</div>
 	</div>
 {/if}
 
 <main class="mx-auto max-w-6xl px-5 py-6">
-	<div class="mb-4 flex items-center justify-between gap-3 text-sm text-gray-500 dark:text-gray-400">
+	<div
+		class="mb-4 flex items-center justify-between gap-3 text-sm text-gray-500 dark:text-gray-400"
+	>
 		<p>
-			共 {filtered.length} 檔{#if updatedLabel}<span class="text-gray-400"> · 資料更新於 {updatedLabel}</span>{/if}
+			共 {filtered.length} 檔{#if updatedLabel}<span class="text-gray-400">
+					· 資料更新於 {updatedLabel}</span
+				>{/if}
 		</p>
 		<div class="flex shrink-0 items-center gap-2">
 			<a
@@ -522,7 +560,9 @@
 		{#if visible < filtered.length}
 			<div bind:this={sentinel} class="py-10 text-center text-sm text-gray-400">載入更多…</div>
 		{:else}
-			<p class="py-10 text-center text-xs text-gray-400">— 已經到底了 · 共 {filtered.length} 檔 —</p>
+			<p class="py-10 text-center text-xs text-gray-400">
+				— 已經到底了 · 共 {filtered.length} 檔 —
+			</p>
 		{/if}
 	{/if}
 </main>
@@ -535,14 +575,22 @@
 	<FeedbackModal repo={REPO} onclose={() => (showFeedback = false)} />
 {/if}
 
-<footer class="border-t border-curtain-100 py-8 text-center text-xs text-gray-400 dark:border-white/10">
+<footer
+	class="border-t border-curtain-100 py-8 text-center text-xs text-gray-400 dark:border-white/10"
+>
 	<p>
-		<a href={REPO} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-medium text-gray-500 hover:text-curtain-600 dark:text-gray-300">
+		<a
+			href={REPO}
+			target="_blank"
+			rel="noopener noreferrer"
+			class="inline-flex items-center gap-1 font-medium text-gray-500 hover:text-curtain-600 dark:text-gray-300"
+		>
 			<Icon name="star" size={12} /> 喜歡的話，在 GitHub 給顆 Star
 		</a>
 	</p>
 	<p class="mx-auto mt-2 max-w-xl px-5">
-		幕間 OnStage TW · 開源戲劇演出聚合 · 資料來自各售票平台公開頁面，著作權屬各主辦單位與售票平台 · 本站不販售門票
+		幕間 OnStage TW · 開源戲劇演出聚合 · 資料來自各售票平台公開頁面，著作權屬各主辦單位與售票平台 ·
+		本站不販售門票
 	</p>
 	<p class="mt-2">
 		<a href="/about" class="text-gray-500 underline hover:text-curtain-600 dark:text-gray-300">

@@ -6,7 +6,7 @@ export const SOURCE_LABELS: Record<Source, string> = {
 	kham: '寬宏售票',
 	era: '年代售票',
 	kktix: 'KKTIX',
-	accupass: 'Accupass 活動通'
+	accupass: 'Accupass 活動通',
 };
 
 export interface Session {

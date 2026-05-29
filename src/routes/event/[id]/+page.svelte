@@ -3,27 +3,19 @@
 	import { fmtDateRange, fmtPrice, fmtOnSale, SOURCE_COLOR } from '$lib/format';
 	import { downloadShowIcs } from '$lib/ics';
 	import { eventPath } from '$lib/slug';
+	import { initialDark, applyDark } from '$lib/theme';
 	import Icon from '$lib/components/Icon.svelte';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
 	const show = $derived(data.show);
 
-	let dark = $state(false);
+	let dark = $state(initialDark());
 	let shared = $state(false);
-
-	$effect(() => {
-		dark = document.documentElement.classList.contains('dark');
-	});
 
 	function toggleTheme() {
 		dark = !dark;
-		document.documentElement.classList.toggle('dark', dark);
-		try {
-			localStorage.setItem('theme', dark ? 'dark' : 'light');
-		} catch {
-			/* ignore */
-		}
+		applyDark(dark);
 	}
 
 	const canonical = $derived(`${data.siteUrl}${eventPath(show.id)}`);
@@ -33,10 +25,10 @@
 			fmtDateRange(show),
 			show.venue ? `${show.venue}${show.city ? ` · ${show.city}` : ''}` : show.city,
 			fmtPrice(show) ? `票價 ${fmtPrice(show)}` : null,
-			show.category
+			show.category,
 		]
 			.filter(Boolean)
-			.join('｜')
+			.join('｜'),
 	);
 
 	const ogImage = $derived(show.imageUrl ?? `${data.siteUrl}/og.svg`);
@@ -54,25 +46,24 @@
 			...(show.venue
 				? { location: { '@type': 'Place', name: show.venue + (show.city ? ` ${show.city}` : '') } }
 				: {}),
-			...(show.organizer
-				? { organizer: { '@type': 'Organization', name: show.organizer } }
-				: {}),
+			...(show.organizer ? { organizer: { '@type': 'Organization', name: show.organizer } } : {}),
 			...(show.minPrice != null
 				? {
 						offers: {
 							'@type': 'Offer',
 							price: show.minPrice,
 							priceCurrency: 'TWD',
-							url: show.url
-						}
+							url: show.url,
+						},
 					}
-				: {})
-		}).replace(/</g, '\\u003c')
+				: {}),
+		}).replace(/</g, '\\u003c'),
 	);
 
 	async function share() {
 		try {
-			if (navigator.share) await navigator.share({ title: `${show.title}｜幕間 OnStage TW`, url: canonical });
+			if (navigator.share)
+				await navigator.share({ title: `${show.title}｜幕間 OnStage TW`, url: canonical });
 			else {
 				await navigator.clipboard.writeText(canonical);
 				shared = true;
@@ -97,7 +88,7 @@
 	<meta name="twitter:title" content={`${show.title}｜幕間 OnStage TW`} />
 	<meta name="twitter:description" content={metaDescription} />
 	<meta name="twitter:image" content={ogImage} />
-	{@html `<script type="application/ld+json">${jsonLd}<\/script>`}
+	{@html `<script type="application/ld+json">${jsonLd}</` + `script>`}
 </svelte:head>
 
 <header class="mx-auto flex max-w-3xl items-center justify-between gap-3 px-4 py-3.5 sm:px-5">
@@ -152,7 +143,9 @@
 				</a>
 			</div>
 
-			<h1 class="font-display text-2xl font-semibold leading-snug text-gray-900 sm:text-3xl dark:text-gray-100">
+			<h1
+				class="font-display text-2xl font-semibold leading-snug text-gray-900 sm:text-3xl dark:text-gray-100"
+			>
 				{show.title}
 			</h1>
 
@@ -163,7 +156,9 @@
 				{#if show.venue || show.city}
 					<Icon name="map-pin" size={16} class="text-curtain-500" />
 					<dt class="text-gray-400">場館</dt>
-					<dd class="text-gray-800 dark:text-gray-200">{show.venue ?? ''}{show.city ? ` · ${show.city}` : ''}</dd>
+					<dd class="text-gray-800 dark:text-gray-200">
+						{show.venue ?? ''}{show.city ? ` · ${show.city}` : ''}
+					</dd>
 				{/if}
 				{#if fmtOnSale(show.onSaleAt, true)}
 					<Icon name="ticket" size={16} class="text-curtain-500" />
@@ -200,7 +195,8 @@
 					onclick={share}
 					class="flex items-center gap-1.5 rounded-full border border-gray-300 px-3.5 py-1.5 text-sm text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:text-gray-300"
 				>
-					<Icon name="share" size={15} /> {shared ? '已複製連結' : '分享'}
+					<Icon name="share" size={15} />
+					{shared ? '已複製連結' : '分享'}
 				</button>
 			</div>
 
@@ -210,8 +206,11 @@
 					<ul class="space-y-1.5 text-sm text-gray-600 dark:text-gray-300">
 						{#each show.sessions as session, i (i)}
 							<li class="flex flex-wrap items-center gap-x-2">
-								<span class="tabular-nums">{session.date ? session.date.replaceAll('-', '/') : '—'}</span>
-								{#if session.venue}<span class="text-gray-300">·</span><span>{session.venue}</span>{/if}
+								<span class="tabular-nums"
+									>{session.date ? session.date.replaceAll('-', '/') : '—'}</span
+								>
+								{#if session.venue}<span class="text-gray-300">·</span><span>{session.venue}</span
+									>{/if}
 								{#if fmtOnSale(session.onSaleAt)}
 									<span class="text-curtain-600">（{fmtOnSale(session.onSaleAt)} 開賣）</span>
 								{/if}
@@ -222,7 +221,9 @@
 			{/if}
 
 			{#if show.description}
-				<div class="prose prose-sm max-w-none whitespace-pre-line text-gray-700 dark:prose-invert dark:text-gray-300">
+				<div
+					class="prose prose-sm max-w-none whitespace-pre-line text-gray-700 dark:prose-invert dark:text-gray-300"
+				>
 					{show.description}
 				</div>
 			{/if}

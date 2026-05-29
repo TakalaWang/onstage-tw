@@ -6,7 +6,7 @@ Taiwan's theatre ticketing is fragmented across OPENTIX, udn, KHAM, ERA and KKTI
 
 Theatre only (stage plays, musicals, traditional opera, puppetry, children's theatre, crosstalk, comedy…); concerts and music recitals are excluded.
 
-🔗 **Live:** https://onstage.takalawang.dev  ·  📦 **Repo:** https://github.com/TakalaWang/onstage-tw
+🔗 **Live:** https://onstage.takalawang.dev · 📦 **Repo:** https://github.com/TakalaWang/onstage-tw
 
 > UI is in Traditional Chinese (the audience is in Taiwan). Code, docs and this README are in English.
 
@@ -22,13 +22,13 @@ Theatre only (stage plays, musicals, traditional opera, puppetry, children's the
 
 ## Sources
 
-| Platform | Method |
-|---|---|
-| OPENTIX 兩廳院 | Public JSON API (list + detail) |
-| udn 售票網 | HTML; detail pages add sessions, venue, price, description |
-| 寬宏 KHAM | HTML; detail meta + body add sessions, description, on-sale |
-| 年代 ERA | HTML; detail GridView adds sessions, venue, price, description, organizer |
-| KKTIX | Per-organizer `events.json` + per-event schema.org JSON-LD |
+| Platform       | Method                                                                    |
+| -------------- | ------------------------------------------------------------------------- |
+| OPENTIX 兩廳院 | Public JSON API (list + detail)                                           |
+| udn 售票網     | HTML; detail pages add sessions, venue, price, description                |
+| 寬宏 KHAM      | HTML; detail meta + body add sessions, description, on-sale               |
+| 年代 ERA       | HTML; detail GridView adds sessions, venue, price, description, organizer |
+| KKTIX          | Per-organizer `events.json` + per-event schema.org JSON-LD                |
 
 Each show is classified into a sub-genre from its title (戲曲 / 偶戲 / 音樂劇 / 兒童親子 / 相聲 / 喜劇 / 舞台劇) for the category filter. tixCraft was evaluated and dropped — its catalogue is concerts/tours, not theatre.
 

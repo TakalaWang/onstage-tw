@@ -47,7 +47,12 @@ export function buildShowIcs(show: Show): string {
 	const stamp = toUtcStamp(new Date());
 	const uid = show.id.replace(/[^\w]/g, '_');
 	const loc = [show.venue, show.city].filter(Boolean).join(' ');
-	const lines: string[] = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//OnStage TW//onstage-tw//ZH-TW', 'CALSCALE:GREGORIAN'];
+	const lines: string[] = [
+		'BEGIN:VCALENDAR',
+		'VERSION:2.0',
+		'PRODID:-//OnStage TW//onstage-tw//ZH-TW',
+		'CALSCALE:GREGORIAN',
+	];
 
 	if (show.startDate) {
 		lines.push(
@@ -59,7 +64,7 @@ export function buildShowIcs(show: Show): string {
 			`SUMMARY:${esc(`🎭 ${show.title}`)}`,
 			...(loc ? [`LOCATION:${esc(loc)}`] : []),
 			`URL:${esc(show.url)}`,
-			'END:VEVENT'
+			'END:VEVENT',
 		);
 	}
 
@@ -78,7 +83,7 @@ export function buildShowIcs(show: Show): string {
 			'TRIGGER:-PT30M',
 			`DESCRIPTION:${esc(`開賣提醒：${show.title}`)}`,
 			'END:VALARM',
-			'END:VEVENT'
+			'END:VEVENT',
 		);
 	}
 

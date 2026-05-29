@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { SOURCE_LABELS, type Show } from '$lib/types';
 	import { fmtDateRange, SOURCE_COLOR } from '$lib/format';
+	import { initialDark, applyDark } from '$lib/theme';
 	import ShowModal from '$lib/components/ShowModal.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import type { PageData } from './$types';
@@ -8,17 +9,11 @@
 	let { data }: { data: PageData } = $props();
 
 	let selected = $state<Show | null>(null);
-	let dark = $state(false);
+	let dark = $state(initialDark());
 
-	$effect(() => {
-		dark = document.documentElement.classList.contains('dark');
-	});
 	function toggleTheme() {
 		dark = !dark;
-		document.documentElement.classList.toggle('dark', dark);
-		try {
-			localStorage.setItem('theme', dark ? 'dark' : 'light');
-		} catch {}
+		applyDark(dark);
 	}
 
 	function showDates(show: Show): string[] {
@@ -32,12 +27,10 @@
 	}
 
 	const byDate = $derived.by(() => {
-		const map = new Map<string, Show[]>();
+		const map: Record<string, Show[]> = {};
 		for (const show of data.shows) {
 			for (const date of showDates(show)) {
-				const bucket = map.get(date);
-				if (bucket) bucket.push(show);
-				else map.set(date, [show]);
+				(map[date] ??= []).push(show);
 			}
 		}
 		return map;
@@ -76,7 +69,7 @@
 	}
 	function goToday() {
 		view = { year: today.getFullYear(), month: today.getMonth() };
-		activeKey = byDate.has(todayKey) ? todayKey : null;
+		activeKey = byDate[todayKey] ? todayKey : null;
 	}
 
 	const monthLabel = $derived(`${view.year} 年 ${view.month + 1} 月`);
@@ -104,9 +97,9 @@
 			cells.push({
 				key,
 				day,
-				shows: byDate.get(key) ?? [],
+				shows: byDate[key] ?? [],
 				isToday: key === todayKey,
-				isWeekend: weekdayIdx >= 5
+				isWeekend: weekdayIdx >= 5,
 			});
 		}
 		while (cells.length % 7 !== 0) cells.push(null);
@@ -121,17 +114,21 @@
 	let activeKey = $state<string | null>(null);
 
 	const resolvedKey = $derived.by(() => {
-		if (activeKey && byDate.has(activeKey)) {
+		if (activeKey && byDate[activeKey]) {
 			const prefix = `${view.year}-${String(view.month + 1).padStart(2, '0')}`;
 			if (activeKey.startsWith(prefix)) return activeKey;
 		}
-		if (byDate.has(todayKey) && todayKey.startsWith(`${view.year}-${String(view.month + 1).padStart(2, '0')}`))
+		if (
+			byDate[todayKey] &&
+			todayKey.startsWith(`${view.year}-${String(view.month + 1).padStart(2, '0')}`)
+		)
 			return todayKey;
-		for (const week of weeks) for (const cell of week) if (cell && cell.shows.length) return cell.key;
+		for (const week of weeks)
+			for (const cell of week) if (cell && cell.shows.length) return cell.key;
 		return null;
 	});
 
-	const activeShows = $derived(resolvedKey ? (byDate.get(resolvedKey) ?? []) : []);
+	const activeShows = $derived(resolvedKey ? (byDate[resolvedKey] ?? []) : []);
 
 	const activeLabel = $derived.by(() => {
 		if (!resolvedKey) return null;
@@ -153,9 +150,9 @@
 					day: 'numeric',
 					hour: '2-digit',
 					minute: '2-digit',
-					hour12: false
+					hour12: false,
 				})
-			: null
+			: null,
 	);
 </script>
 
@@ -298,9 +295,7 @@
 								</span>
 
 								{#if has}
-									<span
-										class="mt-1 h-1.5 w-1.5 rounded-full bg-curtain-500 sm:hidden"
-									></span>
+									<span class="mt-1 h-1.5 w-1.5 rounded-full bg-curtain-500 sm:hidden"></span>
 									<span
 										class="mt-auto hidden rounded-full bg-curtain-50 px-1.5 py-0.5 text-[10px] font-semibold leading-none text-curtain-700 sm:inline-block dark:bg-white/10 dark:text-curtain-300"
 									>
@@ -345,12 +340,14 @@
 									<span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-curtain-400"></span>
 								{/if}
 								<span class="min-w-0 flex-1">
-									<span
-										class="line-clamp-2 text-sm font-medium text-gray-800 dark:text-gray-100"
+									<span class="line-clamp-2 text-sm font-medium text-gray-800 dark:text-gray-100"
 										>{show.title}</span
 									>
 									<span class="mt-0.5 block truncate text-xs text-gray-400">
-										{#if show.venue}{show.venue}{#if show.city} · {show.city}{/if}{:else if show.city}{show.city}{:else}{fmtDateRange(show)}{/if}
+										{#if show.venue}{show.venue}{#if show.city}
+												· {show.city}{/if}{:else if show.city}{show.city}{:else}{fmtDateRange(
+												show,
+											)}{/if}
 									</span>
 									<span
 										class="mt-1 inline-block rounded px-1.5 py-0.5 text-[10px] font-medium {SOURCE_COLOR[

@@ -13,7 +13,7 @@ for (const r of report) {
 
 const { count } = writeOutputs(shows);
 console.log(
-	`\nWrote ${count} active shows to static/shows.json + static/feed.xml in ${((Date.now() - start) / 1000).toFixed(1)}s`
+	`\nWrote ${count} active shows to static/shows.json + static/feed.xml in ${((Date.now() - start) / 1000).toFixed(1)}s`,
 );
 
 const failures = report
@@ -34,12 +34,15 @@ const unresolvedVenues = [...venueCount.entries()]
 
 writeFileSync(
 	'scrape-report.json',
-	JSON.stringify({ failures, unresolvedVenues, report, total: count }, null, 2)
+	JSON.stringify({ failures, unresolvedVenues, report, total: count }, null, 2),
 );
 if (unresolvedVenues.length) {
 	console.log(`\nℹ ${unresolvedVenues.length} venue(s) could not be resolved to a city.`);
 }
 if (failures.length) {
-	console.log(`\n⚠ ${failures.length} source(s) need attention:`, failures.map((f) => f.source).join(', '));
+	console.log(
+		`\n⚠ ${failures.length} source(s) need attention:`,
+		failures.map((f) => f.source).join(', '),
+	);
 }
 process.exit(0);

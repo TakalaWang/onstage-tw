@@ -6,5 +6,5 @@ export const GENRE_SLUG: Record<string, string> = {
 	偶戲: 'puppet',
 	兒童親子: 'family',
 	相聲: 'crosstalk',
-	喜劇: 'comedy'
+	喜劇: 'comedy',
 };

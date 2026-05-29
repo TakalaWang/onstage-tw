@@ -41,52 +41,52 @@
 		aria-modal="true"
 		aria-label="意見回饋"
 	>
-	<form onsubmit={submit} class="space-y-4">
-		<div class="flex items-center justify-between">
-			<h2 class="flex items-center gap-2 text-lg font-semibold text-gray-900 dark:text-gray-100">
-				<Icon name="message" size={18} class="text-curtain-600" /> 意見回饋
-			</h2>
-			<button
-				type="button"
-				onclick={onclose}
-				aria-label="關閉"
-				class="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 hover:bg-gray-100 dark:hover:bg-white/10"
-			>
-				<Icon name="x" size={16} />
-			</button>
-		</div>
-
-		<div class="flex flex-wrap gap-2">
-			{#each TYPES as t (t)}
+		<form onsubmit={submit} class="space-y-4">
+			<div class="flex items-center justify-between">
+				<h2 class="flex items-center gap-2 text-lg font-semibold text-gray-900 dark:text-gray-100">
+					<Icon name="message" size={18} class="text-curtain-600" /> 意見回饋
+				</h2>
 				<button
 					type="button"
-					onclick={() => (type = t)}
-					class="rounded-full border px-3 py-1 text-sm transition {type === t
-						? 'border-curtain-600 bg-curtain-600 text-white'
-						: 'border-gray-300 text-gray-600 hover:border-curtain-400 dark:border-white/15 dark:text-gray-300'}"
+					onclick={onclose}
+					aria-label="關閉"
+					class="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 hover:bg-gray-100 dark:hover:bg-white/10"
 				>
-					{t}
+					<Icon name="x" size={16} />
 				</button>
-			{/each}
-		</div>
+			</div>
 
-		<textarea
-			bind:value={text}
-			required
-			rows="4"
-			placeholder="想補充的演出、發現的錯誤、想要的功能…"
-			class="w-full resize-none rounded-xl border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-curtain-500 focus:ring-2 focus:ring-curtain-500/20 dark:border-white/15 dark:bg-white/5 dark:text-gray-100"
-		></textarea>
+			<div class="flex flex-wrap gap-2">
+				{#each TYPES as t (t)}
+					<button
+						type="button"
+						onclick={() => (type = t)}
+						class="rounded-full border px-3 py-1 text-sm transition {type === t
+							? 'border-curtain-600 bg-curtain-600 text-white'
+							: 'border-gray-300 text-gray-600 hover:border-curtain-400 dark:border-white/15 dark:text-gray-300'}"
+					>
+						{t}
+					</button>
+				{/each}
+			</div>
 
-		<button
-			type="submit"
-			class="flex w-full items-center justify-center gap-2 rounded-xl bg-curtain-600 py-3 font-medium text-white transition hover:bg-curtain-700 active:scale-[0.99]"
-		>
-			送出回饋
-		</button>
-		<p class="text-center text-xs text-gray-400">
-			會開啟 GitHub 的 issue 頁面（內容已帶好），確認後送出即可，需 GitHub 帳號。
-		</p>
-	</form>
+			<textarea
+				bind:value={text}
+				required
+				rows="4"
+				placeholder="想補充的演出、發現的錯誤、想要的功能…"
+				class="w-full resize-none rounded-xl border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-curtain-500 focus:ring-2 focus:ring-curtain-500/20 dark:border-white/15 dark:bg-white/5 dark:text-gray-100"
+			></textarea>
+
+			<button
+				type="submit"
+				class="flex w-full items-center justify-center gap-2 rounded-xl bg-curtain-600 py-3 font-medium text-white transition hover:bg-curtain-700 active:scale-[0.99]"
+			>
+				送出回饋
+			</button>
+			<p class="text-center text-xs text-gray-400">
+				會開啟 GitHub 的 issue 頁面（內容已帶好），確認後送出即可，需 GitHub 帳號。
+			</p>
+		</form>
 	</div>
 </div>

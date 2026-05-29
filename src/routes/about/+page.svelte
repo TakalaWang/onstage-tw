@@ -1,25 +1,23 @@
 <script lang="ts">
 	import Icon from '$lib/components/Icon.svelte';
+	import { initialDark, applyDark } from '$lib/theme';
 
 	const REPO = 'https://github.com/TakalaWang/onstage-tw';
 
-	let dark = $state(false);
+	let dark = $state(initialDark());
 
-	$effect(() => {
-		dark = document.documentElement.classList.contains('dark');
-	});
 	function toggleTheme() {
 		dark = !dark;
-		document.documentElement.classList.toggle('dark', dark);
-		try {
-			localStorage.setItem('theme', dark ? 'dark' : 'light');
-		} catch {}
+		applyDark(dark);
 	}
 </script>
 
 <svelte:head>
 	<title>關於 — 幕間 OnStage TW</title>
-	<meta name="description" content="關於幕間 OnStage TW：免責聲明、著作權、隱私權政策與使用條款。" />
+	<meta
+		name="description"
+		content="關於幕間 OnStage TW：免責聲明、著作權、隱私權政策與使用條款。"
+	/>
 </svelte:head>
 
 <header class="mx-auto flex max-w-3xl items-center justify-between gap-3 px-4 py-3.5 sm:px-5">
@@ -46,7 +44,9 @@
 
 <main class="mx-auto max-w-3xl px-4 py-6 sm:px-5 sm:py-10">
 	<div class="mb-8">
-		<h2 class="font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-50">
+		<h2
+			class="font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-50"
+		>
 			關於 / 法律資訊
 		</h2>
 		<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -88,9 +88,7 @@
 						class="font-semibold text-gray-800 dark:text-gray-100">官方售票頁為準</strong
 					>。
 				</p>
-				<p>
-					本站不對資訊之正確性、即時性或完整性負責，亦不參與、不擔保任何票券交易。
-				</p>
+				<p>本站不對資訊之正確性、即時性或完整性負責，亦不參與、不擔保任何票券交易。</p>
 			</div>
 		</section>
 
@@ -107,7 +105,8 @@
 					>方式呈現，未另行轉存。
 				</p>
 				<p>
-					本站之<strong class="font-semibold text-gray-800 dark:text-gray-100">程式碼以 MIT 授權開源</strong
+					本站之<strong class="font-semibold text-gray-800 dark:text-gray-100"
+						>程式碼以 MIT 授權開源</strong
 					>，歡迎參考與貢獻：
 					<a
 						href={REPO}
@@ -135,7 +134,9 @@
 					>。
 				</p>
 				<p>
-					本站僅使用瀏覽器的 <code class="rounded bg-curtain-50 px-1.5 py-0.5 text-xs text-curtain-800 dark:bg-white/10 dark:text-gray-200">localStorage</code
+					本站僅使用瀏覽器的 <code
+						class="rounded bg-curtain-50 px-1.5 py-0.5 text-xs text-curtain-800 dark:bg-white/10 dark:text-gray-200"
+						>localStorage</code
 					>，將你的「深色模式偏好」與「收藏清單」儲存在<strong
 						class="font-semibold text-gray-800 dark:text-gray-100">你自己的裝置</strong
 					>，這些資料不會上傳到任何伺服器。
@@ -143,8 +144,8 @@
 				<p>
 					本站<strong class="font-semibold text-gray-800 dark:text-gray-100"
 						>不使用追蹤型 Cookie，亦無第三方廣告或分析追蹤</strong
-					>。其中地圖功能的圖磚由 OpenStreetMap / CARTO
-					提供，瀏覽地圖時對方可能因連線而取得你的 IP 位址。
+					>。其中地圖功能的圖磚由 OpenStreetMap / CARTO 提供，瀏覽地圖時對方可能因連線而取得你的 IP
+					位址。
 				</p>
 			</div>
 		</section>
@@ -186,9 +187,7 @@
 				<Icon name="message" size={18} class="text-curtain-600" /> 聯絡 / 回饋
 			</h3>
 			<div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-				<p>
-					有任何問題、錯誤回報或建議，歡迎透過 GitHub issue 與我們聯繫：
-				</p>
+				<p>有任何問題、錯誤回報或建議，歡迎透過 GitHub issue 與我們聯繫：</p>
 				<a
 					href={`${REPO}/issues`}
 					target="_blank"
@@ -211,7 +210,9 @@
 	</div>
 </main>
 
-<footer class="border-t border-curtain-100 py-8 text-center text-xs text-gray-400 dark:border-white/10">
+<footer
+	class="border-t border-curtain-100 py-8 text-center text-xs text-gray-400 dark:border-white/10"
+>
 	<p class="mx-auto max-w-xl px-5">
 		幕間 OnStage TW · 開源戲劇演出聚合 · 本站不販售門票，購票請至各官方售票頁
 	</p>

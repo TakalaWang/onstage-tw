@@ -35,7 +35,7 @@ export async function scrapeAll(): Promise<ScrapeResult> {
 				source,
 				count: 0,
 				ok: false,
-				error: err instanceof Error ? err.message : String(err)
+				error: err instanceof Error ? err.message : String(err),
 			});
 		}
 	}

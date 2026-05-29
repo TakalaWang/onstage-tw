@@ -37,8 +37,7 @@
 				shared = true;
 				setTimeout(() => (shared = false), 1800);
 			}
-		} catch {
-		}
+		} catch {}
 	}
 </script>
 
@@ -108,7 +107,9 @@
 				{#if show.venue || show.city}
 					<Icon name="map-pin" size={16} class="text-curtain-500" />
 					<dt class="text-gray-400">場館</dt>
-					<dd class="text-gray-800 dark:text-gray-200">{show.venue ?? ''}{show.city ? ` · ${show.city}` : ''}</dd>
+					<dd class="text-gray-800 dark:text-gray-200">
+						{show.venue ?? ''}{show.city ? ` · ${show.city}` : ''}
+					</dd>
 				{/if}
 				{#if fmtOnSale(show.onSaleAt, true)}
 					<Icon name="ticket" size={16} class="text-curtain-500" />
@@ -145,7 +146,8 @@
 					onclick={share}
 					class="flex items-center gap-1.5 rounded-full border border-gray-300 px-3.5 py-1.5 text-sm text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:text-gray-300"
 				>
-					<Icon name="share" size={15} /> {shared ? '已複製連結' : '分享'}
+					<Icon name="share" size={15} />
+					{shared ? '已複製連結' : '分享'}
 				</button>
 			</div>
 
@@ -155,8 +157,11 @@
 					<ul class="space-y-1.5 text-sm text-gray-600 dark:text-gray-300">
 						{#each show.sessions as session, i (i)}
 							<li class="flex flex-wrap items-center gap-x-2">
-								<span class="tabular-nums">{session.date ? session.date.replaceAll('-', '/') : '—'}</span>
-								{#if session.venue}<span class="text-gray-300">·</span><span>{session.venue}</span>{/if}
+								<span class="tabular-nums"
+									>{session.date ? session.date.replaceAll('-', '/') : '—'}</span
+								>
+								{#if session.venue}<span class="text-gray-300">·</span><span>{session.venue}</span
+									>{/if}
 								{#if fmtOnSale(session.onSaleAt)}
 									<span class="text-curtain-600">（{fmtOnSale(session.onSaleAt)} 開賣）</span>
 								{/if}
@@ -167,7 +172,9 @@
 			{/if}
 
 			{#if desc}
-				<div class="prose prose-sm max-w-none whitespace-pre-line text-gray-700 dark:prose-invert dark:text-gray-300">
+				<div
+					class="prose prose-sm max-w-none whitespace-pre-line text-gray-700 dark:prose-invert dark:text-gray-300"
+				>
 					{desc}
 				</div>
 			{/if}

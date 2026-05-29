@@ -17,7 +17,7 @@ const ORGANIZERS: { slug: string; mode: 'all' | 'filter' }[] = [
 	{ slug: 'iwillshare', mode: 'filter' },
 	{ slug: 'ntt', mode: 'filter' },
 	{ slug: 'weiwuying', mode: 'filter' },
-	{ slug: 'kafka', mode: 'filter' }
+	{ slug: 'kafka', mode: 'filter' },
 ];
 
 const MAX_PER_ORG = 12;
@@ -54,8 +54,7 @@ function parseEventPage(html: string): {
 				detail = ev as LdEvent;
 				break;
 			}
-		} catch {
-		}
+		} catch {}
 	}
 	const image = html.match(/<meta\s+property="og:image"\s+content="([^"]+)"/i)?.[1] ?? null;
 	return { detail, image };
@@ -66,7 +65,7 @@ export async function scrapeKktix(): Promise<Show[]> {
 	const shows: Show[] = [];
 
 	for (const org of ORGANIZERS) {
-		let entries: FeedEntry[] = [];
+		let entries: FeedEntry[];
 		try {
 			const res = await politeFetch(`https://${org.slug}.kktix.cc/events.json`);
 			entries = ((await res.json()) as { entry?: FeedEntry[] }).entry ?? [];
@@ -120,10 +119,9 @@ export async function scrapeKktix(): Promise<Show[]> {
 					notes: null,
 					introImages: [],
 					organizer: null,
-					sessions: [] as Session[]
+					sessions: [] as Session[],
 				});
-			} catch {
-			}
+			} catch {}
 		}
 	}
 	return shows;

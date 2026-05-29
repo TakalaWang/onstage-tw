@@ -11,7 +11,7 @@ import {
 	contentImages,
 	firstDate,
 	extractPriceRange,
-	dateRangeFromDates
+	dateRangeFromDates,
 } from './util';
 
 const LIST_URL = (cat: string) =>
@@ -46,12 +46,11 @@ export async function scrapeEra(): Promise<Show[]> {
 					card.querySelector('img')?.getAttribute('data-original') ??
 					null;
 				const range = extractDateRange(
-					card.querySelector('.list-group-item-date')?.text.trim() ?? ''
+					card.querySelector('.list-group-item-date')?.text.trim() ?? '',
 				);
 				listed.set(id, { id, title, img, range });
 			}
-		} catch {
-		}
+		} catch {}
 		await sleep(700);
 	}
 
@@ -83,19 +82,17 @@ export async function scrapeEra(): Promise<Show[]> {
 				const intro = root.querySelector('#ctl00_ContentPlaceHolder1_lbProgramInfo_Content');
 				description = htmlToText(intro?.innerHTML);
 				introImages = contentImages(intro, DETAIL_URL(item.id));
-				organizer =
-					root.querySelector('#ctl00_ContentPlaceHolder1_lbOrgName')?.text.trim() || null;
+				organizer = root.querySelector('#ctl00_ContentPlaceHolder1_lbOrgName')?.text.trim() || null;
 				notes = extractHighlights(root.querySelector('.contents.tab-content')?.text);
 				await sleep(700);
-			} catch {
-			}
+			} catch {}
 		}
 
 		const cleanSessions: Session[] = rawSessions.map((s) => ({
 			date: s.date,
 			venue: s.venue,
 			city: s.city,
-			onSaleAt: s.onSaleAt
+			onSaleAt: s.onSaleAt,
 		}));
 		if (cleanSessions.length) {
 			venue = cleanSessions[0].venue ?? venue;
@@ -124,7 +121,7 @@ export async function scrapeEra(): Promise<Show[]> {
 			notes,
 			introImages,
 			organizer,
-			sessions: cleanSessions
+			sessions: cleanSessions,
 		});
 	}
 	return shows;
@@ -147,7 +144,7 @@ function parseEraSessions(root: ReturnType<typeof parse>): EraSession[] {
 			venue: placeName || null,
 			city: cityFromText(placeAddr) ?? cityFromText(placeName),
 			onSaleAt: null,
-			_price: priceText || null
+			_price: priceText || null,
 		});
 	}
 	return sessions;

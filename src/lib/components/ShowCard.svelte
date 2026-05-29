@@ -8,7 +8,7 @@
 	let {
 		show,
 		index = 0,
-		onopen
+		onopen,
 	}: { show: Show; index?: number; onopen: (s: Show) => void } = $props();
 
 	const onSaleDays = $derived(daysUntilOnSale(show.onSaleAt));
@@ -81,7 +81,7 @@
 			aria-label={favorites.has(show.id) ? '取消收藏' : '收藏'}
 			aria-pressed={favorites.has(show.id)}
 			class="absolute right-2 top-2 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-white/85 shadow backdrop-blur transition hover:bg-white active:scale-90 dark:bg-black/50 {favorites.has(
-				show.id
+				show.id,
 			)
 				? 'text-curtain-600'
 				: 'text-gray-500 dark:text-gray-200'}"

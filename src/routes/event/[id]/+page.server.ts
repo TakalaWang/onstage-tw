@@ -8,7 +8,10 @@ export const prerender = true;
 
 const SNAPSHOT_PATH = process.env.ONSTAGE_SNAPSHOT ?? 'static/shows.json';
 const DESC_PATH = process.env.ONSTAGE_DESCRIPTIONS ?? 'static/descriptions.json';
-const SITE_URL = (process.env.ONSTAGE_SITE_URL ?? 'https://onstage.takalawang.dev').replace(/\/$/, '');
+const SITE_URL = (process.env.ONSTAGE_SITE_URL ?? 'https://onstage.takalawang.dev').replace(
+	/\/$/,
+	'',
+);
 
 function loadShows(): Show[] {
 	try {

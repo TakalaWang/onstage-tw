@@ -1,5 +1,12 @@
 import type { Show, Session } from '../../types';
-import { politeFetch, sleep, classifyGenre, looksTheatrical, cityFromText, htmlToText } from './util';
+import {
+	politeFetch,
+	sleep,
+	classifyGenre,
+	looksTheatrical,
+	cityFromText,
+	htmlToText,
+} from './util';
 
 const SEARCH_API = 'https://api.accupass.com/v3/search/SearchEvents';
 const EVENT_URL = (id: string) => `https://www.accupass.com/event/${id}`;
@@ -16,7 +23,7 @@ const KEYWORDS = [
 	'兒童劇',
 	'歌仔戲',
 	'相聲',
-	'偶戲'
+	'偶戲',
 ];
 
 const PAGES_PER_KEYWORD = 2;
@@ -47,7 +54,7 @@ const EN_CITY: Record<string, string> = {
 	'Taitung County': '臺東縣',
 	'Penghu County': '澎湖縣',
 	'Kinmen County': '金門縣',
-	'Lienchiang County': '連江縣'
+	'Lienchiang County': '連江縣',
 };
 
 interface SearchItem {
@@ -95,8 +102,8 @@ async function searchPage(keyword: string, currentIndex: number): Promise<Search
 				sortBy: '4',
 				timeType: '0',
 				keyword,
-				currentIndex
-			})
+				currentIndex,
+			}),
 		});
 		const data = (await res.json()) as SearchResponse;
 		return data.items ?? [];
@@ -113,8 +120,7 @@ function parseEventLd(html: string): LdEvent | null {
 			const arr = Array.isArray(parsed) ? parsed : [parsed];
 			const ev = arr.find((o) => o && o['@type'] === 'Event');
 			if (ev) return ev as LdEvent;
-		} catch {
-		}
+		} catch {}
 	}
 	return null;
 }
@@ -170,8 +176,7 @@ export async function scrapeAccupass(): Promise<Show[]> {
 						startDate = ld.startDate ? ld.startDate.slice(0, 10) : startDate;
 						endDate = ld.endDate ? ld.endDate.slice(0, 10) : endDate;
 					}
-				} catch {
-				}
+				} catch {}
 			}
 
 			shows.push({
@@ -193,7 +198,7 @@ export async function scrapeAccupass(): Promise<Show[]> {
 				notes: null,
 				introImages: [],
 				organizer,
-				sessions: [] as Session[]
+				sessions: [] as Session[],
 			});
 		}
 		return shows;

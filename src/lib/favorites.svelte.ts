@@ -1,20 +1,23 @@
+import { SvelteSet } from 'svelte/reactivity';
+
 const KEY = 'onstage:favorites';
 
-function load(): Set<string> {
-	if (typeof localStorage === 'undefined') return new Set();
+function load(): string[] {
+	if (typeof localStorage === 'undefined') return [];
 	try {
-		return new Set(JSON.parse(localStorage.getItem(KEY) ?? '[]') as string[]);
+		return JSON.parse(localStorage.getItem(KEY) ?? '[]') as string[];
 	} catch {
-		return new Set();
+		return [];
 	}
 }
 
-let ids = $state<Set<string>>(load());
+const ids = new SvelteSet<string>(load());
 
 function persist() {
 	try {
 		localStorage.setItem(KEY, JSON.stringify([...ids]));
 	} catch {
+		/* ignore */
 	}
 }
 
@@ -23,12 +26,11 @@ export const favorites = {
 		return ids.has(id);
 	},
 	toggle(id: string): void {
-		const next = new Set(ids);
-		next.has(id) ? next.delete(id) : next.add(id);
-		ids = next;
+		if (ids.has(id)) ids.delete(id);
+		else ids.add(id);
 		persist();
 	},
 	get count(): number {
 		return ids.size;
-	}
+	},
 };

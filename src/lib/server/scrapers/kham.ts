@@ -10,7 +10,7 @@ import {
 	extractHighlights,
 	contentImages,
 	firstDate,
-	dateRangeFromDates
+	dateRangeFromDates,
 } from './util';
 
 const LIST_URL = (cat: string) =>
@@ -44,11 +44,10 @@ export async function scrapeKham(): Promise<Show[]> {
 					id,
 					title,
 					image: a.querySelector('img')?.getAttribute('src') ?? null,
-					category: cat === '80' ? '音樂劇' : cat === '100' ? '舞蹈' : '戲劇'
+					category: cat === '80' ? '音樂劇' : cat === '100' ? '舞蹈' : '戲劇',
 				});
 			}
-		} catch {
-		}
+		} catch {}
 		await sleep(500);
 	}
 
@@ -77,8 +76,7 @@ export async function scrapeKham(): Promise<Show[]> {
 				introImages = contentImages(intro, DETAIL_URL(item.id));
 				notes = extractHighlights(root.querySelector('#divbtn02')?.text);
 				await sleep(500);
-			} catch {
-			}
+			} catch {}
 		}
 
 		if (sessions.length) {
@@ -108,7 +106,7 @@ export async function scrapeKham(): Promise<Show[]> {
 			notes,
 			introImages,
 			organizer: null,
-			sessions
+			sessions,
 		});
 	}
 	return shows;
@@ -121,7 +119,7 @@ function parseKhamSessions(desc: string): Session[] {
 		.filter(Boolean);
 	const sessions: Session[] = [];
 	for (const seg of segs.slice(1)) {
-		const dm = seg.match(/\d{4}[年/.\-]/);
+		const dm = seg.match(/\d{4}[年/.-]/);
 		const venue = (dm ? seg.slice(0, dm.index).trim() : seg).replace(/\s+/g, ' ') || null;
 		const date = firstDate(seg);
 		if (!venue && !date) continue;
