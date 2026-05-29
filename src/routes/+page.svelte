@@ -2,9 +2,12 @@
 	import { SOURCE_LABELS, type Source, type Show } from '$lib/types';
 	import ShowCard from '$lib/components/ShowCard.svelte';
 	import ShowModal from '$lib/components/ShowModal.svelte';
+	import FeedbackModal from '$lib/components/FeedbackModal.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import favicon from '$lib/assets/favicon.svg';
 	import type { PageData } from './$types';
+
+	const REPO = 'https://github.com/TakalaWang/onstage-tw';
 
 	let { data }: { data: PageData } = $props();
 
@@ -17,9 +20,12 @@
 	let fromDate = $state('');
 	let toDate = $state('');
 	let onSale = $state<'all' | 'available' | 'upcoming'>('all');
+	let priceMin = $state('');
+	let priceMax = $state('');
 	let sort = $state<'date' | 'onsale'>('date');
 	let selected = $state<Show | null>(null);
 	let showSubscribe = $state(false);
+	let showFeedback = $state(false);
 	let visible = $state(48);
 	let sentinel = $state<HTMLElement | null>(null);
 	let dark = $state(false);
@@ -50,6 +56,11 @@
 			// On-sale status. No on-sale info is treated as already on sale.
 			if (onSale === 'available' && s.onSaleAt && s.onSaleAt > nowIso) return false;
 			if (onSale === 'upcoming' && !(s.onSaleAt && s.onSaleAt > nowIso)) return false;
+			if (priceMin || priceMax) {
+				if (s.minPrice == null) return false;
+				if (priceMin && s.minPrice < Number(priceMin)) return false;
+				if (priceMax && s.minPrice > Number(priceMax)) return false;
+			}
 			if (q) {
 				const hay =
 					`${s.title} ${s.venue ?? ''} ${s.category ?? ''} ${s.organizer ?? ''}`.toLowerCase();
@@ -66,7 +77,15 @@
 	});
 
 	const hasFilters = $derived(
-		!!query || activeSources.size > 0 || !!city || !!category || !!fromDate || !!toDate || onSale !== 'all'
+		!!query ||
+			activeSources.size > 0 ||
+			!!city ||
+			!!category ||
+			!!fromDate ||
+			!!toDate ||
+			onSale !== 'all' ||
+			!!priceMin ||
+			!!priceMax
 	);
 
 	function resetFilters() {
@@ -77,6 +96,8 @@
 		fromDate = '';
 		toDate = '';
 		onSale = 'all';
+		priceMin = '';
+		priceMax = '';
 	}
 
 	$effect(() => {
@@ -191,6 +212,30 @@
 				<input type="date" bind:value={toDate} class={dateBorderless} aria-label="結束日期" />
 			</span>
 
+			<span
+				class="flex items-center gap-1 rounded-full border border-gray-300 bg-white py-1 pl-3 pr-2 text-sm text-gray-500 dark:border-white/15 dark:bg-white/5 dark:text-gray-400"
+			>
+				<Icon name="tag" size={14} class="text-gray-400" />
+				<span class="text-xs">NT$</span>
+				<input
+					type="number"
+					min="0"
+					bind:value={priceMin}
+					placeholder="最低"
+					class="w-16 {dateBorderless}"
+					aria-label="最低票價"
+				/>
+				<span class="text-gray-300 dark:text-gray-600">–</span>
+				<input
+					type="number"
+					min="0"
+					bind:value={priceMax}
+					placeholder="最高"
+					class="w-16 {dateBorderless}"
+					aria-label="最高票價"
+				/>
+			</span>
+
 			<select bind:value={onSale} class={selectClass} aria-label="開賣狀態">
 				<option value="all">開賣狀態：全部</option>
 				<option value="available">已開賣</option>
@@ -268,6 +313,19 @@
 
 {#if selected}
 	<ShowModal show={selected} onclose={() => (selected = null)} />
+{/if}
+
+<!-- Feedback → opens a prefilled GitHub issue -->
+<button
+	onclick={() => (showFeedback = true)}
+	class="fixed bottom-5 right-5 z-30 flex items-center gap-2 rounded-full bg-curtain-600 px-4 py-3 text-sm font-medium text-white shadow-lg shadow-curtain-900/25 transition hover:bg-curtain-700 active:scale-[0.97]"
+>
+	<Icon name="message" size={16} />
+	<span class="hidden sm:inline">意見回饋</span>
+</button>
+
+{#if showFeedback}
+	<FeedbackModal repo={REPO} onclose={() => (showFeedback = false)} />
 {/if}
 
 <footer
