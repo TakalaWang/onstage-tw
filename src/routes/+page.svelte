@@ -93,18 +93,33 @@
 		activeSources = next;
 	}
 
+	const todayKey = new Date().toISOString().slice(0, 10);
+
+	// The date used to order a show: its soonest performance still to come. A long
+	// run that started long ago but is on now sorts as "today", not by its old start
+	// date — so 近→遠 means "happening soonest" rather than "started earliest".
+	function sortDate(s: Show): string {
+		const dates = (s.sessions.length ? s.sessions.map((x) => x.date) : [s.startDate]).filter(
+			(d): d is string => !!d
+		);
+		const upcoming = dates.filter((d) => d >= todayKey).sort();
+		if (upcoming.length) return upcoming[0];
+		// No listed date is in the future, but the show is still active → treat as now.
+		return s.endDate && s.endDate >= todayKey ? todayKey : (s.startDate ?? '9999');
+	}
+
 	function sortShows(a: Show, b: Show): number {
 		switch (sort) {
 			case 'date-asc':
-				return (a.startDate ?? '9999').localeCompare(b.startDate ?? '9999');
+				return sortDate(a).localeCompare(sortDate(b));
 			case 'onsale':
 				return (a.onSaleAt ?? '9999').localeCompare(b.onSaleAt ?? '9999');
 			case 'price-asc':
 				return (a.minPrice ?? Infinity) - (b.minPrice ?? Infinity);
 			case 'price-desc':
 				return (b.minPrice ?? -1) - (a.minPrice ?? -1);
-			default: // date-desc — newest performance dates first
-				return (b.startDate ?? '0000').localeCompare(a.startDate ?? '0000');
+			default: // date-desc — furthest-out performance dates first
+				return sortDate(b).localeCompare(sortDate(a));
 		}
 	}
 
