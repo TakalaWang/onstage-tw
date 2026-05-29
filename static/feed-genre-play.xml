@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>幕間 OnStage TW — 台灣戲劇演出（舞台劇）</title>
+    <link>https://onstage.takalawang.dev</link>
+    <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 29 May 2026 10:55:18 GMT</lastBuildDate>
+    <item>
+      <title>王偉忠監製舞台劇《明星養老院》</title>
+      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
+      <guid isPermaLink="false">udn:P0YXZMT5</guid>
+      <pubDate>Thu, 24 Dec 2026 16:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-12-25 – 2026-12-27 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · Source: udn 售票網</description>
+    </item>
+    <item>
+      <title>舞台劇《都更男女》</title>
+      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P18P4HS6</link>
+      <guid isPermaLink="false">udn:P18P4HS6</guid>
+      <pubDate>Thu, 13 Aug 2026 16:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-08-14 – 2026-09-06 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · Source: udn 售票網</description>
+    </item>
+    <item>
+      <title>超人力霸王舞台劇In Taiwan 2026</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19Q1GAI</link>
+      <guid isPermaLink="false">era:P19Q1GAI</guid>
+      <pubDate>Thu, 23 Jul 2026 16:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-07-24 – 2026-08-16 · Venue: 臺北市政大樓親子劇場, 臺北市 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>舞台劇《謝謝大家收看》</title>
+      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P137BHCT</link>
+      <guid isPermaLink="false">udn:P137BHCT</guid>
+      <pubDate>Thu, 25 Jun 2026 16:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-06-26 – 2026-06-28 · Venue: 臺中市中山堂, 臺中市 · Source: udn 售票網</description>
+    </item>
+    <item>
+      <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
+      <guid isPermaLink="false">era:P192ILGJ</guid>
+      <pubDate>Fri, 12 Jun 2026 16:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-06-13 – 2026-08-29 · Venue: 桃園展演中心展演廳 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>舞台劇〈你來的時候〉</title>
+      <link>https://kham.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19CQHU9</link>
+      <guid isPermaLink="false">kham:P19CQHU9</guid>
+      <pubDate>Tue, 21 Apr 2026 16:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-09-11 – 2026-09-26 · Venue: 國家戲劇院 · On sale: 2026-04-22 · Source: 寬宏售票</description>
+    </item>
+    <item>
+      <title>《同棲時間》舞台劇</title>
+      <link>https://www.opentix.life/event/1746795572740759553</link>
+      <guid isPermaLink="false">opentix:1746795572740759553</guid>
+      <pubDate>Fri, 10 Apr 2026 04:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-08-13 – 2026-08-16 · Venue: 臺北表演藝術中心 藍盒子, 臺北市 · On sale: 2026-04-10 · Source: OPENTIX 兩廳院</description>
+    </item>
+  </channel>
+</rss>

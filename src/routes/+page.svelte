@@ -6,6 +6,7 @@
 	import Icon from '$lib/components/Icon.svelte';
 	import favicon from '$lib/assets/favicon.svg';
 	import { favorites } from '$lib/favorites.svelte';
+	import { GENRE_SLUG } from '$lib/genres';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -27,6 +28,7 @@
 	let showSubscribe = $state(false);
 	let showFeedback = $state(false);
 	let onlyFavorites = $state(false);
+	let showFilters = $state(false); // mobile: advanced filters collapsed by default
 	let visible = $state(48);
 	let sentinel = $state<HTMLElement | null>(null);
 	let dark = $state(false);
@@ -267,6 +269,13 @@
 			<Icon name="github" size={16} />
 		</a>
 		<button
+			onclick={() => (showFeedback = true)}
+			aria-label="意見回饋"
+			class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:bg-white/5 dark:text-gray-300"
+		>
+			<Icon name="message" size={16} />
+		</button>
+		<button
 			onclick={() => (onlyFavorites = !onlyFavorites)}
 			aria-pressed={onlyFavorites}
 			class="flex items-center gap-1.5 rounded-full border px-3 py-2 text-sm font-medium transition active:scale-[0.98] {onlyFavorites
@@ -291,19 +300,31 @@
 	class="sticky top-0 z-20 border-y border-curtain-100 bg-curtain-50/80 backdrop-blur-xl dark:border-white/10 dark:bg-[#16100f]/80"
 >
 	<div class="mx-auto max-w-6xl space-y-3 px-5 py-4">
-		<div class="relative">
-			<span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
-				<Icon name="search" size={16} />
-			</span>
-			<input
-				type="search"
-				bind:value={query}
-				placeholder="搜尋劇名、場館、主辦、分類…"
-				class="w-full rounded-full border border-gray-300 bg-white py-2.5 pl-10 pr-4 text-sm outline-none transition focus:border-curtain-500 focus:ring-2 focus:ring-curtain-500/20 dark:border-white/15 dark:bg-white/5 dark:text-gray-100"
-			/>
+		<div class="flex items-center gap-2">
+			<div class="relative flex-1">
+				<span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
+					<Icon name="search" size={16} />
+				</span>
+				<input
+					type="search"
+					bind:value={query}
+					placeholder="搜尋劇名、場館、主辦、分類…"
+					class="w-full rounded-full border border-gray-300 bg-white py-2.5 pl-10 pr-4 text-sm outline-none transition focus:border-curtain-500 focus:ring-2 focus:ring-curtain-500/20 dark:border-white/15 dark:bg-white/5 dark:text-gray-100"
+				/>
+			</div>
+			<!-- mobile-only toggle for advanced filters -->
+			<button
+				onclick={() => (showFilters = !showFilters)}
+				aria-expanded={showFilters}
+				class="flex shrink-0 items-center gap-1.5 rounded-full border border-gray-300 bg-white px-3.5 py-2 text-sm text-gray-600 sm:hidden dark:border-white/15 dark:bg-white/5 dark:text-gray-300 {hasFilters
+					? 'border-curtain-500 text-curtain-600'
+					: ''}"
+			>
+				<Icon name="sliders" size={15} /> 篩選
+			</button>
 		</div>
 
-		<div class="flex flex-wrap items-center gap-2">
+		<div class="{showFilters ? 'flex' : 'hidden'} flex-wrap items-center gap-2 sm:flex">
 			<select bind:value={city} class={selectClass} aria-label="縣市">
 				<option value="">全部縣市</option>
 				{#each cities as c (c)}<option value={c}>{c}</option>{/each}
@@ -346,7 +367,7 @@
 			</select>
 		</div>
 
-		<div class="flex flex-wrap items-center gap-2 text-sm">
+		<div class="{showFilters ? 'flex' : 'hidden'} flex-wrap items-center gap-2 text-sm sm:flex">
 			{#each allSources as s (s)}
 				<button
 					onclick={() => toggleSource(s)}
@@ -397,6 +418,17 @@
 					</a>
 				{/each}
 			</div>
+			<div class="flex flex-wrap items-center gap-2">
+				<span class="text-xs text-gray-400">只訂單一分類：</span>
+				{#each categories.filter((c) => GENRE_SLUG[c]) as c (c)}
+					<a
+						href={`/feed-genre-${GENRE_SLUG[c]}.xml`}
+						class="rounded-full border border-gray-300 px-2.5 py-1 text-xs text-gray-500 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:text-gray-400"
+					>
+						{c}
+					</a>
+				{/each}
+			</div>
 			<p class="text-xs text-gray-400">
 				想要 Email 通知？用 Blogtrottr、Follow.it 之類的服務把這個 RSS 轉成信件即可，本站不需收集你的 Email。
 			</p>
@@ -406,9 +438,17 @@
 
 <!-- Show grid -->
 <main class="mx-auto max-w-6xl px-5 py-6">
-	<p class="mb-4 text-sm text-gray-500 dark:text-gray-400">
-		共 {filtered.length} 檔{#if updatedLabel}<span class="text-gray-400"> · 資料更新於 {updatedLabel}</span>{/if}
-	</p>
+	<div class="mb-4 flex items-center justify-between gap-3 text-sm text-gray-500 dark:text-gray-400">
+		<p>
+			共 {filtered.length} 檔{#if updatedLabel}<span class="text-gray-400"> · 資料更新於 {updatedLabel}</span>{/if}
+		</p>
+		<a
+			href="/calendar"
+			class="flex shrink-0 items-center gap-1.5 rounded-full border border-gray-300 px-3 py-1.5 font-medium transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15"
+		>
+			<Icon name="calendar" size={15} /> 月曆檢視
+		</a>
+	</div>
 	{#if filtered.length === 0}
 		<p class="py-20 text-center text-gray-400">沒有符合條件的演出，試試調整篩選。</p>
 	{:else}
@@ -428,15 +468,6 @@
 {#if selected}
 	<ShowModal show={selected} onclose={() => (selected = null)} />
 {/if}
-
-<!-- Feedback → prefilled GitHub issue -->
-<button
-	onclick={() => (showFeedback = true)}
-	class="fixed bottom-5 right-5 z-30 flex items-center gap-2 rounded-full bg-curtain-600 px-4 py-3 text-sm font-medium text-white shadow-lg shadow-curtain-900/25 transition hover:bg-curtain-700 active:scale-[0.97]"
->
-	<Icon name="message" size={16} />
-	<span class="hidden sm:inline">意見回饋</span>
-</button>
 
 {#if showFeedback}
 	<FeedbackModal repo={REPO} onclose={() => (showFeedback = false)} />

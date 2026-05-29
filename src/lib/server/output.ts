@@ -1,6 +1,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import type { Show, Source } from '../types';
 import { SOURCE_LABELS } from '../types';
+import { GENRE_SLUG } from '../genres';
 
 const OUT_DIR = process.env.ONSTAGE_OUT_DIR ?? 'static';
 const SITE_URL = (process.env.ONSTAGE_SITE_URL ?? 'https://onstage.takalawang.dev').replace(/\/$/, '');
@@ -91,6 +92,21 @@ export function writeOutputs(shows: Show[]): { count: number } {
 				active.filter((s) => s.source === src),
 				builtAt,
 				`（${SOURCE_LABELS[src]}）`
+			)
+		);
+	}
+
+	// Per-genre feeds (e.g. /feed-genre-xiqu.xml) using ASCII slugs.
+	const genres = [...new Set(active.map((s) => s.category).filter((c): c is string => !!c))];
+	for (const genre of genres) {
+		const slug = GENRE_SLUG[genre];
+		if (!slug) continue;
+		writeFileSync(
+			`${OUT_DIR}/feed-genre-${slug}.xml`,
+			renderFeed(
+				active.filter((s) => s.category === genre),
+				builtAt,
+				`（${genre}）`
 			)
 		);
 	}
