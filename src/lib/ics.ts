@@ -21,6 +21,28 @@ function esc(text: string): string {
 	return text.replace(/([,;\\])/g, '\\$1').replace(/\n/g, '\\n');
 }
 
+function fold(line: string): string {
+	const enc = new TextEncoder();
+	if (enc.encode(line).length <= 75) return line;
+	const segments: string[] = [];
+	let cur = '';
+	let bytes = 0;
+	let max = 75;
+	for (const ch of line) {
+		const b = enc.encode(ch).length;
+		if (bytes + b > max) {
+			segments.push(cur);
+			cur = '';
+			bytes = 0;
+			max = 74;
+		}
+		cur += ch;
+		bytes += b;
+	}
+	if (cur) segments.push(cur);
+	return segments.join('\r\n ');
+}
+
 export function buildShowIcs(show: Show): string {
 	const stamp = toUtcStamp(new Date());
 	const uid = show.id.replace(/[^\w]/g, '_');
@@ -61,7 +83,7 @@ export function buildShowIcs(show: Show): string {
 	}
 
 	lines.push('END:VCALENDAR');
-	return lines.join('\r\n');
+	return lines.map(fold).join('\r\n');
 }
 
 export function downloadShowIcs(show: Show): void {
