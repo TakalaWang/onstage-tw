@@ -1,12 +1,28 @@
 <script lang="ts">
 	import { SOURCE_LABELS, type Show } from '$lib/types';
 	import { fmtDateRange, fmtPrice, fmtOnSale, SOURCE_COLOR } from '$lib/format';
+	import { downloadShowIcs } from '$lib/ics';
 	import Icon from './Icon.svelte';
 
 	let { show, onclose }: { show: Show; onclose: () => void } = $props();
+	let shared = $state(false);
 
 	function onKey(e: KeyboardEvent) {
 		if (e.key === 'Escape') onclose();
+	}
+
+	async function share() {
+		const data = { title: `${show.title}｜幕間 OnStage TW`, url: show.url };
+		try {
+			if (navigator.share) await navigator.share(data);
+			else {
+				await navigator.clipboard.writeText(show.url);
+				shared = true;
+				setTimeout(() => (shared = false), 1800);
+			}
+		} catch {
+			/* user cancelled / unsupported */
+		}
 	}
 </script>
 
@@ -92,6 +108,23 @@
 					<dd class="text-gray-800 dark:text-gray-200">{show.organizer}</dd>
 				{/if}
 			</dl>
+
+			<div class="flex flex-wrap gap-2">
+				<button
+					type="button"
+					onclick={() => downloadShowIcs(show)}
+					class="flex items-center gap-1.5 rounded-full border border-gray-300 px-3.5 py-1.5 text-sm text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:text-gray-300"
+				>
+					<Icon name="calendar-plus" size={15} /> 加入行事曆{show.onSaleAt ? '（含開賣提醒）' : ''}
+				</button>
+				<button
+					type="button"
+					onclick={share}
+					class="flex items-center gap-1.5 rounded-full border border-gray-300 px-3.5 py-1.5 text-sm text-gray-600 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:text-gray-300"
+				>
+					<Icon name="share" size={15} /> {shared ? '已複製連結' : '分享'}
+				</button>
+			</div>
 
 			{#if show.sessions.length > 1}
 				<div class="rounded-2xl bg-curtain-50 p-4 dark:bg-white/5">

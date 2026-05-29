@@ -123,23 +123,30 @@ html.dark {
 .curtain-right {
 	animation: curtain-open-right 1.05s cubic-bezier(0.76, 0, 0.24, 1) 0.55s forwards;
 }
-@keyframes curtain-brand {
+/* Rope from the top of the screen down to the icon. */
+.curtain-rope {
+	background: linear-gradient(to bottom, transparent, rgba(246, 183, 60, 0.15) 30%, #caa45a);
+}
+/* The brand drops in, hangs a beat, then is hoisted up and off-screen. */
+@keyframes curtain-hoist {
 	0% {
 		opacity: 0;
-		transform: scale(0.92);
+		transform: translateY(-8vh);
 	}
-	25%,
-	50% {
+	14% {
 		opacity: 1;
-		transform: scale(1);
+		transform: translateY(0);
+	}
+	45% {
+		transform: translateY(0);
 	}
 	100% {
-		opacity: 0;
-		transform: scale(1.04);
+		opacity: 1;
+		transform: translateY(-118vh);
 	}
 }
-.curtain-brand {
-	animation: curtain-brand 1.6s ease forwards;
+.curtain-hoist {
+	animation: curtain-hoist 1.8s cubic-bezier(0.5, 0, 0.7, 0.2) forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {

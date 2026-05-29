@@ -5,6 +5,7 @@
 	import FeedbackModal from '$lib/components/FeedbackModal.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import favicon from '$lib/assets/favicon.svg';
+	import { favorites } from '$lib/favorites.svelte';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -25,6 +26,7 @@
 	let selected = $state<Show | null>(null);
 	let showSubscribe = $state(false);
 	let showFeedback = $state(false);
+	let onlyFavorites = $state(false);
 	let visible = $state(48);
 	let sentinel = $state<HTMLElement | null>(null);
 	let dark = $state(false);
@@ -69,6 +71,7 @@
 		const nowIso = new Date().toISOString();
 		return data.shows
 			.filter((s) => {
+				if (onlyFavorites && !favorites.has(s.id)) return false;
 				if (activeSources.size && !activeSources.has(s.source)) return false;
 				if (city && !showCities(s).includes(city)) return false;
 				if (category && s.category !== category) return false;
@@ -135,7 +138,7 @@
 		// Skip the curtain reveal when reduced motion is requested.
 		if (matchMedia('(prefers-reduced-motion: reduce)').matches) curtain = false;
 		else {
-			const t = setTimeout(() => (curtain = false), 1700);
+			const t = setTimeout(() => (curtain = false), 1900);
 			return () => clearTimeout(t);
 		}
 	});
@@ -212,16 +215,18 @@
 	{@html `<script type="application/ld+json">${jsonLd}</script>`}
 </svelte:head>
 
-<!-- One-time stage-curtain reveal -->
+<!-- One-time stage reveal: brand hangs from a rope, gets hoisted up as the curtains part -->
 {#if curtain}
 	<div class="pointer-events-none fixed inset-0 z-[100] overflow-hidden" aria-hidden="true">
 		<div class="absolute inset-0 flex">
 			<div class="curtain-half curtain-left h-full w-1/2"></div>
 			<div class="curtain-half curtain-right h-full w-1/2"></div>
 		</div>
-		<div class="curtain-brand absolute inset-0 flex flex-col items-center justify-center text-white">
-			<img src={favicon} alt="" class="mb-4 h-16 w-16 rounded-2xl shadow-2xl" />
-			<div class="text-5xl font-bold tracking-tight sm:text-6xl">幕間</div>
+		<!-- hoisted brand: a rope from the top down to the icon, lifted off-screen -->
+		<div class="curtain-hoist absolute inset-x-0 top-0 flex flex-col items-center text-white">
+			<div class="curtain-rope h-[34vh] w-0.5"></div>
+			<img src={favicon} alt="" class="h-16 w-16 rounded-2xl shadow-2xl ring-2 ring-gold-400/40" />
+			<div class="mt-4 text-5xl font-bold tracking-tight sm:text-6xl">幕間</div>
 			<div class="mt-1 font-display text-xl italic text-gold-400">OnStage TW</div>
 			<div class="mt-3 text-sm tracking-[0.3em] text-white/60">台灣戲劇演出，一站看完</div>
 		</div>
@@ -261,6 +266,16 @@
 		>
 			<Icon name="github" size={16} />
 		</a>
+		<button
+			onclick={() => (onlyFavorites = !onlyFavorites)}
+			aria-pressed={onlyFavorites}
+			class="flex items-center gap-1.5 rounded-full border px-3 py-2 text-sm font-medium transition active:scale-[0.98] {onlyFavorites
+				? 'border-curtain-600 bg-curtain-600 text-white'
+				: 'border-gray-200 bg-white text-gray-600 hover:border-curtain-400 dark:border-white/15 dark:bg-white/5 dark:text-gray-300'}"
+		>
+			<Icon name="heart" size={15} filled={onlyFavorites} />
+			<span>收藏{favorites.count ? ` ${favorites.count}` : ''}</span>
+		</button>
 		<button
 			onclick={() => (showSubscribe = !showSubscribe)}
 			class="flex items-center gap-1.5 rounded-full bg-curtain-600 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-curtain-700 active:scale-[0.98]"
@@ -370,6 +385,17 @@
 				>
 					開啟 feed.xml <Icon name="arrow-up-right" size={13} />
 				</a>
+			</div>
+			<div class="flex flex-wrap items-center gap-2 pt-1">
+				<span class="text-xs text-gray-400">只訂單一來源：</span>
+				{#each allSources as s (s)}
+					<a
+						href={`/feed-${s}.xml`}
+						class="rounded-full border border-gray-300 px-2.5 py-1 text-xs text-gray-500 transition hover:border-curtain-400 hover:text-curtain-600 dark:border-white/15 dark:text-gray-400"
+					>
+						{SOURCE_LABELS[s]}
+					</a>
+				{/each}
 			</div>
 			<p class="text-xs text-gray-400">
 				想要 Email 通知？用 Blogtrottr、Follow.it 之類的服務把這個 RSS 轉成信件即可，本站不需收集你的 Email。

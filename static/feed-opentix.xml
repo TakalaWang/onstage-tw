@@ -1,187 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>幕間 OnStage TW — 台灣戲劇演出</title>
+    <title>幕間 OnStage TW — 台灣戲劇演出（OPENTIX 兩廳院）</title>
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
     <lastBuildDate>Fri, 29 May 2026 10:22:50 GMT</lastBuildDate>
-    <item>
-      <title>王偉忠監製舞台劇《明星養老院》</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
-      <guid isPermaLink="false">udn:P0YXZMT5</guid>
-      <pubDate>Thu, 24 Dec 2026 16:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-12-25 – 2026-12-27 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>倫敦全本音樂劇《史瑞克》</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5</link>
-      <guid isPermaLink="false">udn:P1AEBJG5</guid>
-      <pubDate>Thu, 19 Nov 2026 16:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-11-20 – 2026-11-29 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>舞台劇《都更男女》</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P18P4HS6</link>
-      <guid isPermaLink="false">udn:P18P4HS6</guid>
-      <pubDate>Thu, 13 Aug 2026 16:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-08-14 – 2026-09-06 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>動物 FUN 舞島</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1A5XWUU</link>
-      <guid isPermaLink="false">era:P1A5XWUU</guid>
-      <pubDate>Thu, 13 Aug 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-14 · Venue: 四號公園文創演藝廳 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>OSTA-Open Stage To All</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17UDSOS</link>
-      <guid isPermaLink="false">era:P17UDSOS</guid>
-      <pubDate>Sat, 01 Aug 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-02 · Venue: 高雄市文化中心至善廳, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>會演是英雄2之《英雄所賤略同》</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P185ZP45</link>
-      <guid isPermaLink="false">udn:P185ZP45</guid>
-      <pubDate>Thu, 23 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-24 – 2026-12-27 · Venue: 臺北市藝文推廣處 城市舞台, 臺北市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>超人力霸王舞台劇In Taiwan 2026</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19Q1GAI</link>
-      <guid isPermaLink="false">era:P19Q1GAI</guid>
-      <pubDate>Thu, 23 Jul 2026 16:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-07-24 – 2026-08-16 · Venue: 臺北市政大樓親子劇場, 臺北市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>西班牙國家舞團《唐吉訶德》</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P169PNE2</link>
-      <guid isPermaLink="false">udn:P169PNE2</guid>
-      <pubDate>Wed, 22 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-23 – 2026-07-25 · Venue: 國家戲劇院, 臺北市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>2026《再一次！唱歌旅行去》十週年親子演唱會</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19I4966</link>
-      <guid isPermaLink="false">era:P19I4966</guid>
-      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
-      <category>兒童親子</category>
-      <description>Date: 2026-07-11 – 2026-11-22 · Venue: 臺灣戲曲中心大表演廳 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>2026童年樂趣藝術饗宴~夏日狂想</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AETDF0</link>
-      <guid isPermaLink="false">era:P1AETDF0</guid>
-      <pubDate>Tue, 07 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-08 · Venue: 高雄市文化中心至德堂, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>西遊記誤闖黑家店</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P195EQD0</link>
-      <guid isPermaLink="false">udn:P195EQD0</guid>
-      <pubDate>Fri, 03 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-04 · Venue: 桃園展演中心展演廳, 桃園市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>浪曼舞花</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P184460C</link>
-      <guid isPermaLink="false">era:P184460C</guid>
-      <pubDate>Fri, 03 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-04 · Venue: 高雄市文化中心至善廳, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>高雄站 Baby Shark 守護海洋大</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1A75PJ3</link>
-      <guid isPermaLink="false">udn:P1A75PJ3</guid>
-      <pubDate>Tue, 30 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-01 · Venue: 高雄駁二藝術特區 P2 倉庫, 高雄市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>2026朱怡慧舞團年度公演</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P18JCFDS</link>
-      <guid isPermaLink="false">era:P18JCFDS</guid>
-      <pubDate>Fri, 26 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-27 · Venue: 員林演藝廳表演廳 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>舞台劇《謝謝大家收看》</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P137BHCT</link>
-      <guid isPermaLink="false">udn:P137BHCT</guid>
-      <pubDate>Thu, 25 Jun 2026 16:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-06-26 – 2026-06-28 · Venue: 臺中市中山堂, 臺中市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
-      <guid isPermaLink="false">era:P192ILGJ</guid>
-      <pubDate>Fri, 12 Jun 2026 16:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-06-13 – 2026-08-29 · Venue: 桃園展演中心展演廳 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>丑劇大師─斯拉法《下雪了》</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P14XCO98</link>
-      <guid isPermaLink="false">udn:P14XCO98</guid>
-      <pubDate>Thu, 11 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-12 – 2026-06-28 · Venue: 衛武營國家藝術文化中心 歌劇院, 高雄市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>6月高雄市電影館｜長短腳電影院－擁抱心樂章</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AE2D9H</link>
-      <guid isPermaLink="false">era:P1AE2D9H</guid>
-      <pubDate>Sat, 06 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-07 – 2026-06-28 · Venue: 高雄市電影館3樓, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>尋找心中的One Piece-2026惠文兒樂成果發表會</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19STPMY</link>
-      <guid isPermaLink="false">era:P19STPMY</guid>
-      <pubDate>Fri, 05 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-06 · Venue: 臺中市屯區藝文中心演藝廳, 臺中市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>嘉北國小管樂班×嘉頌重奏團《彩虹鴉》</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1889W7X</link>
-      <guid isPermaLink="false">era:P1889W7X</guid>
-      <pubDate>Wed, 03 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-04 · Venue: 嘉義縣表演藝術中心演藝廳, 嘉義縣 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>愛劇在一起–開心的小龍女</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19XNXJO</link>
-      <guid isPermaLink="false">era:P19XNXJO</guid>
-      <pubDate>Fri, 29 May 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-05-30 · Venue: 高雄科工館南館演講廳 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>傻豆騎士系列-「遙遠的美好時光」</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P15TPAUT</link>
-      <guid isPermaLink="false">era:P15TPAUT</guid>
-      <pubDate>Fri, 29 May 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-05-30 – 2026-06-27 · Venue: 屏東藝術館 · Source: 年代售票</description>
-    </item>
     <item>
       <title>《孫臏 -終-》</title>
       <link>https://www.opentix.life/event/2056628721904320512</link>
@@ -221,22 +45,6 @@
       <pubDate>Thu, 28 May 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-09-11 – 2026-09-27 · Venue: 水源劇場, 臺北市 · On sale: 2026-05-28 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【8/16 台南晚場】2026 迷走大學實體課程《這邊可以講 台南場》</title>
-      <link>https://comedyclub.kktix.cc/events/meisouniv20260816-2</link>
-      <guid isPermaLink="false">kktix:comedyclub/meisouniv20260816-2</guid>
-      <pubDate>Wed, 27 May 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-16 · Venue: 漂丿白鷺Live House , 臺南市 · On sale: 2026-05-27 · Source: KKTIX</description>
-    </item>
-    <item>
-      <title>【8/16 台南午場】2026 迷走大學實體課程《這個不能講：哲學大辯 台南場》</title>
-      <link>https://comedyclub.kktix.cc/events/meisouniv20260816</link>
-      <guid isPermaLink="false">kktix:comedyclub/meisouniv20260816</guid>
-      <pubDate>Wed, 27 May 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-16 · Venue: 漂丿白鷺Live House , 臺南市 · On sale: 2026-05-27 · Source: KKTIX</description>
     </item>
     <item>
       <title>《好了啦！達康！》第十季第二集－沒事沒事沒事～還真當我沒事啊！</title>
@@ -495,22 +303,6 @@
       <description>Date: 2026-09-19 – 2026-11-29 · Venue: 臺北市藝文推廣處城市舞台, 臺北市 · On sale: 2026-05-18 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【8/14】阿舜順喜劇專場《好屁演 NICE ASSHOLE》</title>
-      <link>https://comedyclub.kktix.cc/events/niceasshole0814</link>
-      <guid isPermaLink="false">kktix:comedyclub/niceasshole0814</guid>
-      <pubDate>Sun, 17 May 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-08-14 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-05-17 · Source: KKTIX</description>
-    </item>
-    <item>
-      <title>【8/21】阿舜順喜劇專場《好屁演 NICE ASSHOLE》</title>
-      <link>https://comedyclub.kktix.cc/events/niceasshole0821</link>
-      <guid isPermaLink="false">kktix:comedyclub/niceasshole0821</guid>
-      <pubDate>Sun, 17 May 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-08-21 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-05-17 · Source: KKTIX</description>
-    </item>
-    <item>
       <title>原創青少年音樂劇《換氣練習》</title>
       <link>https://www.opentix.life/event/2051483080915320833</link>
       <guid isPermaLink="false">opentix:2051483080915320833</guid>
@@ -727,14 +519,6 @@
       <description>Date: 2026-08-22 – 2026-08-23 · Venue: 台江文化中心台江劇場, 臺南市 · On sale: 2026-05-11 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【9/25】2026年瑞恩單口喜劇專場最終加演場《七年之養 The jokes I raised over the years》之再養一年！</title>
-      <link>https://comedyclub.kktix.cc/events/thejokesiraisedovertheyears20260925</link>
-      <guid isPermaLink="false">kktix:comedyclub/thejokesiraisedovertheyears20260925</guid>
-      <pubDate>Mon, 11 May 2026 04:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-09-25 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-05-11 · Source: KKTIX</description>
-    </item>
-    <item>
       <title>魔術燈</title>
       <link>https://www.opentix.life/event/2046414386621239296</link>
       <guid isPermaLink="false">opentix:2046414386621239296</guid>
@@ -805,6 +589,222 @@
       <pubDate>Wed, 06 May 2026 04:00:00 GMT</pubDate>
       <category>戲曲</category>
       <description>Date: 2026-09-26 – 2026-09-27 · Venue: 臺灣戲曲中心多功能廳, 臺北市 · On sale: 2026-05-06 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>《找歌仔戲演員主演BL是否搞錯了什麼》毛斷計畫｜2026戲曲夢工場</title>
+      <link>https://www.opentix.life/event/2049746347755511809</link>
+      <guid isPermaLink="false">opentix:2049746347755511809</guid>
+      <pubDate>Wed, 06 May 2026 04:00:00 GMT</pubDate>
+      <category>戲曲</category>
+      <description>Date: 2026-10-02 – 2026-10-04 · Venue: 臺灣戲曲中心多功能廳, 臺北市 · On sale: 2026-05-06 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>職男人生2-搞笑重啟</title>
+      <link>https://www.opentix.life/event/2041781596403916801</link>
+      <guid isPermaLink="false">opentix:2041781596403916801</guid>
+      <pubDate>Tue, 05 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-28 · Venue: 恆春文化中心劇場館表演廳, 屏東縣 · On sale: 2026-05-05 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>創劇團 《樂園混音》</title>
+      <link>https://www.opentix.life/event/2051188905070198785</link>
+      <guid isPermaLink="false">opentix:2051188905070198785</guid>
+      <pubDate>Tue, 05 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-04 – 2026-09-06 · Venue: 國家兩廳院實驗劇場, 臺北市 · On sale: 2026-05-05 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026劇餐劇團《遮哲掩演》、《羅衫們》</title>
+      <link>https://www.opentix.life/event/2039648343956680704</link>
+      <guid isPermaLink="false">opentix:2039648343956680704</guid>
+      <pubDate>Mon, 04 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-03 – 2026-07-21 · Venue: 基隆表演藝術中心島嶼實驗劇場, 基隆市 · On sale: 2026-05-04 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>《三水映心》</title>
+      <link>https://www.opentix.life/event/2042515167770714113</link>
+      <guid isPermaLink="false">opentix:2042515167770714113</guid>
+      <pubDate>Mon, 04 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-04 – 2026-07-05 · Venue: 彰化縣文化局員林演藝廳表演廳, 彰化縣 · On sale: 2026-05-04 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>界址創作《死人大哥大》</title>
+      <link>https://www.opentix.life/event/2046520672095342593</link>
+      <guid isPermaLink="false">opentix:2046520672095342593</guid>
+      <pubDate>Mon, 04 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-24 – 2026-07-26 · Venue: 國家兩廳院實驗劇場, 臺北市 · On sale: 2026-05-04 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>雲林表演廳《老闆~來碗陽春麵!》</title>
+      <link>https://www.opentix.life/event/2032387392627208193</link>
+      <guid isPermaLink="false">opentix:2032387392627208193</guid>
+      <pubDate>Mon, 04 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-25 · Venue: 雲林表演廳, 雲林縣 · On sale: 2026-05-04 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026傳藝金曲劇展:二分之一Q劇場《青姬》</title>
+      <link>https://www.opentix.life/event/2042439779702349825</link>
+      <guid isPermaLink="false">opentix:2042439779702349825</guid>
+      <pubDate>Mon, 04 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-14 – 2026-08-16 · Venue: 臺灣戲曲中心小表演廳, 臺北市 · On sale: 2026-05-04 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>現象級舞蹈詩劇《只此青綠》 台灣首演</title>
+      <link>https://www.opentix.life/event/2029816525946609665</link>
+      <guid isPermaLink="false">opentix:2029816525946609665</guid>
+      <pubDate>Mon, 04 May 2026 03:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-02 – 2026-07-05 · Venue: 國家戲劇院, 臺北市 · On sale: 2026-05-04 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>憤怒旅行卡啦帶</title>
+      <link>https://www.opentix.life/event/2039524426554306560</link>
+      <guid isPermaLink="false">opentix:2039524426554306560</guid>
+      <pubDate>Fri, 01 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-06 – 2026-07-26 · Venue: 臺北表演藝術中心3號門外（承德路四段側，館外大客車停車格）, 臺北市 · On sale: 2026-05-01 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>仙劍琉璃</title>
+      <link>https://www.opentix.life/event/2047243782488264704</link>
+      <guid isPermaLink="false">opentix:2047243782488264704</guid>
+      <pubDate>Fri, 01 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-04 · Venue: 雲林表演廳, 雲林縣 · On sale: 2026-05-01 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026夏日宜劇場《夢‧遊》故事工廠《變聲偵探》</title>
+      <link>https://www.opentix.life/event/2043629932354011136</link>
+      <guid isPermaLink="false">opentix:2043629932354011136</guid>
+      <pubDate>Fri, 01 May 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-01 · Venue: 宜蘭演藝廳, 宜蘭縣 · On sale: 2026-05-01 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>崑曲《崔氏的怨悔癡癲》</title>
+      <link>https://www.opentix.life/event/2039548820209590273</link>
+      <guid isPermaLink="false">opentix:2039548820209590273</guid>
+      <pubDate>Fri, 01 May 2026 04:00:00 GMT</pubDate>
+      <category>戲曲</category>
+      <description>Date: 2026-08-16 · Venue: 大稻埕戲苑, 臺北市 · On sale: 2026-05-01 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>臺藝大戲劇學系日間部百十二級班級展演《物理學家》</title>
+      <link>https://www.opentix.life/event/2043933539780677633</link>
+      <guid isPermaLink="false">opentix:2043933539780677633</guid>
+      <pubDate>Fri, 01 May 2026 03:50:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-19 – 2026-06-21 · Venue: 國立臺灣藝術大學實驗劇場（八角廳）, 新北市 · On sale: 2026-05-01 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>《24K金曲同學會！同鞋～》</title>
+      <link>https://www.opentix.life/event/2049292111336022017</link>
+      <guid isPermaLink="false">opentix:2049292111336022017</guid>
+      <pubDate>Thu, 30 Apr 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-07 – 2026-08-08 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · On sale: 2026-04-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>《同學會！同鞋～》</title>
+      <link>https://www.opentix.life/event/2049009007028871169</link>
+      <guid isPermaLink="false">opentix:2049009007028871169</guid>
+      <pubDate>Thu, 30 Apr 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-08 – 2026-08-09 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · On sale: 2026-04-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026夏日放／FUN時光—嚎哮排演《別叫我成功：藝術界歸來的兒子》</title>
+      <link>https://www.opentix.life/event/2046079208613777408</link>
+      <guid isPermaLink="false">opentix:2046079208613777408</guid>
+      <pubDate>Thu, 30 Apr 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-28 – 2026-08-30 · Venue: 臺中國家歌劇院中劇院, 臺中市 · On sale: 2026-04-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>嚎哮排演 音樂劇《別叫我成功：藝術界歸來的兒子》臺北場</title>
+      <link>https://www.opentix.life/event/2046477133841158145</link>
+      <guid isPermaLink="false">opentix:2046477133841158145</guid>
+      <pubDate>Thu, 30 Apr 2026 04:00:00 GMT</pubDate>
+      <category>音樂劇</category>
+      <description>Date: 2026-09-04 – 2026-09-06 · Venue: 臺北市藝文推廣處城市舞台, 臺北市 · On sale: 2026-04-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026夏日宜劇場《夢‧遊》戲劇節目－《職男人生2-搞笑重啟》</title>
+      <link>https://www.opentix.life/event/2037121747201376257</link>
+      <guid isPermaLink="false">opentix:2037121747201376257</guid>
+      <pubDate>Wed, 29 Apr 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-11 · Venue: 宜蘭演藝廳, 宜蘭縣 · On sale: 2026-04-29 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>《天上人渣》讀劇</title>
+      <link>https://www.opentix.life/event/2047617332984160256</link>
+      <guid isPermaLink="false">opentix:2047617332984160256</guid>
+      <pubDate>Tue, 28 Apr 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-05-30 · Venue: 衛武營國家藝術文化中心演講廳, 高雄市 · On sale: 2026-04-28 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026夏日放／FUN時光—苗北客家流行音樂劇《那一天，彩虹出現》2026重磅回歸</title>
+      <link>https://www.opentix.life/event/2045067828311797761</link>
+      <guid isPermaLink="false">opentix:2045067828311797761</guid>
+      <pubDate>Tue, 28 Apr 2026 04:00:00 GMT</pubDate>
+      <category>音樂劇</category>
+      <description>Date: 2026-07-18 – 2026-07-19 · Venue: 臺中國家歌劇院中劇院, 臺中市 · On sale: 2026-04-28 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026 夏日放／FUN時光─韓國音樂劇《如蝶翩翩》</title>
+      <link>https://www.opentix.life/event/2044254955820302336</link>
+      <guid isPermaLink="false">opentix:2044254955820302336</guid>
+      <pubDate>Tue, 28 Apr 2026 04:00:00 GMT</pubDate>
+      <category>音樂劇</category>
+      <description>Date: 2026-07-25 – 2026-07-26 · Venue: 臺中國家歌劇院中劇院, 臺中市 · On sale: 2026-04-28 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026夏日放／FUN時光─台北劇場實驗室《怪美妖仙傳》</title>
+      <link>https://www.opentix.life/event/2045062329252155393</link>
+      <guid isPermaLink="false">opentix:2045062329252155393</guid>
+      <pubDate>Tue, 28 Apr 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-07 – 2026-08-09 · Venue: 臺中國家歌劇院中劇院, 臺中市 · On sale: 2026-04-28 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026夏日放／FUN時光─無獨有偶工作室劇團《月亮找朋友》</title>
+      <link>https://www.opentix.life/event/2042084993047490561</link>
+      <guid isPermaLink="false">opentix:2042084993047490561</guid>
+      <pubDate>Tue, 28 Apr 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-08 – 2026-08-09 · Venue: 臺中國家歌劇院小劇場, 臺中市 · On sale: 2026-04-28 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026夏日放／FUN時光—新藝計畫 複象公場《聽見你的聲音》</title>
+      <link>https://www.opentix.life/event/2045019897568096257</link>
+      <guid isPermaLink="false">opentix:2045019897568096257</guid>
+      <pubDate>Tue, 28 Apr 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-22 – 2026-08-23 · Venue: 臺中國家歌劇院小劇場, 臺中市 · On sale: 2026-04-28 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>職男人生11-開始新生活</title>
+      <link>https://www.opentix.life/event/2041826640707264513</link>
+      <guid isPermaLink="false">opentix:2041826640707264513</guid>
+      <pubDate>Mon, 27 Apr 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-03 – 2026-10-18 · Venue: 臺北市藝文推廣處城市舞台, 臺北市 · On sale: 2026-04-27 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>《南洋過番歌》</title>
+      <link>https://www.opentix.life/event/2046191920501002241</link>
+      <guid isPermaLink="false">opentix:2046191920501002241</guid>
+      <pubDate>Fri, 24 Apr 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-05-30 · Venue: 恆春文化中心劇場館表演廳, 屏東縣 · On sale: 2026-04-24 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

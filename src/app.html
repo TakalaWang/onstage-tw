@@ -4,6 +4,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="text-scale" content="scale" />
+		<link rel="manifest" href="/manifest.webmanifest" />
+		<meta name="theme-color" content="#ac1f2c" />
 		<script>
 			// Apply theme before paint to avoid a flash of the wrong mode.
 			try {
@@ -16,5 +18,15 @@
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
+		<script>
+			// Register the service worker for offline support / installability.
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', () => {
+					try {
+						navigator.serviceWorker.register('/sw.js');
+					} catch (e) {}
+				});
+			}
+		</script>
 	</body>
 </html>

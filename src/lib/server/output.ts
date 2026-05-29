@@ -1,5 +1,5 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
-import type { Show } from '../types';
+import type { Show, Source } from '../types';
 import { SOURCE_LABELS } from '../types';
 
 const OUT_DIR = process.env.ONSTAGE_OUT_DIR ?? 'static';
@@ -30,7 +30,7 @@ function feedDate(s: Show): Date {
 	return Number.isNaN(d.getTime()) ? new Date(0) : d;
 }
 
-function renderFeed(shows: Show[], builtAt: string): string {
+function renderFeed(shows: Show[], builtAt: string, titleSuffix = ''): string {
 	// Most recently on-sale / upcoming items first so readers surface new entries.
 	const items = [...shows]
 		.sort((a, b) => feedDate(b).getTime() - feedDate(a).getTime())
@@ -56,9 +56,9 @@ function renderFeed(shows: Show[], builtAt: string): string {
 	return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>OnStage TW — Taiwan theatre listings</title>
+    <title>${escapeXml(`幕間 OnStage TW — 台灣戲劇演出${titleSuffix}`)}</title>
     <link>${SITE_URL}</link>
-    <description>Aggregated theatre performances from OPENTIX, udn, KHAM and ERA.</description>
+    <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
     <lastBuildDate>${new Date(builtAt).toUTCString()}</lastBuildDate>
 ${items}
@@ -81,5 +81,18 @@ export function writeOutputs(shows: Show[]): { count: number } {
 		JSON.stringify({ updatedAt: builtAt, count: active.length, shows: active })
 	);
 	writeFileSync(`${OUT_DIR}/feed.xml`, renderFeed(active, builtAt));
+
+	// Per-source feeds (e.g. /feed-opentix.xml) so readers can follow one platform.
+	const sources = [...new Set(active.map((s) => s.source))] as Source[];
+	for (const src of sources) {
+		writeFileSync(
+			`${OUT_DIR}/feed-${src}.xml`,
+			renderFeed(
+				active.filter((s) => s.source === src),
+				builtAt,
+				`（${SOURCE_LABELS[src]}）`
+			)
+		);
+	}
 	return { count: active.length };
 }

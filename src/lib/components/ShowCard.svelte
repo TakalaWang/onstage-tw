@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { SOURCE_LABELS, type Show } from '$lib/types';
 	import { fmtDateRange, fmtPrice, fmtOnSale, daysUntilOnSale, SOURCE_COLOR } from '$lib/format';
+	import { favorites } from '$lib/favorites.svelte';
 	import Icon from './Icon.svelte';
 
 	let {
@@ -59,6 +60,21 @@
 				{onSaleDays === 0 ? '今天開賣' : `${onSaleDays} 天後開賣`}
 			</span>
 		{/if}
+
+		<!-- Favourite toggle (localStorage) -->
+		<button
+			type="button"
+			onclick={() => favorites.toggle(show.id)}
+			aria-label={favorites.has(show.id) ? '取消收藏' : '收藏'}
+			aria-pressed={favorites.has(show.id)}
+			class="absolute right-2 top-2 z-[2] flex h-8 w-8 items-center justify-center rounded-full bg-white/85 shadow backdrop-blur transition hover:bg-white active:scale-90 dark:bg-black/50 {favorites.has(
+				show.id
+			)
+				? 'text-curtain-600'
+				: 'text-gray-500 dark:text-gray-200'}"
+		>
+			<Icon name="heart" size={15} filled={favorites.has(show.id)} />
+		</button>
 	</div>
 
 	<div class="relative z-0 flex flex-1 flex-col gap-2 p-4">

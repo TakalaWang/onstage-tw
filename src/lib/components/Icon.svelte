@@ -17,9 +17,17 @@
 		| 'moon'
 		| 'star'
 		| 'github'
-		| 'message';
+		| 'message'
+		| 'heart'
+		| 'calendar-plus'
+		| 'share';
 
-	let { name, size = 16, class: cls = '' }: { name: Name; size?: number; class?: string } = $props();
+	let {
+		name,
+		size = 16,
+		class: cls = '',
+		filled = false
+	}: { name: Name; size?: number; class?: string; filled?: boolean } = $props();
 
 	const paths: Record<Name, string> = {
 		calendar:
@@ -42,7 +50,13 @@
 		star: '<path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 18.56 6.09 21.2l1.13-6.57L2.45 9.99l6.6-.96z"/>',
 		github:
 			'<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>',
-		message: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>'
+		message: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+		heart:
+			'<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>',
+		'calendar-plus':
+			'<path d="M8 2v4M16 2v4M3 10h18"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M12 14v4M10 16h4"/>',
+		share:
+			'<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5 8.6 10.5"/>'
 	};
 </script>
 
@@ -51,7 +65,7 @@
 	width={size}
 	height={size}
 	viewBox="0 0 24 24"
-	fill="none"
+	fill={filled ? 'currentColor' : 'none'}
 	stroke="currentColor"
 	stroke-width="1.75"
 	stroke-linecap="round"

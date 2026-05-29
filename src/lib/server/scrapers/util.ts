@@ -118,6 +118,41 @@ export function parseUtikiDetail(html: string): {
 	};
 }
 
+/**
+ * Extract the first YYYY-MM-DD date from a mixed Chinese/Western text snippet,
+ * e.g. "2026/06/12 (五) 19:00" or "2026年9月11日" → "2026-06-12" / "2026-09-11".
+ * Returns null when no date is found.
+ */
+export function firstDate(text: string | null | undefined): string | null {
+	if (!text) return null;
+	return extractDateRange(text).start;
+}
+
+/**
+ * Extract a [min, max] numeric price range from a text snippet that may contain
+ * one price, a list of prices, or a "900 ~ 3,000" style range. Returns nulls
+ * when no price-like numbers are present.
+ */
+export function extractPriceRange(text: string | null | undefined): {
+	minPrice: number | null;
+	maxPrice: number | null;
+} {
+	if (!text) return { minPrice: null, maxPrice: null };
+	const nums = (text.match(/\d[\d,]{1,6}/g) ?? []).map((n) => Number(n.replace(/,/g, '')));
+	if (!nums.length) return { minPrice: null, maxPrice: null };
+	return { minPrice: Math.min(...nums), maxPrice: Math.max(...nums) };
+}
+
+/** Given session dates (YYYY-MM-DD, may contain nulls), return earliest/latest. */
+export function dateRangeFromDates(dates: (string | null)[]): {
+	start: string | null;
+	end: string | null;
+} {
+	const valid = dates.filter((d): d is string => !!d).sort();
+	if (!valid.length) return { start: null, end: null };
+	return { start: valid[0], end: valid[valid.length - 1] };
+}
+
 const TW_CITIES = [
 	'臺北市', '台北市', '新北市', '基隆市', '桃園市', '新竹市', '新竹縣', '苗栗縣',
 	'臺中市', '台中市', '彰化縣', '南投縣', '雲林縣', '嘉義市', '嘉義縣',
