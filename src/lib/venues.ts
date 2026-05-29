@@ -809,7 +809,20 @@ export const VENUES: Venue[] = [
 	{ name: '肆意咖啡酒館', aliases: ['肆意咖啡酒館'], city: '高雄市', lat: 22.64603, lng: 120.30307 },
 	{ name: '田和越．茶劇場', aliases: ['田和越'], city: '高雄市', lat: 22.6605, lng: 120.288 },
 	{ name: '3Q米食', aliases: ['3Q米食'], city: '苗栗縣', lat: 24.41336, lng: 120.68068 },
-	{ name: '邊緣場 The Edge', aliases: ['邊緣場'], city: '臺中市', lat: 24.1455, lng: 120.6855 }
+	{ name: '邊緣場 The Edge', aliases: ['邊緣場'], city: '臺中市', lat: 24.1455, lng: 120.6855 },
+	{ name: '恆春文化中心', aliases: ['恆春文化中心'], city: '屏東縣', lat: 22.00457, lng: 120.74565 },
+	{ name: '文化部文化資產園區', aliases: ['文化部文化資產局', '文化資產園區'], city: '臺中市', lat: 24.13333, lng: 120.6807 },
+	{ name: '大煙囪下的家', aliases: ['大煙囪下的家'], city: '新竹市', lat: 24.79073, lng: 120.99419 },
+	{ name: '國立雲林特殊教育學校', aliases: ['國立雲林特殊教育學校'], city: '雲林縣', lat: 23.68097, lng: 120.48003 },
+	{ name: '課廳演創空間', aliases: ['課廳演創空間'], city: '臺北市', lat: 25.05566, lng: 121.5107 },
+	{ name: '平鎮區義民市民活動中心', aliases: ['義民市民活動中心'], city: '桃園市', lat: 24.9484, lng: 121.2066 }, // approx
+	{ name: '僑愛國小', aliases: ['僑愛國小'], city: '桃園市', lat: 24.9132, lng: 121.2764 },
+	{ name: '來福好事 LAUGH HOUSE', aliases: ['來福好事', 'LAUGH HOUSE'], city: '臺中市', lat: 24.16847, lng: 120.6431 },
+	{ name: '斗六車站', aliases: ['斗六火車站', '斗六車站'], city: '雲林縣', lat: 23.71161, lng: 120.5417 },
+	{ name: '龍山寺板橋文化廣場', aliases: ['龍山寺板橋文化廣場', '板橋龍山寺文化廣場'], city: '新北市', lat: 25.01636, lng: 121.4643 },
+	{ name: '延聲音樂', aliases: ['延聲音樂'], city: '臺北市', lat: 25.0627, lng: 121.5232 },
+	{ name: '馬祖梅石藝文中心', aliases: ['梅石藝文中心'], city: '連江縣', lat: 26.1524, lng: 119.948 }, // approx
+	{ name: '現場馬拉桑餐酒館', aliases: ['現場馬拉桑'], city: '新竹市', lat: 24.7983, lng: 121.0238 }
 ];
 
 const MATCHERS: { needle: string; venue: Venue }[] = VENUES.flatMap((venue) =>
