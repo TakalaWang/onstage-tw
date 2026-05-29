@@ -854,7 +854,12 @@ export const VENUES: Venue[] = [
 	{ name: '喜劇開港', aliases: ['喜劇開港'], city: '高雄市', lat: 22.62156, lng: 120.28765 }, // approx
 	{ name: '覓蜜基地展演場', aliases: ['覓蜜基地'], city: '高雄市', lat: 22.74935, lng: 120.31592 }, // approx
 	{ name: '艸創心演擊樂場', aliases: ['艸創心'], city: '臺北市', lat: 25.04877, lng: 121.53002 }, // approx
-	{ name: '肆意咖啡酒館', aliases: ['肆意咖啡酒館'], city: '高雄市', lat: 22.64603, lng: 120.30307 } // approx
+	{ name: '肆意咖啡酒館', aliases: ['肆意咖啡酒館'], city: '高雄市', lat: 22.64603, lng: 120.30307 }, // approx
+	// Located from the ticketing pages' listed addresses (see commit notes):
+	// 田和越＝高雄市鼓山區美術南一街192號、3Q米食＝苗栗縣苑裡鎮舊社里、邊緣場＝臺中市三民路二段18巷4號3樓
+	{ name: '田和越．茶劇場', aliases: ['田和越'], city: '高雄市', lat: 22.6605, lng: 120.288 }, // approx — 鼓山美術館特區
+	{ name: '3Q米食', aliases: ['3Q米食'], city: '苗栗縣', lat: 24.41336, lng: 120.68068 }, // approx — 苑裡鎮舊社里
+	{ name: '邊緣場 The Edge', aliases: ['邊緣場'], city: '臺中市', lat: 24.1455, lng: 120.6855 } // approx — 北區三民路二段
 ];
 
 // Build a lookup list of (matchString, venue) sorted longest-first so that more
