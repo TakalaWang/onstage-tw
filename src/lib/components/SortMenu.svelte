@@ -2,10 +2,8 @@
 	import Icon from './Icon.svelte';
 
 	type Opt = { value: string; label: string };
-	let {
-		value = $bindable<string>(''),
-		options = [],
-	}: { value?: string; options?: Opt[] } = $props();
+	let { value = $bindable<string>(''), options = [] }: { value?: string; options?: Opt[] } =
+		$props();
 
 	let open = $state(false);
 	let root = $state<HTMLElement | null>(null);
@@ -47,7 +45,8 @@
 				<button
 					type="button"
 					onclick={() => pick(o.value)}
-					class="block w-full rounded-lg px-2.5 py-1.5 text-left text-sm transition {value === o.value
+					class="block w-full rounded-lg px-2.5 py-1.5 text-left text-sm transition {value ===
+					o.value
 						? 'bg-curtain-50 font-medium text-curtain-700 dark:bg-white/10 dark:text-curtain-300'
 						: 'text-gray-700 hover:bg-curtain-50 dark:text-gray-200 dark:hover:bg-white/5'}"
 				>

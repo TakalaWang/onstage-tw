@@ -1,10 +1,8 @@
 <script lang="ts">
 	import Icon from './Icon.svelte';
 
-	let {
-		from = $bindable<string>(''),
-		to = $bindable<string>(''),
-	}: { from?: string; to?: string } = $props();
+	let { from = $bindable<string>(''), to = $bindable<string>('') }: { from?: string; to?: string } =
+		$props();
 
 	let open = $state(false);
 	let root = $state<HTMLElement | null>(null);
@@ -39,7 +37,8 @@
 		const lead = (first.getDay() + 6) % 7;
 		const out: Cell[] = [];
 		for (let i = 0; i < lead; i++) out.push(null);
-		for (let day = 1; day <= daysInMonth; day++) out.push({ key: iso(view.year, view.month, day), day });
+		for (let day = 1; day <= daysInMonth; day++)
+			out.push({ key: iso(view.year, view.month, day), day });
 		return out;
 	});
 
@@ -126,7 +125,9 @@
 					›
 				</button>
 			</div>
-			<div class="grid grid-cols-7 gap-0.5 text-center text-[11px] text-gray-400 dark:text-gray-500">
+			<div
+				class="grid grid-cols-7 gap-0.5 text-center text-[11px] text-gray-400 dark:text-gray-500"
+			>
 				{#each weekdayLabels as w (w)}<div class="py-1">{w}</div>{/each}
 			</div>
 			<div class="grid grid-cols-7 gap-0.5">
