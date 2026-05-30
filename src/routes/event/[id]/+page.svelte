@@ -32,7 +32,7 @@
 			.join('｜'),
 	);
 
-	const ogImage = $derived(show.imageUrl ?? `${data.siteUrl}/og.svg`);
+	const ogImage = $derived(show.imageUrl ?? `${data.siteUrl}/og.png`);
 
 	const jsonLd = $derived(
 		JSON.stringify({

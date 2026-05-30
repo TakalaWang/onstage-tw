@@ -266,11 +266,14 @@
 		content="一個地方看完台灣所有戲劇演出。搜尋、過濾、用 RSS 追蹤開賣。"
 	/>
 	<meta property="og:url" content={data.siteUrl} />
-	<meta property="og:image" content={`${data.siteUrl}/og.svg`} />
+	<meta property="og:image" content={`${data.siteUrl}/og.png`} />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="幕間 OnStage TW — 台灣戲劇演出整合" />
 	<meta name="twitter:description" content="一個地方看完台灣所有戲劇演出。" />
-	<meta name="twitter:image" content={`${data.siteUrl}/og.svg`} />
+	<meta name="twitter:image" content={`${data.siteUrl}/og.png`} />
 	{@html `<script type="application/ld+json">${jsonLd}</` + `script>`}
 </svelte:head>
 
