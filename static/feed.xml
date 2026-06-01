@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 31 May 2026 13:27:35 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 02:59:47 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -511,6 +511,14 @@
       <description>Date: 2026-06-14 · Venue: 一文錢。烏托邦, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>2026｜六月 漫才 Open Mic｜眾多漫才組合｜聯合出擊</title>
+      <link>https://www.accupass.com/event/2605311851481734830728</link>
+      <guid isPermaLink="false">accupass:2605311851481734830728</guid>
+      <pubDate>Sat, 13 Jun 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-06-14 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
       <guid isPermaLink="false">era:P192ILGJ</guid>
@@ -797,14 +805,6 @@
       <pubDate>Tue, 26 May 2026 04:00:00 GMT</pubDate>
       <category>音樂劇</category>
       <description>Date: 2026-11-27 – 2026-11-29 · Venue: 駁二正港小劇場, 高雄市 · On sale: 2026-05-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>可揚雅庭【藝生平安】來開講 - 給新手劇場人的生存指南</title>
-      <link>https://www.accupass.com/event/2605141127001142807689</link>
-      <guid isPermaLink="false">accupass:2605141127001142807689</guid>
-      <pubDate>Mon, 25 May 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-05-26 – 2026-09-02 · Venue: 林森59, 臺北市 · Source: Accupass 活動通</description>
     </item>
   </channel>
 </rss>
