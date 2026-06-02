@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 02 Jun 2026 02:58:34 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 16:15:04 GMT</lastBuildDate>
     <item>
       <title>動物 FUN 舞島</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1A5XWUU</link>
@@ -63,6 +63,14 @@
       <description>Date: 2026-06-27 · Venue: 員林演藝廳表演廳, 彰化縣 · Source: 年代售票</description>
     </item>
     <item>
+      <title>嘉北國小管樂班×嘉頌重奏團《彩虹鴉》</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1889W7X</link>
+      <guid isPermaLink="false">era:P1889W7X</guid>
+      <pubDate>Tue, 23 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-24 · Venue: 嘉義市政府文化局音樂廳, 嘉義市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
       <guid isPermaLink="false">era:P192ILGJ</guid>
@@ -93,14 +101,6 @@
       <pubDate>Fri, 05 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-06-06 · Venue: 臺中市屯區藝文中心演藝廳, 臺中市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>嘉北國小管樂班×嘉頌重奏團《彩虹鴉》</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1889W7X</link>
-      <guid isPermaLink="false">era:P1889W7X</guid>
-      <pubDate>Wed, 03 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-04 · Venue: 嘉義縣表演藝術中心演藝廳, 嘉義縣 · Source: 年代售票</description>
     </item>
   </channel>
 </rss>

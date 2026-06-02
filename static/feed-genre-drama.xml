@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 02 Jun 2026 02:58:34 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 16:15:04 GMT</lastBuildDate>
     <item>
       <title>劇場在地・共創新連結-白色恐怖田調分享會(含呈現演出)</title>
       <link>https://www.accupass.com/event/2603310621312093918182</link>
@@ -20,7 +20,7 @@
       <guid isPermaLink="false">accupass:2604161917471542799416</guid>
       <pubDate>Fri, 16 Oct 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-10-17 · Venue: 1F-微光廳, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-10-17 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026童演童語-故事DIY-《智慧地圖包：做決定我最勇敢》</title>
@@ -60,7 +60,7 @@
       <guid isPermaLink="false">accupass:2604161813399320653180</guid>
       <pubDate>Fri, 21 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-22 · Venue: 一樓微光廳, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-22 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>動物 FUN 舞島</title>
@@ -100,7 +100,7 @@
       <guid isPermaLink="false">accupass:2604161557411320503412</guid>
       <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-25 · Venue: 大園國小活動中心, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-25 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>會演是英雄2之《英雄所賤略同》</title>
@@ -287,6 +287,14 @@
       <description>Date: 2026-06-26 · Venue: 泰伯炸雞店隔壁, 臺中市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>嘉北國小管樂班×嘉頌重奏團《彩虹鴉》</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1889W7X</link>
+      <guid isPermaLink="false">era:P1889W7X</guid>
+      <pubDate>Tue, 23 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-24 · Venue: 嘉義市政府文化局音樂廳, 嘉義市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>《珍奶公主》兒童播客劇場</title>
       <link>https://www.accupass.com/event/2605210820061601937073</link>
       <guid isPermaLink="false">accupass:2605210820061601937073</guid>
@@ -300,7 +308,15 @@
       <guid isPermaLink="false">accupass:2604161912071507724179</guid>
       <pubDate>Sat, 20 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-06-21 · Venue: 1F-微光廳, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-06-21 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>生生空間｜夏至女人舞專場演出</title>
+      <link>https://www.accupass.com/event/2606011221291594848536</link>
+      <guid isPermaLink="false">accupass:2606011221291594848536</guid>
+      <pubDate>Fri, 19 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-20 · Venue: 生生  Sheng Sheng Space | 複合式藝文空間, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《煙囪上的飛機雲》六燃飛行練習：光桌劇場公演</title>
@@ -375,14 +391,6 @@
       <description>Date: 2026-06-06 · Venue: DIMEN5ION, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>痕花劇團｜世新廣電第32屆畢業製作｜聲音劇場《第五個季節》</title>
-      <link>https://www.accupass.com/event/2605111605351433389430</link>
-      <guid isPermaLink="false">accupass:2605111605351433389430</guid>
-      <pubDate>Thu, 04 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-05 – 2026-06-06 · Venue: 世新大學大禮堂 三樓 良彥講堂A201, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
       <title>來福OPEN MIC 6月</title>
       <link>https://www.accupass.com/event/2605280933571722624244</link>
       <guid isPermaLink="false">accupass:2605280933571722624244</guid>
@@ -391,12 +399,28 @@
       <description>Date: 2026-06-05 · Venue: 群島藝術園區 小劇院, 臺中市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>嘉北國小管樂班×嘉頌重奏團《彩虹鴉》</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1889W7X</link>
-      <guid isPermaLink="false">era:P1889W7X</guid>
-      <pubDate>Wed, 03 Jun 2026 16:00:00 GMT</pubDate>
+      <title>痕花劇團｜世新廣電第32屆畢業製作｜聲音劇場《第五個季節》</title>
+      <link>https://www.accupass.com/event/2605111605351433389430</link>
+      <guid isPermaLink="false">accupass:2605111605351433389430</guid>
+      <pubDate>Thu, 04 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-06-04 · Venue: 嘉義縣表演藝術中心演藝廳, 嘉義縣 · Source: 年代售票</description>
+      <description>Date: 2026-06-05 – 2026-06-06 · Venue: 世新大學大禮堂 三樓 良彥講堂A201, 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>職男人生7-有夫之夫</title>
+      <link>https://www.opentix.life/event/2054111612466401281</link>
+      <guid isPermaLink="false">opentix:2054111612466401281</guid>
+      <pubDate>Tue, 02 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-22 · Venue: 屏東演藝廳音樂廳, 屏東縣 · On sale: 2026-06-02 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【黃梅戲】韻清樂舞劇綜合藝術團-黃梅經典大戲《碧波情緣》</title>
+      <link>https://www.opentix.life/event/2056678456461565953</link>
+      <guid isPermaLink="false">opentix:2056678456461565953</guid>
+      <pubDate>Tue, 02 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-19 – 2026-09-20 · Venue: 大稻埕戲苑, 臺北市 · On sale: 2026-06-02 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>面白放送</title>
@@ -405,6 +429,14 @@
       <pubDate>Mon, 01 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-06-10 · Venue: 光啟社（光啟社攝影棚）, 臺北市 · On sale: 2026-06-01 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】身體和解計畫首部曲</title>
+      <link>https://www.opentix.life/event/2059089842891776000</link>
+      <guid isPermaLink="false">opentix:2059089842891776000</guid>
+      <pubDate>Mon, 01 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-19 – 2026-08-26 · Venue: 窩窩藝文空間, 臺北市 · On sale: 2026-06-01 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026 臺北藝穗節】凱莉！我在⋯⋯</title>
@@ -773,38 +805,6 @@
       <pubDate>Fri, 15 May 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-10-09 – 2026-10-11 · Venue: 牯嶺街小劇場一樓大廳, 臺北市 · On sale: 2026-05-15 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>高詠婕製作《 𝐌𝐎𝐍𝐒𝐓𝐄𝐑 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐇𝐄𝐀𝐑𝐓 》我們的原始，是被社會認可的精神錯亂</title>
-      <link>https://www.opentix.life/event/2052230514505453568</link>
-      <guid isPermaLink="false">opentix:2052230514505453568</guid>
-      <pubDate>Wed, 13 May 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-10 – 2026-07-12 · Venue: 牯嶺街小劇場一樓實驗劇場, 臺北市 · On sale: 2026-05-13 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>春美歌劇團《伽羅香》</title>
-      <link>https://www.opentix.life/event/2047598589857177601</link>
-      <guid isPermaLink="false">opentix:2047598589857177601</guid>
-      <pubDate>Wed, 13 May 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-09-12 – 2026-09-13 · Venue: 衛武營國家藝術文化中心歌劇院, 高雄市 · On sale: 2026-05-13 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>同黨劇團《父親母親》</title>
-      <link>https://www.opentix.life/event/2051254690379628545</link>
-      <guid isPermaLink="false">opentix:2051254690379628545</guid>
-      <pubDate>Wed, 13 May 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-10-24 – 2026-10-25 · Venue: 衛武營國家藝術文化中心戲劇院, 高雄市 · On sale: 2026-05-13 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026衛武營小時光】紅潮劇集《當亞斯遇見人魚》讀演音樂會——B面歌單</title>
-      <link>https://www.opentix.life/event/2043952009527836673</link>
-      <guid isPermaLink="false">opentix:2043952009527836673</guid>
-      <pubDate>Wed, 13 May 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-11-18 · Venue: 衛武營國家藝術文化中心表演廳, 高雄市 · On sale: 2026-05-13 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
