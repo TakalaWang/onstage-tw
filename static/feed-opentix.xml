@@ -5,7 +5,15 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 03 Jun 2026 16:29:11 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 03:02:33 GMT</lastBuildDate>
+    <item>
+      <title>【高雄雄厲害】唱歌集《爬上頂樓看月亮》音樂劇</title>
+      <link>https://www.opentix.life/event/2059231461195935744</link>
+      <guid isPermaLink="false">opentix:2059231461195935744</guid>
+      <pubDate>Thu, 04 Jun 2026 01:00:00 GMT</pubDate>
+      <category>音樂劇</category>
+      <description>Date: 2026-10-02 – 2026-10-04 · Venue: 衛武營國家藝術文化中心戲劇院, 高雄市 · On sale: 2026-06-04 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>【2026臺北藝穗節】剩下的身體</title>
       <link>https://www.opentix.life/event/2059902565718548480</link>
@@ -797,14 +805,6 @@
       <pubDate>Mon, 04 May 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-14 – 2026-08-16 · Venue: 臺灣戲曲中心小表演廳, 臺北市 · On sale: 2026-05-04 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>現象級舞蹈詩劇《只此青綠》 台灣首演</title>
-      <link>https://www.opentix.life/event/2029816525946609665</link>
-      <guid isPermaLink="false">opentix:2029816525946609665</guid>
-      <pubDate>Mon, 04 May 2026 03:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-02 – 2026-07-05 · Venue: 國家戲劇院, 臺北市 · On sale: 2026-05-04 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 03 Jun 2026 16:29:11 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 03:02:33 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -207,6 +207,14 @@
       <description>Date: 2026-07-24 – 2026-08-16 · Venue: 臺北市政大樓親子劇場, 臺北市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>阿舜順喜劇專場《好屁演 NICE ASSHOLE》TRY OUT</title>
+      <link>https://www.accupass.com/event/2606030326261557696647</link>
+      <guid isPermaLink="false">accupass:2606030326261557696647</guid>
+      <pubDate>Thu, 23 Jul 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-07-24 · Venue: 群島藝術園區 小劇院, 臺中市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>西班牙國家舞團《唐吉訶德》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P169PNE2</link>
       <guid isPermaLink="false">udn:P169PNE2</guid>
@@ -252,7 +260,7 @@
       <guid isPermaLink="false">accupass:2604010436471799136155</guid>
       <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-11 · Venue: 龍山寺板橋文化廣場703教室, 臺北市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-11 · Venue: 龍山寺板橋文化廣場8樓8大廳, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【藝啟JAM 2.0 】7/11（六）｜天雨白橋</title>
@@ -388,7 +396,7 @@
       <guid isPermaLink="false">accupass:2604161831334486946410</guid>
       <pubDate>Sat, 27 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-06-28 · Venue: 桃園市立圖書館草漯分館, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-06-28 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【ECHO偶戲下午茶】物仔百百款 mih-á pah-pah-khuán</title>
@@ -791,20 +799,12 @@
       <description>Date: 2026-06-05 · Venue: 台北偶戲館四樓黑箱劇場, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>2026｜6月｜《二三嚴選》｜中文單口喜劇拼盤</title>
-      <link>https://www.accupass.com/event/2605231305451221239760</link>
-      <guid isPermaLink="false">accupass:2605231305451221239760</guid>
-      <pubDate>Wed, 03 Jun 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-06-04 – 2026-06-26 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】剩下的身體</title>
-      <link>https://www.opentix.life/event/2059902565718548480</link>
-      <guid isPermaLink="false">opentix:2059902565718548480</guid>
-      <pubDate>Wed, 03 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-17 – 2026-08-19 · Venue: 遊牧計畫, 臺北市 · On sale: 2026-06-03 · Source: OPENTIX 兩廳院</description>
+      <title>【高雄雄厲害】唱歌集《爬上頂樓看月亮》音樂劇</title>
+      <link>https://www.opentix.life/event/2059231461195935744</link>
+      <guid isPermaLink="false">opentix:2059231461195935744</guid>
+      <pubDate>Thu, 04 Jun 2026 01:00:00 GMT</pubDate>
+      <category>音樂劇</category>
+      <description>Date: 2026-10-02 – 2026-10-04 · Venue: 衛武營國家藝術文化中心戲劇院, 高雄市 · On sale: 2026-06-04 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
