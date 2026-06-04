@@ -45,9 +45,7 @@ describe('buildOpenTixShow', () => {
 			notes: null,
 			youthSeat: true,
 			introImages: [],
-			// programOrganizers uses a nested { type, info } shape, not the flat { name }
-			// the parser reads, so o.name is undefined and organizer collapses to null.
-			organizer: null,
+			organizer: '躍演',
 			sessions: [
 				{
 					date: '2026-08-08',
