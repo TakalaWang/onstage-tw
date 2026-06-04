@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest';
 import type { Show, Source } from '../../../types';
 
 const VALID_SOURCES: Source[] = ['opentix', 'udn', 'kham', 'era', 'kktix', 'accupass'];
-const URL_RE = /^https?:\/\//;
+const URL_RE = /^https:\/\//;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 interface ShowsFile {
