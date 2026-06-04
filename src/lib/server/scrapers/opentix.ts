@@ -33,7 +33,7 @@ export interface ProgramDetail {
 	saleInfoContent?: string;
 	saleInfoNotice?: string;
 	noticeContent?: string;
-	programOrganizers?: { name?: string }[];
+	programOrganizers?: { type?: string; info?: { name?: string }[] }[];
 	eventVenues?: {
 		venue?: { name?: string; city?: string };
 		events?: { startDateTime?: number; onSaleStartDateTime?: number }[];
@@ -73,7 +73,8 @@ export function buildOpenTixShow(p: ProgramListItem, detail: ProgramDetail | nul
 		description = htmlToText(detail?.description);
 		organizer =
 			detail?.programOrganizers
-				?.map((o) => o.name)
+				?.flatMap((o) => o.info ?? [])
+				.map((i) => i.name)
 				.filter(Boolean)
 				.join('、') || null;
 		sessions = (detail?.eventVenues ?? []).flatMap((ev) =>
