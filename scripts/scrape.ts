@@ -2,6 +2,7 @@ import { writeFileSync } from 'node:fs';
 import { scrapeAll } from '../src/lib/server/scrapers/index';
 import { writeOutputs } from '../src/lib/server/output';
 import { cityFromText } from '../src/lib/server/scrapers/util';
+import { evaluateSourceHealth } from '../src/lib/server/scrapers/health';
 
 const start = Date.now();
 const { shows, report } = await scrapeAll();
@@ -16,9 +17,10 @@ console.log(
 	`\nWrote ${count} active shows to static/shows.json + static/feed.xml in ${((Date.now() - start) / 1000).toFixed(1)}s`,
 );
 
-const failures = report
-	.filter((r) => !r.ok || r.count === 0)
-	.map((r) => ({ source: r.source, error: r.ok ? 'returned 0 rows' : (r.error ?? 'unknown') }));
+const health = evaluateSourceHealth(report, shows);
+const failures = health
+	.filter((h) => !h.healthy)
+	.map((h) => ({ source: h.source, error: h.reason ?? 'unhealthy' }));
 
 const venueCount = new Map<string, number>();
 for (const s of shows) {
@@ -34,7 +36,7 @@ const unresolvedVenues = [...venueCount.entries()]
 
 writeFileSync(
 	'scrape-report.json',
-	JSON.stringify({ failures, unresolvedVenues, report, total: count }, null, 2),
+	JSON.stringify({ failures, unresolvedVenues, report, health, total: count }, null, 2),
 );
 if (unresolvedVenues.length) {
 	console.log(`\nℹ ${unresolvedVenues.length} venue(s) could not be resolved to a city.`);
