@@ -120,4 +120,27 @@ describe('evaluateSourceHealth', () => {
 		expect(result[0].healthy).toBe(false); // 0 < MIN_ROWS.era
 		expect(result[0].reason).toBe(`returned 0 rows (min ${MIN_ROWS.era})`);
 	});
+
+	it('gates on completeness at exactly COMPLETENESS_MIN_SAMPLE (count === 8)', () => {
+		// udn MIN is 5, so count 8 clears the rows gate; 4/8 = 0.5 < 0.7
+		const count = COMPLETENESS_MIN_SAMPLE; // 8
+		const report = [{ source: 'udn' as Source, count, ok: true }];
+		const shows = [...makeShows('udn', 4, true), ...makeShows('udn', 4, false)];
+		const result = evaluateSourceHealth(report, shows);
+		expect(result[0].completeness).toBe(0.5);
+		expect(result[0].healthy).toBe(false); // gate is count >= 8, not > 8
+		expect(result[0].reason).toBe(
+			`low field completeness 50% (min ${COMPLETENESS_THRESHOLD * 100}%)`,
+		);
+	});
+
+	it('treats completeness exactly at COMPLETENESS_THRESHOLD as healthy (0.7)', () => {
+		// 7/10 = 0.7, count 10 clears the opentix rows gate
+		const report = [{ source: 'opentix' as Source, count: 10, ok: true }];
+		const shows = [...makeShows('opentix', 7, true), ...makeShows('opentix', 3, false)];
+		const result = evaluateSourceHealth(report, shows);
+		expect(result[0].completeness).toBe(COMPLETENESS_THRESHOLD); // 0.7
+		expect(result[0].healthy).toBe(true); // rule is completeness < 0.7, not <= 0.7
+		expect(result[0].reason).toBe(null);
+	});
 });
