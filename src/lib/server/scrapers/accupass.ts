@@ -58,7 +58,7 @@ const EN_CITY: Record<string, string> = {
 	'Lienchiang County': '連江縣',
 };
 
-interface SearchItem {
+export interface SearchItem {
 	eventIdNumber: string;
 	name: string;
 	photoUrl?: string;
@@ -73,7 +73,7 @@ interface SearchResponse {
 	items?: SearchItem[];
 }
 
-interface LdEvent {
+export interface LdEvent {
 	'@type'?: string;
 	name?: string;
 	startDate?: string;
@@ -84,11 +84,70 @@ interface LdEvent {
 	organizer?: { name?: string };
 }
 
-function isoToTaipeiDate(iso: string | undefined): string | null {
+export function isoToTaipeiDate(iso: string | undefined): string | null {
 	if (!iso) return null;
 	const t = new Date(iso);
 	if (Number.isNaN(t.getTime())) return null;
 	return t.toLocaleDateString('sv-SE', { timeZone: 'Asia/Taipei' });
+}
+
+export function parseSearchResponse(json: unknown): SearchItem[] {
+	const data = json as SearchResponse;
+	return data.items ?? [];
+}
+
+export function filterAccupass(items: SearchItem[]): SearchItem[] {
+	return items.filter((it) => {
+		const tagText = (it.tags ?? []).map((t) => t.name).join(' ');
+		if (EXTRA_NON_THEATRE.test(it.name)) return false;
+		return looksTheatrical(it.name, tagText);
+	});
+}
+
+export function buildAccupassShow(item: SearchItem, ld: LdEvent | null): Show {
+	const id = item.eventIdNumber;
+	let venue: string | null = null;
+	let city: string | null = item.location ? (EN_CITY[item.location] ?? null) : null;
+	let description: string | null = null;
+	let organizer: string | null = null;
+	let youthSeat = false;
+	let imageUrl: string | null = item.photoUrl ?? null;
+	let startDate = isoToTaipeiDate(item.startDateTime);
+	let endDate = isoToTaipeiDate(item.endDateTime);
+
+	if (ld) {
+		venue = ld.location?.name ?? venue;
+		city = cityFromText(ld.location?.address ?? ld.location?.name) ?? city;
+		description = htmlToText(ld.description);
+		youthSeat = hasYouthSeat(ld.description);
+		organizer = ld.organizer?.name ?? null;
+		imageUrl = ld.image ?? imageUrl;
+		startDate = ld.startDate ? ld.startDate.slice(0, 10) : startDate;
+		endDate = ld.endDate ? ld.endDate.slice(0, 10) : endDate;
+	}
+
+	return {
+		id: `accupass:${id}`,
+		source: 'accupass',
+		sourceId: id,
+		title: item.name,
+		category: classifyGenre(item.name),
+		startDate,
+		endDate,
+		venue,
+		city,
+		onSaleAt: null,
+		minPrice: null,
+		maxPrice: null,
+		imageUrl,
+		url: EVENT_URL(id),
+		description,
+		notes: null,
+		youthSeat,
+		introImages: [],
+		organizer,
+		sessions: [] as Session[],
+	};
 }
 
 async function searchPage(keyword: string, currentIndex: number): Promise<SearchItem[]> {
@@ -106,14 +165,13 @@ async function searchPage(keyword: string, currentIndex: number): Promise<Search
 				currentIndex,
 			}),
 		});
-		const data = (await res.json()) as SearchResponse;
-		return data.items ?? [];
+		return parseSearchResponse(await res.json());
 	} catch {
 		return [];
 	}
 }
 
-function parseEventLd(html: string): LdEvent | null {
+export function parseEventLd(html: string): LdEvent | null {
 	const blocks = html.matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi);
 	for (const m of blocks) {
 		try {
@@ -144,66 +202,24 @@ export async function scrapeAccupass(): Promise<Show[]> {
 			}
 		}
 
-		const kept = [...candidates.values()].filter((it) => {
-			const tagText = (it.tags ?? []).map((t) => t.name).join(' ');
-			if (EXTRA_NON_THEATRE.test(it.name)) return false;
-			return looksTheatrical(it.name, tagText);
-		});
+		const kept = filterAccupass([...candidates.values()]);
 
 		const shows: Show[] = [];
 		let detailFetches = 0;
 		for (const it of kept) {
 			const id = it.eventIdNumber;
-			let venue: string | null = null;
-			let city: string | null = it.location ? (EN_CITY[it.location] ?? null) : null;
-			let description: string | null = null;
-			let organizer: string | null = null;
-			let youthSeat = false;
-			let imageUrl: string | null = it.photoUrl ?? null;
-			let startDate = isoToTaipeiDate(it.startDateTime);
-			let endDate = isoToTaipeiDate(it.endDateTime);
+			let ld: LdEvent | null = null;
 
 			if (!fast && detailFetches < MAX_DETAIL_FETCHES) {
 				try {
 					const page = await politeFetch(EVENT_URL(id));
-					const ld = parseEventLd(await page.text());
+					ld = parseEventLd(await page.text());
 					detailFetches++;
 					await sleep(400);
-					if (ld) {
-						venue = ld.location?.name ?? venue;
-						city = cityFromText(ld.location?.address ?? ld.location?.name) ?? city;
-						description = htmlToText(ld.description);
-						youthSeat = hasYouthSeat(ld.description);
-						organizer = ld.organizer?.name ?? null;
-						imageUrl = ld.image ?? imageUrl;
-						startDate = ld.startDate ? ld.startDate.slice(0, 10) : startDate;
-						endDate = ld.endDate ? ld.endDate.slice(0, 10) : endDate;
-					}
 				} catch {}
 			}
 
-			shows.push({
-				id: `accupass:${id}`,
-				source: 'accupass',
-				sourceId: id,
-				title: it.name,
-				category: classifyGenre(it.name),
-				startDate,
-				endDate,
-				venue,
-				city,
-				onSaleAt: null,
-				minPrice: null,
-				maxPrice: null,
-				imageUrl,
-				url: EVENT_URL(id),
-				description,
-				notes: null,
-				youthSeat,
-				introImages: [],
-				organizer,
-				sessions: [] as Session[],
-			});
+			shows.push(buildAccupassShow(it, ld));
 		}
 		return shows;
 	} catch {
