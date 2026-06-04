@@ -1,0 +1,44 @@
+{
+	"total": 3,
+	"items": [
+		{
+			"eventIdNumber": "2512031521171252049410",
+			"name": "公路喜劇《在深夜公路上不小心轉進回憶裡》",
+			"photoUrl": "https://static.accupass.com/eventbanner/2604050634415227426170_P520x260.jpg",
+			"startDateTime": "2026-06-26T10:00:00Z",
+			"endDateTime": "2026-06-27T14:00:00Z",
+			"location": "Taipei City",
+			"tags": [
+				{
+					"name": "療癒系"
+				}
+			]
+		},
+		{
+			"eventIdNumber": "2604290121156654136910",
+			"name": "音樂劇歌唱工作坊",
+			"photoUrl": "https://static.accupass.com/eventbanner/2604291033151583723399_P520x260.jpg",
+			"startDateTime": "2026-07-24T01:00:00Z",
+			"endDateTime": "2026-07-26T12:30:00Z",
+			"location": "Pingtung County",
+			"tags": [
+				{
+					"name": "訓練"
+				}
+			]
+		},
+		{
+			"eventIdNumber": "2603240218262119139194",
+			"name": "【小小音樂大師課】上低音號 × 三隻小豬｜台北",
+			"photoUrl": "https://static.accupass.com/eventbanner/2604242116328498653620_P520x260.jpg",
+			"startDateTime": "2026-08-15T03:00:00Z",
+			"endDateTime": "2026-08-16T10:00:00Z",
+			"location": "Taipei City",
+			"tags": [
+				{
+					"name": "幼兒音樂啟蒙"
+				}
+			]
+		}
+	]
+}

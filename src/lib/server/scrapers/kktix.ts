@@ -29,7 +29,7 @@ const ORGANIZERS: { slug: string; mode: 'all' | 'filter' }[] = [
 
 const MAX_PER_ORG = 12;
 
-interface FeedEntry {
+export interface FeedEntry {
 	url: string;
 	published: string;
 	title: string;
@@ -37,7 +37,7 @@ interface FeedEntry {
 	content?: string;
 }
 
-interface LdEvent {
+export interface LdEvent {
 	'@type'?: string;
 	name?: string;
 	startDate?: string;
@@ -46,7 +46,7 @@ interface LdEvent {
 	offers?: { price?: number; priceCurrency?: string; validFrom?: string }[];
 }
 
-function parseEventPage(html: string): {
+export function parseEventPage(html: string): {
 	detail: LdEvent | null;
 	image: string | null;
 } {
@@ -67,6 +67,62 @@ function parseEventPage(html: string): {
 	return { detail, image };
 }
 
+export function filterKktixEntries(entries: FeedEntry[], mode: 'all' | 'filter'): FeedEntry[] {
+	return entries
+		.filter((e) => mode === 'all' || looksTheatrical(e.title, e.summary, e.content))
+		.slice(0, MAX_PER_ORG);
+}
+
+export function buildKktixShow(
+	entry: FeedEntry,
+	detail: LdEvent | null,
+	image: string | null,
+	today: string,
+): Show | null {
+	const idMatch = entry.url.match(/\/\/([^.]+)\.kktix\.cc\/events\/([^/?#]+)/);
+	if (!idMatch) return null;
+	const id = `${idMatch[1]}/${idMatch[2]}`;
+
+	const offers = detail?.offers ?? [];
+	const prices = offers.map((o) => o.price).filter((p): p is number => !!p && p > 0);
+	const onSale = offers
+		.map((o) => o.validFrom)
+		.filter((v): v is string => !!v)
+		.sort()[0];
+	const venue = detail?.location?.name ?? null;
+	const title = detail?.name ?? entry.title;
+	const startDate = detail?.startDate?.slice(0, 10) ?? null;
+	const endDate = detail?.endDate?.slice(0, 10) ?? null;
+
+	const effectiveEnd = endDate ?? startDate;
+	if (effectiveEnd && effectiveEnd < today) return null;
+
+	const youthSeat = hasYouthSeat(entry.summary, entry.content, entry.title);
+
+	return {
+		id: `kktix:${id}`,
+		source: 'kktix',
+		sourceId: id,
+		title,
+		category: classifyGenre(title),
+		startDate,
+		endDate,
+		venue,
+		city: cityFromText(detail?.location?.address ?? venue),
+		onSaleAt: onSale ? new Date(onSale).toISOString() : null,
+		minPrice: prices.length ? Math.min(...prices) : null,
+		maxPrice: prices.length ? Math.max(...prices) : null,
+		imageUrl: image,
+		url: entry.url,
+		description: detail ? null : (entry.summary ?? null),
+		notes: null,
+		youthSeat,
+		introImages: [],
+		organizer: null,
+		sessions: [] as Session[],
+	};
+}
+
 export async function scrapeKktix(): Promise<Show[]> {
 	const today = new Date().toISOString().slice(0, 10);
 	const shows: Show[] = [];
@@ -80,57 +136,16 @@ export async function scrapeKktix(): Promise<Show[]> {
 			continue;
 		}
 
-		const candidates = entries
-			.filter((e) => org.mode === 'all' || looksTheatrical(e.title, e.summary, e.content))
-			.slice(0, MAX_PER_ORG);
+		const candidates = filterKktixEntries(entries, org.mode);
 
 		for (const entry of candidates) {
-			const idMatch = entry.url.match(/\/\/([^.]+)\.kktix\.cc\/events\/([^/?#]+)/);
-			if (!idMatch) continue;
-			const id = `${idMatch[1]}/${idMatch[2]}`;
 			try {
 				const page = await politeFetch(entry.url);
 				const { detail, image } = parseEventPage(await page.text());
 				await sleep(500);
 
-				const offers = detail?.offers ?? [];
-				const prices = offers.map((o) => o.price).filter((p): p is number => !!p && p > 0);
-				const onSale = offers
-					.map((o) => o.validFrom)
-					.filter((v): v is string => !!v)
-					.sort()[0];
-				const venue = detail?.location?.name ?? null;
-				const title = detail?.name ?? entry.title;
-				const startDate = detail?.startDate?.slice(0, 10) ?? null;
-				const endDate = detail?.endDate?.slice(0, 10) ?? null;
-
-				const effectiveEnd = endDate ?? startDate;
-				if (effectiveEnd && effectiveEnd < today) continue;
-
-				const youthSeat = hasYouthSeat(entry.summary, entry.content, entry.title);
-
-				shows.push({
-					id: `kktix:${id}`,
-					source: 'kktix',
-					sourceId: id,
-					title,
-					category: classifyGenre(title),
-					startDate,
-					endDate,
-					venue,
-					city: cityFromText(detail?.location?.address ?? venue),
-					onSaleAt: onSale ? new Date(onSale).toISOString() : null,
-					minPrice: prices.length ? Math.min(...prices) : null,
-					maxPrice: prices.length ? Math.max(...prices) : null,
-					imageUrl: image,
-					url: entry.url,
-					description: detail ? null : (entry.summary ?? null),
-					notes: null,
-					youthSeat,
-					introImages: [],
-					organizer: null,
-					sessions: [] as Session[],
-				});
+				const show = buildKktixShow(entry, detail, image, today);
+				if (show) shows.push(show);
 			} catch {}
 		}
 	}

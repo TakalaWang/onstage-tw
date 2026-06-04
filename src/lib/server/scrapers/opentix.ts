@@ -15,7 +15,7 @@ const EVENT_URL = (id: string) => `https://www.opentix.life/event/${id}`;
 
 const DRAMA_CATEGORIES = new Set(['戲劇', '音樂劇']);
 
-interface ProgramListItem {
+export interface ProgramListItem {
 	id: string;
 	name: string;
 	displayCategory: string;
@@ -27,7 +27,7 @@ interface ProgramListItem {
 	cities?: string[];
 }
 
-interface ProgramDetail {
+export interface ProgramDetail {
 	onlineStartTime?: number;
 	description?: string;
 	saleInfoContent?: string;
@@ -40,6 +40,75 @@ interface ProgramDetail {
 	}[];
 }
 
+export function parseOpenTixList(json: unknown): ProgramListItem[] {
+	const parsed = json as {
+		result?: { nextPage: number | null; data: ProgramListItem[] };
+	};
+	const data = parsed.result?.data ?? [];
+	const drama: ProgramListItem[] = [];
+	for (const p of data) {
+		if (DRAMA_CATEGORIES.has(p.displayCategory)) drama.push(p);
+	}
+	return drama;
+}
+
+export function buildOpenTixShow(p: ProgramListItem, detail: ProgramDetail | null): Show {
+	let onSaleAt: string | null = null;
+	let venue: string | null = null;
+	let city = p.cities?.[0] ?? null;
+	let description: string | null = null;
+	let organizer: string | null = null;
+	let youthSeat = false;
+	let sessions: Session[] = [];
+	if (detail) {
+		onSaleAt = unixToIso(detail?.onlineStartTime);
+		youthSeat = hasYouthSeat(
+			detail?.saleInfoContent,
+			detail?.saleInfoNotice,
+			detail?.noticeContent,
+			detail?.description,
+		);
+		venue = detail?.eventVenues?.[0]?.venue?.name ?? null;
+		city = detail?.eventVenues?.[0]?.venue?.city ?? city;
+		description = htmlToText(detail?.description);
+		organizer =
+			detail?.programOrganizers
+				?.map((o) => o.name)
+				.filter(Boolean)
+				.join('、') || null;
+		sessions = (detail?.eventVenues ?? []).flatMap((ev) =>
+			(ev.events ?? []).map((e) => ({
+				date: unixToDate(e.startDateTime),
+				venue: ev.venue?.name ?? null,
+				city: ev.venue?.city ?? null,
+				onSaleAt: unixToIso(e.onSaleStartDateTime),
+			})),
+		);
+	}
+	return {
+		id: `opentix:${p.id}`,
+		source: 'opentix',
+		sourceId: p.id,
+		title: p.name,
+		category: classifyGenre(p.name, p.displayCategory),
+		startDate: unixToDate(p.startDateTime),
+		endDate: unixToDate(p.endDateTime),
+		venue,
+		city,
+		onSaleAt,
+		minPrice: p.minPrice ?? null,
+		maxPrice: p.maxPrice ?? null,
+		imageUrl: p.imageUrl ?? null,
+		url: EVENT_URL(p.id),
+		description,
+		notes: null,
+		youthSeat,
+		introImages: [],
+		organizer,
+		sessions,
+	};
+}
+
 export async function scrapeOpenTix(): Promise<Show[]> {
 	const drama: ProgramListItem[] = [];
 	let page = 1;
@@ -48,10 +117,7 @@ export async function scrapeOpenTix(): Promise<Show[]> {
 		const json = (await res.json()) as {
 			result?: { nextPage: number | null; data: ProgramListItem[] };
 		};
-		const data = json.result?.data ?? [];
-		for (const p of data) {
-			if (DRAMA_CATEGORIES.has(p.displayCategory)) drama.push(p);
-		}
+		drama.push(...parseOpenTixList(json));
 		if (!json.result?.nextPage) break;
 		page = json.result.nextPage;
 		await sleep(200);
@@ -60,66 +126,16 @@ export async function scrapeOpenTix(): Promise<Show[]> {
 	const fast = process.env.ONSTAGE_FAST === '1';
 	const shows: Show[] = [];
 	for (const p of drama) {
-		let onSaleAt: string | null = null;
-		let venue: string | null = null;
-		let city = p.cities?.[0] ?? null;
-		let description: string | null = null;
-		let organizer: string | null = null;
-		let youthSeat = false;
-		let sessions: Session[] = [];
+		let detail: ProgramDetail | null = null;
 		if (!fast) {
 			try {
 				const dRes = await politeFetch(`${DETAIL_API}/${p.id}`);
 				const dJson = (await dRes.json()) as { result?: ProgramDetail };
-				const detail = dJson.result;
-				onSaleAt = unixToIso(detail?.onlineStartTime);
-				youthSeat = hasYouthSeat(
-					detail?.saleInfoContent,
-					detail?.saleInfoNotice,
-					detail?.noticeContent,
-					detail?.description,
-				);
-				venue = detail?.eventVenues?.[0]?.venue?.name ?? null;
-				city = detail?.eventVenues?.[0]?.venue?.city ?? city;
-				description = htmlToText(detail?.description);
-				organizer =
-					detail?.programOrganizers
-						?.map((o) => o.name)
-						.filter(Boolean)
-						.join('、') || null;
-				sessions = (detail?.eventVenues ?? []).flatMap((ev) =>
-					(ev.events ?? []).map((e) => ({
-						date: unixToDate(e.startDateTime),
-						venue: ev.venue?.name ?? null,
-						city: ev.venue?.city ?? null,
-						onSaleAt: unixToIso(e.onSaleStartDateTime),
-					})),
-				);
+				detail = dJson.result ?? null;
 				await sleep(150);
 			} catch {}
 		}
-		shows.push({
-			id: `opentix:${p.id}`,
-			source: 'opentix',
-			sourceId: p.id,
-			title: p.name,
-			category: classifyGenre(p.name, p.displayCategory),
-			startDate: unixToDate(p.startDateTime),
-			endDate: unixToDate(p.endDateTime),
-			venue,
-			city,
-			onSaleAt,
-			minPrice: p.minPrice ?? null,
-			maxPrice: p.maxPrice ?? null,
-			imageUrl: p.imageUrl ?? null,
-			url: EVENT_URL(p.id),
-			description,
-			notes: null,
-			youthSeat,
-			introImages: [],
-			organizer,
-			sessions,
-		});
+		shows.push(buildOpenTixShow(p, detail));
 	}
 	return shows;
 }
