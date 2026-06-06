@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 05 Jun 2026 14:38:18 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 02:36:52 GMT</lastBuildDate>
     <item>
       <title>劇場在地・共創新連結-白色恐怖田調分享會(含呈現演出)</title>
       <link>https://www.accupass.com/event/2603310621312093918182</link>
@@ -397,6 +397,14 @@
       <pubDate>Sat, 06 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-06-07 · Venue: 大稻埕戲苑, 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】笑就對了！2.0</title>
+      <link>https://www.opentix.life/event/2062001715672915969</link>
+      <guid isPermaLink="false">opentix:2062001715672915969</guid>
+      <pubDate>Sat, 06 Jun 2026 01:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-21 – 2026-08-22 · Venue: 濕地Venue-B1, 臺北市 · On sale: 2026-06-06 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>尋找心中的One Piece-2026惠文兒樂成果發表會</title>
@@ -797,14 +805,6 @@
       <pubDate>Tue, 19 May 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-10-31 · Venue: 臺東縣政府文化處藝文中心演藝廳, 臺東縣 · On sale: 2026-05-19 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>2026臺東藝術節：會演是英雄2之 《英雄所賤略同》</title>
-      <link>https://www.opentix.life/event/2054017886196895745</link>
-      <guid isPermaLink="false">opentix:2054017886196895745</guid>
-      <pubDate>Tue, 19 May 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-11-21 · Venue: 臺東縣政府文化處藝文中心演藝廳, 臺東縣 · On sale: 2026-05-19 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

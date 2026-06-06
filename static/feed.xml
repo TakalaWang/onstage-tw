@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 05 Jun 2026 14:38:18 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 02:36:52 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -775,6 +775,14 @@
       <description>Date: 2026-06-07 · Venue: 預見日好巷子步行20公尺近環河, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>【2026臺北藝穗節】笑就對了！2.0</title>
+      <link>https://www.opentix.life/event/2062001715672915969</link>
+      <guid isPermaLink="false">opentix:2062001715672915969</guid>
+      <pubDate>Sat, 06 Jun 2026 01:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-21 – 2026-08-22 · Venue: 濕地Venue-B1, 臺北市 · On sale: 2026-06-06 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>尋找心中的One Piece-2026惠文兒樂成果發表會</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19STPMY</link>
       <guid isPermaLink="false">era:P19STPMY</guid>
@@ -797,14 +805,6 @@
       <pubDate>Fri, 05 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-06-06 · Venue: DIMEN5ION, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>【KUSO爆丸】2026 最ㄅㄧㄤˋ的雙人單口喜劇專場</title>
-      <link>https://www.accupass.com/event/2603091358261662415699</link>
-      <guid isPermaLink="false">accupass:2603091358261662415699</guid>
-      <pubDate>Fri, 05 Jun 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-06-06 – 2026-06-14 · Venue: ( 06/06高雄場.06/14台北場 ), 高雄市 · Source: Accupass 活動通</description>
     </item>
   </channel>
 </rss>
