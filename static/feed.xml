@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 06 Jun 2026 02:36:52 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 13:20:59 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -84,7 +84,7 @@
       <guid isPermaLink="false">accupass:2604161849551233866544</guid>
       <pubDate>Mon, 24 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-25 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-25 · Venue: 3F-親子小學堂, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026童演童語-《仙界小霹靂-圖書館特工》任務四：協調</title>
@@ -236,7 +236,7 @@
       <guid isPermaLink="false">accupass:2604161810081209651625</guid>
       <pubDate>Sat, 18 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-19 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-19 · Venue: 一樓微光廳, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《系列第七/第八場》🎡【即興 x 遊樂園】不準備，也能很好玩：鬆開束縛，找回彈性</title>
@@ -412,7 +412,7 @@
       <guid isPermaLink="false">accupass:2604161831334486946410</guid>
       <pubDate>Sat, 27 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-06-28 · Source: Accupass 活動通</description>
+      <description>Date: 2026-06-28 · Venue: 桃園市立圖書館草漯分館, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【ECHO偶戲下午茶】物仔百百款 mih-á pah-pah-khuán</title>
@@ -727,20 +727,20 @@
       <description>Date: 2026-06-11 · Venue: 華山文創園區東3B館 烏梅劇院, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>【劇舞即Party】即興劇 × 舞蹈即興 × Social Party</title>
-      <link>https://www.accupass.com/event/2605202123262055258348</link>
-      <guid isPermaLink="false">accupass:2605202123262055258348</guid>
-      <pubDate>Tue, 09 Jun 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-06-10 · Venue: 艸創心演擊樂場, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
       <title>即興open mic 同歡樂 /6月份 Fakers club 飛客喜劇劇樂部/主持：《新激梗社》布萊恩</title>
       <link>https://www.accupass.com/event/2606031516502575444800</link>
       <guid isPermaLink="false">accupass:2606031516502575444800</guid>
       <pubDate>Tue, 09 Jun 2026 16:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-06-10 · Venue: basis coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>【劇舞即Party】即興劇 × 舞蹈即興 × Social Party</title>
+      <link>https://www.accupass.com/event/2605202123262055258348</link>
+      <guid isPermaLink="false">accupass:2605202123262055258348</guid>
+      <pubDate>Tue, 09 Jun 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-06-10 · Venue: 艸創心演擊樂場, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>6月高雄市電影館｜長短腳電影院－擁抱心樂章</title>
@@ -775,6 +775,14 @@
       <description>Date: 2026-06-07 · Venue: 預見日好巷子步行20公尺近環河, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>【2026臺北藝穗節】最後五秒</title>
+      <link>https://www.opentix.life/event/2059080758652174337</link>
+      <guid isPermaLink="false">opentix:2059080758652174337</guid>
+      <pubDate>Sat, 06 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-25 – 2026-08-29 · Venue: 小馬廄, 臺北市 · On sale: 2026-06-06 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>【2026臺北藝穗節】笑就對了！2.0</title>
       <link>https://www.opentix.life/event/2062001715672915969</link>
       <guid isPermaLink="false">opentix:2062001715672915969</guid>
@@ -783,28 +791,20 @@
       <description>Date: 2026-08-21 – 2026-08-22 · Venue: 濕地Venue-B1, 臺北市 · On sale: 2026-06-06 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>尋找心中的One Piece-2026惠文兒樂成果發表會</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19STPMY</link>
-      <guid isPermaLink="false">era:P19STPMY</guid>
+      <title>【KUSO爆丸】2026 最ㄅㄧㄤˋ的雙人單口喜劇專場</title>
+      <link>https://www.accupass.com/event/2603091358261662415699</link>
+      <guid isPermaLink="false">accupass:2603091358261662415699</guid>
       <pubDate>Fri, 05 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-06 · Venue: 臺中市屯區藝文中心演藝廳, 臺中市 · Source: 年代售票</description>
+      <category>喜劇</category>
+      <description>Date: 2026-06-06 – 2026-06-14 · Venue: ( 06/06高雄場.06/14台北場 ), 高雄市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>2026 第二季 OPEN HOUSE 米倉劇場開放日</title>
-      <link>https://www.accupass.com/event/2603090158013709694340</link>
-      <guid isPermaLink="false">accupass:2603090158013709694340</guid>
-      <pubDate>Fri, 05 Jun 2026 16:00:00 GMT</pubDate>
+      <title>蕭建平電視木偶劇團《怪俠紅黑巾-水底鬼娶親》</title>
+      <link>https://www.opentix.life/event/2059472292840448001</link>
+      <guid isPermaLink="false">opentix:2059472292840448001</guid>
+      <pubDate>Fri, 05 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-06-06 · Venue: 米倉劇場, 桃園市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>6/6吳雨橋 木箱鼓個人專場：一些人生二三事</title>
-      <link>https://www.accupass.com/event/2605190724329630045000</link>
-      <guid isPermaLink="false">accupass:2605190724329630045000</guid>
-      <pubDate>Fri, 05 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-06 · Venue: DIMEN5ION, 臺北市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-06-27 · Venue: 臺中市葫蘆墩文化中心演奏廳, 臺中市 · On sale: 2026-06-05 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
