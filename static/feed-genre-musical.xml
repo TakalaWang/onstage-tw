@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 07 Jun 2026 02:55:14 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 13:33:24 GMT</lastBuildDate>
     <item>
       <title>倫敦全本音樂劇《史瑞克》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5</link>
@@ -207,14 +207,6 @@
       <description>Date: 2026-06-13 · Venue: 高雄市文化中心至德堂, 高雄市 · On sale: 2026-03-30 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>親子音樂劇《誰偷走了我的字？》</title>
-      <link>https://www.opentix.life/event/2029363019898978305</link>
-      <guid isPermaLink="false">opentix:2029363019898978305</guid>
-      <pubDate>Mon, 09 Mar 2026 04:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-06-07 · Venue: 臺北市藝文推廣處城市舞台, 臺北市 · On sale: 2026-03-09 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>全本音樂劇《萬世巨星》JESUS CHRIST SUPERSTAR</title>
       <link>https://kham.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P163GNQQ</link>
       <guid isPermaLink="false">kham:P163GNQQ</guid>
@@ -244,23 +236,7 @@
       <guid isPermaLink="false">opentix:1993959650157686785</guid>
       <pubDate>Wed, 10 Dec 2025 04:00:00 GMT</pubDate>
       <category>音樂劇</category>
-      <description>Date: 2026-06-07 – 2026-06-28 · Venue: PLAYground 南村劇場．青鳥．有.設計, 臺北市 · On sale: 2025-12-10 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>C MUSICAL韓國授權音樂劇《有真與有真》</title>
-      <link>https://www.opentix.life/event/1993967412890648577</link>
-      <guid isPermaLink="false">opentix:1993967412890648577</guid>
-      <pubDate>Mon, 08 Dec 2025 04:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-06-07 · Venue: 臺中國家歌劇院中劇院, 臺中市 · On sale: 2025-12-08 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>全本音樂劇《歌劇魅影》The Phantom of the Opera</title>
-      <link>https://kham.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P13CXC1H</link>
-      <guid isPermaLink="false">kham:P13CXC1H</guid>
-      <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Source: 寬宏售票</description>
+      <description>Date: 2026-06-10 – 2026-06-28 · Venue: PLAYground 南村劇場．青鳥．有.設計, 臺北市 · On sale: 2025-12-10 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
