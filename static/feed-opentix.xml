@@ -5,7 +5,15 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 07 Jun 2026 13:33:24 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 02:57:22 GMT</lastBuildDate>
+    <item>
+      <title>《水中之屋》感動回歸版</title>
+      <link>https://www.opentix.life/event/2052315168468307969</link>
+      <guid isPermaLink="false">opentix:2052315168468307969</guid>
+      <pubDate>Mon, 08 Jun 2026 02:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-06 – 2026-08-08 · Venue: 水源劇場, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>【2026臺北藝穗節】最後五秒</title>
       <link>https://www.opentix.life/event/2059080758652174337</link>
@@ -797,14 +805,6 @@
       <pubDate>Wed, 06 May 2026 04:00:00 GMT</pubDate>
       <category>戲曲</category>
       <description>Date: 2026-08-29 – 2026-08-30 · Venue: 臺灣戲曲中心多功能廳, 臺北市 · On sale: 2026-05-06 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>《烏廟》錦飛鳳傀儡戲劇團｜2026戲曲夢工場</title>
-      <link>https://www.opentix.life/event/2049700100253523969</link>
-      <guid isPermaLink="false">opentix:2049700100253523969</guid>
-      <pubDate>Wed, 06 May 2026 04:00:00 GMT</pubDate>
-      <category>戲曲</category>
-      <description>Date: 2026-09-05 – 2026-09-06 · Venue: 臺灣戲曲中心多功能廳, 臺北市 · On sale: 2026-05-06 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
