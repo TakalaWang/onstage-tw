@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 10 Jun 2026 02:50:25 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 15:08:54 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -76,7 +76,7 @@
       <guid isPermaLink="false">accupass:2604161607482058993332</guid>
       <pubDate>Fri, 04 Sep 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-09-05 · Venue: 桃園市觀音區草漯國民小學活動中心, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-09-05 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>滄海天后 海上明燈 媽祖 音樂劇</title>
@@ -188,7 +188,7 @@
       <guid isPermaLink="false">accupass:2604161557411320503412</guid>
       <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-25 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-25 · Venue: 大園國小活動中心, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《Re:late》2026雙卡司再創作版</title>
@@ -479,6 +479,14 @@
       <description>Date: 2026-06-27 · Venue: Basis Coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>【移動故事屋】《刺蝟跳跳與水之舞》 ＠C-LAB穹頂劇場</title>
+      <link>https://www.accupass.com/event/2606020957152084263694</link>
+      <guid isPermaLink="false">accupass:2606020957152084263694</guid>
+      <pubDate>Fri, 26 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-27 – 2026-06-28 · Venue: 臺灣當代文化實驗場（C-LAB）, 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>金車文藝講堂：河床劇團 郭文泰【擁抱無限：從劇場與藝術到 VR 360 與 XR 體驗】</title>
       <link>https://www.accupass.com/event/2605300353471881745405</link>
       <guid isPermaLink="false">accupass:2605300353471881745405</guid>
@@ -647,12 +655,28 @@
       <description>Date: 2026-06-20 · Venue: 喜劇開港（🔎地圖搜尋「蔬食綠洲」）, 高雄市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>端午節特別企劃_「粽」藝之魂</title>
+      <link>https://www.accupass.com/event/2606090644521106758572</link>
+      <guid isPermaLink="false">accupass:2606090644521106758572</guid>
+      <pubDate>Thu, 18 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-19 · Venue: 跨蒔咖啡, 臺中市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>飛客喜劇夜：端午節特別企劃  06/19（五）20:00|飛客俱樂部 |大可愛/余胖/賀瓏/金可/傑森</title>
       <link>https://www.accupass.com/event/2606011030076719202890</link>
       <guid isPermaLink="false">accupass:2606011030076719202890</guid>
       <pubDate>Thu, 18 Jun 2026 16:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-06-19 · Venue: Basis Coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>Jimmy Stone 石峻旻 人生首場 單口喜劇專場 《上流法則 Rules of Shangliu》</title>
+      <link>https://comedyclub.kktix.cc/events/rulesofshangliu0829</link>
+      <guid isPermaLink="false">kktix:comedyclub/rulesofshangliu0829</guid>
+      <pubDate>Sun, 14 Jun 2026 04:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-08-29 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-06-14 · Source: KKTIX</description>
     </item>
     <item>
       <title>《煙囪上的飛機雲》六燃飛行練習：光桌劇場公演</title>
@@ -781,30 +805,6 @@
       <pubDate>Wed, 10 Jun 2026 16:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-06-11 – 2026-06-25 · Venue: basis coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>&lt;英文喜劇&gt;English Open mic：Fakers Comedy Club：Every Thursday 21:30~23:00|雙語秀 |Host:Evan Danger</title>
-      <link>https://www.accupass.com/event/2606041304342728091040</link>
-      <guid isPermaLink="false">accupass:2606041304342728091040</guid>
-      <pubDate>Wed, 10 Jun 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-06-11 – 2026-06-25 · Venue: Basis Coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>【開口變現塾】脫口秀人生診斷室 -找到你能變現的個人定位</title>
-      <link>https://www.accupass.com/event/2605251539071464648335</link>
-      <guid isPermaLink="false">accupass:2605251539071464648335</guid>
-      <pubDate>Wed, 10 Jun 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-06-11 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>【華山論戲】關於戲曲編劇的瘋狂埋梗這檔事</title>
-      <link>https://www.accupass.com/event/2605200348311058899965</link>
-      <guid isPermaLink="false">accupass:2605200348311058899965</guid>
-      <pubDate>Wed, 10 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲曲</category>
-      <description>Date: 2026-06-11 · Venue: 華山文創園區東3B館 烏梅劇院, 臺北市 · Source: Accupass 活動通</description>
     </item>
   </channel>
 </rss>
