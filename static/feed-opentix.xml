@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 12 Jun 2026 14:48:52 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 02:48:25 GMT</lastBuildDate>
     <item>
       <title>面白足球王</title>
       <link>https://www.opentix.life/event/2062731000083652609</link>
@@ -159,20 +159,20 @@
       <description>Date: 2026-06-17 · Venue: 光啟社（光啟社攝影棚）, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】ㄐㄧㄣˋㄒㄧㄤ</title>
-      <link>https://www.opentix.life/event/2057356122830548993</link>
-      <guid isPermaLink="false">opentix:2057356122830548993</guid>
-      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 紀州庵文學森林-古蹟大廣間, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>【2026臺北藝穗節】紅顏或水腫</title>
       <link>https://www.opentix.life/event/2059908358721101824</link>
       <guid isPermaLink="false">opentix:2059908358721101824</guid>
       <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-15 – 2026-08-18 · Venue: 臺北表演藝術中心 11樓排練場5, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】ㄐㄧㄣˋㄒㄧㄤ</title>
+      <link>https://www.opentix.life/event/2057356122830548993</link>
+      <guid isPermaLink="false">opentix:2057356122830548993</guid>
+      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 紀州庵文學森林-古蹟大廣間, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】漂浮的人</title>
@@ -223,14 +223,6 @@
       <description>Date: 2026-10-31 – 2026-11-01 · Venue: 台江文化中心台江劇場, 臺南市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>2026臺南藝術節：鐵仕製作（香港）x  剛左小組（大阪）《搭橋》</title>
-      <link>https://www.opentix.life/event/2059817032922460161</link>
-      <guid isPermaLink="false">opentix:2059817032922460161</guid>
-      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-11-07 – 2026-11-08 · Venue: 臺南文化中心演藝廳, 臺南市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>2026臺南藝術節：閱時《萬象園》吳園版</title>
       <link>https://www.opentix.life/event/2059834497252855809</link>
       <guid isPermaLink="false">opentix:2059834497252855809</guid>
@@ -245,6 +237,14 @@
       <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-11-07 – 2026-11-15 · Venue: 國立成功大學鳳凰樹劇場, 臺南市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026臺南藝術節：鐵仕製作（香港）x  剛左小組（大阪）《搭橋》</title>
+      <link>https://www.opentix.life/event/2059817032922460161</link>
+      <guid isPermaLink="false">opentix:2059817032922460161</guid>
+      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-11-07 – 2026-11-08 · Venue: 臺南文化中心演藝廳, 臺南市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>2026臺南藝術節：阿納卡西斯・拉莫斯《我的母親與金錢》</title>
