@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 13 Jun 2026 02:48:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 13:50:33 GMT</lastBuildDate>
     <item>
       <title>劇場在地・共創新連結-白色恐怖田調分享會(含呈現演出)</title>
       <link>https://www.accupass.com/event/2603310621312093918182</link>
@@ -95,6 +95,14 @@
       <description>Date: 2026-08-01 · Venue: 臺中國家歌劇院 角落沙龍, 臺中市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>「潮劇場」-《我願》</title>
+      <link>https://www.accupass.com/event/2605261250523133554170</link>
+      <guid isPermaLink="false">accupass:2605261250523133554170</guid>
+      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-01 · Venue: 芳苑鄉農會, 彰化縣 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>2026童演童語 特別活動-《仙界故事我來續》</title>
       <link>https://www.accupass.com/event/2604161601098300220570</link>
       <guid isPermaLink="false">accupass:2604161601098300220570</guid>
@@ -109,6 +117,14 @@
       <pubDate>Thu, 30 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-31 · Venue: 桃園市政府文化局演藝廳, 桃園市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>「潮聚落」</title>
+      <link>https://www.accupass.com/event/2605261302131341738415</link>
+      <guid isPermaLink="false">accupass:2605261302131341738415</guid>
+      <pubDate>Sat, 25 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-26 – 2026-07-31 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《洄游之間—大海的小孩》劇場演出</title>
@@ -279,6 +295,14 @@
       <description>Date: 2026-07-01 · Venue: 高雄駁二藝術特區 P2 倉庫, 高雄市 · Source: udn 售票網</description>
     </item>
     <item>
+      <title>6月高雄市電影館｜長短腳電影院－擁抱心樂章</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AE2D9H</link>
+      <guid isPermaLink="false">era:P1AE2D9H</guid>
+      <pubDate>Sat, 27 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-28 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>2026童演童語 特別活動-《小英雄上場》 </title>
       <link>https://www.accupass.com/event/2604161543331939481928</link>
       <guid isPermaLink="false">accupass:2604161543331939481928</guid>
@@ -391,12 +415,28 @@
       <description>Date: 2026-06-21 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>2026 真的有劇團《永夜：召喚雪之歌》音樂讀劇演出 </title>
+      <link>https://www.accupass.com/event/2605301404291131820130</link>
+      <guid isPermaLink="false">accupass:2605301404291131820130</guid>
+      <pubDate>Fri, 19 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-20 – 2026-06-21 · Venue: 中央書局3樓, 臺中市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>生生空間｜夏至女人舞專場演出</title>
       <link>https://www.accupass.com/event/2606011221291594848536</link>
       <guid isPermaLink="false">accupass:2606011221291594848536</guid>
       <pubDate>Fri, 19 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-06-20 · Venue: 生生  Sheng Sheng Space | 複合式藝文空間, 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>丑劇大師─斯拉法《下雪了》</title>
+      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P14XCO98</link>
+      <guid isPermaLink="false">udn:P14XCO98</guid>
+      <pubDate>Thu, 18 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-19 – 2026-06-28 · Venue: 臺中國家歌劇院 大劇院, 臺中市 · Source: udn 售票網</description>
     </item>
     <item>
       <title> 屏東端午節 · 戲劇展演 · 2026芒川四季劇展｜夏季製作《宜人之地》</title>
@@ -413,6 +453,14 @@
       <pubDate>Thu, 18 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-06-19 · Venue: 跨蒔咖啡, 臺中市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>傻豆騎士系列-「遙遠的美好時光」</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P15TPAUT</link>
+      <guid isPermaLink="false">era:P15TPAUT</guid>
+      <pubDate>Sat, 13 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-14 – 2026-06-27 · Venue: 台江文化中心台江劇場, 臺南市 · Source: 年代售票</description>
     </item>
     <item>
       <title>《煙囪上的飛機雲》六燃飛行練習：光桌劇場公演</title>
@@ -437,30 +485,6 @@
       <pubDate>Sat, 13 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-06-14 – 2026-06-28 · Venue: 直接點上方引導會跑錯地方，可至地圖APP搜尋 SASADRA CAFE即可找到, 臺南市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>丑劇大師─斯拉法《下雪了》</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P14XCO98</link>
-      <guid isPermaLink="false">udn:P14XCO98</guid>
-      <pubDate>Fri, 12 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-13 – 2026-06-28 · Venue: 衛武營國家藝術文化中心 歌劇院, 高雄市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>傻豆騎士系列-「遙遠的美好時光」</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P15TPAUT</link>
-      <guid isPermaLink="false">era:P15TPAUT</guid>
-      <pubDate>Fri, 12 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-13 – 2026-06-27 · Venue: 台江文化中心台江劇場, 臺南市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>6月高雄市電影館｜長短腳電影院－擁抱心樂章</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AE2D9H</link>
-      <guid isPermaLink="false">era:P1AE2D9H</guid>
-      <pubDate>Fri, 12 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-13 – 2026-06-28 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
       <title>面白足球王</title>
@@ -781,30 +805,6 @@
       <pubDate>Fri, 05 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-10-16 – 2026-10-18 · Venue: 臺北表演藝術中心 球劇場, 臺北市 · On sale: 2026-06-05 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>臺南文化中心42週年館慶《幾米男孩的100次勇敢》</title>
-      <link>https://www.opentix.life/event/2053719432722923520</link>
-      <guid isPermaLink="false">opentix:2053719432722923520</guid>
-      <pubDate>Fri, 05 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-11-21 – 2026-11-22 · Venue: 臺南文化中心演藝廳, 臺南市 · On sale: 2026-06-05 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】剩下的身體</title>
-      <link>https://www.opentix.life/event/2059902565718548480</link>
-      <guid isPermaLink="false">opentix:2059902565718548480</guid>
-      <pubDate>Wed, 03 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-17 – 2026-08-19 · Venue: 遊牧計畫, 臺北市 · On sale: 2026-06-03 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】滿目春色藏不住</title>
-      <link>https://www.opentix.life/event/2060200088949612545</link>
-      <guid isPermaLink="false">opentix:2060200088949612545</guid>
-      <pubDate>Wed, 03 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-19 – 2026-08-23 · Venue: 窩著fossa, 臺北市 · On sale: 2026-06-03 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

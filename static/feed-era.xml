@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 13 Jun 2026 02:48:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 13:50:33 GMT</lastBuildDate>
     <item>
       <title>滄海天后 海上明燈 媽祖 音樂劇</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BGGOWG</link>
@@ -63,6 +63,14 @@
       <description>Date: 2026-07-04 · Venue: 高雄市文化中心至善廳, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>6月高雄市電影館｜長短腳電影院－擁抱心樂章</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AE2D9H</link>
+      <guid isPermaLink="false">era:P1AE2D9H</guid>
+      <pubDate>Sat, 27 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-28 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>2026朱怡慧舞團年度公演</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P18JCFDS</link>
       <guid isPermaLink="false">era:P18JCFDS</guid>
@@ -82,25 +90,17 @@
       <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
       <guid isPermaLink="false">era:P192ILGJ</guid>
-      <pubDate>Fri, 12 Jun 2026 16:00:00 GMT</pubDate>
+      <pubDate>Sat, 13 Jun 2026 16:00:00 GMT</pubDate>
       <category>舞台劇</category>
-      <description>Date: 2026-06-13 – 2026-08-29 · Venue: 桃園展演中心展演廳, 桃園市 · Source: 年代售票</description>
+      <description>Date: 2026-06-14 – 2026-08-29 · Venue: 桃園展演中心展演廳, 桃園市 · Source: 年代售票</description>
     </item>
     <item>
       <title>傻豆騎士系列-「遙遠的美好時光」</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P15TPAUT</link>
       <guid isPermaLink="false">era:P15TPAUT</guid>
-      <pubDate>Fri, 12 Jun 2026 16:00:00 GMT</pubDate>
+      <pubDate>Sat, 13 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-06-13 – 2026-06-27 · Venue: 台江文化中心台江劇場, 臺南市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>6月高雄市電影館｜長短腳電影院－擁抱心樂章</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AE2D9H</link>
-      <guid isPermaLink="false">era:P1AE2D9H</guid>
-      <pubDate>Fri, 12 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-13 – 2026-06-28 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
+      <description>Date: 2026-06-14 – 2026-06-27 · Venue: 台江文化中心台江劇場, 臺南市 · Source: 年代售票</description>
     </item>
   </channel>
 </rss>
