@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 13 Jun 2026 13:50:33 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 02:59:36 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -84,7 +84,7 @@
       <guid isPermaLink="false">accupass:2604161607482058993332</guid>
       <pubDate>Fri, 04 Sep 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-09-05 · Source: Accupass 活動通</description>
+      <description>Date: 2026-09-05 · Venue: 桃園市觀音區草漯國民小學活動中心, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>滄海天后 海上明燈 媽祖 音樂劇</title>
@@ -751,6 +751,14 @@
       <description>Date: 2026-08-29 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-06-14 · Source: KKTIX</description>
     </item>
     <item>
+      <title>【2026 臺北藝穗節】北投散步 —— 微溫的星光散策</title>
+      <link>https://www.opentix.life/event/2062745654057897984</link>
+      <guid isPermaLink="false">opentix:2062745654057897984</guid>
+      <pubDate>Sun, 14 Jun 2026 01:30:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-29 · Venue: 北投中心新村-E2-2心村行+E2-3展間, 臺北市 · On sale: 2026-06-14 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
       <guid isPermaLink="false">era:P192ILGJ</guid>
@@ -797,14 +805,6 @@
       <pubDate>Sat, 13 Jun 2026 16:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-06-14 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>唱進心靈的眼眸：「青瞑猴，出外讀冊拼出頭」音樂劇</title>
-      <link>https://www.opentix.life/event/2037069944678072321</link>
-      <guid isPermaLink="false">opentix:2037069944678072321</guid>
-      <pubDate>Sat, 13 Jun 2026 04:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-10-16 · Venue: 台北生技園區多功能廳, 臺北市 · On sale: 2026-06-13 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
