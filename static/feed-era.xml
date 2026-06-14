@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 14 Jun 2026 02:59:36 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 13:56:09 GMT</lastBuildDate>
     <item>
       <title>滄海天后 海上明燈 媽祖 音樂劇</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BGGOWG</link>
@@ -71,6 +71,22 @@
       <description>Date: 2026-06-28 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
+      <guid isPermaLink="false">era:P192ILGJ</guid>
+      <pubDate>Fri, 26 Jun 2026 16:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-06-27 – 2026-08-29 · Venue: 臺北市政大樓親子劇場, 臺北市 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>傻豆騎士系列-「遙遠的美好時光」</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P15TPAUT</link>
+      <guid isPermaLink="false">era:P15TPAUT</guid>
+      <pubDate>Fri, 26 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-27 · Venue: 高雄市岡山文化中心演藝廳, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>2026朱怡慧舞團年度公演</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P18JCFDS</link>
       <guid isPermaLink="false">era:P18JCFDS</guid>
@@ -85,22 +101,6 @@
       <pubDate>Tue, 23 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-06-24 · Venue: 嘉義市政府文化局音樂廳, 嘉義市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
-      <guid isPermaLink="false">era:P192ILGJ</guid>
-      <pubDate>Sat, 13 Jun 2026 16:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-06-14 – 2026-08-29 · Venue: 桃園展演中心展演廳, 桃園市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>傻豆騎士系列-「遙遠的美好時光」</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P15TPAUT</link>
-      <guid isPermaLink="false">era:P15TPAUT</guid>
-      <pubDate>Sat, 13 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-14 – 2026-06-27 · Venue: 台江文化中心台江劇場, 臺南市 · Source: 年代售票</description>
     </item>
   </channel>
 </rss>

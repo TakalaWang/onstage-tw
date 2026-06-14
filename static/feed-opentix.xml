@@ -5,7 +5,15 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 14 Jun 2026 02:59:36 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 13:56:09 GMT</lastBuildDate>
+    <item>
+      <title>【2026臺北藝穗節】可寵</title>
+      <link>https://www.opentix.life/event/2063897349864177665</link>
+      <guid isPermaLink="false">opentix:2063897349864177665</guid>
+      <pubDate>Sun, 14 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 藝秀設計影像工作室, 臺北市 · On sale: 2026-06-14 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>【2026 臺北藝穗節】北投散步 —— 微溫的星光散策</title>
       <link>https://www.opentix.life/event/2062745654057897984</link>
@@ -797,14 +805,6 @@
       <pubDate>Tue, 19 May 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-11-21 · Venue: 臺東縣政府文化處藝文中心演藝廳, 臺東縣 · On sale: 2026-05-19 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>2026貓裏表演藝術節《錯位的圓舞曲》</title>
-      <link>https://www.opentix.life/event/2054825166679060480</link>
-      <guid isPermaLink="false">opentix:2054825166679060480</guid>
-      <pubDate>Mon, 18 May 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-11 – 2026-07-12 · Venue: 幽谷書屋, 苗栗縣 · On sale: 2026-05-18 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
