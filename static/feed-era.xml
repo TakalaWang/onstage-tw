@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 16 Jun 2026 03:07:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 16:37:39 GMT</lastBuildDate>
     <item>
       <title>滄海天后 海上明燈 媽祖 音樂劇</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BGGOWG</link>
@@ -21,6 +21,14 @@
       <pubDate>Thu, 13 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-14 · Venue: 四號公園文創演藝廳, 新北市 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>8月高雄市電影館｜長短腳電影院－嘰嘰王子：宇宙無敵</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPVOX</link>
+      <guid isPermaLink="false">era:P1BTPVOX</guid>
+      <pubDate>Fri, 07 Aug 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-08 – 2026-08-16 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
       <title>OSTA-Open Stage To All</title>
@@ -47,12 +55,36 @@
       <description>Date: 2026-07-11 – 2026-11-22 · Venue: 臺灣戲曲中心大表演廳, 臺北市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>7月高雄市電影館｜長短腳電影院－好奇寶貝方城市－法國新影像學院兒童動畫短片精選</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPI8Y</link>
+      <guid isPermaLink="false">era:P1BTPI8Y</guid>
+      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-11 – 2026-07-19 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>7月高雄市電影館｜長短腳電影院－O!PLA 波蘭兒童短片集</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPI98</link>
+      <guid isPermaLink="false">era:P1BTPI98</guid>
+      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-11 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>2026童年樂趣藝術饗宴~夏日狂想</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AETDF0</link>
       <guid isPermaLink="false">era:P1AETDF0</guid>
       <pubDate>Tue, 07 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-08 · Venue: 高雄市文化中心至德堂, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>7月高雄市電影館｜長短腳電影院－蹦蹦奇遇森友會</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPI8Q</link>
+      <guid isPermaLink="false">era:P1BTPI8Q</guid>
+      <pubDate>Sat, 04 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-05 – 2026-07-26 · Venue: 高雄市電影館3樓, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
       <title>浪曼舞花</title>
