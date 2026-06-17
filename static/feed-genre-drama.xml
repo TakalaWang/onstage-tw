@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 16 Jun 2026 16:37:39 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 03:02:33 GMT</lastBuildDate>
     <item>
       <title>劇場在地・共創新連結-白色恐怖田調分享會(含呈現演出)</title>
       <link>https://www.accupass.com/event/2603310621312093918182</link>
@@ -20,7 +20,7 @@
       <guid isPermaLink="false">accupass:2604161917471542799416</guid>
       <pubDate>Fri, 16 Oct 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-10-17 · Venue: 1F-微光廳, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-10-17 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026童演童語-故事DIY-《智慧地圖包：做決定我最勇敢》</title>
@@ -503,6 +503,14 @@
       <description>Date: 2026-06-19 · Venue: 跨蒔咖啡, 臺中市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>豬探長XR科學辦案實錄 II《光影竊賊》</title>
+      <link>https://www.opentix.life/event/2059207842247417857</link>
+      <guid isPermaLink="false">opentix:2059207842247417857</guid>
+      <pubDate>Wed, 17 Jun 2026 02:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Venue: 兒童新樂園-光XR實境樂園2F, 臺北市 · On sale: 2026-06-17 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>【2026臺北藝穗節】失格會計系列一《資產負債表》</title>
       <link>https://www.opentix.life/event/2058751385100869632</link>
       <guid isPermaLink="false">opentix:2058751385100869632</guid>
@@ -759,20 +767,20 @@
       <description>Date: 2026-06-17 · Venue: 光啟社（光啟社攝影棚）, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】ㄐㄧㄣˋㄒㄧㄤ</title>
-      <link>https://www.opentix.life/event/2057356122830548993</link>
-      <guid isPermaLink="false">opentix:2057356122830548993</guid>
-      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 紀州庵文學森林-古蹟大廣間, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>【2026臺北藝穗節】紅顏或水腫</title>
       <link>https://www.opentix.life/event/2059908358721101824</link>
       <guid isPermaLink="false">opentix:2059908358721101824</guid>
       <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-15 – 2026-08-18 · Venue: 臺北表演藝術中心 11樓排練場5, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】ㄐㄧㄣˋㄒㄧㄤ</title>
+      <link>https://www.opentix.life/event/2057356122830548993</link>
+      <guid isPermaLink="false">opentix:2057356122830548993</guid>
+      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 紀州庵文學森林-古蹟大廣間, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】漂浮的人</title>
@@ -797,14 +805,6 @@
       <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-09-18 – 2026-09-20 · Venue: 駁二正港小劇場, 高雄市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>臺南文化中心館慶《地動說──世界不是一幅靜物畫》</title>
-      <link>https://www.opentix.life/event/2062350124831883265</link>
-      <guid isPermaLink="false">opentix:2062350124831883265</guid>
-      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-10-03 – 2026-10-04 · Venue: 臺南文化中心演藝廳, 臺南市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
