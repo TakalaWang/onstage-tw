@@ -5,7 +5,15 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 17 Jun 2026 03:02:33 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 15:04:33 GMT</lastBuildDate>
+    <item>
+      <title>測試節目(此節目無效請勿訂購)</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
+      <guid isPermaLink="false">era:P17SAXND</guid>
+      <pubDate>Mon, 30 Nov 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-12-01 · Venue: 新北市五股工商展覽中心, 新北市 · Source: 年代售票</description>
+    </item>
     <item>
       <title>劇場在地・共創新連結-白色恐怖田調分享會(含呈現演出)</title>
       <link>https://www.accupass.com/event/2603310621312093918182</link>
@@ -20,7 +28,7 @@
       <guid isPermaLink="false">accupass:2604161917471542799416</guid>
       <pubDate>Fri, 16 Oct 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-10-17 · Source: Accupass 活動通</description>
+      <description>Date: 2026-10-17 · Venue: 1F-微光廳, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026童演童語-故事DIY-《智慧地圖包：做決定我最勇敢》</title>
@@ -237,14 +245,6 @@
       <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-11 · Venue: 龍山寺板橋文化廣場8樓8大廳, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>【2026大溪大禧】宜蘭傳藝大溪日</title>
-      <link>https://www.accupass.com/event/2606051720487191049260</link>
-      <guid isPermaLink="false">accupass:2606051720487191049260</guid>
-      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-11 – 2026-07-12 · Venue: 宜蘭傳藝園區, 宜蘭縣 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【藝啟JAM 2.0 】7/11（六）｜天雨白橋</title>
@@ -468,7 +468,7 @@
       <guid isPermaLink="false">accupass:2604161912071507724179</guid>
       <pubDate>Sat, 20 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-06-21 · Source: Accupass 活動通</description>
+      <description>Date: 2026-06-21 · Venue: 1F-微光廳, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>生生空間｜夏至女人舞專場演出</title>
@@ -503,12 +503,52 @@
       <description>Date: 2026-06-19 · Venue: 跨蒔咖啡, 臺中市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>2026北投小戲節－《落語之夜—江戶那些老古董們》</title>
+      <link>https://www.opentix.life/event/2064267371672784897</link>
+      <guid isPermaLink="false">opentix:2064267371672784897</guid>
+      <pubDate>Wed, 17 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-29 – 2026-08-05 · Venue: 尾田家, 臺北市 · On sale: 2026-06-17 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026北投小戲節－澳門破藝術工作室《新與舊之間@北投》</title>
+      <link>https://www.opentix.life/event/2064262010762371073</link>
+      <guid isPermaLink="false">opentix:2064262010762371073</guid>
+      <pubDate>Wed, 17 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-31 – 2026-08-02 · Venue: 舊峸劇場, 臺北市 · On sale: 2026-06-17 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】收信快樂</title>
+      <link>https://www.opentix.life/event/2064530187907964929</link>
+      <guid isPermaLink="false">opentix:2064530187907964929</guid>
+      <pubDate>Wed, 17 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 牯嶺街小劇場一樓實驗劇場, 臺北市 · On sale: 2026-06-17 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】卡啦OK</title>
+      <link>https://www.opentix.life/event/2062796831956811777</link>
+      <guid isPermaLink="false">opentix:2062796831956811777</guid>
+      <pubDate>Wed, 17 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-21 – 2026-08-22 · Venue: 臺灣大學藝文中心遊心劇場, 臺北市 · On sale: 2026-06-17 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】暗房</title>
+      <link>https://www.opentix.life/event/2064916319667507201</link>
+      <guid isPermaLink="false">opentix:2064916319667507201</guid>
+      <pubDate>Wed, 17 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-26 – 2026-08-27 · Venue: 鬧房間, 臺北市 · On sale: 2026-06-17 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>豬探長XR科學辦案實錄 II《光影竊賊》</title>
       <link>https://www.opentix.life/event/2059207842247417857</link>
       <guid isPermaLink="false">opentix:2059207842247417857</guid>
       <pubDate>Wed, 17 Jun 2026 02:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Venue: 兒童新樂園-光XR實境樂園2F, 臺北市 · On sale: 2026-06-17 · Source: OPENTIX 兩廳院</description>
+      <description>Date: 2026-08-22 – 2026-08-30 · Venue: 兒童新樂園-光XR實境樂園2F, 臺北市 · On sale: 2026-06-17 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】失格會計系列一《資產負債表》</title>
@@ -759,52 +799,12 @@
       <description>Date: 2026-10-23 – 2026-11-01 · Venue: 國立成功大學成功廳, 臺南市 · On sale: 2026-06-09 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>面白放送</title>
-      <link>https://www.opentix.life/event/2053838884560412673</link>
-      <guid isPermaLink="false">opentix:2053838884560412673</guid>
-      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-17 · Venue: 光啟社（光啟社攝影棚）, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>【2026臺北藝穗節】紅顏或水腫</title>
       <link>https://www.opentix.life/event/2059908358721101824</link>
       <guid isPermaLink="false">opentix:2059908358721101824</guid>
       <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-15 – 2026-08-18 · Venue: 臺北表演藝術中心 11樓排練場5, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】ㄐㄧㄣˋㄒㄧㄤ</title>
-      <link>https://www.opentix.life/event/2057356122830548993</link>
-      <guid isPermaLink="false">opentix:2057356122830548993</guid>
-      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 紀州庵文學森林-古蹟大廣間, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】漂浮的人</title>
-      <link>https://www.opentix.life/event/2062737713461436417</link>
-      <guid isPermaLink="false">opentix:2062737713461436417</guid>
-      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-16 – 2026-08-20 · Venue: 鬧房間, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>《咱兜lán tau》雙版本巡演</title>
-      <link>https://www.opentix.life/event/2056657152138346497</link>
-      <guid isPermaLink="false">opentix:2056657152138346497</guid>
-      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-29 – 2026-10-04 · Venue: 臺灣戲曲中心小表演廳, 臺北市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>樹德科技大學表演藝術系第17屆畢業製作《失聲》</title>
-      <link>https://www.opentix.life/event/2060308522436108289</link>
-      <guid isPermaLink="false">opentix:2060308522436108289</guid>
-      <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-09-18 – 2026-09-20 · Venue: 駁二正港小劇場, 高雄市 · On sale: 2026-06-08 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
