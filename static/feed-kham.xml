@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 18 Jun 2026 15:01:04 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 03:43:53 GMT</lastBuildDate>
     <item>
       <title>舞台劇〈你來的時候〉</title>
       <link>https://kham.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19CQHU9</link>
@@ -29,14 +29,6 @@
       <pubDate>Thu, 05 Mar 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-28 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · On sale: 2026-03-06 · Source: 寬宏售票</description>
-    </item>
-    <item>
-      <title>全本音樂劇《萬世巨星》JESUS CHRIST SUPERSTAR</title>
-      <link>https://kham.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P163GNQQ</link>
-      <guid isPermaLink="false">kham:P163GNQQ</guid>
-      <pubDate>Tue, 03 Feb 2026 16:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-06-18 · Venue: 國家戲劇院, 臺北市 · On sale: 2026-02-04 · Source: 寬宏售票</description>
     </item>
   </channel>
 </rss>
