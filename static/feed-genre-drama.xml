@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 19 Jun 2026 14:56:28 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 02:47:07 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -471,6 +471,14 @@
       <description>Date: 2026-06-21 · Venue: 1F-微光廳, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>【2026 臺北藝穗節】即使世界末日還是想吃枝仔冰</title>
+      <link>https://www.opentix.life/event/2064535827594289153</link>
+      <guid isPermaLink="false">opentix:2064535827594289153</guid>
+      <pubDate>Sat, 20 Jun 2026 02:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-18 · Venue: 師大白鹿洞書坊B1, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>丑劇大師─斯拉法《下雪了》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P14XCO98</link>
       <guid isPermaLink="false">udn:P14XCO98</guid>
@@ -797,14 +805,6 @@
       <pubDate>Fri, 12 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-09-12 – 2026-12-27 · Venue: 臺灣戲曲中心大表演廳, 臺北市 · On sale: 2026-06-12 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>當代傳奇劇場《慾望城國》</title>
-      <link>https://www.opentix.life/event/2060216856853549057</link>
-      <guid isPermaLink="false">opentix:2060216856853549057</guid>
-      <pubDate>Fri, 12 Jun 2026 03:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-10-09 – 2026-10-11 · Venue: 衛武營國家藝術文化中心歌劇院, 高雄市 · On sale: 2026-06-12 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 19 Jun 2026 14:56:28 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 02:47:07 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -735,6 +735,14 @@
       <description>Date: 2026-06-21 · Venue: 1F-微光廳, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>【2026 臺北藝穗節】即使世界末日還是想吃枝仔冰</title>
+      <link>https://www.opentix.life/event/2064535827594289153</link>
+      <guid isPermaLink="false">opentix:2064535827594289153</guid>
+      <pubDate>Sat, 20 Jun 2026 02:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-18 · Venue: 師大白鹿洞書坊B1, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>丑劇大師─斯拉法《下雪了》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P14XCO98</link>
       <guid isPermaLink="false">udn:P14XCO98</guid>
@@ -797,14 +805,6 @@
       <pubDate>Fri, 19 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-18 – 2026-08-23 · Venue: 北投中心新村-C1 藝棧, 臺北市 · On sale: 2026-06-19 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】《我有一個超能力》人事擴編版</title>
-      <link>https://www.opentix.life/event/2064247573548912641</link>
-      <guid isPermaLink="false">opentix:2064247573548912641</guid>
-      <pubDate>Fri, 19 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-19 – 2026-08-28 · Venue: 遊牧計畫, 臺北市 · On sale: 2026-06-19 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

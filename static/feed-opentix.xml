@@ -5,7 +5,15 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 19 Jun 2026 14:56:28 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 02:47:07 GMT</lastBuildDate>
+    <item>
+      <title>【2026 臺北藝穗節】即使世界末日還是想吃枝仔冰</title>
+      <link>https://www.opentix.life/event/2064535827594289153</link>
+      <guid isPermaLink="false">opentix:2064535827594289153</guid>
+      <pubDate>Sat, 20 Jun 2026 02:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-18 · Venue: 師大白鹿洞書坊B1, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>2026北投小戲節－國際讀劇匯演</title>
       <link>https://www.opentix.life/event/2065016759394521089</link>
@@ -797,14 +805,6 @@
       <pubDate>Mon, 01 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-09-05 · Venue: 苗栗縣政府文化觀光局中正堂, 苗栗縣 · On sale: 2026-06-01 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>《神明便利商店》音樂劇</title>
-      <link>https://www.opentix.life/event/1823201256034107393</link>
-      <guid isPermaLink="false">opentix:1823201256034107393</guid>
-      <pubDate>Mon, 01 Jun 2026 04:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-09-19 · Venue: 澎湖縣演藝廳, 澎湖縣 · On sale: 2026-06-01 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
