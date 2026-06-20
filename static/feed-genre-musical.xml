@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 20 Jun 2026 02:47:07 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 13:54:40 GMT</lastBuildDate>
     <item>
       <title>倫敦全本音樂劇《史瑞克》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5</link>
@@ -37,6 +37,14 @@
       <pubDate>Sun, 26 Jul 2026 16:00:00 GMT</pubDate>
       <category>音樂劇</category>
       <description>Date: 2026-07-27 – 2026-08-15 · Venue: 排練室、小劇場, 臺中市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>韓國原創音樂劇《6點下班》</title>
+      <link>https://www.opentix.life/event/2061288557856047105</link>
+      <guid isPermaLink="false">opentix:2061288557856047105</guid>
+      <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
+      <category>音樂劇</category>
+      <description>Date: 2026-08-01 · Venue: 雲林表演廳, 雲林縣 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>《仙履奇緣》百老匯音樂劇</title>
@@ -268,7 +276,7 @@
       <guid isPermaLink="false">opentix:1993959650157686785</guid>
       <pubDate>Wed, 10 Dec 2025 04:00:00 GMT</pubDate>
       <category>音樂劇</category>
-      <description>Date: 2026-06-20 – 2026-06-28 · Venue: PLAYground 南村劇場．青鳥．有.設計, 臺北市 · On sale: 2025-12-10 · Source: OPENTIX 兩廳院</description>
+      <description>Date: 2026-06-21 – 2026-06-28 · Venue: PLAYground 南村劇場．青鳥．有.設計, 臺北市 · On sale: 2025-12-10 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
