@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 20 Jun 2026 13:54:40 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 03:04:14 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -212,7 +212,7 @@
       <guid isPermaLink="false">accupass:2605270823471538145080</guid>
       <pubDate>Sat, 18 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-19 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-19 · Venue: 思劇場, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【2026夏季藝術兒童營】兔比的奇幻旅程｜音樂x戲劇x美術x配音x生物x校外參訪</title>
@@ -495,20 +495,20 @@
       <description>Date: 2026-08-15 – 2026-08-17 · Venue: 窩窩藝文空間, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】《如果幸福是一場煉金術？》</title>
-      <link>https://www.opentix.life/event/2060183790425870337</link>
-      <guid isPermaLink="false">opentix:2060183790425870337</guid>
-      <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-20 – 2026-08-21 · Venue: 小劇場學校, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>【2026臺北藝穗節】沒有名字的部落</title>
       <link>https://www.opentix.life/event/2063869368957550593</link>
       <guid isPermaLink="false">opentix:2063869368957550593</guid>
       <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-20 – 2026-08-22 · Venue: 萬座曉劇場, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】《如果幸福是一場煉金術？》</title>
+      <link>https://www.opentix.life/event/2060183790425870337</link>
+      <guid isPermaLink="false">opentix:2060183790425870337</guid>
+      <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-20 – 2026-08-21 · Venue: 小劇場學校, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】貓咪！死日快樂</title>
