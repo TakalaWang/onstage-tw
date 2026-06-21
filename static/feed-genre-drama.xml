@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 21 Jun 2026 03:04:14 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 14:00:51 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -463,30 +463,6 @@
       <description>Date: 2026-06-21 – 2026-07-12 · Venue: 基隆表演藝術中心島嶼實驗劇場, 基隆市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>《戲說草山》(一)陽明山上的遊走劇場</title>
-      <link>https://www.accupass.com/event/2606111440261302845555</link>
-      <guid isPermaLink="false">accupass:2606111440261302845555</guid>
-      <pubDate>Sat, 20 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-21 · Venue: google map請搜尋「風尾步道」, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>《珍奶公主》兒童播客劇場</title>
-      <link>https://www.accupass.com/event/2605210820061601937073</link>
-      <guid isPermaLink="false">accupass:2605210820061601937073</guid>
-      <pubDate>Sat, 20 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-21 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>2026童演童語-霹靂電影日《奇人密碼—古羅布之謎》 </title>
-      <link>https://www.accupass.com/event/2604161912071507724179</link>
-      <guid isPermaLink="false">accupass:2604161912071507724179</guid>
-      <pubDate>Sat, 20 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-21 · Venue: 1F-微光廳, 桃園市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
       <title>【2026臺北藝穗節】《夢魘販賣舖》</title>
       <link>https://www.opentix.life/event/2066716560728784896</link>
       <guid isPermaLink="false">opentix:2066716560728784896</guid>
@@ -605,14 +581,6 @@
       <pubDate>Fri, 19 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-20 – 2026-08-22 · Venue: 北投中心新村-C1 藝棧, 臺北市 · On sale: 2026-06-19 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title> 屏東端午節 · 戲劇展演 · 2026芒川四季劇展｜夏季製作《宜人之地》</title>
-      <link>https://www.accupass.com/event/2604281326221114145469</link>
-      <guid isPermaLink="false">accupass:2604281326221114145469</guid>
-      <pubDate>Thu, 18 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-19 – 2026-06-21 · Venue: 肆 · 我 MOI.Lab 勝利星村得勝區遺構公園, 屏東縣 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026北投小戲節－北投open mic x 嘉賓閣溫泉會館</title>
@@ -805,6 +773,38 @@
       <pubDate>Sun, 14 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-26 – 2026-08-30 · Venue: 倏忽空間, 臺北市 · On sale: 2026-06-14 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】可寵</title>
+      <link>https://www.opentix.life/event/2063897349864177665</link>
+      <guid isPermaLink="false">opentix:2063897349864177665</guid>
+      <pubDate>Sun, 14 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 藝秀設計影像工作室, 臺北市 · On sale: 2026-06-14 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026 臺北藝穗節】北投散步 —— 微溫的星光散策</title>
+      <link>https://www.opentix.life/event/2062745654057897984</link>
+      <guid isPermaLink="false">opentix:2062745654057897984</guid>
+      <pubDate>Sun, 14 Jun 2026 01:30:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-29 · Venue: 北投中心新村-E2-2心村行+E2-3展間, 臺北市 · On sale: 2026-06-14 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>六月OPEN MIC</title>
+      <link>https://www.accupass.com/event/2606031404312077686434</link>
+      <guid isPermaLink="false">accupass:2606031404312077686434</guid>
+      <pubDate>Sat, 13 Jun 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-06-14 – 2026-06-28 · Venue: 直接點上方引導會跑錯地方，可至地圖APP搜尋 SASADRA CAFE即可找到, 臺南市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】《此刻、曾經與如果當時》</title>
+      <link>https://www.opentix.life/event/2062007379128360961</link>
+      <guid isPermaLink="false">opentix:2062007379128360961</guid>
+      <pubDate>Fri, 12 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 綠門, 臺北市 · On sale: 2026-06-12 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
