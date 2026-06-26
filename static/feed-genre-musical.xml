@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 26 Jun 2026 02:46:10 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 14:17:40 GMT</lastBuildDate>
     <item>
       <title>倫敦全本音樂劇《史瑞克》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5</link>
@@ -13,6 +13,14 @@
       <pubDate>Thu, 19 Nov 2026 16:00:00 GMT</pubDate>
       <category>音樂劇</category>
       <description>Date: 2026-11-20 – 2026-11-29 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · Source: udn 售票網</description>
+    </item>
+    <item>
+      <title>2026 音樂劇產業國際論壇—音樂劇生態系的建構與未來</title>
+      <link>https://www.accupass.com/event/2606250425521002327659</link>
+      <guid isPermaLink="false">accupass:2606250425521002327659</guid>
+      <pubDate>Fri, 04 Sep 2026 16:00:00 GMT</pubDate>
+      <category>音樂劇</category>
+      <description>Date: 2026-09-05 – 2026-09-06 · Venue: 小劇場, 臺中市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>滄海天后 海上明燈 媽祖 音樂劇</title>
@@ -37,6 +45,22 @@
       <pubDate>Sun, 26 Jul 2026 16:00:00 GMT</pubDate>
       <category>音樂劇</category>
       <description>Date: 2026-07-27 – 2026-08-15 · Venue: 排練室、小劇場, 臺中市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>如果兒童劇團：百老匯授權音樂劇國際中文版《 Honk ！你好鴨》</title>
+      <link>https://www.opentix.life/event/2066755623980507137</link>
+      <guid isPermaLink="false">opentix:2066755623980507137</guid>
+      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
+      <category>音樂劇</category>
+      <description>Date: 2026-09-19 · Venue: 臺中市葫蘆墩文化中心演奏廳, 臺中市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>音樂劇《潘朵拉的音樂盒》</title>
+      <link>https://www.opentix.life/event/2067154457490825217</link>
+      <guid isPermaLink="false">opentix:2067154457490825217</guid>
+      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
+      <category>音樂劇</category>
+      <description>Date: 2026-11-21 – 2026-11-22 · Venue: 臺中國家歌劇院小劇場, 臺中市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>《小裸女Si Sol Mi》音樂劇讀劇會</title>
@@ -300,7 +324,7 @@
       <guid isPermaLink="false">opentix:1993959650157686785</guid>
       <pubDate>Wed, 10 Dec 2025 04:00:00 GMT</pubDate>
       <category>音樂劇</category>
-      <description>Date: 2026-06-26 – 2026-06-28 · Venue: PLAYground 南村劇場．青鳥．有.設計, 臺北市 · On sale: 2025-12-10 · Source: OPENTIX 兩廳院</description>
+      <description>Date: 2026-06-27 – 2026-06-28 · Venue: PLAYground 南村劇場．青鳥．有.設計, 臺北市 · On sale: 2025-12-10 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
