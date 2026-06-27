@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 26 Jun 2026 14:17:40 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 02:39:50 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -375,6 +375,14 @@
       <description>Date: 2026-07-23 – 2026-07-25 · Venue: 國家戲劇院, 臺北市 · Source: udn 售票網</description>
     </item>
     <item>
+      <title>即興喜劇:「立即興奮」|夏大寶 / 微笑丹尼 / KJ / 城寶｜07/22  (三) 20:00|飛客劇樂部</title>
+      <link>https://www.accupass.com/event/2606261811131840965759</link>
+      <guid isPermaLink="false">accupass:2606261811131840965759</guid>
+      <pubDate>Tue, 21 Jul 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-07-22 · Venue: Basis Coffee 地下室, 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>玩．劇場—青少年創意工坊：舞蹈劇場篇</title>
       <link>https://www.accupass.com/event/2603250234161601863129</link>
       <guid isPermaLink="false">accupass:2603250234161601863129</guid>
@@ -676,7 +684,7 @@
       <guid isPermaLink="false">accupass:2604140920441276021220</guid>
       <pubDate>Sat, 27 Jun 2026 16:00:00 GMT</pubDate>
       <category>偶戲</category>
-      <description>Date: 2026-06-28 · Venue: 台北偶戲館研習教室, 臺北市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-06-28 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>丑劇大師─斯拉法《下雪了》</title>
@@ -791,20 +799,12 @@
       <description>Date: 2026-08-16 · Venue: 台泥大樓士敏廳, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】沒有，也沒差</title>
-      <link>https://www.opentix.life/event/2066732161669160960</link>
-      <guid isPermaLink="false">opentix:2066732161669160960</guid>
+      <title>【2026臺北藝穗節】每週晚上八點消失的我</title>
+      <link>https://www.opentix.life/event/2065280168788201473</link>
+      <guid isPermaLink="false">opentix:2065280168788201473</guid>
       <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 北投中心新村-C1 藝棧, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】《BUG》</title>
-      <link>https://www.opentix.life/event/2062380175849832449</link>
-      <guid isPermaLink="false">opentix:2062380175849832449</guid>
-      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-20 · Venue: 拾久駅, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
+      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 窩著fossa, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
