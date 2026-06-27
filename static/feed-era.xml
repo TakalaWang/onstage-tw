@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 27 Jun 2026 02:39:50 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 13:25:50 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -119,36 +119,20 @@
       <description>Date: 2026-07-04 · Venue: 高雄市文化中心至善廳, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
+      <guid isPermaLink="false">era:P192ILGJ</guid>
+      <pubDate>Sat, 27 Jun 2026 16:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-06-28 – 2026-08-29 · Venue: 臺北市政大樓親子劇場, 臺北市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>6月高雄市電影館｜長短腳電影院－擁抱心樂章</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AE2D9H</link>
       <guid isPermaLink="false">era:P1AE2D9H</guid>
       <pubDate>Sat, 27 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-06-28 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
-      <guid isPermaLink="false">era:P192ILGJ</guid>
-      <pubDate>Fri, 26 Jun 2026 16:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-06-27 – 2026-08-29 · Venue: 臺北市政大樓親子劇場, 臺北市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>傻豆騎士系列-「遙遠的美好時光」</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P15TPAUT</link>
-      <guid isPermaLink="false">era:P15TPAUT</guid>
-      <pubDate>Fri, 26 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-27 · Venue: 高雄市岡山文化中心演藝廳, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>2026朱怡慧舞團年度公演</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P18JCFDS</link>
-      <guid isPermaLink="false">era:P18JCFDS</guid>
-      <pubDate>Fri, 26 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-27 · Venue: 員林演藝廳表演廳, 彰化縣 · Source: 年代售票</description>
     </item>
   </channel>
 </rss>

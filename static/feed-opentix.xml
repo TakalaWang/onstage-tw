@@ -5,7 +5,23 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 27 Jun 2026 02:39:50 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 13:25:50 GMT</lastBuildDate>
+    <item>
+      <title>涉岸会社2026年度製作《搞什麼啊》</title>
+      <link>https://www.opentix.life/event/2069341654445314049</link>
+      <guid isPermaLink="false">opentix:2069341654445314049</guid>
+      <pubDate>Sat, 27 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-25 – 2026-09-27 · Venue: 臺灣大學藝文中心遊心劇場, 臺北市 · On sale: 2026-06-27 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026風動歌劇團《映影返時》</title>
+      <link>https://www.opentix.life/event/2062132894929657857</link>
+      <guid isPermaLink="false">opentix:2062132894929657857</guid>
+      <pubDate>Sat, 27 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-10-25 · Venue: 基隆表演藝術中心演藝廳, 基隆市 · On sale: 2026-06-27 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>當真鬧：龍與地下城《冬之鎖的背叛》真人跑團秀</title>
       <link>https://www.opentix.life/event/2068983884549693440</link>
@@ -789,22 +805,6 @@
       <pubDate>Sun, 14 Jun 2026 01:30:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-29 · Venue: 北投中心新村-E2-2心村行+E2-3展間, 臺北市 · On sale: 2026-06-14 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>唱進心靈的眼眸：「青瞑猴，出外讀冊拼出頭」音樂劇</title>
-      <link>https://www.opentix.life/event/2037069944678072321</link>
-      <guid isPermaLink="false">opentix:2037069944678072321</guid>
-      <pubDate>Sat, 13 Jun 2026 04:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-10-16 · Venue: 台北生技園區多功能廳, 臺北市 · On sale: 2026-06-13 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】《此刻、曾經與如果當時》</title>
-      <link>https://www.opentix.life/event/2062007379128360961</link>
-      <guid isPermaLink="false">opentix:2062007379128360961</guid>
-      <pubDate>Fri, 12 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 綠門, 臺北市 · On sale: 2026-06-12 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
