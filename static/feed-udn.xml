@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 28 Jun 2026 02:52:57 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 13:30:02 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -85,22 +85,6 @@
       <pubDate>Tue, 30 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-01 · Venue: 高雄駁二藝術特區 P2 倉庫, 高雄市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>丑劇大師─斯拉法《下雪了》</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P14XCO98</link>
-      <guid isPermaLink="false">udn:P14XCO98</guid>
-      <pubDate>Sat, 27 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-28 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · Source: udn 售票網</description>
-    </item>
-    <item>
-      <title>舞台劇《謝謝大家收看》</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P137BHCT</link>
-      <guid isPermaLink="false">udn:P137BHCT</guid>
-      <pubDate>Sat, 27 Jun 2026 16:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-06-28 · Venue: 臺中市中山堂, 臺中市 · Source: udn 售票網</description>
     </item>
   </channel>
 </rss>
