@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 27 Jun 2026 13:25:50 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 02:52:57 GMT</lastBuildDate>
     <item>
       <title>涉岸会社2026年度製作《搞什麼啊》</title>
       <link>https://www.opentix.life/event/2069341654445314049</link>
@@ -39,20 +39,20 @@
       <description>Date: 2026-08-15 – 2026-08-30 · Venue: 窩著fossa, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】《BUG》</title>
-      <link>https://www.opentix.life/event/2062380175849832449</link>
-      <guid isPermaLink="false">opentix:2062380175849832449</guid>
-      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-20 · Venue: 拾久駅, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>【2026臺北藝穗節】沒有，也沒差</title>
       <link>https://www.opentix.life/event/2066732161669160960</link>
       <guid isPermaLink="false">opentix:2066732161669160960</guid>
       <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-15 – 2026-08-16 · Venue: 北投中心新村-C1 藝棧, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】《BUG》</title>
+      <link>https://www.opentix.life/event/2062380175849832449</link>
+      <guid isPermaLink="false">opentix:2062380175849832449</guid>
+      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-20 · Venue: 拾久駅, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】太有才華</title>
@@ -279,12 +279,12 @@
       <description>Date: 2026-08-15 · Venue: 遊牧計畫, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】王睿緯×潘人賓《普通的身體》</title>
-      <link>https://www.opentix.life/event/2064923003771703297</link>
-      <guid isPermaLink="false">opentix:2064923003771703297</guid>
+      <title>【2026臺北藝穗節】女子金宿嬉：來場迷你小漫才吧！</title>
+      <link>https://www.opentix.life/event/2064982560279306241</link>
+      <guid isPermaLink="false">opentix:2064982560279306241</guid>
       <pubDate>Mon, 22 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-19 · Venue: 牯嶺街小劇場二樓藝文空間, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
+      <category>喜劇</category>
+      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 鬧房間, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】星星交錯六千次</title>
@@ -295,12 +295,12 @@
       <description>Date: 2026-08-15 – 2026-08-18 · Venue: 福利社, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】女子金宿嬉：來場迷你小漫才吧！</title>
-      <link>https://www.opentix.life/event/2064982560279306241</link>
-      <guid isPermaLink="false">opentix:2064982560279306241</guid>
+      <title>【2026臺北藝穗節】王睿緯×潘人賓《普通的身體》</title>
+      <link>https://www.opentix.life/event/2064923003771703297</link>
+      <guid isPermaLink="false">opentix:2064923003771703297</guid>
       <pubDate>Mon, 22 Jun 2026 04:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 鬧房間, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-19 · Venue: 牯嶺街小劇場二樓藝文空間, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】煙霧中長大的孩子:防空洞裡學會的事</title>
@@ -431,6 +431,14 @@
       <description>Date: 2026-08-18 – 2026-08-30 · Venue: 拾久駅, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
+      <title>【2026臺北藝穗節】沒有名字的部落</title>
+      <link>https://www.opentix.life/event/2063869368957550593</link>
+      <guid isPermaLink="false">opentix:2063869368957550593</guid>
+      <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-20 – 2026-08-22 · Venue: 萬座曉劇場, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>【2026臺北藝穗節】《半生瓜》</title>
       <link>https://www.opentix.life/event/2067086940681428993</link>
       <guid isPermaLink="false">opentix:2067086940681428993</guid>
@@ -445,14 +453,6 @@
       <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-20 – 2026-08-21 · Venue: 小劇場學校, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】沒有名字的部落</title>
-      <link>https://www.opentix.life/event/2063869368957550593</link>
-      <guid isPermaLink="false">opentix:2063869368957550593</guid>
-      <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-20 – 2026-08-22 · Venue: 萬座曉劇場, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】貓咪！死日快樂</title>
