@@ -5,7 +5,23 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 28 Jun 2026 13:30:02 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 02:53:28 GMT</lastBuildDate>
+    <item>
+      <title>《而獨角獸倒立在歧路》</title>
+      <link>https://www.opentix.life/event/2051953816989761537</link>
+      <guid isPermaLink="false">opentix:2051953816989761537</guid>
+      <pubDate>Mon, 29 Jun 2026 02:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-18 – 2026-09-20 · Venue: 國家兩廳院實驗劇場, 臺北市 · On sale: 2026-06-29 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>《神隱少女》舞台劇</title>
+      <link>https://www.opentix.life/event/2054505084713033728</link>
+      <guid isPermaLink="false">opentix:2054505084713033728</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-12-17 – 2027-01-31 · Venue: 國家戲劇院, 臺北市 · On sale: 2026-06-29 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>涉岸会社2026年度製作《搞什麼啊》</title>
       <link>https://www.opentix.life/event/2069341654445314049</link>
@@ -31,14 +47,6 @@
       <description>Date: 2026-08-16 · Venue: 台泥大樓士敏廳, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】每週晚上八點消失的我</title>
-      <link>https://www.opentix.life/event/2065280168788201473</link>
-      <guid isPermaLink="false">opentix:2065280168788201473</guid>
-      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 窩著fossa, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>【2026臺北藝穗節】沒有，也沒差</title>
       <link>https://www.opentix.life/event/2066732161669160960</link>
       <guid isPermaLink="false">opentix:2066732161669160960</guid>
@@ -53,6 +61,14 @@
       <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-15 – 2026-08-20 · Venue: 拾久駅, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】每週晚上八點消失的我</title>
+      <link>https://www.opentix.life/event/2065280168788201473</link>
+      <guid isPermaLink="false">opentix:2065280168788201473</guid>
+      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 窩著fossa, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】太有才華</title>
@@ -279,14 +295,6 @@
       <description>Date: 2026-08-15 · Venue: 遊牧計畫, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】女子金宿嬉：來場迷你小漫才吧！</title>
-      <link>https://www.opentix.life/event/2064982560279306241</link>
-      <guid isPermaLink="false">opentix:2064982560279306241</guid>
-      <pubDate>Mon, 22 Jun 2026 04:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 鬧房間, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>【2026臺北藝穗節】星星交錯六千次</title>
       <link>https://www.opentix.life/event/2064520897262739456</link>
       <guid isPermaLink="false">opentix:2064520897262739456</guid>
@@ -301,6 +309,14 @@
       <pubDate>Mon, 22 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-15 – 2026-08-19 · Venue: 牯嶺街小劇場二樓藝文空間, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】女子金宿嬉：來場迷你小漫才吧！</title>
+      <link>https://www.opentix.life/event/2064982560279306241</link>
+      <guid isPermaLink="false">opentix:2064982560279306241</guid>
+      <pubDate>Mon, 22 Jun 2026 04:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 鬧房間, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】煙霧中長大的孩子:防空洞裡學會的事</title>
@@ -431,6 +447,14 @@
       <description>Date: 2026-08-18 – 2026-08-30 · Venue: 拾久駅, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
+      <title>【2026臺北藝穗節】《如果幸福是一場煉金術？》</title>
+      <link>https://www.opentix.life/event/2060183790425870337</link>
+      <guid isPermaLink="false">opentix:2060183790425870337</guid>
+      <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-20 – 2026-08-21 · Venue: 小劇場學校, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>【2026臺北藝穗節】沒有名字的部落</title>
       <link>https://www.opentix.life/event/2063869368957550593</link>
       <guid isPermaLink="false">opentix:2063869368957550593</guid>
@@ -445,14 +469,6 @@
       <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-20 – 2026-08-24 · Venue: 舊峸劇場, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】《如果幸福是一場煉金術？》</title>
-      <link>https://www.opentix.life/event/2060183790425870337</link>
-      <guid isPermaLink="false">opentix:2060183790425870337</guid>
-      <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-20 – 2026-08-21 · Venue: 小劇場學校, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】貓咪！死日快樂</title>
@@ -789,22 +805,6 @@
       <pubDate>Sun, 14 Jun 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-26 – 2026-08-30 · Venue: 倏忽空間, 臺北市 · On sale: 2026-06-14 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】可寵</title>
-      <link>https://www.opentix.life/event/2063897349864177665</link>
-      <guid isPermaLink="false">opentix:2063897349864177665</guid>
-      <pubDate>Sun, 14 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 藝秀設計影像工作室, 臺北市 · On sale: 2026-06-14 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026 臺北藝穗節】北投散步 —— 微溫的星光散策</title>
-      <link>https://www.opentix.life/event/2062745654057897984</link>
-      <guid isPermaLink="false">opentix:2062745654057897984</guid>
-      <pubDate>Sun, 14 Jun 2026 01:30:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-29 · Venue: 北投中心新村-E2-2心村行+E2-3展間, 臺北市 · On sale: 2026-06-14 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
