@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 30 Jun 2026 02:47:14 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 14:09:52 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -423,6 +423,38 @@
       <description>Date: 2026-07-01 · Venue: 高雄駁二藝術特區 P2 倉庫, 高雄市 · Source: udn 售票網</description>
     </item>
     <item>
+      <title>面白X菜冠</title>
+      <link>https://www.opentix.life/event/2062745685495390208</link>
+      <guid isPermaLink="false">opentix:2062745685495390208</guid>
+      <pubDate>Tue, 30 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-12 · Venue: 漫漫喫, 臺北市 · On sale: 2026-06-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026北投小戲節－《Bar ART 午夜怪客》</title>
+      <link>https://www.opentix.life/event/2069712364406038529</link>
+      <guid isPermaLink="false">opentix:2069712364406038529</guid>
+      <pubDate>Tue, 30 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-26 – 2026-07-29 · Venue: ART BAR 藝術家的酒吧, 臺北市 · On sale: 2026-06-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】大凶劇團《第3人稱：我們曾經參與》</title>
+      <link>https://www.opentix.life/event/2069342103919042561</link>
+      <guid isPermaLink="false">opentix:2069342103919042561</guid>
+      <pubDate>Tue, 30 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 窩著fossa, 臺北市 · On sale: 2026-06-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>吳念真國民戲劇《人間條件三》台北上午零時</title>
+      <link>https://www.opentix.life/event/2070074346117287937</link>
+      <guid isPermaLink="false">opentix:2070074346117287937</guid>
+      <pubDate>Tue, 30 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-10-09 – 2026-12-06 · Venue: 國家戲劇院, 臺北市 · On sale: 2026-06-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>【2026臺北藝穗節】__，我回來了</title>
       <link>https://www.opentix.life/event/2064948032819109889</link>
       <guid isPermaLink="false">opentix:2064948032819109889</guid>
@@ -773,38 +805,6 @@
       <pubDate>Mon, 22 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-29 · Venue: 臺中國家歌劇院大劇院, 臺中市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【島嶼開門：揭開劇場神秘學】夏季學苑</title>
-      <link>https://www.accupass.com/event/2605300033471155796075</link>
-      <guid isPermaLink="false">accupass:2605300033471155796075</guid>
-      <pubDate>Sat, 20 Jun 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-06-21 – 2026-07-12 · Venue: 基隆表演藝術中心島嶼實驗劇場, 基隆市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】《夢魘販賣舖》</title>
-      <link>https://www.opentix.life/event/2066716560728784896</link>
-      <guid isPermaLink="false">opentix:2066716560728784896</guid>
-      <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-17 · Venue: 窩窩藝文空間, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】沒有名字的部落</title>
-      <link>https://www.opentix.life/event/2063869368957550593</link>
-      <guid isPermaLink="false">opentix:2063869368957550593</guid>
-      <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-20 – 2026-08-22 · Venue: 萬座曉劇場, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】《半生瓜》</title>
-      <link>https://www.opentix.life/event/2067086940681428993</link>
-      <guid isPermaLink="false">opentix:2067086940681428993</guid>
-      <pubDate>Sat, 20 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-20 – 2026-08-24 · Venue: 舊峸劇場, 臺北市 · On sale: 2026-06-20 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

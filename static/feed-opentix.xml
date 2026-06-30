@@ -5,7 +5,39 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 30 Jun 2026 02:47:14 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 14:09:52 GMT</lastBuildDate>
+    <item>
+      <title>面白X菜冠</title>
+      <link>https://www.opentix.life/event/2062745685495390208</link>
+      <guid isPermaLink="false">opentix:2062745685495390208</guid>
+      <pubDate>Tue, 30 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-12 · Venue: 漫漫喫, 臺北市 · On sale: 2026-06-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026北投小戲節－《Bar ART 午夜怪客》</title>
+      <link>https://www.opentix.life/event/2069712364406038529</link>
+      <guid isPermaLink="false">opentix:2069712364406038529</guid>
+      <pubDate>Tue, 30 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-26 – 2026-07-29 · Venue: ART BAR 藝術家的酒吧, 臺北市 · On sale: 2026-06-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】大凶劇團《第3人稱：我們曾經參與》</title>
+      <link>https://www.opentix.life/event/2069342103919042561</link>
+      <guid isPermaLink="false">opentix:2069342103919042561</guid>
+      <pubDate>Tue, 30 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-30 · Venue: 窩著fossa, 臺北市 · On sale: 2026-06-30 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>吳念真國民戲劇《人間條件三》台北上午零時</title>
+      <link>https://www.opentix.life/event/2070074346117287937</link>
+      <guid isPermaLink="false">opentix:2070074346117287937</guid>
+      <pubDate>Tue, 30 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-10-09 – 2026-12-06 · Venue: 國家戲劇院, 臺北市 · On sale: 2026-06-30 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>【2026臺北藝穗節】__，我回來了</title>
       <link>https://www.opentix.life/event/2064948032819109889</link>
@@ -773,38 +805,6 @@
       <pubDate>Tue, 16 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-23 – 2026-08-28 · Venue: 叢口, 臺北市 · On sale: 2026-06-16 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026 臺北藝穗節】人从众</title>
-      <link>https://www.opentix.life/event/2060249198942724096</link>
-      <guid isPermaLink="false">opentix:2060249198942724096</guid>
-      <pubDate>Mon, 15 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 小劇場學校, 臺北市 · On sale: 2026-06-15 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】毛毛製作《吃飽？夢想？閉嘴開動！》</title>
-      <link>https://www.opentix.life/event/2063904065275940865</link>
-      <guid isPermaLink="false">opentix:2063904065275940865</guid>
-      <pubDate>Mon, 15 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-16 – 2026-08-27 · Venue: 濕地Venue-B1, 臺北市 · On sale: 2026-06-15 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】小媮戲室《甜夢莉》</title>
-      <link>https://www.opentix.life/event/2061671507918839808</link>
-      <guid isPermaLink="false">opentix:2061671507918839808</guid>
-      <pubDate>Mon, 15 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-20 – 2026-08-22 · Venue: 台北偶戲館黑箱劇場, 臺北市 · On sale: 2026-06-15 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】桃妹</title>
-      <link>https://www.opentix.life/event/2064319680953786369</link>
-      <guid isPermaLink="false">opentix:2064319680953786369</guid>
-      <pubDate>Mon, 15 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-21 – 2026-08-24 · Venue: 窩著fossa, 臺北市 · On sale: 2026-06-15 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 30 Jun 2026 02:47:14 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 14:09:52 GMT</lastBuildDate>
     <item>
       <title>劇場在地・共創新連結-白色恐怖田調分享會(含呈現演出)</title>
       <link>https://www.accupass.com/event/2603310621312093918182</link>
@@ -93,6 +93,14 @@
       <pubDate>Mon, 24 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-25 · Venue: 3F-親子小學堂, 桃園市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>【兒童劇場】 《你看過台灣大山嗎》當繪本變成一座山，會是什麼樣子？</title>
+      <link>https://www.accupass.com/event/2606260917193850285790</link>
+      <guid isPermaLink="false">accupass:2606260917193850285790</guid>
+      <pubDate>Sat, 22 Aug 2026 16:00:00 GMT</pubDate>
+      <category>兒童親子</category>
+      <description>Date: 2026-08-23 · Venue: 桃園市立圖書館總館 1 樓微光廳, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026童演童語-《仙界小霹靂-圖書館特工》任務四：協調</title>
@@ -527,14 +535,6 @@
       <description>Date: 2026-06-06 – 2026-10-31 · Venue: 部分活動於虎尾建國二村（雲林縣虎尾鎮建國里11號）進行，請詳閱活動資訊。, 雲林縣 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>現場喜劇: 6月份/飛客劇樂部《週二歐噴麥》open mic｜主持：傑森 /FOHER / 欣霖 / 秋涼 / 俊彥</title>
-      <link>https://www.accupass.com/event/2606020932356474726310</link>
-      <guid isPermaLink="false">accupass:2606020932356474726310</guid>
-      <pubDate>Mon, 01 Jun 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-06-02 – 2026-06-30 · Venue: basis coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
       <title>可揚雅庭【藝生平安】來開講 - 給新手劇場人的生存指南</title>
       <link>https://www.accupass.com/event/2605141127001142807689</link>
       <guid isPermaLink="false">accupass:2605141127001142807689</guid>
@@ -551,28 +551,12 @@
       <description>Date: 2026-05-22 – 2026-07-10 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>打架俱樂部｜即興裡的反派練習</title>
-      <link>https://www.accupass.com/event/2605011142202229434720</link>
-      <guid isPermaLink="false">accupass:2605011142202229434720</guid>
-      <pubDate>Wed, 20 May 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-05-21 – 2026-06-30 · Venue: 遊牧計畫, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
       <title>初次 JAM面</title>
       <link>https://www.accupass.com/event/2603160711363903463870</link>
       <guid isPermaLink="false">accupass:2603160711363903463870</guid>
       <pubDate>Fri, 17 Apr 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-04-18 – 2026-07-17 · Venue: 遊牧計畫工作室, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>真與幻的交纏糾葛：音樂劇《歌劇魅影》全本導聆</title>
-      <link>https://www.accupass.com/event/2603250925024108746870</link>
-      <guid isPermaLink="false">accupass:2603250925024108746870</guid>
-      <pubDate>Mon, 30 Mar 2026 16:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-03-31 – 2026-06-30 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026 北部綜藝能工作室《週三即興子》</title>
