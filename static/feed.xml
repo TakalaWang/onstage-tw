@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 29 Jun 2026 15:42:39 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 02:47:14 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -647,6 +647,14 @@
       <description>Date: 2026-07-03 – 2026-07-19 · Venue: PLAYground 南村劇場, 臺北市 · Source: udn 售票網</description>
     </item>
     <item>
+      <title>來福OPEN MIC 7月</title>
+      <link>https://www.accupass.com/event/2606280743551685530405</link>
+      <guid isPermaLink="false">accupass:2606280743551685530405</guid>
+      <pubDate>Thu, 02 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-03 – 2026-07-31 · Venue: 群島藝術園區 小劇院, 臺中市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>妹迪 IN TAIWAN《你共我擋咧！》台語漫才專場巡迴｜高雄場</title>
       <link>https://www.accupass.com/event/2603251727031122444161</link>
       <guid isPermaLink="false">accupass:2603251727031122444161</guid>
@@ -727,20 +735,20 @@
       <description>Date: 2026-10-03 · Venue: 南投縣政府文化局演藝廳, 南投縣 · On sale: 2026-06-29 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>國家兩廳院 ✕ 瑞士洛桑維蒂劇院——里米尼紀錄劇團《這不是個大使館》</title>
-      <link>https://www.opentix.life/event/2059888347628990465</link>
-      <guid isPermaLink="false">opentix:2059888347628990465</guid>
-      <pubDate>Mon, 29 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-10-16 – 2026-10-18 · Venue: 國家戲劇院, 臺北市 · On sale: 2026-06-29 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>娩娩工作室 x 尹懷慈《泰迪熊守護神》</title>
       <link>https://www.opentix.life/event/2062512563552665601</link>
       <guid isPermaLink="false">opentix:2062512563552665601</guid>
       <pubDate>Mon, 29 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-10-16 – 2026-10-18 · Venue: 樹林藝文中心演藝廳, 新北市 · On sale: 2026-06-29 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>國家兩廳院 ✕ 瑞士洛桑維蒂劇院——里米尼紀錄劇團《這不是個大使館》</title>
+      <link>https://www.opentix.life/event/2059888347628990465</link>
+      <guid isPermaLink="false">opentix:2059888347628990465</guid>
+      <pubDate>Mon, 29 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-10-16 – 2026-10-18 · Venue: 國家戲劇院, 臺北市 · On sale: 2026-06-29 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>《而獨角獸倒立在歧路》</title>
@@ -781,14 +789,6 @@
       <pubDate>Fri, 26 Jun 2026 08:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-16 · Venue: 台泥大樓士敏廳, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】沒有，也沒差</title>
-      <link>https://www.opentix.life/event/2066732161669160960</link>
-      <guid isPermaLink="false">opentix:2066732161669160960</guid>
-      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 北投中心新村-C1 藝棧, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】《BUG》</title>
