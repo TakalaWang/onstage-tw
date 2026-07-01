@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 30 Jun 2026 14:09:52 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 02:53:32 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -343,7 +343,7 @@
       <description>Date: 2026-07-08 – 2026-07-25 · Venue: 國立臺灣藝術教育館-南海劇場, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>2026《劇場中的音樂．解析與實踐4》演出｜ 舞踏之詩</title>
+      <title>2026《劇場中的音樂．解析與實踐4》演出｜舞踏之詩</title>
       <link>https://www.accupass.com/event/2606171808571945170769</link>
       <guid isPermaLink="false">accupass:2606171808571945170769</guid>
       <pubDate>Tue, 07 Jul 2026 16:00:00 GMT</pubDate>
@@ -543,20 +543,20 @@
       <description>Date: 2026-08-16 · Venue: 台泥大樓士敏廳, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】《BUG》</title>
-      <link>https://www.opentix.life/event/2062380175849832449</link>
-      <guid isPermaLink="false">opentix:2062380175849832449</guid>
-      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-20 · Venue: 拾久駅, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>【2026臺北藝穗節】每週晚上八點消失的我</title>
       <link>https://www.opentix.life/event/2065280168788201473</link>
       <guid isPermaLink="false">opentix:2065280168788201473</guid>
       <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-15 – 2026-08-30 · Venue: 窩著fossa, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】《BUG》</title>
+      <link>https://www.opentix.life/event/2062380175849832449</link>
+      <guid isPermaLink="false">opentix:2062380175849832449</guid>
+      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 – 2026-08-20 · Venue: 拾久駅, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】沒有，也沒差</title>
@@ -735,20 +735,20 @@
       <description>Date: 2026-09-10 – 2026-09-13 · Venue: 可能存在的遊樂園 CollaPlay, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】台下一年功：五組新銳漫材組合的第一場拼盤秀！</title>
-      <link>https://www.opentix.life/event/2063907321525440513</link>
-      <guid isPermaLink="false">opentix:2063907321525440513</guid>
-      <pubDate>Mon, 22 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 · Venue: 遊牧計畫, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>菜冠電視台-賭博藝人2</title>
       <link>https://www.opentix.life/event/2065264294950543360</link>
       <guid isPermaLink="false">opentix:2065264294950543360</guid>
       <pubDate>Mon, 22 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-15 · Venue: 華山1914文創園區 傳音樂展演空間, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】台下一年功：五組新銳漫材組合的第一場拼盤秀！</title>
+      <link>https://www.opentix.life/event/2063907321525440513</link>
+      <guid isPermaLink="false">opentix:2063907321525440513</guid>
+      <pubDate>Mon, 22 Jun 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 · Venue: 遊牧計畫, 臺北市 · On sale: 2026-06-22 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】星星交錯六千次</title>
