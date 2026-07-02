@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 02 Jul 2026 02:43:53 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 13:52:51 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -447,6 +447,14 @@
       <description>Date: 2026-07-18 · Venue: Basis Coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>即興實驗室 07月號！</title>
+      <link>https://www.accupass.com/event/2606260430363124743060</link>
+      <guid isPermaLink="false">accupass:2606260430363124743060</guid>
+      <pubDate>Fri, 17 Jul 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-07-18 · Venue: 喜劇開港（🔎地圖搜尋「蔬食綠洲」）, 高雄市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>《系列第七/第八場》🎡【即興 x 遊樂園】不準備，也能很好玩：鬆開束縛，找回彈性</title>
       <link>https://www.accupass.com/event/2606031300151953105527</link>
       <guid isPermaLink="false">accupass:2606031300151953105527</guid>
@@ -461,6 +469,14 @@
       <pubDate>Sun, 12 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-13 – 2026-08-28 · Venue: 金山愛國交叉路口，捷運東門站3號出口走路3分鐘, 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>2026｜七月 漫才 Open Mic｜眾多漫才組合｜聯合出擊</title>
+      <link>https://www.accupass.com/event/2607020747521181929991</link>
+      <guid isPermaLink="false">accupass:2607020747521181929991</guid>
+      <pubDate>Sat, 11 Jul 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-07-12 – 2026-07-26 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026《再一次！唱歌旅行去》十週年親子演唱會</title>
@@ -716,7 +732,7 @@
       <guid isPermaLink="false">opentix:2070026434774556673</guid>
       <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-07 · Venue: 舊峸劇場, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
+      <description>Date: 2026-08-07 – 2026-08-09 · Venue: 舊峸劇場, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>2026北投小戲節—《鯨生：海神公主與神秘的龍宮城》</title>
@@ -789,22 +805,6 @@
       <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-16 – 2026-08-21 · Venue: 窩窩藝文空間, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】靈魂收容所</title>
-      <link>https://www.opentix.life/event/2062358666609041409</link>
-      <guid isPermaLink="false">opentix:2062358666609041409</guid>
-      <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-16 – 2026-08-19 · Venue: 倏忽空間, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】天保：一個變裝儀式</title>
-      <link>https://www.opentix.life/event/2062734886320218113</link>
-      <guid isPermaLink="false">opentix:2062734886320218113</guid>
-      <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-16 – 2026-08-30 · Venue: 拾久駅, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
