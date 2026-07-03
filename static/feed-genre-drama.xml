@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 03 Jul 2026 02:19:34 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 13:56:55 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -295,14 +295,6 @@
       <description>Date: 2026-07-11 · Venue: 龍山寺板橋文化廣場8樓8大廳, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>【2026大溪大禧】宜蘭傳藝大溪日</title>
-      <link>https://www.accupass.com/event/2606051720487191049260</link>
-      <guid isPermaLink="false">accupass:2606051720487191049260</guid>
-      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-11 – 2026-07-12 · Venue: 宜蘭傳藝園區, 宜蘭縣 · Source: Accupass 活動通</description>
-    </item>
-    <item>
       <title>【藝啟JAM 2.0 】7/11（六）｜天雨白橋</title>
       <link>https://www.accupass.com/event/2605170815513737568070</link>
       <guid isPermaLink="false">accupass:2605170815513737568070</guid>
@@ -375,6 +367,14 @@
       <description>Date: 2026-07-05 – 2026-07-26 · Venue: 高雄市電影館3樓, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>《大開眼界2.0》黃柏翰個人魔術秀</title>
+      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1B0JCEI</link>
+      <guid isPermaLink="false">udn:P1B0JCEI</guid>
+      <pubDate>Fri, 03 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-04 – 2026-07-19 · Venue: PLAYground 南村劇場, 臺北市 · Source: udn 售票網</description>
+    </item>
+    <item>
       <title>西遊記誤闖黑家店</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P195EQD0</link>
       <guid isPermaLink="false">udn:P195EQD0</guid>
@@ -397,14 +397,6 @@
       <pubDate>Fri, 03 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-04 · Venue: google map請搜尋「風尾步道」, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>《大開眼界2.0》黃柏翰個人魔術秀</title>
-      <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1B0JCEI</link>
-      <guid isPermaLink="false">udn:P1B0JCEI</guid>
-      <pubDate>Thu, 02 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-03 – 2026-07-19 · Venue: PLAYground 南村劇場, 臺北市 · Source: udn 售票網</description>
     </item>
     <item>
       <title>來福OPEN MIC 7月</title>
@@ -805,6 +797,14 @@
       <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-27 – 2026-08-29 · Venue: 二空間, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】擬訂中</title>
+      <link>https://www.opentix.life/event/2070066430949855233</link>
+      <guid isPermaLink="false">opentix:2070066430949855233</guid>
+      <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-27 – 2026-08-28 · Venue: 小劇場學校, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
