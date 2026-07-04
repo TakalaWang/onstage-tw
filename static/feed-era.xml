@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 04 Jul 2026 02:16:42 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 13:14:23 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -103,28 +103,20 @@
       <description>Date: 2026-07-08 · Venue: 高雄市文化中心至德堂, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
+      <guid isPermaLink="false">era:P192ILGJ</guid>
+      <pubDate>Sat, 04 Jul 2026 16:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-07-05 – 2026-08-29 · Venue: 衛武營國家藝術文化中心歌劇院, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>7月高雄市電影館｜長短腳電影院－蹦蹦奇遇森友會</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPI8Q</link>
       <guid isPermaLink="false">era:P1BTPI8Q</guid>
       <pubDate>Sat, 04 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-05 – 2026-07-26 · Venue: 高雄市電影館3樓, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
-      <guid isPermaLink="false">era:P192ILGJ</guid>
-      <pubDate>Fri, 03 Jul 2026 16:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-07-04 – 2026-08-29 · Venue: 衛武營國家藝術文化中心歌劇院, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>浪曼舞花</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P184460C</link>
-      <guid isPermaLink="false">era:P184460C</guid>
-      <pubDate>Fri, 03 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-04 · Venue: 高雄市文化中心至善廳, 高雄市 · Source: 年代售票</description>
     </item>
   </channel>
 </rss>
