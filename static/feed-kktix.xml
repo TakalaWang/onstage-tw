@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 06 Jul 2026 02:37:33 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 15:26:34 GMT</lastBuildDate>
     <item>
       <title>Jimmy Stone 石峻旻 人生首部喜劇專場《上流法則》</title>
       <link>https://comedyclub.kktix.cc/events/rulesofshangliu0829</link>
@@ -31,14 +31,6 @@
       <description>Date: 2026-09-13 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-06-09 · Source: KKTIX</description>
     </item>
     <item>
-      <title>【8/21】阿舜順喜劇專場《好屁演 NICE ASSHOLE》</title>
-      <link>https://comedyclub.kktix.cc/events/niceasshole0821</link>
-      <guid isPermaLink="false">kktix:comedyclub/niceasshole0821</guid>
-      <pubDate>Sun, 17 May 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-08-21 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-05-17 · Source: KKTIX</description>
-    </item>
-    <item>
       <title>【9/25】2026年瑞恩單口喜劇專場最終加演場《七年之養 The jokes I raised over the years》之再養一年！</title>
       <link>https://comedyclub.kktix.cc/events/thejokesiraisedovertheyears20260925</link>
       <guid isPermaLink="false">kktix:comedyclub/thejokesiraisedovertheyears20260925</guid>
@@ -55,20 +47,28 @@
       <description>Date: 2026-08-22 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-03-18 · Source: KKTIX</description>
     </item>
     <item>
-      <title>卡米地週五夜#02</title>
-      <link>https://comedyclub.kktix.cc/events/fridaynight0821</link>
-      <guid isPermaLink="false">kktix:comedyclub/fridaynight0821</guid>
-      <pubDate>Sun, 04 Jan 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-21 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-01-04 · Source: KKTIX</description>
-    </item>
-    <item>
       <title>《職業傷害》Roast Battle</title>
       <link>https://comedyclub.kktix.cc/events/roastbattle0822</link>
       <guid isPermaLink="false">kktix:comedyclub/roastbattle0822</guid>
       <pubDate>Sun, 04 Jan 2026 16:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-08-22 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-01-04 · Source: KKTIX</description>
+    </item>
+    <item>
+      <title>大錢口技喜劇專場：發達號</title>
+      <link>https://comedyclub.kktix.cc/events/beatbox0823</link>
+      <guid isPermaLink="false">kktix:comedyclub/beatbox0823</guid>
+      <pubDate>Sun, 04 Jan 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-08-23 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-01-04 · Source: KKTIX</description>
+    </item>
+    <item>
+      <title>【9/26】9月刊－相聲歸來、第三章〈哏哏哏哏哏〉</title>
+      <link>https://comedyclub.kktix.cc/events/laugh20260926</link>
+      <guid isPermaLink="false">kktix:comedyclub/laugh20260926</guid>
+      <pubDate>Sun, 04 Jan 2026 16:00:00 GMT</pubDate>
+      <category>相聲</category>
+      <description>Date: 2026-09-26 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-01-04 · Source: KKTIX</description>
     </item>
     <item>
       <title>【9/5】《菜冠雙Talk》2026年9月號</title>

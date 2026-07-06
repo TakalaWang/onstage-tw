@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 06 Jul 2026 02:37:33 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 15:26:34 GMT</lastBuildDate>
     <item>
       <title>【相聲 Open Mic 】07/11（六）19:30｜飛客劇樂部｜ 主持：黃笑 </title>
       <link>https://www.accupass.com/event/2606261154321541660950</link>
@@ -21,6 +21,14 @@
       <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
       <category>相聲</category>
       <description>Date: 2026-07-11 · Venue: 龍潭分館1樓多功能展演空間, 桃園市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>《今夜無法說相聲之大師來了》</title>
+      <link>https://www.opentix.life/event/2072123837435228160</link>
+      <guid isPermaLink="false">opentix:2072123837435228160</guid>
+      <pubDate>Mon, 06 Jul 2026 04:00:00 GMT</pubDate>
+      <category>相聲</category>
+      <description>Date: 2026-08-29 – 2026-12-19 · Venue: 中壢藝術館音樂廳, 桃園市 · On sale: 2026-07-06 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【9/20】相聲失控傳奇加演-生ㄕˇ之交『再』加演：每次都想呼喊「尼」的名字 </title>
@@ -69,6 +77,14 @@
       <pubDate>Mon, 19 Jan 2026 04:00:00 GMT</pubDate>
       <category>相聲</category>
       <description>Date: 2026-08-29 – 2026-12-19 · Venue: 臺南文化中心演藝廳, 臺南市 · On sale: 2026-01-19 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【9/26】9月刊－相聲歸來、第三章〈哏哏哏哏哏〉</title>
+      <link>https://comedyclub.kktix.cc/events/laugh20260926</link>
+      <guid isPermaLink="false">kktix:comedyclub/laugh20260926</guid>
+      <pubDate>Sun, 04 Jan 2026 16:00:00 GMT</pubDate>
+      <category>相聲</category>
+      <description>Date: 2026-09-26 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-01-04 · Source: KKTIX</description>
     </item>
   </channel>
 </rss>
