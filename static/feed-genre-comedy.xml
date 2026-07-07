@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 06 Jul 2026 15:26:34 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 02:33:37 GMT</lastBuildDate>
     <item>
       <title>打架俱樂部｜即興裡的反派練習（九月場）</title>
       <link>https://www.accupass.com/event/2605041335582923192090</link>
@@ -335,14 +335,6 @@
       <description>Date: 2026-01-14 – 2026-12-09 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>《職業傷害》Roast Battle</title>
-      <link>https://comedyclub.kktix.cc/events/roastbattle0822</link>
-      <guid isPermaLink="false">kktix:comedyclub/roastbattle0822</guid>
-      <pubDate>Sun, 04 Jan 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-08-22 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-01-04 · Source: KKTIX</description>
-    </item>
-    <item>
       <title>大錢口技喜劇專場：發達號</title>
       <link>https://comedyclub.kktix.cc/events/beatbox0823</link>
       <guid isPermaLink="false">kktix:comedyclub/beatbox0823</guid>
@@ -357,6 +349,14 @@
       <pubDate>Tue, 11 Nov 2025 16:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2025-11-12 – 2026-07-31 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>【9/10】漫才歐噴麥</title>
+      <link>https://comedyclub.kktix.cc/events/manzaiopenmic0910</link>
+      <guid isPermaLink="false">kktix:comedyclub/manzaiopenmic0910</guid>
+      <pubDate>Mon, 24 Feb 2025 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-09-10 · Venue: Comedy Plus 卡米地＋, 臺北市 · On sale: 2025-02-24 · Source: KKTIX</description>
     </item>
   </channel>
 </rss>
