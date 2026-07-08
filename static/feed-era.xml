@@ -5,14 +5,14 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 08 Jul 2026 02:08:04 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 13:56:30 GMT</lastBuildDate>
     <item>
-      <title>測試節目(此節目無效請勿訂購)</title>
+      <title>測試節目(此節目無效請勿訂購)new</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
       <guid isPermaLink="false">era:P17SAXND</guid>
       <pubDate>Mon, 30 Nov 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-12-01 – 2026-12-31 · Venue: 新北市五股工商展覽中心, 新北市 · Source: 年代售票</description>
+      <description>Date: 2026-12-01 – 2027-01-01 · Venue: 新北市五股工商展覽中心, 新北市 · Source: 年代售票</description>
     </item>
     <item>
       <title>《旅店迴旋曲》-清水劇團2026年度公演</title>
@@ -109,14 +109,6 @@
       <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-11 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>2026童年樂趣藝術饗宴~夏日狂想</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AETDF0</link>
-      <guid isPermaLink="false">era:P1AETDF0</guid>
-      <pubDate>Tue, 07 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-08 · Venue: 高雄市文化中心至德堂, 高雄市 · Source: 年代售票</description>
     </item>
   </channel>
 </rss>

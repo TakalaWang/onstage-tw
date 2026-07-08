@@ -5,14 +5,14 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 08 Jul 2026 02:08:04 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 13:56:30 GMT</lastBuildDate>
     <item>
-      <title>測試節目(此節目無效請勿訂購)</title>
+      <title>測試節目(此節目無效請勿訂購)new</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
       <guid isPermaLink="false">era:P17SAXND</guid>
       <pubDate>Mon, 30 Nov 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-12-01 – 2026-12-31 · Venue: 新北市五股工商展覽中心, 新北市 · Source: 年代售票</description>
+      <description>Date: 2026-12-01 – 2027-01-01 · Venue: 新北市五股工商展覽中心, 新北市 · Source: 年代售票</description>
     </item>
     <item>
       <title>劇場在地・共創新連結-白色恐怖田調分享會(含呈現演出)</title>
@@ -151,20 +151,20 @@
       <description>Date: 2026-08-01 · Venue: 臺中國家歌劇院 角落沙龍, 臺中市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>「潮劇場」-《我願》</title>
-      <link>https://www.accupass.com/event/2605261250523133554170</link>
-      <guid isPermaLink="false">accupass:2605261250523133554170</guid>
-      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-01 · Venue: 芳苑鄉農會, 彰化縣 · Source: Accupass 活動通</description>
-    </item>
-    <item>
       <title>2026 青少年劇場〈N個我〉</title>
       <link>https://www.accupass.com/event/2605210313307306301300</link>
       <guid isPermaLink="false">accupass:2605210313307306301300</guid>
       <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-01 – 2026-08-02 · Venue: 基隆表演藝術中心島嶼實驗劇場, 基隆市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>「潮劇場」-《我願》</title>
+      <link>https://www.accupass.com/event/2605261250523133554170</link>
+      <guid isPermaLink="false">accupass:2605261250523133554170</guid>
+      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-01 · Venue: 芳苑鄉農會, 彰化縣 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026童演童語 特別活動-《仙界故事我來續》</title>
@@ -223,6 +223,14 @@
       <description>Date: 2026-07-25 – 2026-07-31 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>【戲劇中的女性群像：三個角色，三杯酒】戲劇Ｘ品酒沙龍 </title>
+      <link>https://www.accupass.com/event/2607060720031937742921</link>
+      <guid isPermaLink="false">accupass:2607060720031937742921</guid>
+      <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-25 · Venue: 喝喝書店 HĒHĒ BOOKSTORE &amp; WINE, 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>《洄游之間—大海的小孩》劇場演出</title>
       <link>https://www.accupass.com/event/2605290319221644335590</link>
       <guid isPermaLink="false">accupass:2605290319221644335590</guid>
@@ -237,14 +245,6 @@
       <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-25 · Venue: 大園國小活動中心, 桃園市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>【戲劇中的女性群像：三個角色，三杯酒】戲劇Ｘ品酒沙龍 </title>
-      <link>https://www.accupass.com/event/2607060720031937742921</link>
-      <guid isPermaLink="false">accupass:2607060720031937742921</guid>
-      <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-25 · Venue: 喝喝書店 HĒHĒ BOOKSTORE &amp; WINE, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《Re:late》2026雙卡司再創作版</title>
@@ -327,6 +327,14 @@
       <description>Date: 2026-07-11 – 2026-07-18 · Venue: 龍山寺板橋文化廣場8樓8大廳, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>【2026大溪大禧】宜蘭傳藝大溪日</title>
+      <link>https://www.accupass.com/event/2606051720487191049260</link>
+      <guid isPermaLink="false">accupass:2606051720487191049260</guid>
+      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-11 – 2026-07-12 · Venue: 宜蘭傳藝園區, 宜蘭縣 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>【藝啟JAM 2.0 】7/11（六）｜天雨白橋</title>
       <link>https://www.accupass.com/event/2605170815513737568070</link>
       <guid isPermaLink="false">accupass:2605170815513737568070</guid>
@@ -359,20 +367,12 @@
       <description>Date: 2026-07-10 – 2026-07-12 · Venue: 明亮的地方, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>2026童年樂趣藝術饗宴~夏日狂想</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AETDF0</link>
-      <guid isPermaLink="false">era:P1AETDF0</guid>
+      <title>第廿六屆花樣年華全國青少年戲劇節《存在》決賽演出暨頒獎典禮</title>
+      <link>https://www.accupass.com/event/2605120642372583360200</link>
+      <guid isPermaLink="false">accupass:2605120642372583360200</guid>
       <pubDate>Tue, 07 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-08 · Venue: 高雄市文化中心至德堂, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>2026《劇場中的音樂．解析與實踐4》演出｜舞踏之詩</title>
-      <link>https://www.accupass.com/event/2606171808571945170769</link>
-      <guid isPermaLink="false">accupass:2606171808571945170769</guid>
-      <pubDate>Tue, 07 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-08 · Venue: 鐵森林排練空間, 新北市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-08 – 2026-07-25 · Venue: 國立臺灣藝術教育館-南海劇場, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>青年創造場《棲身之所：關於我的及其他》</title>
