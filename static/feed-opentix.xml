@@ -5,7 +5,31 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 09 Jul 2026 02:20:36 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 14:47:12 GMT</lastBuildDate>
+    <item>
+      <title>別照鏡子</title>
+      <link>https://www.opentix.life/event/2071869942162059265</link>
+      <guid isPermaLink="false">opentix:2071869942162059265</guid>
+      <pubDate>Thu, 09 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-05 – 2026-09-06 · Venue: 華山1914文創園區東3B館 烏梅劇院, 臺北市 · On sale: 2026-07-09 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>天天工作社《關係阮祖先的故事》</title>
+      <link>https://www.opentix.life/event/2074761127208947713</link>
+      <guid isPermaLink="false">opentix:2074761127208947713</guid>
+      <pubDate>Thu, 09 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-25 – 2026-09-27 · Venue: 牯嶺街小劇場一樓實驗劇場, 臺北市 · On sale: 2026-07-09 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>2026新莊有好戲 ~ 一心戲劇團《隋唐風雲—江山換美人》</title>
+      <link>https://www.opentix.life/event/2071939794940801025</link>
+      <guid isPermaLink="false">opentix:2071939794940801025</guid>
+      <pubDate>Thu, 09 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-10-03 · Venue: 新莊文化藝術中心演藝廳, 新北市 · On sale: 2026-07-09 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>臺灣豫劇團2026飆戲「熱血X戲魂」</title>
       <link>https://www.opentix.life/event/2051489300031848448</link>
@@ -781,30 +805,6 @@
       <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
       <category>音樂劇</category>
       <description>Date: 2026-09-19 · Venue: 臺中市葫蘆墩文化中心演奏廳, 臺中市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【表演工作坊】《彈琴說愛》</title>
-      <link>https://www.opentix.life/event/2062388054961393665</link>
-      <guid isPermaLink="false">opentix:2062388054961393665</guid>
-      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-11-06 – 2026-11-22 · Venue: 臺北表演藝術中心 球劇場, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>音樂劇《潘朵拉的音樂盒》</title>
-      <link>https://www.opentix.life/event/2067154457490825217</link>
-      <guid isPermaLink="false">opentix:2067154457490825217</guid>
-      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-11-21 – 2026-11-22 · Venue: 臺中國家歌劇院小劇場, 臺中市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】嫌疑人之夜</title>
-      <link>https://www.opentix.life/event/2065390788300738560</link>
-      <guid isPermaLink="false">opentix:2065390788300738560</guid>
-      <pubDate>Thu, 25 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-20 · Venue: 遊牧計畫, 臺北市 · On sale: 2026-06-25 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
