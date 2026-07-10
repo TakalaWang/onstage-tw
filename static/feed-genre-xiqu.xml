@@ -5,7 +5,15 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 10 Jul 2026 02:21:43 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 14:15:08 GMT</lastBuildDate>
+    <item>
+      <title>「詩詞情緣III」崑曲音樂會</title>
+      <link>https://www.opentix.life/event/2068290375006269441</link>
+      <guid isPermaLink="false">opentix:2068290375006269441</guid>
+      <pubDate>Fri, 10 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲曲</category>
+      <description>Date: 2026-09-06 · Venue: 國家兩廳院演奏廳, 臺北市 · On sale: 2026-07-10 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>臺灣豫劇團2026飆戲「熱血X戲魂」</title>
       <link>https://www.opentix.life/event/2051489300031848448</link>
@@ -300,7 +308,7 @@
       <guid isPermaLink="false">opentix:1941017775922786305</guid>
       <pubDate>Wed, 23 Jul 2025 04:00:00 GMT</pubDate>
       <category>戲曲</category>
-      <description>Date: 2026-07-11 – 2026-07-12 · Venue: 高雄中山堂劇場, 高雄市 · On sale: 2025-07-23 · Source: OPENTIX 兩廳院</description>
+      <description>Date: 2026-07-12 · Venue: 高雄中山堂劇場, 高雄市 · On sale: 2025-07-23 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
