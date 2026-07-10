@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 09 Jul 2026 14:47:12 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 02:21:43 GMT</lastBuildDate>
     <item>
       <title>【本場延期至10/11】2026 喜劇研討會：你不會，研討會！</title>
       <link>https://comedyclub.kktix.cc/events/seminar260711</link>
@@ -15,12 +15,20 @@
       <description>Date: 2026-10-11 · Venue: Comedy Plus 卡米地＋ · Source: KKTIX</description>
     </item>
     <item>
-      <title>Jimmy Stone 石峻旻 人生首部喜劇專場《上流法則》</title>
-      <link>https://comedyclub.kktix.cc/events/rulesofshangliu0829</link>
-      <guid isPermaLink="false">kktix:comedyclub/rulesofshangliu0829</guid>
-      <pubDate>Sun, 14 Jun 2026 04:00:00 GMT</pubDate>
+      <title>巴斯2026單口喜劇專場《中二病》</title>
+      <link>https://comedyclub.kktix.cc/events/chuunibyou</link>
+      <guid isPermaLink="false">kktix:comedyclub/chuunibyou</guid>
+      <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
       <category>喜劇</category>
-      <description>Date: 2026-08-29 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-06-14 · Source: KKTIX</description>
+      <description>Date: 2026-10-23 – 2026-10-24 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
+    </item>
+    <item>
+      <title>【10/24】巴斯2026單口喜劇專場《中二病》</title>
+      <link>https://comedyclub.kktix.cc/events/chuunibyou1024</link>
+      <guid isPermaLink="false">kktix:comedyclub/chuunibyou1024</guid>
+      <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-10-24 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
     </item>
     <item>
       <title>【9/20】相聲失控傳奇加演-生ㄕˇ之交『再』加演：每次都想呼喊「尼」的名字 </title>
@@ -45,14 +53,6 @@
       <pubDate>Mon, 11 May 2026 04:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-09-25 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-05-11 · Source: KKTIX</description>
-    </item>
-    <item>
-      <title>【8/27】北部綜藝能工作室：週四即戰力</title>
-      <link>https://comedyclub.kktix.cc/events/thursdayfight0827</link>
-      <guid isPermaLink="false">kktix:comedyclub/thursdayfight0827</guid>
-      <pubDate>Sun, 04 Jan 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-27 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-01-04 · Source: KKTIX</description>
     </item>
     <item>
       <title>【9/26】9月刊－相聲歸來、第三章〈哏哏哏哏哏〉</title>
