@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 11 Jul 2026 02:04:32 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 13:10:15 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)new</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -303,6 +303,14 @@
       <description>Date: 2026-07-20 · Venue: 台北西門町意舍酒店5F聽吧, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>7月高雄市電影館｜長短腳電影院－好奇寶貝方城市－法國新影像學院兒童動畫短片精選</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPI8Y</link>
+      <guid isPermaLink="false">era:P1BTPI8Y</guid>
+      <pubDate>Sat, 18 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-19 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>2026童演童語-《仙界小霹靂-圖書館特工》任務三：理解</title>
       <link>https://www.accupass.com/event/2604161810081209651625</link>
       <guid isPermaLink="false">accupass:2604161810081209651625</guid>
@@ -338,25 +346,17 @@
       <title>《大開眼界2.0》黃柏翰個人魔術秀</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1B0JCEI</link>
       <guid isPermaLink="false">udn:P1B0JCEI</guid>
-      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
+      <pubDate>Sat, 11 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-11 – 2026-07-19 · Venue: PLAYground 南村劇場, 臺北市 · Source: udn 售票網</description>
+      <description>Date: 2026-07-12 – 2026-07-19 · Venue: PLAYground 南村劇場, 臺北市 · Source: udn 售票網</description>
     </item>
     <item>
-      <title>7月高雄市電影館｜長短腳電影院－好奇寶貝方城市－法國新影像學院兒童動畫短片精選</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPI8Y</link>
-      <guid isPermaLink="false">era:P1BTPI8Y</guid>
+      <title>【2026大溪大禧】宜蘭傳藝大溪日</title>
+      <link>https://www.accupass.com/event/2606051720487191049260</link>
+      <guid isPermaLink="false">accupass:2606051720487191049260</guid>
       <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-11 – 2026-07-19 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>7月高雄市電影館｜長短腳電影院－O!PLA 波蘭兒童短片集</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPI98</link>
-      <guid isPermaLink="false">era:P1BTPI98</guid>
-      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-11 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
+      <description>Date: 2026-07-11 – 2026-07-12 · Venue: 宜蘭傳藝園區, 宜蘭縣 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【藝啟JAM 2.0 】7/11（六）｜天雨白橋</title>

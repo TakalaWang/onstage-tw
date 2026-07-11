@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 11 Jul 2026 02:04:32 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 13:10:15 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)new</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -55,6 +55,14 @@
       <description>Date: 2026-08-02 · Venue: 高雄市文化中心至善廳, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
+      <guid isPermaLink="false">era:P192ILGJ</guid>
+      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-08-01 – 2026-08-29 · Venue: 新竹縣政府文化局演藝廳, 新竹縣 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>7月高雄市電影館｜長短腳電影院－蹦蹦奇遇森友會</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPI8Q</link>
       <guid isPermaLink="false">era:P1BTPI8Q</guid>
@@ -79,36 +87,20 @@
       <description>Date: 2026-07-24 – 2026-08-16 · Venue: 臺北市政大樓親子劇場, 臺北市 · Source: 年代售票</description>
     </item>
     <item>
-      <title>2026《再一次！唱歌旅行去》十週年親子演唱會</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19I4966</link>
-      <guid isPermaLink="false">era:P19I4966</guid>
-      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
-      <category>兒童親子</category>
-      <description>Date: 2026-07-11 – 2026-11-22 · Venue: 臺灣戲曲中心大表演廳, 臺北市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>2026年夏季巧虎大型舞臺劇「銀河怪盜的祕密」</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P192ILGJ</link>
-      <guid isPermaLink="false">era:P192ILGJ</guid>
-      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-07-11 – 2026-08-29 · Venue: 臺南文化中心演藝廳, 臺南市 · Source: 年代售票</description>
-    </item>
-    <item>
       <title>7月高雄市電影館｜長短腳電影院－好奇寶貝方城市－法國新影像學院兒童動畫短片精選</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPI8Y</link>
       <guid isPermaLink="false">era:P1BTPI8Y</guid>
-      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
+      <pubDate>Sat, 18 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-11 – 2026-07-19 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
+      <description>Date: 2026-07-19 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
-      <title>7月高雄市電影館｜長短腳電影院－O!PLA 波蘭兒童短片集</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPI98</link>
-      <guid isPermaLink="false">era:P1BTPI98</guid>
-      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-11 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
+      <title>2026《再一次！唱歌旅行去》十週年親子演唱會</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19I4966</link>
+      <guid isPermaLink="false">era:P19I4966</guid>
+      <pubDate>Sat, 11 Jul 2026 16:00:00 GMT</pubDate>
+      <category>兒童親子</category>
+      <description>Date: 2026-07-12 – 2026-11-22 · Venue: 臺灣戲曲中心大表演廳, 臺北市 · Source: 年代售票</description>
     </item>
   </channel>
 </rss>
