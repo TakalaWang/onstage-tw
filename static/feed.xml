@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 10 Jul 2026 14:15:08 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 02:04:32 GMT</lastBuildDate>
     <item>
       <title>王偉忠監製舞台劇《明星養老院》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P0YXZMT5</link>
@@ -452,7 +452,7 @@
       <guid isPermaLink="false">accupass:2604161557411320503412</guid>
       <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-25 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-25 · Venue: 大園國小活動中心, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《Re:late》2026雙卡司再創作版</title>
@@ -599,20 +599,20 @@
       <description>Date: 2026-07-18 · Venue: 五維聚所, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>巴斯2026單口喜劇專場《中二病》</title>
+      <title>【10/23】巴斯2026單口喜劇專場《中二病中二病Narcissus》</title>
+      <link>https://comedyclub.kktix.cc/events/chuunibyou1023</link>
+      <guid isPermaLink="false">kktix:comedyclub/chuunibyou1023</guid>
+      <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-10-23 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
+    </item>
+    <item>
+      <title>巴斯2026單口喜劇專場《中二病Narcissus》</title>
       <link>https://comedyclub.kktix.cc/events/chuunibyou</link>
       <guid isPermaLink="false">kktix:comedyclub/chuunibyou</guid>
       <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-10-23 – 2026-10-24 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
-    </item>
-    <item>
-      <title>【10/24】巴斯2026單口喜劇專場《中二病》</title>
-      <link>https://comedyclub.kktix.cc/events/chuunibyou1024</link>
-      <guid isPermaLink="false">kktix:comedyclub/chuunibyou1024</guid>
-      <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-10-24 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
     </item>
     <item>
       <title>飛客喜劇夜：世界表情符號日  07/17（五）20:00|飛客俱樂部 |艾董/秋涼/巨陽尼/微涼/欣霖</title>
@@ -701,14 +701,6 @@
       <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
       <category>相聲</category>
       <description>Date: 2026-07-11 · Venue: basis coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>【2026大溪大禧】宜蘭傳藝大溪日</title>
-      <link>https://www.accupass.com/event/2606051720487191049260</link>
-      <guid isPermaLink="false">accupass:2606051720487191049260</guid>
-      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-11 – 2026-07-12 · Venue: 宜蘭傳藝園區, 宜蘭縣 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【藝啟JAM 2.0 】7/11（六）｜天雨白橋</title>
@@ -805,6 +797,14 @@
       <pubDate>Thu, 09 Jul 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-09-05 – 2026-09-06 · Venue: 華山1914文創園區東3B館 烏梅劇院, 臺北市 · On sale: 2026-07-09 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>天天工作社《關係阮祖先的故事》</title>
+      <link>https://www.opentix.life/event/2074761127208947713</link>
+      <guid isPermaLink="false">opentix:2074761127208947713</guid>
+      <pubDate>Thu, 09 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-25 – 2026-09-27 · Venue: 牯嶺街小劇場一樓實驗劇場, 臺北市 · On sale: 2026-07-09 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
