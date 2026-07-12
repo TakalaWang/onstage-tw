@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 11 Jul 2026 13:10:15 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 02:09:00 GMT</lastBuildDate>
     <item>
       <title>【本場延期至10/11】2026 喜劇研討會：你不會，研討會！</title>
       <link>https://comedyclub.kktix.cc/events/seminar260711</link>
@@ -15,7 +15,7 @@
       <description>Date: 2026-10-11 · Venue: Comedy Plus 卡米地＋ · Source: KKTIX</description>
     </item>
     <item>
-      <title>【10/23】巴斯2026單口喜劇專場《中二病中二病Narcissus》</title>
+      <title>【10/23】巴斯2026單口喜劇專場《中二病Narcissus》</title>
       <link>https://comedyclub.kktix.cc/events/chuunibyou1023</link>
       <guid isPermaLink="false">kktix:comedyclub/chuunibyou1023</guid>
       <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
@@ -29,6 +29,14 @@
       <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-10-23 – 2026-10-24 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
+    </item>
+    <item>
+      <title>【10/24】巴斯2026單口喜劇專場《中二病Narcissus》</title>
+      <link>https://comedyclub.kktix.cc/events/chuunibyou1024</link>
+      <guid isPermaLink="false">kktix:comedyclub/chuunibyou1024</guid>
+      <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-10-24 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
     </item>
     <item>
       <title>【9/20】相聲失控傳奇加演-生ㄕˇ之交『再』加演：每次都想呼喊「尼」的名字 </title>
@@ -61,14 +69,6 @@
       <pubDate>Sun, 04 Jan 2026 16:00:00 GMT</pubDate>
       <category>相聲</category>
       <description>Date: 2026-09-26 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-01-04 · Source: KKTIX</description>
-    </item>
-    <item>
-      <title>【9/5】《菜冠雙Talk》2026年9月號</title>
-      <link>https://comedyclub.kktix.cc/events/tsaiguan20260905</link>
-      <guid isPermaLink="false">kktix:comedyclub/tsaiguan20260905</guid>
-      <pubDate>Tue, 19 Aug 2025 04:30:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-09-05 · Venue: Comedy Plus 卡米地＋ · On sale: 2025-08-19 · Source: KKTIX</description>
     </item>
     <item>
       <title>【10/3】《菜冠雙Talk》2026年10月號</title>
