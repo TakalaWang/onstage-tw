@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 12 Jul 2026 02:09:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 13:13:12 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)new</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -13,6 +13,14 @@
       <pubDate>Mon, 30 Nov 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-12-01 – 2027-01-01 · Venue: 新北市五股工商展覽中心, 新北市 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>2026《再一次！唱歌旅行去》十週年親子演唱會</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19I4966</link>
+      <guid isPermaLink="false">era:P19I4966</guid>
+      <pubDate>Fri, 18 Sep 2026 16:00:00 GMT</pubDate>
+      <category>兒童親子</category>
+      <description>Date: 2026-09-19 – 2026-11-22 · Venue: 臺中市政府文化局中山堂, 臺中市 · Source: 年代售票</description>
     </item>
     <item>
       <title>《旅店迴旋曲》-清水劇團2026年度公演</title>
@@ -93,14 +101,6 @@
       <pubDate>Sat, 18 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-07-19 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
-    </item>
-    <item>
-      <title>2026《再一次！唱歌旅行去》十週年親子演唱會</title>
-      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19I4966</link>
-      <guid isPermaLink="false">era:P19I4966</guid>
-      <pubDate>Sat, 11 Jul 2026 16:00:00 GMT</pubDate>
-      <category>兒童親子</category>
-      <description>Date: 2026-07-12 – 2026-11-22 · Venue: 臺灣戲曲中心大表演廳, 臺北市 · Source: 年代售票</description>
     </item>
   </channel>
 </rss>
