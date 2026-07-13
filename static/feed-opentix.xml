@@ -5,7 +5,15 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 13 Jul 2026 02:10:03 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 14:22:19 GMT</lastBuildDate>
+    <item>
+      <title>2026年度新作《劉備招親》</title>
+      <link>https://www.opentix.life/event/2074397491068465152</link>
+      <guid isPermaLink="false">opentix:2074397491068465152</guid>
+      <pubDate>Mon, 13 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-10-16 – 2026-10-17 · Venue: 雲林縣北港文化中心家湖廳, 雲林縣 · On sale: 2026-07-13 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>古城會</title>
       <link>https://www.opentix.life/event/2070432640829448193</link>
@@ -797,14 +805,6 @@
       <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-16 – 2026-08-19 · Venue: 叢口, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】一年又一天</title>
-      <link>https://www.opentix.life/event/2064255778873876481</link>
-      <guid isPermaLink="false">opentix:2064255778873876481</guid>
-      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-19 – 2026-08-30 · Venue: 小馬廄, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
