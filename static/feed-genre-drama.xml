@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 14 Jul 2026 01:56:28 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 13:26:05 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)new</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -60,7 +60,7 @@
       <guid isPermaLink="false">accupass:2604161852431123538314</guid>
       <pubDate>Fri, 25 Sep 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-09-26 · Venue: 3F-親子小學堂, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-09-26 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>沉浸式餐桌劇場《好美味大作戰》- 2026秋季席位</title>
@@ -84,7 +84,7 @@
       <guid isPermaLink="false">accupass:2604161816079539147950</guid>
       <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-09-12 · Venue: 一樓微光廳, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-09-12 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026童演童語 特別活動-《實踐遊戲場》</title>
@@ -95,12 +95,28 @@
       <description>Date: 2026-09-05 · Venue: 桃園市觀音區草漯國民小學活動中心, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>《木盒宇宙》劇場版</title>
+      <link>https://www.accupass.com/event/2607011309591167440987</link>
+      <guid isPermaLink="false">accupass:2607011309591167440987</guid>
+      <pubDate>Thu, 03 Sep 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-04 – 2026-09-06 · Venue: 基隆表演藝術中心島嶼實驗劇場, 基隆市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>《旅店迴旋曲》-清水劇團2026年度公演</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1C4LT81</link>
       <guid isPermaLink="false">era:P1C4LT81</guid>
       <pubDate>Fri, 28 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-29 · Venue: 臺中市港區藝術中心演藝廳, 臺中市 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>第八屆魚池戲劇節《大魚戲水》</title>
+      <link>https://www.accupass.com/event/2606261211501382179400</link>
+      <guid isPermaLink="false">accupass:2606261211501382179400</guid>
+      <pubDate>Thu, 27 Aug 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-28 – 2026-08-29 · Venue: 南投縣魚池鄉魚池國民小學, 南投縣 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026童演童語-故事DIY-《友誼拉拉手：我們都是超級隊友》</title>
@@ -116,7 +132,7 @@
       <guid isPermaLink="false">accupass:2604161813399320653180</guid>
       <pubDate>Fri, 21 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-22 · Venue: 一樓微光廳, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-22 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>當文字站上舞台：劇本如何成為現場</title>
@@ -173,6 +189,14 @@
       <pubDate>Fri, 07 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-08 – 2026-08-16 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>宜蘭人愛跳舞環境劇場</title>
+      <link>https://www.accupass.com/event/2607131223193957825820</link>
+      <guid isPermaLink="false">accupass:2607131223193957825820</guid>
+      <pubDate>Fri, 07 Aug 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-08 – 2026-08-09 · Venue: 宜蘭礁溪 跑馬古道公園（北園區）, 宜蘭縣 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>OSTA-Open Stage To All</title>
@@ -300,7 +324,7 @@
       <guid isPermaLink="false">accupass:2604161557411320503412</guid>
       <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-25 · Venue: 大園國小活動中心, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-25 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《Re:late》2026雙卡司再創作版</title>
@@ -356,7 +380,7 @@
       <guid isPermaLink="false">accupass:2604161810081209651625</guid>
       <pubDate>Sat, 18 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-19 · Venue: 一樓微光廳, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-19 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>[叛逆研究社] 搶先口碑場</title>
@@ -781,30 +805,6 @@
       <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-25 · Venue: 師大白鹿洞書坊B1, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】《老．伴—一名機構講師的練習題》</title>
-      <link>https://www.opentix.life/event/2067549781284773889</link>
-      <guid isPermaLink="false">opentix:2067549781284773889</guid>
-      <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-25 – 2026-08-27 · Venue: 拾久駅, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】神不在的房間</title>
-      <link>https://www.opentix.life/event/2068897579950317569</link>
-      <guid isPermaLink="false">opentix:2068897579950317569</guid>
-      <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-25 · Venue: 北投中心新村-E2-2心村行+E2-3展間, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】《尋找-2026》--我是誰？生命之歌</title>
-      <link>https://www.opentix.life/event/2069253323535065089</link>
-      <guid isPermaLink="false">opentix:2069253323535065089</guid>
-      <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-25 – 2026-08-27 · Venue: 紀州庵文學森林-古蹟大廣間, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

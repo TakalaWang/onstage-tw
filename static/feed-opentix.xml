@@ -5,7 +5,23 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 14 Jul 2026 01:56:28 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 13:26:05 GMT</lastBuildDate>
+    <item>
+      <title>經典歌仔戲《龍鳳情緣》</title>
+      <link>https://www.opentix.life/event/2075503946785624065</link>
+      <guid isPermaLink="false">opentix:2075503946785624065</guid>
+      <pubDate>Tue, 14 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲曲</category>
+      <description>Date: 2026-08-29 · Venue: 雲林表演廳, 雲林縣 · On sale: 2026-07-14 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>波力救援小英雄舞臺劇《玩具王國大冒險》</title>
+      <link>https://www.opentix.life/event/2074696102477586433</link>
+      <guid isPermaLink="false">opentix:2074696102477586433</guid>
+      <pubDate>Tue, 14 Jul 2026 02:00:00 GMT</pubDate>
+      <category>舞台劇</category>
+      <description>Date: 2026-09-26 · Venue: 大東文化藝術中心, 高雄市 · On sale: 2026-07-14 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>2026年度新作《劉備招親》</title>
       <link>https://www.opentix.life/event/2074397491068465152</link>
@@ -789,22 +805,6 @@
       <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-15 – 2026-08-16 · Venue: 北投中心新村-C1 藝棧, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】《BUG》</title>
-      <link>https://www.opentix.life/event/2062380175849832449</link>
-      <guid isPermaLink="false">opentix:2062380175849832449</guid>
-      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-20 · Venue: 拾久駅, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】太有才華</title>
-      <link>https://www.opentix.life/event/2069344054379925506</link>
-      <guid isPermaLink="false">opentix:2069344054379925506</guid>
-      <pubDate>Fri, 26 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-16 – 2026-08-19 · Venue: 叢口, 臺北市 · On sale: 2026-06-26 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
