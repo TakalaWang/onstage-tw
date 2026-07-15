@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 14 Jul 2026 13:26:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 01:52:19 GMT</lastBuildDate>
     <item>
       <title>測試節目(此節目無效請勿訂購)new</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
@@ -13,6 +13,14 @@
       <pubDate>Mon, 30 Nov 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-12-01 – 2027-01-01 · Venue: 新北市五股工商展覽中心, 新北市 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>台北陶笛樂團20週年紀念音樂會</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1CG4CEE</link>
+      <guid isPermaLink="false">era:P1CG4CEE</guid>
+      <pubDate>Sat, 24 Oct 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-10-25 · Venue: 蘆洲功學社音樂廳, 新北市 · Source: 年代售票</description>
     </item>
     <item>
       <title>英雄傳 武聖關公</title>
