@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 16 Jul 2026 02:02:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 13:35:02 GMT</lastBuildDate>
     <item>
       <title>【10/23】巴斯2026單口喜劇專場《中二病Narcissus》</title>
       <link>https://comedyclub.kktix.cc/events/chuunibyou1023</link>
@@ -29,6 +29,14 @@
       <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-10-24 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
+    </item>
+    <item>
+      <title>【9/17】《百靈果News Live》 (會員限定）</title>
+      <link>https://comedyclub.kktix.cc/events/bailingguo0917</link>
+      <guid isPermaLink="false">kktix:comedyclub/bailingguo0917</guid>
+      <pubDate>Thu, 09 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-17 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-07-09 · Source: KKTIX</description>
     </item>
     <item>
       <title>【9/20】相聲失控傳奇加演-生ㄕˇ之交『再』加演：每次都想呼喊「尼」的名字 </title>
@@ -93,14 +101,6 @@
       <pubDate>Tue, 19 Aug 2025 04:30:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-12-05 · Venue: Comedy Plus 卡米地＋ · On sale: 2025-08-19 · Source: KKTIX</description>
-    </item>
-    <item>
-      <title>【9/10】漫才歐噴麥</title>
-      <link>https://comedyclub.kktix.cc/events/manzaiopenmic0910</link>
-      <guid isPermaLink="false">kktix:comedyclub/manzaiopenmic0910</guid>
-      <pubDate>Mon, 24 Feb 2025 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-09-10 · Venue: Comedy Plus 卡米地＋, 臺北市 · On sale: 2025-02-24 · Source: KKTIX</description>
     </item>
   </channel>
 </rss>
