@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 16 Jul 2026 13:35:02 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 02:07:00 GMT</lastBuildDate>
     <item>
       <title>劇場在地・共創新連結-白色恐怖田調分享會(含呈現演出)</title>
       <link>https://www.accupass.com/event/2603310621312093918182</link>
@@ -37,6 +37,14 @@
       <pubDate>Mon, 28 Sep 2026 16:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-09-29 · Venue: 遊牧計畫, 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>【鮮乳日常計劃】鮮乳偵探社｜鮮乳劇場</title>
+      <link>https://www.accupass.com/event/2606300308525485762090</link>
+      <guid isPermaLink="false">accupass:2606300308525485762090</guid>
+      <pubDate>Sat, 26 Sep 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-09-27 · Venue: 國立臺灣藝術教育館 南海劇場 1F, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《怪物與影子》音樂手語劇場</title>
@@ -311,20 +319,20 @@
       <description>Date: 2026-08-01 · Venue: 華山1914文化創意產業園區中3館 2樓拱廳 , 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>2026 青少年劇場〈N個我〉</title>
-      <link>https://www.accupass.com/event/2605210313307306301300</link>
-      <guid isPermaLink="false">accupass:2605210313307306301300</guid>
-      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-01 – 2026-08-02 · Venue: 基隆表演藝術中心島嶼實驗劇場, 基隆市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
       <title>「潮劇場」-《我願》</title>
       <link>https://www.accupass.com/event/2605261250523133554170</link>
       <guid isPermaLink="false">accupass:2605261250523133554170</guid>
       <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-01 · Venue: 芳苑鄉農會, 彰化縣 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>2026 青少年劇場〈N個我〉</title>
+      <link>https://www.accupass.com/event/2605210313307306301300</link>
+      <guid isPermaLink="false">accupass:2605210313307306301300</guid>
+      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-01 – 2026-08-02 · Venue: 基隆表演藝術中心島嶼實驗劇場, 基隆市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《把書吃掉｜太空西遊篇》演出票券－2026華山親子表藝節</title>
@@ -348,7 +356,7 @@
       <guid isPermaLink="false">accupass:2604161601098300220570</guid>
       <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-01 · Venue: 龜山區公所中山天幕廣場, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-01 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>第十八屆想演就演戲劇節《STORY》</title>
