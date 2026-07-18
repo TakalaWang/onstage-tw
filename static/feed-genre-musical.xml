@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 18 Jul 2026 01:56:43 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 13:06:10 GMT</lastBuildDate>
     <item>
       <title>倫敦全本音樂劇《史瑞克》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5</link>
@@ -39,12 +39,12 @@
       <description>Date: 2026-08-05 · Venue: 國立臺灣圖書館B1演藝廳, 新北市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>🎭 NEXT STAGE！青年劇場人才培育計畫－進階班- 成果呈現-台語親子音樂劇《春天佇佗位》</title>
-      <link>https://www.accupass.com/event/2607171920481872660872</link>
-      <guid isPermaLink="false">accupass:2607171920481872660872</guid>
+      <title>青年劇場人才培育計畫-成果呈現演出-台語親子音樂劇《春天佇佗位》</title>
+      <link>https://www.accupass.com/event/2607171836041201533217</link>
+      <guid isPermaLink="false">accupass:2607171836041201533217</guid>
       <pubDate>Thu, 30 Jul 2026 16:00:00 GMT</pubDate>
       <category>音樂劇</category>
-      <description>Date: 2026-07-31 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-31 · Venue: 樹林藝文中心, 新北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026 NTT+╳勇源—音樂劇線上：新起之秀</title>
@@ -183,14 +183,6 @@
       <description>Date: 2026-09-19 · Venue: 澎湖縣演藝廳, 澎湖縣 · On sale: 2026-06-01 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>坤泰OPEN藝術節-親子音樂劇《阿甯咕的狗狗會說話YA~》</title>
-      <link>https://www.opentix.life/event/2051498109678620672</link>
-      <guid isPermaLink="false">opentix:2051498109678620672</guid>
-      <pubDate>Mon, 01 Jun 2026 03:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-07-18 · Venue: 國立陽明交通大學光復校區大禮堂, 新竹市 · On sale: 2026-06-01 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>唱歌集《以為是BL結果是BFF》青春校園音樂劇</title>
       <link>https://www.opentix.life/event/2058773455445823489</link>
       <guid isPermaLink="false">opentix:2058773455445823489</guid>
@@ -292,7 +284,7 @@
       <guid isPermaLink="false">opentix:2045067828311797761</guid>
       <pubDate>Tue, 28 Apr 2026 04:00:00 GMT</pubDate>
       <category>音樂劇</category>
-      <description>Date: 2026-07-18 – 2026-07-19 · Venue: 臺中國家歌劇院中劇院, 臺中市 · On sale: 2026-04-28 · Source: OPENTIX 兩廳院</description>
+      <description>Date: 2026-07-19 · Venue: 臺中國家歌劇院中劇院, 臺中市 · On sale: 2026-04-28 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>2026 夏日放／FUN時光─韓國音樂劇《如蝶翩翩》</title>
@@ -319,20 +311,20 @@
       <description>Date: 2026-08-21 – 2026-09-06 · Venue: 水源劇場, 臺北市 · On sale: 2026-03-31 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>《你好，我是接體員》黑色幽默音樂劇</title>
-      <link>https://www.opentix.life/event/2011615042313633793</link>
-      <guid isPermaLink="false">opentix:2011615042313633793</guid>
-      <pubDate>Sun, 25 Jan 2026 04:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-07-18 – 2026-09-27 · Venue: 衛武營國家藝術文化中心歌劇院, 高雄市 · On sale: 2026-01-25 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>《情人哏裡出西施》跨界改編古裝音樂劇</title>
       <link>https://www.opentix.life/event/2009210831283515392</link>
       <guid isPermaLink="false">opentix:2009210831283515392</guid>
       <pubDate>Sun, 25 Jan 2026 04:00:00 GMT</pubDate>
       <category>音樂劇</category>
       <description>Date: 2026-07-25 – 2026-08-30 · Venue: 衛武營國家藝術文化中心歌劇院, 高雄市 · On sale: 2026-01-25 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>《你好，我是接體員》黑色幽默音樂劇</title>
+      <link>https://www.opentix.life/event/2011615042313633793</link>
+      <guid isPermaLink="false">opentix:2011615042313633793</guid>
+      <pubDate>Sun, 25 Jan 2026 04:00:00 GMT</pubDate>
+      <category>音樂劇</category>
+      <description>Date: 2026-08-14 – 2026-09-27 · Venue: 臺中國家歌劇院大劇院, 臺中市 · On sale: 2026-01-25 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
