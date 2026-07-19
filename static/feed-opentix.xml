@@ -5,7 +5,7 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 19 Jul 2026 02:05:18 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 13:10:08 GMT</lastBuildDate>
     <item>
       <title>音樂劇《跑跑殭丙仁》</title>
       <link>https://www.opentix.life/event/2076511977710968833</link>
@@ -551,14 +551,6 @@
       <description>Date: 2026-08-25 · Venue: 北投中心新村-E2-2心村行+E2-3展間, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
-      <title>【2026臺北藝穗節】哈啾</title>
-      <link>https://www.opentix.life/event/2063907458422030336</link>
-      <guid isPermaLink="false">opentix:2063907458422030336</guid>
-      <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-25 – 2026-08-26 · Venue: 倏忽空間, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
       <title>【2026臺北藝穗節】重新發車</title>
       <link>https://www.opentix.life/event/2064634786052853761</link>
       <guid isPermaLink="false">opentix:2064634786052853761</guid>
@@ -589,6 +581,14 @@
       <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-25 – 2026-08-26 · Venue: 師大白鹿洞書坊B1, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
+      <title>【2026臺北藝穗節】哈啾</title>
+      <link>https://www.opentix.life/event/2063907458422030336</link>
+      <guid isPermaLink="false">opentix:2063907458422030336</guid>
+      <pubDate>Wed, 01 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-25 – 2026-08-26 · Venue: 倏忽空間, 臺北市 · On sale: 2026-07-01 · Source: OPENTIX 兩廳院</description>
     </item>
     <item>
       <title>【2026臺北藝穗節】等，回去的那一天</title>
