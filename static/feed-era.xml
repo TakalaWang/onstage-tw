@@ -5,7 +5,15 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 21 Jul 2026 02:11:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 13:29:43 GMT</lastBuildDate>
+    <item>
+      <title>測試節目(此節目無效請勿訂購)new</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
+      <guid isPermaLink="false">era:P17SAXND</guid>
+      <pubDate>Mon, 30 Nov 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-12-01 · Venue: 新北市五股工商展覽中心, 新北市 · Source: 年代售票</description>
+    </item>
     <item>
       <title>台北陶笛樂團20週年紀念音樂會</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1CG4CEE</link>
@@ -71,6 +79,14 @@
       <description>Date: 2026-08-14 · Venue: 四號公園文創演藝廳, 新北市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>8月高雄市電影館｜劇場版 吉伊卡哇 人魚島的秘密（中配版）</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1D834GM</link>
+      <guid isPermaLink="false">era:P1D834GM</guid>
+      <pubDate>Fri, 07 Aug 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-08 – 2026-08-30 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>8月高雄市電影館｜長短腳電影院－嘰嘰王子：宇宙無敵</title>
       <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1BTPVOX</link>
       <guid isPermaLink="false">era:P1BTPVOX</guid>
@@ -93,6 +109,14 @@
       <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
       <category>舞台劇</category>
       <description>Date: 2026-08-01 – 2026-08-29 · Venue: 新竹縣政府文化局演藝廳, 新竹縣 · Source: 年代售票</description>
+    </item>
+    <item>
+      <title>8月高雄市電影館｜劇場版 吉伊卡哇 人魚島的秘密</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1D806CZ</link>
+      <guid isPermaLink="false">era:P1D806CZ</guid>
+      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-01 – 2026-08-29 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
       <title>7月高雄市電影館｜長短腳電影院－蹦蹦奇遇森友會</title>

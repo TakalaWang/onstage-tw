@@ -5,14 +5,14 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 21 Jul 2026 02:11:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 13:29:43 GMT</lastBuildDate>
     <item>
       <title>【相聲愛NG】實驗相聲開放麥｜02/27（六）20:00｜飛客劇樂部｜李沐陽 /陳韋捷 /李柏陞 /胡庭瑞 /李芳芳 / 小南 </title>
       <link>https://www.accupass.com/event/2607191149131156127616</link>
       <guid isPermaLink="false">accupass:2607191149131156127616</guid>
       <pubDate>Fri, 26 Feb 2027 16:00:00 GMT</pubDate>
       <category>相聲</category>
-      <description>Date: 2027-02-27 · Source: Accupass 活動通</description>
+      <description>Date: 2027-02-27 · Venue: basis coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【相聲愛NG】實驗相聲開放麥｜12/26（六）20:00｜飛客劇樂部｜李沐陽 /陳韋捷 /李柏陞 /胡庭瑞 /李芳芳 / 小南 </title>
@@ -29,6 +29,14 @@
       <pubDate>Thu, 24 Dec 2026 16:00:00 GMT</pubDate>
       <category>舞台劇</category>
       <description>Date: 2026-12-25 – 2026-12-27 · Venue: 臺北表演藝術中心 大劇院, 臺北市 · Source: udn 售票網</description>
+    </item>
+    <item>
+      <title>測試節目(此節目無效請勿訂購)new</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P17SAXND</link>
+      <guid isPermaLink="false">era:P17SAXND</guid>
+      <pubDate>Mon, 30 Nov 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-12-01 · Venue: 新北市五股工商展覽中心, 新北市 · Source: 年代售票</description>
     </item>
     <item>
       <title>倫敦全本音樂劇《史瑞克》</title>
@@ -71,12 +79,20 @@
       <description>Date: 2026-10-17 · Venue: 新莊文化藝術中心演藝廳, 新北市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>【別人家的小孩】醫師致葦 ✕ 台積工程師佳偉 — 雙人喜劇專場</title>
+      <link>https://www.accupass.com/event/2607121028531840493938</link>
+      <guid isPermaLink="false">accupass:2607121028531840493938</guid>
+      <pubDate>Fri, 16 Oct 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-10-17 – 2026-10-31 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>2026童演童語-霹靂電影日《奇人密碼—古羅布之謎》 </title>
       <link>https://www.accupass.com/event/2604161917471542799416</link>
       <guid isPermaLink="false">accupass:2604161917471542799416</guid>
       <pubDate>Fri, 16 Oct 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-10-17 · Venue: 1F-微光廳, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-10-17 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【相聲愛NG】實驗相聲開放麥｜10/10（六）20:00｜飛客劇樂部｜李沐陽 /陳韋捷 /李柏陞 /胡庭瑞 /李芳芳 / 小南 </title>
@@ -124,7 +140,7 @@
       <guid isPermaLink="false">accupass:2604161852431123538314</guid>
       <pubDate>Fri, 25 Sep 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-09-26 · Venue: 3F-親子小學堂, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-09-26 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>沉浸式餐桌劇場《好美味大作戰》- 2026秋季席位</title>
@@ -159,6 +175,14 @@
       <description>Date: 2026-09-19 · Venue: 馬祖梅石藝文中心1F, 連江縣 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>《春雨の喜劇力開發研究部》9、10月號</title>
+      <link>https://www.accupass.com/event/2607130631161136450462</link>
+      <guid isPermaLink="false">accupass:2607130631161136450462</guid>
+      <pubDate>Sat, 12 Sep 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-09-13 – 2026-10-11 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>2026 第三季 OPEN HOUSE 米倉劇場開放日</title>
       <link>https://www.accupass.com/event/2606120422001836273370</link>
       <guid isPermaLink="false">accupass:2606120422001836273370</guid>
@@ -172,7 +196,7 @@
       <guid isPermaLink="false">accupass:2604161816079539147950</guid>
       <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-09-12 · Venue: 一樓微光廳, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-09-12 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title> 2026 驫舞劇場 X 樹林藝文中心《打擊身體即興舞廳》</title>
@@ -231,6 +255,22 @@
       <description>Date: 2026-08-29 – 2026-08-30 · Venue: 新北市客家文化園區, 新北市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>收夏吧!喜劇大神</title>
+      <link>https://www.accupass.com/event/2607161043358408499550</link>
+      <guid isPermaLink="false">accupass:2607161043358408499550</guid>
+      <pubDate>Fri, 28 Aug 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-08-29 · Venue: 杯貝咖啡空間, 新竹縣 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>【08/29】歡樂週末夜 ✨2026喜劇開港拼盤秀 ✨</title>
+      <link>https://www.accupass.com/event/2606260430471446249074</link>
+      <guid isPermaLink="false">accupass:2606260430471446249074</guid>
+      <pubDate>Fri, 28 Aug 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-08-29 · Venue: 喜劇開港（🔎地圖搜尋「蔬食綠洲」）, 高雄市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>第八屆魚池戲劇節《大魚戲水》</title>
       <link>https://www.accupass.com/event/2606261211501382179400</link>
       <guid isPermaLink="false">accupass:2606261211501382179400</guid>
@@ -260,7 +300,7 @@
       <guid isPermaLink="false">accupass:2606260917193850285790</guid>
       <pubDate>Sat, 22 Aug 2026 16:00:00 GMT</pubDate>
       <category>兒童親子</category>
-      <description>Date: 2026-08-23 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-23 · Venue: 桃園市立圖書館總館 1 樓微光廳, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【相聲愛NG】實驗相聲開放麥｜08/22（六）20:00｜飛客劇樂部｜李沐陽 /陳韋捷 /李柏陞 /胡庭瑞 /李芳芳 / 小南 </title>
@@ -268,7 +308,7 @@
       <guid isPermaLink="false">accupass:2607191143415517524000</guid>
       <pubDate>Fri, 21 Aug 2026 16:00:00 GMT</pubDate>
       <category>相聲</category>
-      <description>Date: 2026-08-22 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-22 · Venue: basis coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【匯聚喜來登】8/22 陸爸爸說演故事劇場－繪本故事分享</title>
@@ -279,12 +319,20 @@
       <description>Date: 2026-08-22 · Venue: 新竹豐邑喜來登大飯店1F大廳, 新竹縣 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>首度來台！澳洲喜劇天王 Tim Ellis 歡樂魔術秀！</title>
+      <link>https://www.accupass.com/event/2606300740121862078281</link>
+      <guid isPermaLink="false">accupass:2606300740121862078281</guid>
+      <pubDate>Fri, 21 Aug 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-08-22 – 2026-08-23 · Venue: 8/22 台北市政府青年局、8/23 幻巷魔術劇場, 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>2026童演童語-《仙界小霹靂-圖書館特工》任務四：協調</title>
       <link>https://www.accupass.com/event/2604161813399320653180</link>
       <guid isPermaLink="false">accupass:2604161813399320653180</guid>
       <pubDate>Fri, 21 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-22 · Venue: 一樓微光廳, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-22 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>當文字站上舞台：劇本如何成為現場</title>
@@ -295,20 +343,36 @@
       <description>Date: 2026-08-21 · Venue:  (入口在101斜對面，松智路上）, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
-      <title>2026年十週年全新製作《Patience 靜候》</title>
-      <link>https://www.accupass.com/event/2606080854462091160436</link>
-      <guid isPermaLink="false">accupass:2606080854462091160436</guid>
-      <pubDate>Fri, 14 Aug 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-15 – 2026-08-16 · Venue: 彰化市農會, 彰化縣 · Source: Accupass 活動通</description>
-    </item>
-    <item>
       <title>2026 八月 【雄好笑 漫才 OPEN MIC】</title>
       <link>https://www.accupass.com/event/2607140542291988394713</link>
       <guid isPermaLink="false">accupass:2607140542291988394713</guid>
       <pubDate>Fri, 14 Aug 2026 16:00:00 GMT</pubDate>
       <category>喜劇</category>
       <description>Date: 2026-08-15 · Venue: 肆意咖啡酒館, 高雄市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>第一超棒新竹脫口秀</title>
+      <link>https://www.accupass.com/event/2607071259493243167470</link>
+      <guid isPermaLink="false">accupass:2607071259493243167470</guid>
+      <pubDate>Fri, 14 Aug 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-08-15 · Venue: 現場馬拉桑特色餐廳三樓, 新竹市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>HSINCHU COMEDY LIVE</title>
+      <link>https://www.accupass.com/event/2607071252499670621290</link>
+      <guid isPermaLink="false">accupass:2607071252499670621290</guid>
+      <pubDate>Fri, 14 Aug 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-15 · Venue: 現場馬拉桑特色餐廳三樓, 新竹市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>爆笑中文喜劇催眠秀｜蔣海明</title>
+      <link>https://www.accupass.com/event/2606221231431126840606</link>
+      <guid isPermaLink="false">accupass:2606221231431126840606</guid>
+      <pubDate>Fri, 14 Aug 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-08-15 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>舞台劇《都更男女》</title>
@@ -340,7 +404,7 @@
       <guid isPermaLink="false">accupass:2606010559251224548396</guid>
       <pubDate>Wed, 12 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-13 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-13 · Venue: 新莊文化藝術中心, 新北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>2026新莊有好戲-【劇場開箱系列】一心戲劇團《審石頭？Oh MyGod！真的假的啦？》</title>
@@ -357,6 +421,22 @@
       <pubDate>Mon, 10 Aug 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-11 · Venue:  (入口在101斜對面，松智路上）, 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>&lt; 2026『大寶流』漫才&amp; 短劇訓練班 &gt;｜08/09～08/29｜ 飛客俱樂部 </title>
+      <link>https://www.accupass.com/event/2607051348271557070980</link>
+      <guid isPermaLink="false">accupass:2607051348271557070980</guid>
+      <pubDate>Sat, 08 Aug 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-08-09 – 2026-08-29 · Venue: Basis Coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>8月高雄市電影館｜劇場版 吉伊卡哇 人魚島的秘密（中配版）</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1D834GM</link>
+      <guid isPermaLink="false">era:P1D834GM</guid>
+      <pubDate>Fri, 07 Aug 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-08 – 2026-08-30 · Venue: 內惟藝術中心 Reel two 2廳, 高雄市 · Source: 年代售票</description>
     </item>
     <item>
       <title>8月高雄市電影館｜長短腳電影院－嘰嘰王子：宇宙無敵</title>
@@ -407,6 +487,14 @@
       <description>Date: 2026-08-01 – 2026-08-29 · Venue: 新竹縣政府文化局演藝廳, 新竹縣 · Source: 年代售票</description>
     </item>
     <item>
+      <title>8月高雄市電影館｜劇場版 吉伊卡哇 人魚島的秘密</title>
+      <link>https://ticket.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1D806CZ</link>
+      <guid isPermaLink="false">era:P1D806CZ</guid>
+      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-08-01 – 2026-08-29 · Venue: 內惟藝術中心 Reel one 1廳, 高雄市 · Source: 年代售票</description>
+    </item>
+    <item>
       <title>2026夏日放／FUN時光—歌劇院駐館藝術家黃建豪《大話家》讀劇音樂會</title>
       <link>https://www.accupass.com/event/2604190919141237619391</link>
       <guid isPermaLink="false">accupass:2604190919141237619391</guid>
@@ -420,7 +508,7 @@
       <guid isPermaLink="false">accupass:2606160745481568228356</guid>
       <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-01 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-01 · Venue: 華山1914文化創意產業園區中3館 2樓拱廳 , 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>「潮劇場」-《我願》</title>
@@ -460,15 +548,7 @@
       <guid isPermaLink="false">accupass:2604161601098300220570</guid>
       <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-08-01 · Venue: 龜山區公所中山天幕廣場, 桃園市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>第十八屆想演就演戲劇節《STORY》</title>
-      <link>https://www.accupass.com/event/2606061309056184232100</link>
-      <guid isPermaLink="false">accupass:2606061309056184232100</guid>
-      <pubDate>Thu, 30 Jul 2026 16:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-07-31 · Source: Accupass 活動通</description>
+      <description>Date: 2026-08-01 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>青年劇場人才培育計畫-成果呈現演出-台語親子音樂劇《春天佇佗位》</title>
@@ -477,6 +557,14 @@
       <pubDate>Thu, 30 Jul 2026 16:00:00 GMT</pubDate>
       <category>音樂劇</category>
       <description>Date: 2026-07-31 · Venue: 樹林藝文中心, 新北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>第十八屆想演就演戲劇節《STORY》</title>
+      <link>https://www.accupass.com/event/2606061309056184232100</link>
+      <guid isPermaLink="false">accupass:2606061309056184232100</guid>
+      <pubDate>Thu, 30 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-31 · Venue: 桃園市政府文化局演藝廳, 桃園市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>打架俱樂部｜即興裡的反派練習（7-8月場）</title>
@@ -516,7 +604,15 @@
       <guid isPermaLink="false">accupass:2607011359583416861610</guid>
       <pubDate>Sat, 25 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-26 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-26 · Venue: 開元排練場 排練場C, 臺南市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>王金櫻《月娘照佇雙叉路》專輯分享會</title>
+      <link>https://www.accupass.com/event/2607210358371076946302</link>
+      <guid isPermaLink="false">accupass:2607210358371076946302</guid>
+      <pubDate>Sat, 25 Jul 2026 16:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-07-26 · Venue: 臺灣戲曲中心 臺灣音樂館 B1 視聽室, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>【ECHO偶戲下午茶】誰把劇場變玩具了？！</title>
@@ -556,7 +652,7 @@
       <guid isPermaLink="false">accupass:2606270924082068313823</guid>
       <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
       <category>喜劇</category>
-      <description>Date: 2026-07-25 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-25 · Venue: 福興公園對面, 臺中市 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《洄游之間—大海的小孩》劇場演出</title>
@@ -567,12 +663,20 @@
       <description>Date: 2026-07-25 · Venue: 衛武營都會公園三連棟-R棟, 高雄市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>第一超棒台北脫口秀| 台北場 07/26（六）20:00|飛客俱樂部 |曹小歐 /Evan / 樂樂法利 / 阿秋 /懿霽</title>
+      <link>https://www.accupass.com/event/2607051111421319360628</link>
+      <guid isPermaLink="false">accupass:2607051111421319360628</guid>
+      <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-07-25 · Venue: Basis Coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
       <title>2026童演童語 特別活動-《勇氣選擇任務》</title>
       <link>https://www.accupass.com/event/2604161557411320503412</link>
       <guid isPermaLink="false">accupass:2604161557411320503412</guid>
       <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
       <category>戲劇</category>
-      <description>Date: 2026-07-25 · Venue: 大園國小活動中心, 桃園市 · Source: Accupass 活動通</description>
+      <description>Date: 2026-07-25 · Source: Accupass 活動通</description>
     </item>
     <item>
       <title>《Re:late》2026雙卡司再創作版</title>
@@ -599,6 +703,70 @@
       <description>Date: 2026-07-24 – 2026-08-16 · Venue: 臺北市政大樓親子劇場, 臺北市 · Source: 年代售票</description>
     </item>
     <item>
+      <title>飛客喜劇夜：國際冷笑話日  07/24（五）20:00|飛客俱樂部 |艾董/微涼/LiLi講/媞媞/曹小歐</title>
+      <link>https://www.accupass.com/event/2607050925012340317360</link>
+      <guid isPermaLink="false">accupass:2607050925012340317360</guid>
+      <pubDate>Thu, 23 Jul 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-07-24 · Venue: Basis Coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>阿舜順喜劇專場《好屁演 NICE ASSHOLE》TRY OUT</title>
+      <link>https://www.accupass.com/event/2606030326261557696647</link>
+      <guid isPermaLink="false">accupass:2606030326261557696647</guid>
+      <pubDate>Thu, 23 Jul 2026 16:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-07-24 · Venue: 群島藝術園區 小劇院, 臺中市 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>今日掌中劇團《轉念》</title>
+      <link>https://www.accupass.com/event/2606010326112054334242</link>
+      <guid isPermaLink="false">accupass:2606010326112054334242</guid>
+      <pubDate>Thu, 23 Jul 2026 16:00:00 GMT</pubDate>
+      <category>偶戲</category>
+      <description>Date: 2026-07-24 · Source: Accupass 活動通</description>
+    </item>
+    <item>
+      <title>【10/3 台中群島】藍恩首次單口喜劇專場《All Around You》 </title>
+      <link>https://comedyclub.kktix.cc/events/allaroundyou1003</link>
+      <guid isPermaLink="false">kktix:comedyclub/allaroundyou1003</guid>
+      <pubDate>Thu, 23 Jul 2026 04:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-10-03 · Venue: 群島藝術園區 Islands Art Park, 臺中市 · On sale: 2026-07-23 · Source: KKTIX</description>
+    </item>
+    <item>
+      <title>【10/8 卡米地】藍恩首次單口喜劇專場《All Around You》 </title>
+      <link>https://comedyclub.kktix.cc/events/allaroundyou1008</link>
+      <guid isPermaLink="false">kktix:comedyclub/allaroundyou1008</guid>
+      <pubDate>Thu, 23 Jul 2026 04:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-10-08 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-07-23 · Source: KKTIX</description>
+    </item>
+    <item>
+      <title>【10/9 卡米地】藍恩首次單口喜劇專場《All Around You》 </title>
+      <link>https://comedyclub.kktix.cc/events/allaroundyou1009</link>
+      <guid isPermaLink="false">kktix:comedyclub/allaroundyou1009</guid>
+      <pubDate>Thu, 23 Jul 2026 04:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-10-09 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-07-23 · Source: KKTIX</description>
+    </item>
+    <item>
+      <title>【10/10 卡米地】藍恩首次單口喜劇專場《All Around You》 </title>
+      <link>https://comedyclub.kktix.cc/events/allaroundyou1010</link>
+      <guid isPermaLink="false">kktix:comedyclub/allaroundyou1010</guid>
+      <pubDate>Thu, 23 Jul 2026 04:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-10-10 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-07-23 · Source: KKTIX</description>
+    </item>
+    <item>
+      <title>【10/11 卡米地】藍恩首次單口喜劇專場《All Around You》 </title>
+      <link>https://comedyclub.kktix.cc/events/allaroundyou1011</link>
+      <guid isPermaLink="false">kktix:comedyclub/allaroundyou1011</guid>
+      <pubDate>Thu, 23 Jul 2026 04:00:00 GMT</pubDate>
+      <category>喜劇</category>
+      <description>Date: 2026-10-11 · Venue: Comedy Plus 卡米地＋ · On sale: 2026-07-23 · Source: KKTIX</description>
+    </item>
+    <item>
       <title>西班牙國家舞團《唐吉訶德》</title>
       <link>https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P169PNE2</link>
       <guid isPermaLink="false">udn:P169PNE2</guid>
@@ -615,6 +783,14 @@
       <description>Date: 2026-07-22 · Venue: Basis Coffee 地下室, 臺北市 · Source: Accupass 活動通</description>
     </item>
     <item>
+      <title>《原來你佇咧》</title>
+      <link>https://www.opentix.life/event/2041775304994054145</link>
+      <guid isPermaLink="false">opentix:2041775304994054145</guid>
+      <pubDate>Tue, 21 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-12-12 · Venue: 米倉劇場, 桃園市 · On sale: 2026-07-21 · Source: OPENTIX 兩廳院</description>
+    </item>
+    <item>
       <title>玩．劇場—青少年創意工坊：舞蹈劇場篇</title>
       <link>https://www.accupass.com/event/2603250234161601863129</link>
       <guid isPermaLink="false">accupass:2603250234161601863129</guid>
@@ -629,182 +805,6 @@
       <pubDate>Mon, 20 Jul 2026 12:00:00 GMT</pubDate>
       <category>音樂劇</category>
       <description>Date: 2026-08-08 – 2026-10-25 · Venue: 國家戲劇院, 臺北市 · On sale: 2026-07-20 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>神化</title>
-      <link>https://www.opentix.life/event/2074390913883893761</link>
-      <guid isPermaLink="false">opentix:2074390913883893761</guid>
-      <pubDate>Mon, 20 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-09-04 – 2026-09-05 · Venue: 新莊文化藝術中心演藝廳, 新北市 · On sale: 2026-07-20 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>動見体Ｘ橫山拓也《白條肉》</title>
-      <link>https://www.opentix.life/event/2074024287509049345</link>
-      <guid isPermaLink="false">opentix:2074024287509049345</guid>
-      <pubDate>Mon, 20 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-11-06 – 2026-11-08 · Venue: 水源劇場, 臺北市 · On sale: 2026-07-20 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>【10/23】巴斯2026單口喜劇專場《中二病Narcissus》</title>
-      <link>https://comedyclub.kktix.cc/events/chuunibyou1023</link>
-      <guid isPermaLink="false">kktix:comedyclub/chuunibyou1023</guid>
-      <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-10-23 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
-    </item>
-    <item>
-      <title>巴斯2026單口喜劇專場《中二病Narcissus》</title>
-      <link>https://comedyclub.kktix.cc/events/chuunibyou</link>
-      <guid isPermaLink="false">kktix:comedyclub/chuunibyou</guid>
-      <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-10-23 – 2026-10-24 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
-    </item>
-    <item>
-      <title>【10/24】巴斯2026單口喜劇專場《中二病Narcissus》</title>
-      <link>https://comedyclub.kktix.cc/events/chuunibyou1024</link>
-      <guid isPermaLink="false">kktix:comedyclub/chuunibyou1024</guid>
-      <pubDate>Fri, 17 Jul 2026 04:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-10-24 · Venue: 西門紅樓, 臺北市 · On sale: 2026-07-17 · Source: KKTIX</description>
-    </item>
-    <item>
-      <title>音樂劇《跑跑殭丙仁》</title>
-      <link>https://www.opentix.life/event/2076511977710968833</link>
-      <guid isPermaLink="false">opentix:2076511977710968833</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-12-04 – 2026-12-13 · Venue: 臺北表演藝術中心 球劇場, 臺北市 · On sale: 2026-07-17 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>環遊世界80+1天</title>
-      <link>https://www.opentix.life/event/2076862416033050624</link>
-      <guid isPermaLink="false">opentix:2076862416033050624</guid>
-      <pubDate>Thu, 16 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-23 · Venue: 衛武營國家藝術文化中心戲劇院, 高雄市 · On sale: 2026-07-16 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>OPEN週末劇院_阮劇團《樓上的好人》</title>
-      <link>https://www.opentix.life/event/2066809416750247937</link>
-      <guid isPermaLink="false">opentix:2066809416750247937</guid>
-      <pubDate>Thu, 16 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-09-19 – 2026-09-20 · Venue: 彰化縣文化局員林演藝廳小劇場, 彰化縣 · On sale: 2026-07-16 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>OPEN週末劇院_同黨劇團《父親母親》</title>
-      <link>https://www.opentix.life/event/2066805019785867264</link>
-      <guid isPermaLink="false">opentix:2066805019785867264</guid>
-      <pubDate>Thu, 16 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-09-26 – 2026-09-27 · Venue: 彰化縣文化局員林演藝廳小劇場, 彰化縣 · On sale: 2026-07-16 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>NEXT劇場_明華園戲劇總團《狐說百妖》</title>
-      <link>https://www.opentix.life/event/2066764933884280832</link>
-      <guid isPermaLink="false">opentix:2066764933884280832</guid>
-      <pubDate>Thu, 16 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-10-03 · Venue: 彰化縣文化局員林演藝廳表演廳, 彰化縣 · On sale: 2026-07-16 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>NEXT劇場_明華園戲劇總團《狐說百妖》</title>
-      <link>https://www.opentix.life/event/2071798385800597505</link>
-      <guid isPermaLink="false">opentix:2071798385800597505</guid>
-      <pubDate>Thu, 16 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-10-04 · Venue: 彰化縣文化局員林演藝廳表演廳, 彰化縣 · On sale: 2026-07-16 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>NEXT劇場_楊景翔演劇團《我不是影后》</title>
-      <link>https://www.opentix.life/event/2066812720814366721</link>
-      <guid isPermaLink="false">opentix:2066812720814366721</guid>
-      <pubDate>Thu, 16 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-10-17 · Venue: 彰化縣文化局員林演藝廳表演廳, 彰化縣 · On sale: 2026-07-16 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>拜三聽什麼～【音樂劇到底在夯什麼?】</title>
-      <link>https://www.accupass.com/event/2607130315374202320140</link>
-      <guid isPermaLink="false">accupass:2607130315374202320140</guid>
-      <pubDate>Wed, 15 Jul 2026 16:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-07-16 – 2026-08-19 · Venue: 灣聲 OneSong, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>《系列第七/第八場》🎡【即興 x 遊樂園】不準備，也能很好玩：鬆開束縛，找回彈性</title>
-      <link>https://www.accupass.com/event/2606031300151953105527</link>
-      <guid isPermaLink="false">accupass:2606031300151953105527</guid>
-      <pubDate>Wed, 15 Jul 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-07-16 – 2026-07-30 · Venue: 可能存在的遊樂園 CollaPlay, 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>【2026臺北藝穗節】《呼麻二齒的阿德醫生》</title>
-      <link>https://www.opentix.life/event/2075184697495470081</link>
-      <guid isPermaLink="false">opentix:2075184697495470081</guid>
-      <pubDate>Wed, 15 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-08-18 – 2026-08-22 · Venue: 北投中心新村-E2-2心村行+E2-3展間, 臺北市 · On sale: 2026-07-15 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>國光劇團魔幻京劇《公主與她的魔法扇》2026苗北藝術節</title>
-      <link>https://www.opentix.life/event/2076493611234652160</link>
-      <guid isPermaLink="false">opentix:2076493611234652160</guid>
-      <pubDate>Wed, 15 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲曲</category>
-      <description>Date: 2026-10-03 · Venue: 苗北藝文中心演藝廳, 苗栗縣 · On sale: 2026-07-15 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>圓仔花意識拼貼劇坊《鶯鶯》</title>
-      <link>https://www.opentix.life/event/2054124040675516417</link>
-      <guid isPermaLink="false">opentix:2054124040675516417</guid>
-      <pubDate>Wed, 15 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-10-24 – 2026-10-25 · Venue: 基隆表演藝術中心島嶼實驗劇場, 基隆市 · On sale: 2026-07-15 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>果陀劇場音樂劇《生命最美好的5分鍾》2026苗北藝術節</title>
-      <link>https://www.opentix.life/event/2072574785822879745</link>
-      <guid isPermaLink="false">opentix:2072574785822879745</guid>
-      <pubDate>Wed, 15 Jul 2026 04:00:00 GMT</pubDate>
-      <category>音樂劇</category>
-      <description>Date: 2026-11-13 · Venue: 苗北藝文中心演藝廳, 苗栗縣 · On sale: 2026-07-15 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>即興open mic 同歡樂 ： 7月份 Fakers club 飛客喜劇劇樂部 ｜主持：東區德 / 東東</title>
-      <link>https://www.accupass.com/event/2607041519311466406479</link>
-      <guid isPermaLink="false">accupass:2607041519311466406479</guid>
-      <pubDate>Tue, 14 Jul 2026 16:00:00 GMT</pubDate>
-      <category>喜劇</category>
-      <description>Date: 2026-07-15 – 2026-07-29 · Venue: basis coffee 地下室 , 臺北市 · Source: Accupass 活動通</description>
-    </item>
-    <item>
-      <title>經典歌仔戲《龍鳳情緣》</title>
-      <link>https://www.opentix.life/event/2075503946785624065</link>
-      <guid isPermaLink="false">opentix:2075503946785624065</guid>
-      <pubDate>Tue, 14 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲曲</category>
-      <description>Date: 2026-08-29 · Venue: 雲林表演廳, 雲林縣 · On sale: 2026-07-14 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>波力救援小英雄舞臺劇《玩具王國大冒險》</title>
-      <link>https://www.opentix.life/event/2074696102477586433</link>
-      <guid isPermaLink="false">opentix:2074696102477586433</guid>
-      <pubDate>Tue, 14 Jul 2026 02:00:00 GMT</pubDate>
-      <category>舞台劇</category>
-      <description>Date: 2026-09-26 · Venue: 大東文化藝術中心, 高雄市 · On sale: 2026-07-14 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>2026年度新作《劉備招親》</title>
-      <link>https://www.opentix.life/event/2074397491068465152</link>
-      <guid isPermaLink="false">opentix:2074397491068465152</guid>
-      <pubDate>Mon, 13 Jul 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-10-16 – 2026-10-17 · Venue: 雲林縣北港文化中心家湖廳, 雲林縣 · On sale: 2026-07-13 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>

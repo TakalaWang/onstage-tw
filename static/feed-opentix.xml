@@ -5,7 +5,15 @@
     <link>https://onstage.takalawang.dev</link>
     <description>Aggregated theatre performances from OPENTIX, udn, KHAM, ERA and KKTIX.</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 21 Jul 2026 02:11:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 13:29:43 GMT</lastBuildDate>
+    <item>
+      <title>《原來你佇咧》</title>
+      <link>https://www.opentix.life/event/2041775304994054145</link>
+      <guid isPermaLink="false">opentix:2041775304994054145</guid>
+      <pubDate>Tue, 21 Jul 2026 04:00:00 GMT</pubDate>
+      <category>戲劇</category>
+      <description>Date: 2026-12-12 · Venue: 米倉劇場, 桃園市 · On sale: 2026-07-21 · Source: OPENTIX 兩廳院</description>
+    </item>
     <item>
       <title>躍演《勸世三姊妹》中文音樂劇</title>
       <link>https://www.opentix.life/event/2051591825313611777</link>
@@ -797,14 +805,6 @@
       <pubDate>Tue, 30 Jun 2026 04:00:00 GMT</pubDate>
       <category>戲劇</category>
       <description>Date: 2026-08-22 – 2026-08-24 · Venue: 鬧房間, 臺北市 · On sale: 2026-06-30 · Source: OPENTIX 兩廳院</description>
-    </item>
-    <item>
-      <title>吳念真國民戲劇《人間條件三》台北上午零時</title>
-      <link>https://www.opentix.life/event/2070074346117287937</link>
-      <guid isPermaLink="false">opentix:2070074346117287937</guid>
-      <pubDate>Tue, 30 Jun 2026 04:00:00 GMT</pubDate>
-      <category>戲劇</category>
-      <description>Date: 2026-10-09 – 2026-12-06 · Venue: 國家戲劇院, 臺北市 · On sale: 2026-06-30 · Source: OPENTIX 兩廳院</description>
     </item>
   </channel>
 </rss>
